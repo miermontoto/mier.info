@@ -2,8 +2,8 @@ name: updateReadme
 
 on:
   schedule:
-    - cron: "15 9-23,0-3 * 9-12,1-6 *"
-    - cron: "45 8-20/4,0 * 7-8 *"
+    - cron: "15 9-23/3,0-3/3 * 9-12,1-6 *"
+    - cron: "45 */12 * 7-8 *"
   workflow_dispatch:
 jobs:
   update-readme:
@@ -22,10 +22,6 @@ jobs:
           SHOW_SHORT_INFO: "False"
           SHOW_LOC_CHART: "False"
           SHOW_PROFILE_VIEWS: "False"
-          SHOW_LANGUAGE: "True"
-          SHOW_OS: "True"
-          SHOW_PROJECTS: "True"
-          SHOW_EDITORS: "False"
 
           
           
