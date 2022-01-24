@@ -6,5 +6,5 @@
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=miermontoto&layout=compact&card_width=250&exclude_repo=TEC&langs_count=8&hide_border=true&theme=nord" height="195rem" />
 </p>
 
-<!-- waka-box start -->
-<!-- waka-box end -->
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
