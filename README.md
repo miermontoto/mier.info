@@ -7,4 +7,31 @@
 </p>
 
 <!--START_SECTION:waka-->
+![Code Time](http://img.shields.io/badge/Code%20Time-16%20mins-blue)
+
+![Profile Views](http://img.shields.io/badge/Profile%20Views-0-blue)
+
+📊 **This Week I Spent My Time On** 
+
+```text
+💬 Programming Languages: 
+No Activity Tracked This Week
+
+🔥 Editors: 
+No Activity Tracked This Week
+
+🐱‍💻 Projects: 
+No Activity Tracked This Week
+
+💻 Operating System: 
+No Activity Tracked This Week
+
+```
+
+**Timeline**
+
+![Chart not found](https://raw.githubusercontent.com/miermontoto/miermontoto/main/charts/bar_graph.png) 
+
+
+ Last Updated on 24/01/2022 21:49:12 UTC
 <!--END_SECTION:waka-->
