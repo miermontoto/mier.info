@@ -1,9 +1,9 @@
 name: updateReadme
 
 on:
-  schedule:
-    - cron: "15 0 * 9-12,1-5 *"
-    - cron: "45 0 */2 6-8 *"
+  #schedule:
+    #- cron: "15 0 * 9-12,1-5 *"
+    #- cron: "45 0 */2 6-8 *"
   workflow_dispatch:
 jobs:
   update-readme:
