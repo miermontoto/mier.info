@@ -1,0 +1,23 @@
+{
+  "name": "miermontoto",
+  "version": "1.0.0",
+  "description": "![](https://hit.yhype.me/github/profile?user_id=20926603)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miermontoto/miermontoto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miermontoto/miermontoto/issues"
+  },
+  "homepage": "https://github.com/miermontoto/miermontoto#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2"
+  }
+}
