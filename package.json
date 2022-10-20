@@ -1,6 +1,6 @@
 {
   "name": "mier.info",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "scripts": {
     "start": "eleventy --serve",
@@ -15,5 +15,8 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2"
+  },
+  "dependencies": {
+    "npm": "^8.19.2"
   }
 }

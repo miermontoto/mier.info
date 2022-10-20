@@ -1,0 +1,41 @@
+body {
+    --primary: #202124;
+    --secundary: #4F5051;
+    --dark: #101012;
+    --light: #8F9091;
+    --white: #f8f8f2;
+
+    font-family: 'Fira Code', monospace;
+    background-color: var(--primary);
+    color: var(--white);
+    overflow-x: hidden;
+    text-align: center;
+}
+
+main {
+    width: min(400px, 50%);
+    padding: 5px 20px 30px 20px;
+    border-radius: 10px;
+}
+
+.block {
+    border: 4px solid var(--secundary);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer {
+    padding: 5px;
+    font-size: 0.75em;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.dark {
+    background-color: var(--dark);
+}
