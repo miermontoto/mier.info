@@ -1,10 +1,10 @@
 {
-  "name": "miermontoto",
-  "version": "1.0.0",
-  "description": "![](https://hit.yhype.me/github/profile?user_id=20926603)",
-  "main": "index.js",
+  "name": "mier.info",
+  "version": "0.1.0",
+  "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "eleventy --serve",
+    "build": "eleventy"
   },
   "repository": {
     "type": "git",
@@ -13,10 +13,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/miermontoto/miermontoto/issues"
-  },
-  "homepage": "https://github.com/miermontoto/miermontoto#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2"
   }
