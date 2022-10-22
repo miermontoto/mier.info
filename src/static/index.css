@@ -1,0 +1,88 @@
+/* main */
+#content {
+    width: 90%;
+    padding: 5%;
+}
+
+#title {
+    font-family: 'Daft Font', cursive;
+    font-size: 3em;
+}
+
+
+/* socials */
+#socials a {
+    display: inline-block;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 11px;
+    margin-left: 5px;
+    padding: 2px 0;
+    vertical-align: middle;
+}
+
+.dot {
+    vertical-align: middle;
+    background-color: var(--dot);
+    border: 2px solid var(--dot);
+    display: inline-block;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    margin-right: 5px;
+}
+
+a:hover .dot {
+    background-color: var(--primary);
+}
+
+.multicolor {
+    animation: MULTICOLOR 1s infinite;
+}
+
+@keyframes MULTICOLOR {
+    0% {
+     background-color:#9f0;
+     color:#f3c
+    }
+    10% {
+     background-color:#6ff;
+     color:#f0c
+    }
+    20% {
+     background-color:#39f;
+     color:#9f0
+    }
+    30% {
+     background-color:#3c0;
+     color:#fff
+    }
+    40% {
+     background-color:#03f;
+     color:#f90
+    }
+    50% {
+     background-color:#9f0;
+     color:#f30
+    }
+    60% {
+     background-color:#f0c;
+     color:#fff
+    }
+    70% {
+     background-color:#0ff;
+     color:#f30
+    }
+    80% {
+     background-color:#9f0;
+     color:#066
+    }
+    90% {
+     background-color:#f90;
+     color:#03f
+    }
+    100% {
+     background-color:#03f;
+     color:#f90
+    }
+}

@@ -1,26 +1,19 @@
+@import url('http://fonts.cdnfonts.com/css/daft-font');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
 body {
-    --primary: #202124;
+    --primary: /*#202124*/ black;
     --secundary: #4F5051;
     --dark: #101012;
     --light: #8F9091;
     --white: #f8f8f2;
+    --dot: var(--white);
 
-    font-family: 'Fira Code', monospace;
-    background-color: var(--primary);
+    font-family: 'Courier Prime', monospace;
     color: var(--white);
+    background-color: var(--primary);
     overflow-x: hidden;
     text-align: center;
-}
-
-main {
-    width: min(400px, 50%);
-    padding: 5px 20px 30px 20px;
-    border-radius: 10px;
-}
-
-.block {
-    border: 4px solid var(--secundary);
-
     position: absolute;
     top: 50%;
     left: 50%;
@@ -36,6 +29,7 @@ footer {
     width: 100%;
 }
 
-.dark {
-    background-color: var(--dark);
+#text {
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
