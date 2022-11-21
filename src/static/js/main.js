@@ -13,3 +13,12 @@ function chooseRandomString() {
     var randomString = strings[Math.floor(Math.random() * strings.length)];
     document.getElementById('scroll-string').innerHTML = randomString;
 }
+
+function toggleVisibility(id) {
+    var dom = document.getElementById(id);
+    dom.hidden = !dom.hidden;
+}
+
+function sendToClipboard(text) {
+    navigator.clipboard.writeText(text);
+}

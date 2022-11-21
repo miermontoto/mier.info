@@ -1,8 +1,0 @@
-@import url("style.css");
-
-#main {
-    border: 5px solid var(--light);
-    background-color: var(--secondary);
-    width: 90%;
-    height: 90%;
-}

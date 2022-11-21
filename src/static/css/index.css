@@ -40,7 +40,7 @@ div {
     height: 7px;
 }
 
-a:hover .dot {
+a:hover .dot, span:hover .dot {
     background-color: var(--primary);
 }
 
