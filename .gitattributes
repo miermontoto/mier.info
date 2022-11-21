@@ -1,3 +1,2 @@
 *.md linguist-detectable
-_site linguist-generated
 package*.json linguist-generated

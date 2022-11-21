@@ -62,3 +62,21 @@ a:hover .dot {
         transform: translateX(-100%);
     }
 }
+
+/* projects */
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project {
+    border-radius: 10px;
+    border: 2px solid var(--light);
+    background-color: var(--dark);
+    width: 20%;
+}
+
+.project p {
+    padding: 1em;
+}
