@@ -1,6 +1,6 @@
 function chooseRandomString() {
     var strings = [
-        "still celebrating Homework 25th anniversary",
+        "still celebrating Homework 25th anniversary.",
         "the prime time of your life. now, live it.",
         "something's in the air.",
         "we are human, after all.",
