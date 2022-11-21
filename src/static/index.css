@@ -24,7 +24,6 @@ div {
 /* socials */
 #socials a {
     display: inline-block;
-    color: var(--white);
     text-decoration: none;
     font-size: 11px;
     margin-left: 5px;
@@ -50,7 +49,6 @@ a:hover .dot {
     text-align: center;
     font-weight: 1000;
     font: 1.5em 'Ndot-55';
-    transform: translateX(100%);
     animation: scroll-left 40s linear infinite;
 }
 
@@ -79,4 +77,8 @@ a:hover .dot {
 
 .project p {
     padding: 1em;
+}
+
+.project a {
+    padding-bottom: 1em;
 }

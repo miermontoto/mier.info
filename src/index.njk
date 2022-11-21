@@ -25,7 +25,10 @@ onload: "onload='chooseRandomString();'"
                 <img src="{{ project.data.img }}">
                 <p>{{ project.data.desc }}</p>
                 {% if project.data.link %}
-                    <a href="{{ project.data.link }}" target="_blank" rel="noopener noreferrer">read more.</a>
+                    <a href="{{ project.data.link }}" target="_blank" rel="noopener noreferrer">read more</a>
+                {% endif %}
+                {% if project.data.source %}
+                    <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer">source code</a>
                 {% endif %}
             </div>
         {% endfor %}
