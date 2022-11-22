@@ -82,3 +82,7 @@ a:hover .dot, span:hover .dot {
 .project p {
     margin: 1em;
 }
+
+section {
+    margin-top: 6em;
+}

@@ -16,7 +16,11 @@ function chooseRandomString() {
 
 function toggleVisibility(id) {
     var dom = document.getElementById(id);
+    var about = document.getElementById('about-section');
+    var projects = document.getElementById('project-section');
+
     dom.hidden = !dom.hidden;
+    if (dom == about) { projects.hidden = true; } else { about.hidden = true; }
 }
 
 function sendToClipboard(text) {
