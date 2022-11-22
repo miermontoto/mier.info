@@ -12,16 +12,8 @@ body {
     font-family: 'Courier Prime', monospace;
     color: var(--white);
     background-color: var(--primary);
-    overflow-x: hidden;
     text-align: center;
-}
-
-footer {
-    padding: 5px;
-    font-size: 0.75em;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    overflow-x: hidden;
 }
 
 a, a:visited {

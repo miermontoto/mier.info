@@ -9,9 +9,8 @@
 }
 
 /* main */
-#content {
-    width: 90%;
-    padding: 5%;
+#main-container {
+    margin-top: 30vh;
 }
 
 #title {
@@ -20,7 +19,7 @@
 }
 
 div {
-    margin: 1em;
+    margin-bottom: 1em;
 }
 
 
@@ -52,6 +51,7 @@ a:hover .dot, span:hover .dot {
     text-align: center;
     font-weight: 1000;
     font: 1.5em 'Ndot-55';
+    white-space: nowrap;
     animation: scroll-left 40s linear infinite;
 }
 
@@ -71,13 +71,14 @@ a:hover .dot, span:hover .dot {
     border-radius: 10px;
     border: 2px solid var(--light);
     background-color: var(--dark);
-    width: 20%;
+    width: max(20%, 300px);
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    margin: 1em;
 }
+
 
 .project p {
-    padding: 1em;
-}
-
-.project a {
-    padding-bottom: 1em;
+    margin: 1em;
 }
