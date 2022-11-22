@@ -1,5 +1,5 @@
 ---
 title: source code
-tags: ['socials']
+tags: socials
 target: https://github.com/miermontoto/miermontoto
 ---

@@ -1,60 +1,55 @@
 ---
 title: mier
 layout: base.njk
-others: <link rel='stylesheet' href='static/css/index.css'>
+others: <link rel='stylesheet' href='/static/css/index.css'>
 onload: onload='chooseRandomString();'
 ---
 
-<div id="content">
-    <div id="title">juan<br>mier</div>
-    <div class="marquee" id="scroll-string"></div>
+<div id="title">juan<br>mier</div>
+<div class="marquee" id="scroll-string"></div>
 
-    <div id="socials">
-        {% for item in collections.socials %}
-            <a href="{{ item.data.target }}" rel="noopener noreferrer">
-                <span class="dot"></span> {{ item.data.title }}
-            </a>
-        {% endfor %}
-    </div>
-
-    <div id="buttons">
-        <a class="button" onclick="toggleVisibility('project-section');">projects</a>
-        <a class="button" onclick="toggleVisibility('about-section');">about</a>
-    </div>
-
-    <br>
-    <section id="project-section" hidden>
-        <h1>projects.</h1>
-        <div id="projects">
-            {% for project in collections.projects %}
-                <div class="project">
-                    <h1>{{ project.data.title }}</h1>
-                    <img src="{{ project.data.img }}">
-                    <p>{{ project.data.desc }}</p>
-                    {% if project.data.link %}
-                        <a href="{{ project.data.link }}" target="_blank" rel="noopener noreferrer">read more</a>
-                    {% endif %}
-                    {% if project.data.source %}
-                        <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer">source code</a>
-                    {% endif %}
-                </div>
-            {% endfor %}
-        </div>
-    </section>
-
-    <section id="about-section" hidden>
-        <h1>about.</h1>
-        <div id="about">
-            <ul>
-                <li>spanish computer engineering undergraduate.</li>
-                <li>currently studying at EPI Gijón (University of Oviedo).</li>
-                <li>interested in all things tech and music.</li>
-                <li>i like climbing, cycling and playing bass.</li>
-                <li>python, java, shell and a little bit of everything else.</li>
-                <li>i take notes in markdown using <a href="https://obsidian.md" target="_blank">obsidian</a>.</li>
-            </ul>
-        </div>
-    </section>
+<div id="socials">
+    {% for item in collections.socials %}
+        <a href="{{ item.data.target }}" rel="noopener noreferrer">
+            <span class="dot"></span> {{ item.data.title }}
+        </a>
+    {% endfor %}
 </div>
 
-<!--{%include "footer.njk"%}-->
+<div id="buttons">
+    <a class="button" onclick="toggleVisibility('project-section');">projects</a>
+    <a class="button" onclick="toggleVisibility('about-section');">about</a>
+</div>
+
+<br>
+
+<section id="project-section" hidden>
+    <h1>projects.</h1>
+    <div id="projects">
+        {% for project in collections.projects %}
+            <div class="project">
+                <h1>{{ project.data.title }}</h1>
+                <img src="{{ project.data.img }}">
+                <p>{{ project.data.desc }}</p>
+                <a href="/{{ project.data.title | slug }}/" target="_blank" rel="noopener noreferrer">read more</a>
+                {% if project.data.source %}
+                    <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer">source code</a>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section id="about-section" hidden>
+    <h1>about.</h1>
+    <div id="about">
+        <ul>
+            <li>spanish computer engineering undergraduate.</li>
+            <li>currently studying at EPI Gijón (University of Oviedo).</li>
+            <li>interested in all things tech and music.</li>
+            <li>i like climbing, cycling and playing bass.</li>
+            <li>python, java, shell and a little bit of everything else.</li>
+            <li>i take notes in markdown using <a href="https://obsidian.md" target="_blank">obsidian</a>.</li>
+        </ul>
+    </div>
+</section>

@@ -1,5 +1,5 @@
 ---
 title: github
-tags: ['socials']
+tags: socials
 target: https://github.com/miermontoto
 ---

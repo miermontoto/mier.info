@@ -1,5 +1,5 @@
 ---
 title: linkedin
-tags: ['socials']
+tags: socials
 target: https://www.linkedin.com/in/miermontoto/
 ---
