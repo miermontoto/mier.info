@@ -33,7 +33,7 @@ others: <link rel='stylesheet' href='/static/css/index.css'>
                     <p>{{ project.data.desc }}</p>
 
                     <div class="project-links">
-                        <a href="/{{ project.data.title | slug }}/" target="_blank" rel="noopener noreferrer">read more</a>
+                        <a href="/{{ project.data.title | slug }}/" rel="noopener noreferrer">read more</a>
                         {% if project.data.source %}
                             <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer">source code</a>
                         {% endif %}
