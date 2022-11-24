@@ -1,8 +1,9 @@
 ---
 layout: base.njk
-title: project {{ title }}
+others: <link ref="stylesheet" href="/static/css/project.css">
 ---
 
-<h1> {{ title }} </h1>
-<br>
-{{ content | safe}}
+<body>
+    <a href="/" id="back"><< go back</a>
+    {{ content | safe }}
+</body>
