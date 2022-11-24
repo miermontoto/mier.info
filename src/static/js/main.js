@@ -9,7 +9,11 @@ function chooseRandomString() {
         "the perfect song is framed with silence.",
         "make love.",
         "and we will never be alone again.",
+        "many rooms to explore but the doors look the same.",
+        "ROCK. ROBOT ROCK.",
+        "touch it. bring it. pay it. watch it. turn it. leave it. stop. format it."
     ];
+
     var randomString = strings[Math.floor(Math.random() * strings.length)];
     document.getElementById('scroll-string').innerHTML = randomString;
 }

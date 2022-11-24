@@ -52,7 +52,7 @@ a:hover .dot, span:hover .dot {
     font-weight: 1000;
     font: 1.5em 'Ndot-55';
     white-space: nowrap;
-    animation: scroll-left 40s linear infinite;
+    animation: scroll-left 30s linear infinite;
 }
 
 @keyframes scroll-left {
