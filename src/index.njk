@@ -18,8 +18,8 @@ others: <link rel='stylesheet' href='/static/css/index.css'>
         </div>
 
         <div id="buttons">
-            <a class="button" onclick="toggleVisibility('project-section');">projects</a>
-            <a class="button" onclick="toggleVisibility('about-section');">about</a>
+            <span class="button" onclick="toggleVisibility('project-section');">projects</span>
+            <span class="button" onclick="toggleVisibility('about-section');">about</span>
         </div>
     </div>
 
@@ -46,14 +46,7 @@ others: <link rel='stylesheet' href='/static/css/index.css'>
     <section id="about-section" hidden>
         <h1>about.</h1>
         <div id="about">
-            <ul>
-                <li>spanish computer engineering undergraduate.</li>
-                <li>currently studying at EPI Gijón (University of Oviedo).</li>
-                <li>interested in all things tech and music.</li>
-                <li>i like climbing, cycling and playing bass.</li>
-                <li>python, java, shell and a little bit of everything else.</li>
-                <li>i take notes in markdown using <a href="https://obsidian.md" target="_blank">obsidian</a>.</li>
-            </ul>
+            {% renderFile "./src/content/about.md" %}
         </div>
     </section>
 </body>
