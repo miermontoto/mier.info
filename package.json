@@ -1,10 +1,11 @@
 {
   "name": "mier.info",
-  "version": "0.4.3",
+  "version": "0.4.5",
   "description": "",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "deploy": "eleventy; firebase deploy; rm -r _site"
   },
   "repository": {
     "type": "git",
