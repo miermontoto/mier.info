@@ -2,4 +2,4 @@
 
 <p align="center">
   <a href="https://mier.info">
-    <img src="https://raw.githubusercontent.com/miermontoto/miermontoto/main/media/daft.gif"/>
+    <img src="https://raw.githubusercontent.com/miermontoto/miermontoto/main/assets/media/daft.gif"/>
