@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+@font-face { /* use local font instead of using google fonts */
+    font-family: 'Courier Prime';
+    font-display: swap;
+    src: local('Courier Prime'), url('/assets/fonts/CourierPrime.woff2') format('woff2');
+}
 
 body {
     --primary: black;

@@ -26,7 +26,3 @@ function toggleVisibility(id) {
     dom.hidden = !dom.hidden;
     if (dom == about) { projects.hidden = true; } else { about.hidden = true; }
 }
-
-function sendToClipboard(text) {
-    navigator.clipboard.writeText(text);
-}
