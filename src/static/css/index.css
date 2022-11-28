@@ -1,3 +1,4 @@
+@import url("global.css");
 @font-face {
     font-family: 'Daft Font';
     font-display: swap;
@@ -55,6 +56,7 @@ a:hover .dot, span:hover .dot {
     font: 1.5em 'Ndot-55';
     white-space: nowrap;
     animation: scroll-left 30s linear infinite;
+    filter: drop-shadow(0 0 3px var(--white));
 }
 
 @keyframes scroll-left {
