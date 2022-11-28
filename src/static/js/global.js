@@ -14,17 +14,18 @@ function getChristmas() {
 }
 
 function snow() {
-    var script = document.createElement('script');    script.src = 'static/js/snow.js';
-    script.src = 'static/js/snow.js';
-    // configure snowstorm
-    script.onload = function() {
+    let script = document.createElement('script');
+    script.src = '/static/js/snow.js';
+
+    script.onload = function() { // configure snowstorm
         snowStorm.excludeMobile = false;
         snowStorm.flakesMaxActive = 128;
-        snowStorm.falkesMax = 256;
+        snowStorm.flakesMax = 256;
         snowStorm.followMouse = false;
         snowStorm.snowStick = true;
         snowStorm.vMaxX = 2;
         snowStorm.vMaxY = 3;
     }
+
     document.head.appendChild(script);
 }
