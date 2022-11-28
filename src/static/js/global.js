@@ -2,7 +2,6 @@ window.onload = christmas();
 
 function christmas() {
     if (getChristmas()) {
-        document.body.style.cursor = "url('/assets/util/xmas.png'), auto";
         snow();
     }
 }
