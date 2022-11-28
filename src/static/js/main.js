@@ -1,4 +1,9 @@
-function chooseRandomString() {
+function load() {
+    marqueeString();
+    christmas();
+}
+
+function marqueeString() {
     var strings = [
         "still celebrating Homework 25th anniversary.",
         "the prime time of your life. now, live it.",
@@ -16,6 +21,18 @@ function chooseRandomString() {
 
     var randomString = strings[Math.floor(Math.random() * strings.length)];
     document.getElementById('scroll-string').innerHTML = randomString;
+}
+
+
+
+function christmas() {
+    // get todays date
+    if (new Date().getMonth() == 10) {
+        console.log('christmas!');
+        let body = document.getElementsByTagName('body')[0];
+        body.style.cursor = "url('/assets/util/xmas.png')";
+        console.log(body.style.cursor);
+    }
 }
 
 function toggleVisibility(id) {
