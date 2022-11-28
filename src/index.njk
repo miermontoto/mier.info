@@ -28,7 +28,15 @@ others: <link rel='stylesheet' href='/static/css/index.css'>
         <div id="projects">
             {% for project in collections.projects %}
                 <div class="project">
-                    <h1>{{ project.data.title }}</h1>
+                    <h1>
+                        {% if project.data.demo %}
+                            <a href="{{ project.data.demo }}" rel="noopener noreferrer">
+                                {{ project.data.title }}
+                            </a>
+                        {% else %}
+                            {{ project.data.title }}
+                        {% endif %}
+                    </h1>
 
                     <p>{{ project.data.desc }}</p>
 
