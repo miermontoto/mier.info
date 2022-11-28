@@ -1,7 +1,4 @@
-function load() {
-    marqueeString();
-    christmas();
-}
+window.onload = marqueeString();
 
 function marqueeString() {
     var strings = [
@@ -19,26 +16,14 @@ function marqueeString() {
         "touch it. bring it. pay it. watch it. turn it. leave it. stop. format it."
     ];
 
-    var randomString = strings[Math.floor(Math.random() * strings.length)];
+    let randomString = strings[Math.floor(Math.random() * strings.length)];
     document.getElementById('scroll-string').innerHTML = randomString;
 }
 
-
-
-function christmas() {
-    // get todays date
-    if (new Date().getMonth() == 10) {
-        console.log('christmas!');
-        let body = document.getElementsByTagName('body')[0];
-        body.style.cursor = "url('/assets/util/xmas.png')";
-        console.log(body.style.cursor);
-    }
-}
-
 function toggleVisibility(id) {
-    var dom = document.getElementById(id);
-    var about = document.getElementById('about-section');
-    var projects = document.getElementById('project-section');
+    let dom = document.getElementById(id);
+    let about = document.getElementById('about-section');
+    let projects = document.getElementById('project-section');
 
     dom.hidden = !dom.hidden;
     if (dom == about) { projects.hidden = true; } else { about.hidden = true; }

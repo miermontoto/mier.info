@@ -1,11 +1,12 @@
 {
   "name": "mier.info",
-  "version": "0.4.6",
-  "description": "",
+  "version": "0.5.0",
+  "description": "personal portfolio website where i write about myself and what i've done in the past.",
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy",
-    "deploy": "eleventy; firebase deploy; rm -r _site"
+    "start": "npm run clean; eleventy --serve",
+    "build": "npm run clean; eleventy",
+    "deploy": "npm run build; firebase deploy; npm run clean",
+    "clean": "rm -r _site"
   },
   "repository": {
     "type": "git",

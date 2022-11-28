@@ -1,59 +1,58 @@
 ---
 title: mier
 layout: base.njk
-others: <link rel='stylesheet' href='/static/css/index.css'>
+css: /static/css/index.css
+js: /static/js/index.js
 ---
 
-<body onload='load();'>
-    <div id="main-container">
-        <div id="title">juan<br>mier</div>
-        <div class="marquee" id="scroll-string"></div>
+<div id="main-container">
+    <div id="title">juan<br>mier</div>
+    <div class="marquee" id="scroll-string"><noscript>js isn't enabled :')</noscript></div>
 
-        <div id="socials">
-            {% for item in collections.socials %}
-                <a href="{{ item.data.target }}" rel="noopener noreferrer">
-                    <span class="dot"></span> {{ item.data.title }}
-                </a>
-            {% endfor %}
-        </div>
-
-        <div id="buttons">
-            <span class="button" onclick="toggleVisibility('project-section');">projects</span>
-            <span class="button" onclick="toggleVisibility('about-section');">about</span>
-        </div>
+    <div id="socials">
+        {% for item in collections.socials %}
+            <a href="{{ item.data.target }}" rel="noopener noreferrer">
+                <span class="dot"></span> {{ item.data.title }}
+            </a>
+        {% endfor %}
     </div>
 
-    <section id="project-section" hidden>
-        <h1>projects.</h1>
-        <div id="projects">
-            {% for project in collections.projects %}
-                <div class="project">
-                    <h1>
-                        {% if project.data.demo %}
-                            <a href="{{ project.data.demo }}" rel="noopener noreferrer">
-                                {{ project.data.title }}
-                            </a>
-                        {% else %}
+    <div id="buttons">
+        <span class="button" onclick="toggleVisibility('project-section');">projects</span>
+        <span class="button" onclick="toggleVisibility('about-section');">about</span>
+    </div>
+</div>
+
+<section id="project-section" hidden>
+    <h1>projects.</h1>
+    <div id="projects">
+        {% for project in collections.projects %}
+            <div class="project" id="{{ project.data.title | slug }}">
+                <h1>
+                    {% if project.data.demo %}
+                        <a href="{{ project.data.demo }}" rel="noopener noreferrer">
                             {{ project.data.title }}
-                        {% endif %}
-                    </h1>
+                        </a>
+                    {% else %}
+                        {{ project.data.title }}
+                    {% endif %}
+                </h1>
 
-                    <p>{{ project.data.desc }}</p>
+                <p>{{ project.data.desc }}</p>
 
-                    <div class="project-links">
-                        <a href="/{{ project.data.title | slug }}/" rel="noopener noreferrer">read more</a>
-                        {% if project.data.source %}
-                            <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer">source code</a>
-                        {% endif %}
-                    </div>
+                <div class="project-links">
+                    <a href="/{{ project.data.title | slug }}/" rel="noopener noreferrer">read more</a>
+                    {% if project.data.source %}
+                        <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer">source code</a>
+                    {% endif %}
                 </div>
-            {% endfor %}
-        </div>
-    </section>
+            </div>
+        {% endfor %}
+    </div>
+</section>
 
-    <section id="about-section" hidden>
-        <div id="about">
-            {% renderFile "./src/content/about.md" %}
-        </div>
-    </section>
-</body>
+<section id="about-section" hidden>
+    <div id="about">
+        {% renderFile "./src/content/about.md" %}
+    </div>
+</section>
