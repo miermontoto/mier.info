@@ -65,7 +65,7 @@ a:hover .dot, span:hover .dot {
 }
 
 /* projects */
-#projects {
+.projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

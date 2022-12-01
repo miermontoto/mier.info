@@ -20,11 +20,16 @@ function marqueeString() {
     document.getElementById('scroll-string').innerHTML = randomString;
 }
 
-function toggleVisibility(id) {
+function toggleSection(id) {
     let dom = document.getElementById(id);
     let about = document.getElementById('about-section');
     let projects = document.getElementById('project-section');
 
-    dom.hidden = !dom.hidden;
+    toggleVisibility(id);
     if (dom == about) { projects.hidden = true; } else { about.hidden = true; }
+}
+
+function toggleVisibility(id) {
+    let dom = document.getElementById(id);
+    dom.hidden = !dom.hidden;
 }

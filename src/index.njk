@@ -18,17 +18,17 @@ js: /static/js/index.js
     </div>
 
     <div id="buttons">
-        <span class="button" onclick="toggleVisibility('project-section');">projects</span>
-        <span class="button" onclick="toggleVisibility('about-section');">about</span>
+        <span class="button" onclick="toggleSection('project-section');">projects</span>
+        <span class="button" onclick="toggleSection('about-section');">about</span>
     </div>
 </div>
 
 <section id="project-section" hidden>
     <h1>projects.</h1>
-    <div id="projects">
+    <div class="projects" id="general-projects">
         {% for project in collections.projects %}
             <div class="project" id="{{ project.data.title | slug }}">
-                <h1>
+                <h1 class="project-title">
                     {% if project.data.demo %}
                         <a href="{{ project.data.demo }}" rel="noopener noreferrer">
                             {{ project.data.title }}
@@ -37,9 +37,7 @@ js: /static/js/index.js
                         {{ project.data.title }}
                     {% endif %}
                 </h1>
-
-                <p>{{ project.data.desc }}</p>
-
+                <p class="project-description">{{ project.data.desc }}</p>
                 <div class="project-links">
                     <a href="/{{ project.data.title | slug }}/" rel="noopener noreferrer">read more</a>
                     {% if project.data.source %}
@@ -49,6 +47,25 @@ js: /static/js/index.js
             </div>
         {% endfor %}
     </div>
+
+    <span class="button" onclick="toggleVisibility('others-section');">show all</span>
+    <section id="others-section" hidden>
+        <h2>other projects.</h2>
+        <div id="others-section" class="projects">
+            {% for project in collections.others %}
+                <div id="{{ project.data.title | slug }}" class="project">
+                    <h1 class="project-title">{{ project.data.title }}</h1>
+                    <p class="project-description">{{ project.data.desc }}</p>
+                    <div class="project-links">
+                        {% if project.data.read %}
+                            <a href="/{{ project.data.title | slug }}" rel="noopener noreferrer">read more</a>
+                        {% endif %}
+                        <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer">source code</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
 </section>
 
 <section id="about-section" hidden>
