@@ -21,9 +21,9 @@ function snow() {
         snowStorm.flakesMaxActive = 128;
         snowStorm.flakesMax = 256;
         snowStorm.followMouse = false;
-        snowStorm.snowStick = true;
         snowStorm.vMaxX = 2;
         snowStorm.vMaxY = 3;
+        snowStorm.zIndex = -1;
     }
 
     document.head.appendChild(script);

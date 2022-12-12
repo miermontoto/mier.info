@@ -21,6 +21,15 @@ js: /static/js/index.js
         <span class="button" onclick="toggleSection('project-section');">projects</span>
         <span class="button" onclick="toggleSection('about-section');">about</span>
     </div>
+
+    <div id="affiliates">
+        <span id="affiliates-title">affiliates:</span>
+        {% for item in collections.affiliates %}
+            <a href="{{ item.data.target }}" rel="noopener noreferrer">
+                <span class="dot"></span> {{ item.data.title }}
+            </a>
+        {% endfor %}
+    </div>
 </div>
 
 <section id="project-section" hidden>
@@ -52,7 +61,7 @@ js: /static/js/index.js
     <section id="others-section" hidden>
         <h2>other projects.</h2>
         <div id="others-section" class="projects">
-            {% for project in collections.others %}
+            {% for project in collections.otherprojects %}
                 <div id="{{ project.data.title | slug }}" class="project">
                     <h1 class="project-title">{{ project.data.title }}</h1>
                     <p class="project-description">{{ project.data.desc }}</p>

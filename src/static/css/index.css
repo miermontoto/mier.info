@@ -27,12 +27,16 @@ div {
 
 
 /* socials */
-#socials a {
+#socials a, #affiliates a {
     display: inline-block;
     text-decoration: none;
     font-size: 11px;
     margin-left: 5px;
     padding: 2px 0;
+}
+
+#affiliates-title {
+    font-size: 11px;
 }
 
 .dot {
