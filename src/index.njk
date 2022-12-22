@@ -21,18 +21,9 @@ js: /static/js/index.js
         <span class="button" onclick="toggleSection('project-section');">projects</span>
         <span class="button" onclick="toggleSection('about-section');">about</span>
     </div>
-
-    <div id="affiliates">
-        <span id="affiliates-title">affiliates:</span>
-        {% for item in collections.affiliates %}
-            <a href="{{ item.data.target }}" rel="noopener noreferrer">
-                <span class="dot"></span> {{ item.data.title }}
-            </a>
-        {% endfor %}
-    </div>
 </div>
 
-<section id="project-section" hidden>
+<section id="project-section" class="sections" hidden>
     <h1>projects.</h1>
     <div class="projects" id="general-projects">
         {% for project in collections.projects %}
@@ -77,7 +68,7 @@ js: /static/js/index.js
     </section>
 </section>
 
-<section id="about-section" hidden>
+<section id="about-section" class="sections" hidden>
     <div id="about">
         {% renderFile "./src/content/about.md" %}
     </div>

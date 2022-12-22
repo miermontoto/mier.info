@@ -39,6 +39,10 @@ div {
     font-size: 11px;
 }
 
+#affiliates {
+    margin-top: 0;
+}
+
 .dot {
     vertical-align: middle;
     background-color: var(--dot);
@@ -91,6 +95,6 @@ a:hover .dot, span:hover .dot {
     margin: 1em;
 }
 
-section {
+.sections {
     margin-top: 6em;
 }
