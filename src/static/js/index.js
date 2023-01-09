@@ -29,7 +29,6 @@ window.onclick = function(event) {
     let projects = document.getElementById('projects-section');
     let about = document.getElementById('about-section');
 
-    console.log(event.target);
     if(event.target == projects || event.target == about) {
         projects.style.display = "none";
         about.style.display = "none";
