@@ -9,7 +9,7 @@ function christmas() {
 function getChristmas() {
     let date = new Date();
     let month = date.getMonth();
-    return month == 11 || month == 0 && date.getDay() < 7;
+    return month == 11 || month == 0 && date.getDate() < 7;
 }
 
 function snow() {

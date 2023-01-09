@@ -1,13 +1,4 @@
-/** @license
-
- DHTML Snowstorm! JavaScript-based snow for web pages
- Making it snow on the internets since 2003. You're welcome.
- -----------------------------------------------------------
- Version 1.44.20131208 (Previous rev: 1.44.20131125)
- Copyright (c) 2007, Scott Schiller. All rights reserved.
- Code provided under the BSD License
- http://schillmania.com/projects/snowstorm/license.txt
-*/
+//http://schillmania.com/projects/snowstorm/license.txt
 var snowStorm=function(g,f){function k(a,d){isNaN(d)&&(d=0);return Math.random()*a+d}function x(){g.setTimeout(function(){a.start(!0)},20);a.events.remove(m?f:g,"mousemove",x)}function y(){(!a.excludeMobile||!D)&&x();a.events.remove(g,"load",y)}this.excludeMobile=this.autoStart=!0;this.flakesMax=128;this.flakesMaxActive=64;this.animationInterval=33;this.useGPU=!0;this.className=null;this.excludeMobile=!0;this.flakeBottom=null;this.followMouse=!0;this.snowColor="#fff";this.snowCharacter="&bull;";this.snowStick=
 !0;this.targetElement=null;this.useMeltEffect=!0;this.usePixelPosition=this.usePositionFixed=this.useTwinkleEffect=!1;this.freezeOnBlur=!0;this.flakeRightOffset=this.flakeLeftOffset=0;this.flakeHeight=this.flakeWidth=8;this.vMaxX=5;this.vMaxY=4;this.zIndex=0;var a=this,q,m=navigator.userAgent.match(/msie/i),E=navigator.userAgent.match(/msie 6/i),D=navigator.userAgent.match(/mobile|opera m(ob|in)/i),r=m&&"BackCompat"===f.compatMode||E,h=null,n=null,l=null,p=null,s=null,z=null,A=null,v=1,t=!1,w=!1,
 u;a:{try{f.createElement("div").style.opacity="0.5"}catch(F){u=!1;break a}u=!0}var B=!1,C=f.createDocumentFragment();q=function(){function c(b){g.setTimeout(b,1E3/(a.animationInterval||20))}function d(a){return void 0!==h.style[a]?a:null}var e,b=g.requestAnimationFrame||g.webkitRequestAnimationFrame||g.mozRequestAnimationFrame||g.oRequestAnimationFrame||g.msRequestAnimationFrame||c;e=b?function(){return b.apply(g,arguments)}:null;var h;h=f.createElement("div");e={transform:{ie:d("-ms-transform"),
