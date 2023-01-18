@@ -39,7 +39,6 @@ js: /static/js/index.js
                 </h1>
                 <p class="project-description">{{ project.data.desc }}</p>
                 <div class="project-links">
-                    <a href="/{{ project.data.title | slug }}/" rel="noopener noreferrer">read more</a>
                     {% if project.data.source %}
                         <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer">source code</a>
                     {% endif %}
@@ -57,10 +56,9 @@ js: /static/js/index.js
                     <h1 class="project-title">{{ project.data.title }}</h1>
                     <p class="project-description">{{ project.data.desc }}</p>
                     <div class="project-links">
-                        {% if project.data.read %}
-                            <a href="/{{ project.data.title | slug }}" rel="noopener noreferrer">read more</a>
+                        {% if project.data.source %}
+                            <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer">source code</a>
                         {% endif %}
-                        <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer">source code</a>
                     </div>
                 </div>
             {% endfor %}
