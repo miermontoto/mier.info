@@ -19,12 +19,12 @@
 #title {
     font-family: 'Daft Font', cursive;
     font-size: 3em;
+    user-select: none;
 }
 
 div {
     margin-bottom: 1em;
 }
-
 
 /* socials */
 #socials a, #affiliates a {
@@ -33,14 +33,11 @@ div {
     font-size: 11px;
     margin-left: 5px;
     padding: 2px 0;
+    user-select: none;
 }
 
-#affiliates-title {
-    font-size: 11px;
-}
-
-#affiliates {
-    margin-top: 0;
+#socials {
+    user-select: none;
 }
 
 .dot {
@@ -58,7 +55,7 @@ a:hover .dot, span:hover .dot {
 }
 
 /* marquee */
-.marquee {
+#marquee {
     text-align: center;
     font-weight: 1000;
     font: 1.5em 'Ndot-55';
@@ -97,4 +94,9 @@ a:hover .dot, span:hover .dot {
 
 .sections {
     margin-top: 6em;
+}
+
+ul {
+    display: inline-block;
+    text-align: left;
 }

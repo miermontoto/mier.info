@@ -17,7 +17,7 @@ function marqueeString() {
     ];
 
     let randomString = strings[Math.floor(Math.random() * strings.length)];
-    document.getElementById('scroll-string').innerHTML = randomString;
+    document.getElementById('marquee').innerHTML = randomString;
 }
 
 function toggleSection(id) {
