@@ -1,3 +1,25 @@
 #back {
     position: static;
 }
+
+* {
+    text-align: left;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+}
+
+h2, h3 {
+    margin-top: 3em;
+}
+
+h1 {
+    margin-top: 1em;
+}
