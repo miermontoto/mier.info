@@ -20,19 +20,13 @@ function marqueeString() {
     document.getElementById('scroll-string').innerHTML = randomString;
 }
 
-function showSection(target) {
-    var section = document.getElementById(target);
-    section.style.display = "block";
-}
-
-window.onclick = function(event) {
-    let projects = document.getElementById('projects-section');
+function toggleSection(id) {
+    let dom = document.getElementById(id);
     let about = document.getElementById('about-section');
+    let projects = document.getElementById('project-section');
 
-    if(event.target == projects || event.target == about) {
-        projects.style.display = "none";
-        about.style.display = "none";
-    }
+    toggleVisibility(id);
+    if (dom == about) { projects.hidden = true; } else { about.hidden = true; }
 }
 
 function toggleVisibility(id) {
