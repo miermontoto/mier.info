@@ -27,6 +27,8 @@ function toggleSection(id) {
 
     toggleVisibility(id);
     if (dom == about) { projects.hidden = true; } else { about.hidden = true; }
+    document.getElementById('about-button').style.animation = about.hidden ? '' : 'MULTICOLOR 1s infinite';
+    document.getElementById('project-button').style.animation = projects.hidden ? '' : 'MULTICOLOR 1s infinite';
 }
 
 function toggleVisibility(id) {
