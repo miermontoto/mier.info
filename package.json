@@ -6,7 +6,9 @@
     "start": "npm run clean; eleventy --serve",
     "build": "npm run clean; eleventy",
     "deploy": "npm run build; firebase deploy; npm run clean",
-    "clean": "rm -r _site"
+    "clean": "rm -r _site",
+    "test": "npm run build; firebase serve",
+    "beta": "npm run build; firebase hosting:channel:deploy beta"
   },
   "repository": {
     "type": "git",
