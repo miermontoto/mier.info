@@ -27,7 +27,7 @@
   ],
   "author": "Juan Mier",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.2"
+    "@11ty/eleventy": "^2.0.0"
   },
   "dependencies": {
     "npm": "^8.19.2"
