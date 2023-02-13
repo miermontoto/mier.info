@@ -67,15 +67,15 @@ para descargar todos los repositorios, usar el siguiente comando en una terminal
 - [Teoremas y Paradigmas de la Programación](https://github.com/miermontoto/TPP) *(examen propio funcional + exámenes propios PL)*
 - [Sistemas Operativos](https://github.com/miermontoto/Operativos) *(mútliples exámenes filtrados de academias, PLs completas)*
 
-## y3t1 (ongoing)
+## y3t1
 - [Administración de Sistemas](https://github.com/miermontoto/Admin)
-- [Configuración y Evaluación de Sistemas](https://github.com/miermontoto/CES)
+- [Configuración y Evaluación de Sistemas](https://github.com/miermontoto/CES) *(plantilla excel para examen, examen final propio)*
   - ["benchmarkInjector", primera parte de PL](https://github.com/miermontoto/benchmarkInjector)
-- [Ingeniería del Software](https://github.com/miermontoto/ISoft)
-- [Programación Concurrente y Paralela](https://github.com/miermontoto/PCP)
-- [Redes de Computadores](https://github.com/miermontoto/Redes)
+- [Ingeniería del Software](https://github.com/miermontoto/ISoft) *(PLs completas, PAs completas)*
+- [Programación Concurrente y Paralela](https://github.com/miermontoto/PCP) *(PLs completas)*
+- [Redes de Computadores](https://github.com/miermontoto/Redes) *(entregables corregidos, examen final propio de PL)*
 
-## y3t2 (new!)
+## y3t2 (ongoing)
 - [Infraestructura Informática](https://github.com/miermontoto/Infraestructura)
 - [Ingeniería de Redes](https://github.com/miermontoto/IngRedes)
 - [Sistemas de Información](https://github.com/miermontoto/SI)
