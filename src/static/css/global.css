@@ -63,3 +63,14 @@ code {
 .unavailable {
     color: var(--light);
 }
+
+div#browser-info {
+    color: rgba(255, 255, 255, 0.1);
+    font-size: 28px;
+    line-height: 40px;
+    position: fixed;
+    top: 200px;
+    left: 20px;
+    z-index: -1;
+    text-align: left;
+}

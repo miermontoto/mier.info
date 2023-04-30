@@ -57,8 +57,7 @@ a:hover .dot, span:hover .dot {
 /* marquee */
 #marquee {
     text-align: center;
-    font-weight: 1000;
-    font: 1.5em 'Ndot-55';
+    font: 500 1.5em 'Ndot-55', sans-serif;
     white-space: nowrap;
     animation: scroll-left 30s linear infinite;
     filter: drop-shadow(0 0 3px var(--white));

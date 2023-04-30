@@ -8,6 +8,7 @@
 
 h1 {
     text-align: center;
+    margin-top: 1em;
 }
 
 body {
@@ -18,10 +19,6 @@ body {
 
 h2, h3 {
     margin-top: 3em;
-}
-
-h1 {
-    margin-top: 1em;
 }
 
 #subjects a {

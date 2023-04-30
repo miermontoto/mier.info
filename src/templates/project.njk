@@ -4,8 +4,10 @@ css: /static/css/project.css
 ---
 
 <a href="/" id="back">< go back</a>
-<span id="sep"> | </span>
-<a href="{{ source }}" id="source">source code ></a>
+{% if source %}
+    <span id="sep"> | </span>
+    <a href="{{ source }}" id="source">source code ></a>
+{% endif %}
 <h1>{{ title }}</h1>
 {% if content %}
     {{ content | safe }}
