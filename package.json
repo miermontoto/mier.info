@@ -1,12 +1,12 @@
 {
   "name": "mier.info",
-  "version": "0.11.0",
+  "version": "0.11.1",
   "description": "personal portfolio website where i write about myself and my projects.",
   "scripts": {
     "start": "npm run clean; eleventy --serve",
     "build": "npm run clean; eleventy",
     "deploy": "npm run build; firebase deploy; npm run clean",
-    "clean": "rm -r _site",
+    "clean": "rm -rf _site",
     "test": "npm run build; firebase serve",
     "beta": "npm run build; firebase hosting:channel:deploy beta"
   },
