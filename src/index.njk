@@ -5,6 +5,9 @@ css: /static/css/index.css
 js: /static/js/index.js
 ---
 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
 <div id="main-container">
     <div id="title">juan<br>mier</div>
     <div id="marquee"><noscript>js isn't enabled :')</noscript></div>
@@ -18,56 +21,35 @@ js: /static/js/index.js
     </div>
 
     <div id="buttons">
-        <span class="button" id="project-button" onclick="toggleSection('project-section');">projects</span>
-        <span class="button" id="about-button" onclick="toggleSection('about-section');">about</span>
+        <span class="button" id="project-button">projects</span>
+        <span class="button" id="about-button">about</span>
     </div>
+
 </div>
 
-<section id="project-section" class="sections" hidden>
+{% import "src/macros.njk" as macros %}
+
+<section id="project-section" class="section">
     <h1>projects.</h1>
     <div class="projects" id="general-projects">
         {% for project in collections.projects %}
-            <div class="project" id="{{ project.data.title | slug }}">
-                <h1 class="project-title">
-                    {% if project.data.demo %}
-                        <a href="{{ project.data.demo }}" rel="noopener noreferrer">
-                            {{ project.data.title }}
-                        </a>
-                    {% else %}
-                        {{ project.data.title }}
-                    {% endif %}
-                </h1>
-                <p class="project-description">{{ project.data.desc }}</p>
-                <div class="project-links">
-                    {% if project.data.source %}
-                        <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer">source code</a>
-                    {% endif %}
-                </div>
-            </div>
+            {{ macros.renderProject(project) }}
         {% endfor %}
     </div>
 
-    <span class="button" onclick="toggleVisibility('others-section');">show all</span>
-    <section id="others-section" hidden>
+    <span class="button" id="others-button">show all</span>
+    <section id="others-section" class="section">
         <h2>other projects.</h2>
         <div id="others-section" class="projects">
             {% for project in collections.otherprojects %}
-                <div id="{{ project.data.title | slug }}" class="project">
-                    <h1 class="project-title">{{ project.data.title }}</h1>
-                    <p class="project-description">{{ project.data.desc }}</p>
-                    <div class="project-links">
-                        {% if project.data.source %}
-                            <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer">source code</a>
-                        {% endif %}
-                    </div>
-                </div>
+                {{ macros.renderProject(project) }}
             {% endfor %}
         </div>
     </section>
 </section>
 
-<section id="about-section" class="sections" hidden>
-    <div id="about">
+<section id="about-section" class="section">
+    <div id="about" class="card">
         {% renderFile "./src/content/about.md" %}
     </div>
 </section>

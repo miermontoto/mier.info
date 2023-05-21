@@ -1,11 +1,15 @@
 ---
 title: epiCalendar
-tags: projects
 desc: web (and python) app that downloads your personal University of Oviedo calendar in ICS or CSV format.
 source: https://github.com/miermontoto/epiCalendar
+info: "/epiCalendar"
 demo: https://epicalendar.mier.info
 permalink: /epiCalendar/
+icons: [flask-original, python-plain, react-plain]
+date: 1800-01-01
 ---
+
+# [\[enlace\]](https://epicalendar.mier.info)
 
 ## JSESSION tutorial
 1. Inicia sesión en el [SIES](https://sies.uniovi.es/serviciosacademicos/) con tu cuenta.

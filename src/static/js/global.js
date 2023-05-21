@@ -38,7 +38,7 @@ function getAgent() {
     let wInfo = document.getElementById('window-info');
     wInfo.innerHTML = '<br>' + window.screen.width + 'x' + window.screen.height; // get window size
     wInfo.innerHTML += ', ' + window.innerWidth + 'px ' + window.innerHeight + 'px'; // get window size
-    wInfo.innerHTML += ', ' + window.pageYOffset + 'px,';
+    wInfo.innerHTML += ', ' + window.scrollY + 'px,';
 }
 
 function reloadInfo(event) {

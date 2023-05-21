@@ -1,6 +1,6 @@
 ---
 title: mier.info
-tags: projects
-desc: my portfolio website. built with Eleventy and Nunjucks, hosted on Firebase.
+desc: my personal portfolio, the very website you are looking at right now.
 source: https://github.com/miermontoto/miermontoto
+icons: [eleventy-plain, markdown-original, firebase-plain]
 ---

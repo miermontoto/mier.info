@@ -1,0 +1,8 @@
+:root {
+	--primary: hsl(0, 0%, 1%);
+	--secondary: hsl(0, 0%, 5%);
+	--light: hsl(0, 0%, 50%);
+	--white: hsl(0, 0%, 90%);
+	--link: var(--white);
+	--dot: var(--white);
+  }

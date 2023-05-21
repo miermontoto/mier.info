@@ -1,4 +1,5 @@
 @import url("global.css");
+@import url("https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css");
 @font-face {
     font-family: 'Daft Font';
     font-display: swap;
@@ -14,6 +15,7 @@
 /* main */
 #main-container {
     margin-top: 30vh;
+    overflow: hidden;
 }
 
 #title {
@@ -24,6 +26,41 @@
 
 div {
     margin-bottom: 1em;
+}
+
+ul {
+    display: inline-block;
+    text-align: left;
+}
+
+/* sections */
+.section {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.section.active {
+    opacity: 1;
+    max-height: 9999em;
+}
+
+.card {
+    border-radius: 10px;
+    border: 2px solid var(--light);
+    background-color: var(--secondary);
+    margin: 1em;
+    display: inline-block;
+    padding: 1em;
+}
+
+#about ul {
+    margin-right: 1.25em;
+}
+
+.sections {
+    margin-top: 5em;
 }
 
 /* socials */
@@ -61,6 +98,12 @@ a:hover .dot, span:hover .dot {
     white-space: nowrap;
     animation: scroll-left 30s linear infinite;
     filter: drop-shadow(0 0 3px var(--white));
+    user-select: none;
+    font-style: italic;
+}
+
+#marquee-container {
+    width: 100%;
 }
 
 @keyframes scroll-left {
@@ -76,26 +119,43 @@ a:hover .dot, span:hover .dot {
 }
 
 .project {
-    border-radius: 10px;
-    border: 2px solid var(--light);
-    background-color: var(--dark);
     width: max(20%, 300px);
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     align-items: center;
-    margin: 1em;
 }
 
+#others-section .project {
+    width: max(12%, 200px);
+    aspect-ratio: 1/1;
+}
 
 .project p {
     margin: 1em;
 }
 
-.sections {
-    margin-top: 6em;
+.project-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-ul {
-    display: inline-block;
-    text-align: left;
+.project-icons {
+    margin-left: 10px;
+    border-left: 1px solid var(--white);
+    padding-left: 10px;
+}
+
+.project-icons:empty {
+    display: none;
+    width: 0;
+}
+
+.project-links {
+    margin-right: 5px;
+}
+
+.icon {
+    margin: 0 5px;
+    font-size: 1.5em;
 }

@@ -1,3 +1,5 @@
+@import url('variables.css');
+
 @font-face {
     font-family: 'Courier Prime';
     font-display: swap;
@@ -5,19 +7,12 @@
 }
 
 body {
-    --primary: black;
-    --secundary: #4F5051;
-    --dark: #101012;
-    --light: #8F9091;
-    --white: #f8f8f2;
-    --link: var(--white);
-    --dot: var(--white);
-
     font-family: 'Courier Prime', monospace;
     color: var(--white);
     background-color: var(--primary);
     text-align: center;
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 a, a:visited {
@@ -34,28 +29,28 @@ a, a:visited {
     user-select: none;
 }
 
-.button:hover {
+.button:hover, .button.active {
     animation: MULTICOLOR 1s infinite;
     cursor: pointer;
 }
 
 @keyframes MULTICOLOR {
-    0% { background-color:#9f0; color:#f3c; }
-    10% { background-color:#6ff; color:#f0c; }
-    20% { background-color:#39f; color:#9f0; }
-    30% { background-color:#3c0; color:#fff; }
-    40% { background-color:#03f; color:#f90; }
-    50% { background-color:#9f0; color:#f30; }
-    60% { background-color:#f0c; color:#fff; }
-    70% { background-color:#0ff; color:#f30; }
-    80% { background-color:#9f0; color:#066; }
-    90% { background-color:#f90; color:#03f; }
+    0%   { background-color:#9f0; color:#f3c; }
+    10%  { background-color:#6ff; color:#f0c; }
+    20%  { background-color:#39f; color:#9f0; }
+    30%  { background-color:#3c0; color:#fff; }
+    40%  { background-color:#03f; color:#f90; }
+    50%  { background-color:#9f0; color:#f30; }
+    60%  { background-color:#f0c; color:#fff; }
+    70%  { background-color:#0ff; color:#f30; }
+    80%  { background-color:#9f0; color:#066; }
+    90%  { background-color:#f90; color:#03f; }
     100% { background-color:#03f; color:#f90; }
 }
 
 code {
     color: var(--white);
-    background-color: var(--dark);
+    background-color: var(--secondary);
     padding: 0 5px;
     border-radius: 5px;
 }
@@ -64,7 +59,7 @@ code {
     color: var(--light);
 }
 
-div#browser-info {
+#browser-info {
     color: rgba(255, 255, 255, 0.1);
     font-size: 28px;
     line-height: 40px;
@@ -73,4 +68,9 @@ div#browser-info {
     left: 20px;
     z-index: -1;
     text-align: left;
+    user-select: none;
+}
+
+#browser-info span {
+    user-select: none;
 }

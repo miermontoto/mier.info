@@ -1,0 +1,30 @@
+{% macro renderProject(project) %}
+    <div class="project card" id="{{ project.data.title | slug }}">
+        <h1 class="project-title">
+            {% if project.data.demo %}
+                <a href="{{ project.data.demo }}" rel="noopener noreferrer">
+                    {{ project.data.title}}
+                </a>
+            {% else %}
+                {{ project.data.title}}
+            {% endif %}
+        </h1>
+        <p class="project-description">{{ project.data.desc }}</p>
+        <div class="project-bottom">
+            <div class="project-links">
+                {% if project.data.source %}
+                    <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer">source code</a>
+                {% endif %}
+                {% if project.data.info %}
+                    <br>
+                    <a href="{{ project.data.info }}" target="_blank" rel="noopener noreferrer">read more</a>
+                {% endif %}
+            </div>
+            <div class="project-icons">
+                {% for icon in project.data.icons %}
+                    <i class="devicon-{{ icon | slug }} icon"></i>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endmacro %}
