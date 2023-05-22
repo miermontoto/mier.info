@@ -1,3 +1,13 @@
+---
+permalink: false
+---
+
+{% macro renderProjects(projects) %}
+    {% for project in projects %}
+        {{ renderProject(project) }}
+    {% endfor %}
+{% endmacro %}
+
 {% macro renderProject(project) %}
     <div class="project card" id="{{ project.data.title | slug }}">
         <h1 class="project-title">

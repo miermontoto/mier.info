@@ -6,7 +6,7 @@ js: /static/js/index.js
 ---
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" media>
 
 <div id="main-container">
     <div id="title">juan<br>mier</div>
@@ -27,23 +27,19 @@ js: /static/js/index.js
 
 </div>
 
-{% import "src/macros.njk" as macros %}
+{% import "src/static/macros.njk" as macros %}
 
 <section id="project-section" class="section">
     <h1>projects.</h1>
     <div class="projects" id="general-projects">
-        {% for project in collections.projects %}
-            {{ macros.renderProject(project) }}
-        {% endfor %}
+        {{ macros.renderProjects(collections.projects) }}
     </div>
 
     <span class="button" id="others-button">show all</span>
     <section id="others-section" class="section">
         <h2>other projects.</h2>
         <div id="others-section" class="projects">
-            {% for project in collections.otherprojects %}
-                {{ macros.renderProject(project) }}
-            {% endfor %}
+            {{ macros.renderProjects(collections.otherprojects) }}
         </div>
     </section>
 </section>

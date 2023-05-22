@@ -102,10 +102,6 @@ a:hover .dot, span:hover .dot {
     font-style: italic;
 }
 
-#marquee-container {
-    width: 100%;
-}
-
 @keyframes scroll-left {
     0% {transform: translateX(100%);}
     100% {transform: translateX(-100%);}
@@ -138,17 +134,13 @@ a:hover .dot, span:hover .dot {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%; /* add this line to make sure the container takes up the full height */
 }
 
-.project-icons {
-    margin-left: 10px;
-    border-left: 1px solid var(--white);
-    padding-left: 10px;
-}
-
-.project-icons:empty {
-    display: none;
-    width: 0;
+.project-links {
+    margin-right: 10px;
+    border-right: 1px solid var(--white);
+    padding-right: 10px;
 }
 
 .project-links {
