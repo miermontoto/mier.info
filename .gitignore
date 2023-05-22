@@ -3,3 +3,4 @@ node_modules
 _site
 .firebase
 target
+firebase-debug.log

@@ -4,6 +4,14 @@ getTime();
 setInterval(getTime, 1000);
 addEventListener('mousemove', reloadInfo);
 
+// print npm package version
+fetch('/package.json')
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('version-tag').innerHTML = data.version;
+    })
+    .catch(error => console.error(error));
+
 function christmas() {
     if (getChristmas()) {
         snow();

@@ -98,7 +98,6 @@ a:hover .dot, span:hover .dot {
     white-space: nowrap;
     animation: scroll-left 30s linear infinite;
     filter: drop-shadow(0 0 3px var(--white));
-    user-select: none;
     font-style: italic;
 }
 
@@ -140,11 +139,7 @@ a:hover .dot, span:hover .dot {
 .project-links {
     margin-right: 10px;
     border-right: 1px solid var(--white);
-    padding-right: 10px;
-}
-
-.project-links {
-    margin-right: 5px;
+    padding-right: 15px;
 }
 
 .icon {

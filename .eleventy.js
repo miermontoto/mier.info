@@ -7,6 +7,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/content/**");
     eleventyConfig.addPassthroughCopy("./assets/**");
     eleventyConfig.addPassthroughCopy("./src/files/**");
+    eleventyConfig.addPassthroughCopy("./package.json");
 
     return {
         dir: {
