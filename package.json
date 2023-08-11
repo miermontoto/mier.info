@@ -30,6 +30,6 @@
 		"@11ty/eleventy": "^2.0.0"
 	},
 	"dependencies": {
-		"npm": "^8.19.2"
+		"npm": "^9.8.0"
 	}
 }
