@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Courier Prime';
     font-display: swap;
-    src: local('Courier Prime'), url('https://mier.info/assets/fonts/CourierPrime.woff2') format('woff2');
+    src: local('Courier Prime');
 }
 
 :root {
