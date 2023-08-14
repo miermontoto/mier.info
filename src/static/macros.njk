@@ -19,7 +19,15 @@ permalink: false
                 {{ project.data.title}}
             {% endif %}
         </h1>
-        <p class="project-description">{{ project.data.desc }}</p>
+        <p class="project-description">
+            {{ project.data.desc }}
+            {% if project.data.status %}
+                <br>
+                <a href="https://dashboard.mier.info" target="_blank" rel="noopener noreferrer" class="status-link">
+                    <img src="{{ project.data.status }}" alt="status" class="status">
+                </a>
+            {% endif %}
+        </p>
         <div class="project-bottom">
             <div class="project-links">
                 {% if project.data.source %}

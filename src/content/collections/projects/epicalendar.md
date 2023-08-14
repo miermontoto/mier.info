@@ -7,6 +7,7 @@ demo: https://epicalendar.mier.info
 permalink: /epiCalendar/
 icons: [flask-original, python-plain, react-plain]
 date: 1800-01-01
+status: https://dashboard.mier.info/api/badge/2/status?style=flat-square
 ---
 
 # [\[enlace\]](https://epicalendar.mier.info)

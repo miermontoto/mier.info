@@ -146,3 +146,7 @@ a:hover .dot, span:hover .dot {
     margin: 0 5px;
     font-size: 1.5em;
 }
+
+.status {
+    margin-top: 1em;
+}
