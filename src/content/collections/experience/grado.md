@@ -2,7 +2,7 @@
 name: universidad de oviedo
 role: computer engineering degree
 period: 2020-2024 (expected)
-logo: https://epigijon.uniovi.es/image/image_gallery?uuid=3b02cb65-16b8-475e-a93e-1c5c9694a839&groupId=3743853&t=1688577436550
+logo: ./assets/logos/epi.png
 ---
 
 **grades:** 3.0 GPA, 12 honors

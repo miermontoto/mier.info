@@ -2,7 +2,7 @@
 name: okticket
 role: software engineer, intership
 period: 2023 (3 months)
-logo: https://uploads-ssl.webflow.com/64746813101c81b742de50ab/6475be7c8ab9ea3bafebdba8_webclip.png
+logo: ./assets/logos/okticket.png
 icons: [fa-brands fa-laravel fa-solid, fa-brands fa-php, fa-brands fa-docker, devicon-ruby-plain]
 ---
 extracurricular internship at *okticket*, a Fintech SaaS that digitizes and manages employee tickets.
