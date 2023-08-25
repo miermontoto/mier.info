@@ -1,4 +1,3 @@
-# about.
 - spanish computer engineering undergraduate.
 - currently studying at EPI Gijón (University of Oviedo).
 - interested in all things tech and music.

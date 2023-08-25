@@ -5,7 +5,7 @@ source: https://github.com/miermontoto/epiCalendar
 info: "/epiCalendar"
 demo: https://epicalendar.mier.info
 permalink: /epiCalendar/
-icons: [flask-original, python-plain, react-plain]
+icons: [devicon-flask-original, devicon-python-plain, devicon-react-plain]
 date: 1800-01-01
 status: https://dashboard.mier.info/api/badge/2/status?style=flat-square
 ---

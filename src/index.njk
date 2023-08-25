@@ -7,6 +7,8 @@ js: /static/js/index.js
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" media>
+<script src="https://kit.fontawesome.com/a73ee9bbfb.js" crossorigin="anonymous"></script>
+
 
 <div id="main-container">
     <div id="title">juan<br>mier</div>
@@ -31,21 +33,31 @@ js: /static/js/index.js
 
 <section id="project-section" class="section">
     <h1>projects.</h1>
-    <div class="projects" id="general-projects">
+    <div class="carded" id="general-projects">
         {{ macros.renderProjects(collections.projects) }}
     </div>
 
     <span class="button" id="others-button">show all</span>
     <section id="others-section" class="section">
         <h2>other projects.</h2>
-        <div id="others-section" class="projects">
+        <div id="others-section" class="carded">
             {{ macros.renderProjects(collections.otherprojects) }}
         </div>
     </section>
 </section>
 
 <section id="about-section" class="section">
-    <div id="about" class="card">
-        {% renderFile "./src/content/about.md" %}
+    <div id="experience-container">
+        <h1>experience.</h1>
+        <div id="experience" class="carded">
+            {{ macros.renderExperiences(collections.experience) }}
+        </div>
+    </div>
+
+    <div id="about-container">
+        <h1>about.</h1>
+        <div id="about" class="model">
+            {% renderFile "./src/content/about.md" %}
+        </div>
     </div>
 </section>

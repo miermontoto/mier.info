@@ -2,6 +2,12 @@
 permalink: false
 ---
 
+{% macro renderIcons(icons) %}
+    {% for icon in icons %}
+        <i class="{{ icon }} icon"></i>
+    {% endfor %}
+{% endmacro %}
+
 {% macro renderProjects(projects) %}
     {% for project in projects %}
         {{ renderProject(project) }}
@@ -9,17 +15,17 @@ permalink: false
 {% endmacro %}
 
 {% macro renderProject(project) %}
-    <div class="project card" id="{{ project.data.title | slug }}">
-        <h1 class="project-title">
+    <div class="model card" id="{{ project.data.title | slug }}">
+        <h1 class="card-title">
             {% if project.data.demo %}
                 <a href="{{ project.data.demo }}" rel="noopener noreferrer">
                     {{ project.data.title}}
                 </a>
             {% else %}
-                {{ project.data.title}}
+                {{ project.data.title }}
             {% endif %}
         </h1>
-        <p class="project-description">
+        <p class="card-description">
             {{ project.data.desc }}
             {% if project.data.status %}
                 <br>
@@ -28,8 +34,8 @@ permalink: false
                 </a>
             {% endif %}
         </p>
-        <div class="project-bottom">
-            <div class="project-links">
+        <div class="card-bottom">
+            <div class="card-links">
                 {% if project.data.source %}
                     <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer">source code</a>
                 {% endif %}
@@ -38,11 +44,45 @@ permalink: false
                     <a href="{{ project.data.info }}" target="_blank" rel="noopener noreferrer">read more</a>
                 {% endif %}
             </div>
-            <div class="project-icons">
-                {% for icon in project.data.icons %}
-                    <i class="devicon-{{ icon | slug }} icon"></i>
-                {% endfor %}
+            <div class="card-icons">
+                {{ renderIcons(project.data.icons) }}
             </div>
         </div>
+    </div>
+{% endmacro %}
+
+{% macro renderExperiences(experiences) %}
+    {% for experience in experiences %}
+        {{ renderExperience(experience) }}
+    {% endfor %}
+{% endmacro %}
+
+{% macro renderExperience(experience) %}
+    <div class="model card" id="{{ experience.data.name | slug }}">
+        <div class="card-title-col">
+            <h1 class="card-title">
+                {% if experience.data.logo %}
+                    <img src="{{ experience.data.logo }}" class="experience-logo">
+                {% endif %}
+                {{ experience.data.name }}
+            </h1>
+            {% if experience.data.role %}
+                <b>{{ experience.data.role }}</b>
+            {% endif %}
+            {% if experience.data.period %}
+                <br>
+                <i>{{ experience.data.period }}</i>
+            {% endif %}
+        </div>
+        <div class="card-description">
+            {{ experience.content | safe }}
+        </div>
+        {% if experience.data.icons %}
+            <div class="card-bottom">
+                <div class="card-icons">
+                    {{ renderIcons(experience.data.icons) }}
+                </div>
+            </div>
+        {% endif %}
     </div>
 {% endmacro %}

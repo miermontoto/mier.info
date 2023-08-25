@@ -46,7 +46,7 @@ ul {
     max-height: 9999em;
 }
 
-.card {
+.model {
     border-radius: 10px;
     border: 2px solid var(--light);
     background-color: var(--secondary);
@@ -57,6 +57,10 @@ ul {
 
 #about ul {
     margin-right: 1.25em;
+}
+
+#about {
+    line-height: 1.5em;
 }
 
 .sections {
@@ -107,36 +111,36 @@ a:hover .dot, span:hover .dot {
 }
 
 /* projects */
-.projects {
+.carded {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.project {
+.card {
     width: max(20%, 300px);
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
     align-items: center;
 }
 
-#others-section .project {
+#others-section .card {
     width: max(12%, 200px);
     aspect-ratio: 1/1;
 }
 
-.project p {
+.card p {
     margin: 1em;
 }
 
-.project-bottom {
+.card-bottom {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%; /* add this line to make sure the container takes up the full height */
 }
 
-.project-links {
+.card-links {
     margin-right: 10px;
     border-right: 1px solid var(--white);
     padding-right: 15px;
@@ -149,4 +153,22 @@ a:hover .dot, span:hover .dot {
 
 .status {
     margin-top: 1em;
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.experience-logo {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.5em;
+    border-radius: 5%;
+    user-select: none;
+}
+
+.card-icons {
+    user-select: none;
 }

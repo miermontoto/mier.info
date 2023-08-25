@@ -2,5 +2,5 @@
 title: Advent of Code
 desc: resolution of the Advent of Code challenges.
 source: https://github.com/miermontoto/AdventOfCode
-icons: [ruby-plain]
+icons: [devicon-ruby-plain]
 ---
