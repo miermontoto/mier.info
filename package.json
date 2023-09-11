@@ -1,6 +1,6 @@
 {
 	"name": "mier.info",
-	"version": "0.14.3",
+	"version": "0.14.4",
 	"description": "personal portfolio website where i write about myself and my projects.",
 	"scripts": {
 		"start": "npm run clean; eleventy --serve",
