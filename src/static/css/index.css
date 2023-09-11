@@ -125,7 +125,7 @@ a:hover .dot, span:hover .dot {
 }
 
 #others-section .card {
-    width: max(12%, 200px);
+    width: max(15%, 200px);
     aspect-ratio: 1/1;
 }
 
