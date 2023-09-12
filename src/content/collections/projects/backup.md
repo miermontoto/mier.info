@@ -76,11 +76,19 @@ para descargar todos los repositorios, usar el siguiente comando en una terminal
 - [Programación Concurrente y Paralela](https://github.com/miermontoto/PCP) *(PLs completas)*
 - [Redes de Computadores](https://github.com/miermontoto/Redes) *(entregables corregidos, examen final propio de PL)*
 
-## y3t2 (ongoing)
-- [Infraestructura Informática](https://github.com/miermontoto/Infraestructura)
-- [Ingeniería de Redes](https://github.com/miermontoto/IngRedes)
-- [Sistemas de Información](https://github.com/miermontoto/SI)
-- [Sistemas Distribuidos](https://github.com/miermontoto/Distribuidos)
-- [Sistemas Inteligentes](https://github.com/miermontoto/Inteligentes)
+## y3t2
+- [Infraestructura Informática](https://github.com/miermontoto/Infraestructura) *PLs completas con scripts, temario completado con definiciones*
+- [Ingeniería de Redes](https://github.com/miermontoto/IngRedes) *escenario final completo, apuntes sobre PLs*
+- [Sistemas de Información](https://github.com/miermontoto/SI) **(falta contenido de PA y PL)**
+  - ["SI2022-PL41", trabajo en grupo](https://github.com/miermontoto/SI2022-PL41)
+- [Sistemas Distribuidos](https://github.com/miermontoto/Distribuidos) *trabajos de PL completos*
+- [Sistemas Inteligentes](https://github.com/miermontoto/Inteligentes) **(falta contenido de PL)**
+
+## y4t1
+- [Gestión de Tecnologías de la Información](https://github.com/miermontoto/GTI)
+- [Ingeniería de Servicios](https://github.com/miermontoto/Servicios)
+- [Inteligencia de Negocio](https://github.com/miermontoto/Negocio)
+- [Seguridad](https://github.com/miermontoto/Servicios)
+- [Tecnologías Web](https://github.com/miermontoto/Web)
 
 </div>
