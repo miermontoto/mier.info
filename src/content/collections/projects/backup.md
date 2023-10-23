@@ -46,9 +46,9 @@ para descargar todos los repositorios, usar el siguiente comando en una terminal
 - [Estadística](https://github.com/miermontoto/Estadistica) *(PAs corregidas, PL completas)*
 - [Fundamentos de Computadores y Redes](https://github.com/miermontoto/FCR) *(mucha info sobre PL, exámenes parciales propios)*
   - ["HackingForce", trabajo final](https://github.com/miermontoto/HackingForce)
-- <span class="unavailable"><strike>Autómatas y Matemáticas Discretas</strike> <i>(no disponible)</i></span>
-- <span class="unavailable"><strike>Metodología de la Programación</strike> <i>(no disponible)</i></span>
-- <span class="unavailable"><strike>Ondas y Electromagnetismo</strike> <i>(no disponible)</i></span>
+- <span class="unavailable">Autómatas y Matemáticas Discretas <i>(no disponible)</i></span>
+- <span class="unavailable">Metodología de la Programación <i>(no disponible)</i></span>
+- <span class="unavailable">Ondas y Electromagnetismo <i>(no disponible)</i></span>
 
 ## y2t1
 - [Algoritmia](https://github.com/miermontoto/Algoritmia) *(recopilaciones de parciales, parciales del año corregidos)*
@@ -90,5 +90,7 @@ para descargar todos los repositorios, usar el siguiente comando en una terminal
 - [Inteligencia de Negocio](https://github.com/miermontoto/Negocio)
 - [Seguridad](https://github.com/miermontoto/Servicios)
 - [Tecnologías Web](https://github.com/miermontoto/Web)
+  - <span class="unavailable">["tew-lab-jee", prácticas de laboratorio](https://github.com/miermontoto/tew-2324-4-UO283319-lab-jee)</span>
+  - <span class="unavailable">"2324-tew1-41", trabajo en grupo</span>
 
 </div>

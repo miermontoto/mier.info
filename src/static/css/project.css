@@ -34,3 +34,8 @@ h2, h3 {
     font-size: 1em;
     font-weight: normal;
 }
+
+.unavailable {
+    color: var(--light);
+    text-decoration: line-through;
+}
