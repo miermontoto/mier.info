@@ -62,7 +62,8 @@ permalink: false
         <div class="card-title-col">
             <h1 class="card-title">
                 {% if experience.data.logo %}
-                    <img src="{{ experience.data.logo }}" class="experience-logo" alt="">
+                    <img src="{{ experience.data.logo }}" class="experience-logo" alt="{{ experience.data.name }} logo"
+                        width="64" height="64">
                 {% endif %}
                 {{ experience.data.name }}
             </h1>

@@ -13,15 +13,12 @@ fetch('/package.json')
     .catch(error => console.error(error));
 
 function christmas() {
-    if (getChristmas()) {
-        snow();
-    }
-}
-
-function getChristmas() {
     let date = new Date();
     let month = date.getMonth();
-    return month == 11 || month == 0 && date.getDate() < 7;
+
+    if (month == 11 || month == 0 && date.getDate() < 7) {
+        snow();
+    }
 }
 
 function snow() {
