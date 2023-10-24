@@ -78,6 +78,8 @@ code {
     font-size: 16px;
     color: rgba(255, 255, 255, 0.3);
     user-select: none;
+    text-decoration: none;
+    cursor: alias;
 }
 
 #version-tag:hover {

@@ -3,3 +3,4 @@ _site
 .firebase
 target
 firebase-debug.log
+**.report.html

@@ -1,8 +1,8 @@
 christmas();
 getAgent();
+getWindowSize();
 getTime();
-setInterval(getTime, 1000);
-addEventListener('mousemove', reloadInfo);
+setInterval(updateInfo, 1000);
 
 // print npm package version
 fetch('/package.json')
@@ -40,15 +40,17 @@ function snow() {
 
 function getAgent() {
     document.getElementById('general-info').innerHTML = navigator.userAgent; // get user agent
-    let wInfo = document.getElementById('window-info');
-    wInfo.innerHTML = '<br>' + window.screen.width + 'x' + window.screen.height; // get window size
-    wInfo.innerHTML += ', ' + window.innerWidth + 'px ' + window.innerHeight + 'px'; // get window size
-    wInfo.innerHTML += ', ' + window.scrollY + 'px,';
 }
 
-function reloadInfo(event) {
-    let dom = document.getElementById('mouse-info');
-    dom.innerHTML = event.clientX + 'px ' + event.clientY + 'px';
+function updateInfo() {
+    getWindowSize();
+    getTime();
+}
+
+function getWindowSize() {
+    let wInfo = document.getElementById('window-info');
+    wInfo.innerHTML = '<br>' + window.screen.width + 'x' + window.screen.height; // get window size
+    wInfo.innerHTML += ' ' + window.innerWidth + 'px ' + window.innerHeight + 'px';
 }
 
 function getTime() {
