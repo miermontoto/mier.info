@@ -2,6 +2,13 @@
 layout: base.njk
 css: /static/css/project.css
 ---
+{% if project_css %}
+    <link rel="stylesheet" href="{{ project_css }}">
+{% endif %}
+
+{% if project_js %}
+    <script src="{{ project_js }}"></script>
+{% endif %}
 
 <a href="/" id="back">< go back</a>
 {% if source %}

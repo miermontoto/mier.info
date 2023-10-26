@@ -4,14 +4,6 @@ getWindowSize();
 getTime();
 setInterval(updateInfo, 1000);
 
-// print npm package version
-fetch('/package.json')
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById('version-tag').innerHTML = data.version;
-    })
-    .catch(error => console.error(error));
-
 function christmas() {
     let date = new Date();
     let month = date.getMonth();
