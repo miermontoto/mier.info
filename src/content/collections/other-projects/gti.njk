@@ -1,0 +1,26 @@
+---
+title: gti quiz
+desc: wip.
+icons: [devicon-eleventy-plain, devicon-javascript-plain]
+permalink: /gti/
+project_css: /static/css/gti.css
+project_js: /static/js/gti.js
+demo: /gti/
+---
+
+<span class="spacer"></span>
+
+<div id="info">
+	<div id="results">
+		<span id="correct">0</span> / <span id="total">?</span>
+	</div>
+	<span class="button" id="reset">reset</span>
+</div>
+
+<span class="spacer"></span>
+
+{% questions questions %}
+
+<span class="spacer"></span>
+
+<span id="top" class="button">top</span>
