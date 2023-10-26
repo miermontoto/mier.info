@@ -1,22 +1,52 @@
 {
 	"questions": [
 		{
-			"title": "test title",
+			"title": "¿Cuáles de las siguientes son herramientas de la práctica Análisis de Negocio?",
 			"answers": [
-				"test answer 1",
-				"test answer 2",
-				"test answer 3",
-				"test answer 4"
+				"1",
+				"2",
+				"ambas",
+				"ninguna"
 			],
-			"correct": "0"
+			"correct": "2"
 		},
 		{
-			"title": "test title 2",
+			"title": "El diseño de servicios informáticos requiere preparar y planificar el uso eficaz y eficiente de:",
 			"answers": [
-				"test answer 1",
-				"test answer 2",
-				"test answer 3",
-				"test answer 4"
+				"personas, procesos, partners y proveedores",
+				"personas, procesos, productos y tecnología",
+				"personas, procesos, tecnología y partners",
+				"personas, productos, tecnología y partners"
+			],
+			"correct": "2 "
+		},
+		{
+			"title": "¿Cuál es la MEJOR descripción de un Catálogo de Servicios?",
+			"answers": [
+				"Un documento que define todos los aspectos de un servicio de TI y sus requerimientos a través de cada etapa de su ciclo de vida",
+				"El conjunto completo de servicios que maneja un proveedor de servicios",
+				"Una base de datos o documento estructurado con información acerca de todos los servicios de TI operativos, incluyendo aquellos que están disponibles para desplegar",
+				"Un acuerdo entre el proveedor de servicios de TI y el usuario de servicios de TI"
+			],
+			"correct": "2"
+		},
+		{
+			"title": "¿Cómo contribuye la gestión del nivel de servicio a la actividad \"Planificar\" de la cadena de valor del servicio?",
+			"answers": [
+				"Recoge información durante las interacciones y comunican los objetivos de rendimiento del servicio a los equipos de operaciones y apoyo",
+				"Recoge y procesa comentarios de clientes y usuarios",
+				"Proporciona información sobre el desempeño y las tendencias reales del servicio",
+				"Utiliza los comentarios de los usuarios sobre el servicio y los requisitos de los clientes para mejorar el servicio"
+			],
+			"correct": "2"
+		},
+		{
+			"title": "¿Qué métricas de nivel de servicio son mejores para medir la experiencia del usuario?",
+			"answers": [
+				"Métricas únicas basadas en el sistema",
+				"Métricas de % de tiempo de actividad de un servicio",
+				"Métricas operacionales",
+				"Métricas vinculadas a resultados/salidas definidos/as"
 			],
 			"correct": "3"
 		}
