@@ -1,7 +1,41 @@
-&[correct="false"].selected {
-	background-color: #b00900;
+.disabled.selected {
+	background-color: #d40b00;
 }
 
-&[correct="true"].selected {
-	background-color: #007506;
+.correct.selected {
+	background-color: #00df0b;
+}
+
+.disabled {
+	background-color: var(--light);
+}
+
+.disabled:hover {
+	cursor: auto;
+	animation: none;
+}
+
+#correct {
+	font-size: 10em;
+}
+
+#total {
+	font-size: 5em;
+}
+
+#top:hover {
+	cursor: alias;
+}
+
+.question-block {
+	margin: 0 auto;
+	width: 80%;
+}
+
+#info {
+	/* center content */
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 }

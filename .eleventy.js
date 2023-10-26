@@ -21,14 +21,13 @@ module.exports = function (eleventyConfig) {
                 </h2>
             `;
 
-            template += ` <div class="answer-block">`;
+            template += `<div class="answer-block">`;
             q.answers.forEach((a, j) => {
                 let letter = String.fromCharCode(97 + j); // convert index to letter
                 template += `
-                    <span class="button answer" id="q${i}-a${j}" correct="${j == q.correct}">
-                        ${letter}. ${a}
-                    </span>
-                `;
+                <span class="button answer ${j == q.correct ? "correct" : ""}">
+                    <b>${letter}.</b> ${a}
+                </span> <br>`;
             });
 
             template += `
