@@ -1,0 +1,7 @@
+&[correct="false"].selected {
+	background-color: #b00900;
+}
+
+&[correct="true"].selected {
+	background-color: #007506;
+}

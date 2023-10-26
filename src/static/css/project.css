@@ -16,26 +16,3 @@ body {
     margin-right: 10%;
     margin-bottom: 5%;
 }
-
-h2, h3 {
-    margin-top: 3em;
-}
-
-#subjects a {
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-#subjects i, #subjects em {
-    font-size: 0.8em;
-}
-
-#subjects ul li ul li a {
-    font-size: 1em;
-    font-weight: normal;
-}
-
-.unavailable {
-    color: var(--light);
-    text-decoration: line-through;
-}
