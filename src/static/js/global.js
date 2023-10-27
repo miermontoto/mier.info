@@ -4,6 +4,10 @@ getWindowSize();
 getTime();
 setInterval(updateInfo, 1000);
 
+document.querySelector('#top').addEventListener('click', () => {
+    window.scrollTo(0, 0);
+});
+
 function christmas() {
     let date = new Date();
     let month = date.getMonth();

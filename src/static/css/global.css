@@ -90,3 +90,10 @@ code {
     background-color: var(--white);
     color: var(--secondary);
 }
+
+hr {
+	color: var(--dark);
+	margin-top: 3em;
+	margin-bottom: 3em;
+    width: 95%;
+}

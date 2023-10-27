@@ -30,7 +30,7 @@ para descargar un repositorio, se puede clonar de forma individual o descargar e
 para descargar todos los repositorios, usar el siguiente comando en una terminal con `git`:
 `git clone https://github.com/miermontoto/backup --recurse-submodules`
 
-<br> <br>
+<br> <hr>
 
 # Contenido
 <div id="subjects">
@@ -95,3 +95,7 @@ para descargar todos los repositorios, usar el siguiente comando en una terminal
   - <span class="unavailable">"2324-tew1-41", trabajo en grupo</span>
 
 </div>
+
+<hr>
+
+{% top %}

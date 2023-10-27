@@ -8,19 +8,15 @@ project_js: /static/js/gti.js
 demo: /gti/
 ---
 
-<span class="spacer"></span>
-
-<div id="info">
-	<div id="results">
-		<span id="correct">0</span> / <span id="total">?</span>
-	</div>
-	<span class="button" id="reset">reset</span>
+<div id="results">
+	<span id="correct">0</span> / <span id="total">?</span>
 </div>
+<span class="button" id="reset">reset</span>
 
-<span class="spacer"></span>
+<hr>
 
 {% questions questions %}
 
-<span class="spacer"></span>
+<hr>
 
-<span id="top" class="button">top</span>
+{% top %}

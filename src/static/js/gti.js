@@ -3,9 +3,6 @@ const isCorrect = (ans) => ans.classList.contains('correct');
 window.addEventListener('load', () => {
 	resetAll();
 	document.querySelector('#reset').addEventListener('click', resetAll);
-	document.querySelector('#top').addEventListener('click', () => {
-		window.scrollTo(0, 0);
-	});
 });
 
 window.addEventListener('scroll', () => {

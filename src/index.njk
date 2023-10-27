@@ -23,7 +23,6 @@ js: /static/js/index.js
         <span class="button" id="project-button">projects</span>
         <span class="button" id="about-button">about</span>
     </div>
-
 </div>
 
 {% import "src/static/macros.njk" as macros %}
@@ -40,6 +39,7 @@ js: /static/js/index.js
         <div id="others-section" class="carded">
             {{ macros.renderProjects(collections.otherprojects) }}
         </div>
+        {% top %}
     </section>
 </section>
 
