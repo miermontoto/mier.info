@@ -1,15 +1,27 @@
 @import url('variables.css');
 
 .disabled.selected {
-	background-color: #d40b00;
+	background-color: var(--wrong);
 }
 
 .correct.selected {
-	background-color: #00df0b;
+	background-color: var(--correct);
 }
 
 .disabled {
 	background-color: var(--light);
+}
+
+.disabled.correct:not(.selected) {
+	background-color: var(--correct-background);
+}
+
+.question-block.correct {
+	border-color: var(--correct-background);
+}
+
+.question-block.wrong {
+	border-color: var(--wrong-background);
 }
 
 .disabled:hover {
@@ -31,7 +43,11 @@
 
 .question-block {
 	margin: 0 auto;
-	width: 80%;
+	width: 90%;
+	border-radius: 8px;
+	border: 3px solid var(--dark);
+	margin-bottom: 2em;
+	padding: 2em;
 }
 
 #results {
@@ -40,4 +56,21 @@
 	justify-content: center;
 	align-items: center;
 	font-size: 2em;
+}
+
+#scored {
+	font-size: 2em;
+}
+
+#score {
+	font-size: 1.5em;
+}
+
+.button {
+	user-select: auto;
+}
+
+#→ {
+	margin-left: 2em;
+	margin-right: 2em;
 }

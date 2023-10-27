@@ -6,4 +6,9 @@
 	--white: hsl(0, 0%, 99%);
 	--link: var(--white);
 	--dot: var(--white);
+
+	--correct: #00df0b;
+	--wrong: #d40b00;
+	--correct-background: #007706;
+	--wrong-background: #660500;
 }
