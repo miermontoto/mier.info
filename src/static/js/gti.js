@@ -1,9 +1,32 @@
 const isCorrect = (ans) => ans.classList.contains('correct') && ans.classList.contains('selected');
 let responded = 0;
 
-window.addEventListener('load', () => {
+window.addEventListener('load', () => { // when the page loads (the content is rendered)
 	resetAll();
 	document.querySelector('#reset').addEventListener('click', resetAll);
+
+	// shuffle questions
+	let questions = document.querySelectorAll('.question-block');
+	shuffle(questions).forEach((q) => document.querySelector('#questions').appendChild(q));
+
+	// shuffle 'shuffable' answer blocks
+	document.querySelectorAll('.answer-block').forEach((block) => {
+		let j = 0;
+		if (block.getAttribute('shuffle') == 'true') {                 // if it's shuffable
+			block.querySelectorAll('br').forEach((br) => br.remove()); // remove all <br> tags
+			let answers = block.querySelectorAll('.answer');           // get all answers
+			shuffle(answers).forEach((ans) => {                        // shuffle them and for each
+				block.appendChild(ans);                                // append them to the block
+				block.appendChild(document.createElement('br'));       // and add a <br> tag
+			});
+		}
+
+		block.querySelectorAll('.answer').forEach((ans) => {           // for each answer
+			let letter = String.fromCharCode(97 + j);                  // convert index to letter
+			ans.innerHTML = '<b>' + letter + '.</b> ' + ans.innerHTML; // add letter to answer
+			j++;
+		});
+	});
 });
 
 window.addEventListener('scroll', () => {
@@ -68,4 +91,19 @@ function resetAll() {
 	document.querySelector('#correct').innerHTML = 0;
 	document.querySelector('#score').innerHTML = 0;
 	responded = 0;
+}
+
+function shuffle(collection) {
+	let array = Array.from(collection);
+	let currentIndex = array.length;
+	let randomIndex;
+
+	while (currentIndex != 0) {
+		randomIndex = Math.floor(Math.random() * currentIndex);
+		currentIndex--;
+
+		[array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+	}
+
+	return array;
 }

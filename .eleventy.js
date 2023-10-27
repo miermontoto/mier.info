@@ -7,7 +7,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./assets/**");
 
     eleventyConfig.addShortcode("version", function() {
-        return require("./package.json").version + ' (beta3)';
+        return require("./package.json").version + ' (beta6)';
     });
 
     eleventyConfig.addShortcode("top", function() {
@@ -27,12 +27,13 @@ module.exports = function (eleventyConfig) {
                 </h2>
             `;
 
-            template += `<div class="answer-block">`;
+            let shuffle = q.shuffle || true;
+
+            template += `<div class="answer-block" shuffle="${shuffle}">`;
             q.answers.forEach((a, j) => {
-                let letter = String.fromCharCode(97 + j); // convert index to letter
                 template += `
-                <span class="button answer ${j == q.correct ? "correct" : ""}">
-                    <b>${letter}.</b> ${a}
+                <span class="button answer${j == q.correct ? " correct" : ""}">
+                    ${a}
                 </span> <br>`;
             });
 
