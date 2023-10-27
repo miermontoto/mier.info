@@ -1,4 +1,5 @@
-const isCorrect = (ans) => ans.classList.contains('correct');
+const isCorrect = (ans) => ans.classList.contains('correct') && ans.classList.contains('selected');
+let responded = 0;
 
 window.addEventListener('load', () => {
 	resetAll();
@@ -22,26 +23,49 @@ function disableBlock(block) {
 	block.querySelectorAll('.answer').forEach((ans) => {
 		ans.removeEventListener('click', handleAnswerClick);
 		ans.classList.add('disabled');
-		if (isCorrect(ans)) {
-			document.querySelector('#correct').innerHTML++;
-		}
 	});
 }
 
 function handleAnswerClick(e) {
-	e.target.classList.add('selected');
-	disableBlock(e.target.parentNode);
+	let target = e.target;
+	let block = target.parentNode;
+
+	target.classList.add('selected');
+	disableBlock(block);
+	responded++;
+
+	let correct = isCorrect(target);
+	if (correct) {
+		document.querySelector('#correct').innerHTML++;
+	}
+	block.parentNode.classList.add(correct ? 'correct' : 'wrong');
+
+	let score = document.querySelector('#correct').innerHTML / responded * 100;
+	document.querySelector('#score').innerHTML = round(score);
+}
+
+function round(number) {
+	let rounded = number.toFixed(1);
+	if (rounded.endsWith('.0')) {
+		return number;
+	}
+	return rounded;
 }
 
 function resetAll() {
-	document.querySelectorAll('.answer-block').forEach((block) => {
-		block.querySelectorAll('.answer').forEach((ans) => {
-			ans.classList.remove('selected');
-			ans.classList.remove('disabled');
-			ans.addEventListener('click', handleAnswerClick);
-		});
+	document.querySelectorAll('.question-block').forEach((block) => {
+		block.classList.remove('correct');
+		block.classList.remove('wrong');
+	});
+
+	document.querySelectorAll('.answer').forEach((ans) => {
+		ans.classList.remove('selected');
+		ans.classList.remove('disabled');
+		ans.addEventListener('click', handleAnswerClick);
 	});
 
 	document.querySelector('#total').innerHTML = document.querySelectorAll('.question-block').length;
 	document.querySelector('#correct').innerHTML = 0;
+	document.querySelector('#score').innerHTML = 0;
+	responded = 0;
 }
