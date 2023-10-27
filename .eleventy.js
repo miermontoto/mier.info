@@ -7,7 +7,13 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./assets/**");
 
     eleventyConfig.addShortcode("version", function() {
-        return require("./package.json").version;
+        return require("./package.json").version + ' (beta)';
+    });
+
+    eleventyConfig.addShortcode("top", function() {
+        return `
+        <span id="top" class="button">top ↑</span>
+        `;
     });
 
     eleventyConfig.addShortcode("questions", function(qs) {
