@@ -7,7 +7,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./assets/**");
 
     eleventyConfig.addShortcode("version", function() {
-        return require("./package.json").version + ' (beta6)';
+        return require("./package.json").version + ' (beta 7)';
     });
 
     eleventyConfig.addShortcode("top", function() {
