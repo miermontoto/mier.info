@@ -3,8 +3,8 @@
 		{
 			"title": "¿Cuáles de las siguientes son herramientas de la práctica Análisis de Negocio?",
 			"answers": [
-				"1",
-				"2",
+				"análisis DAFO",
+				"historias de usuario",
 				"ambas",
 				"ninguna"
 			],
@@ -18,7 +18,7 @@
 				"personas, procesos, tecnología y partners",
 				"personas, productos, tecnología y partners"
 			],
-			"correct": "2 "
+			"correct": "2"
 		},
 		{
 			"title": "¿Cuál es la MEJOR descripción de un Catálogo de Servicios?",
