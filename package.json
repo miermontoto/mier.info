@@ -3,12 +3,14 @@
 	"version": "0.15.0",
 	"description": "personal portfolio website where i write about myself and my projects.",
 	"scripts": {
-		"start": "npm run clean; eleventy --serve",
-		"build": "npm run clean; eleventy",
+		"start": "npm run clean; eleventy --serve & npm run sass-dev",
+		"build": "npm run clean; eleventy & npm run sass-prod",
 		"deploy": "npm run build; firebase deploy; npm run clean",
 		"clean": "rm -rf _site",
 		"test": "npm run build; firebase serve",
-		"beta": "npm run build; firebase hosting:channel:deploy beta"
+		"beta": "npm run build; firebase hosting:channel:deploy beta",
+		"sass-dev": "sass --watch --update --style=expanded src/static/css:_site/static/css",
+		"sass-prod": "sass --no-source-map --style=compressed src/static/css:_site/static/css"
 	},
 	"repository": {
 		"type": "git",
@@ -30,6 +32,7 @@
 		"@11ty/eleventy": "^2.0.1"
 	},
 	"dependencies": {
-		"npm": "^9.8.0"
+		"npm": "^9.8.0",
+		"sass": "^1.69.5"
 	}
 }

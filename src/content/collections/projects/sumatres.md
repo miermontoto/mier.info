@@ -3,4 +3,5 @@ title: SumaTres
 desc: Threes! clone made in Java, product of several subjects' final projects.
 source: https://github.com/miermontoto/SumaTres
 icons: [devicon-java-plain]
+star: yes
 ---
