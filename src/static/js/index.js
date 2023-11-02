@@ -1,11 +1,9 @@
 const projectSection = document.getElementById('project-section');
-const othersSection = document.getElementById('others-section');
 const projectButton = document.getElementById('project-button');
 
 const sections = [
     { button: projectButton, section: projectSection },
-    { button: document.getElementById('about-button'), section: document.getElementById('about-section') },
-    { button: document.getElementById('others-button'), section: othersSection }
+    { button: document.getElementById('about-button'), section: document.getElementById('about-section') }
 ];
 
 sections.forEach(({ button, section }) => {
@@ -44,12 +42,6 @@ function toggleSection(section, button) {
     // add active class to the selected section if it wasn't active before
     if (!sectionIsActive) {
         section.classList.add('active');
-    }
-
-    // if the selected section is the others section, set projects to active
-    if (section === othersSection) {
-        projectSection.classList.add('active');
-        projectButton.classList.add('active');
     }
 }
 

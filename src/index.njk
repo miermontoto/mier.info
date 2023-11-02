@@ -32,15 +32,6 @@ js: /static/js/index.js
     <div class="carded" id="general-projects">
         {{ macros.renderProjects(collections.projects) }}
     </div>
-
-    <span class="button" id="others-button">show all</span>
-    <section id="others-section" class="section">
-        <h2>other projects.</h2>
-        <div id="others-section" class="carded">
-            {{ macros.renderProjects(collections.otherprojects) }}
-        </div>
-        {% top %}
-    </section>
 </section>
 
 <section id="about-section" class="section">

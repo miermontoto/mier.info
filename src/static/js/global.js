@@ -4,8 +4,10 @@ getWindowSize();
 getTime();
 setInterval(updateInfo, 1000);
 
-document.querySelector('#top').addEventListener('click', () => {
-    window.scrollTo(0, 0);
+document.querySelectorAll('.topbtn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+        window.scrollTo(0, 0);
+    });
 });
 
 function christmas() {

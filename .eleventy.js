@@ -3,11 +3,16 @@ const { EleventyRenderPlugin } = require("@11ty/eleventy");
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(EleventyRenderPlugin);
 
-    eleventyConfig.addPassthroughCopy("./src/static/*/**");
+    eleventyConfig.addPassthroughCopy("./src/static/js/**");
     eleventyConfig.addPassthroughCopy("./assets/**");
 
+    eleventyConfig.setServerOptions({
+        watch: ["_site/static/css/**"]
+    });
+
+
     eleventyConfig.addShortcode("version", function() {
-        return require("./package.json").version + ' (beta 7)';
+        return require("./package.json").version + ' (beta 8)';
     });
 
     eleventyConfig.addShortcode("top", function() {

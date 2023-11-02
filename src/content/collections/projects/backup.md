@@ -3,10 +3,11 @@ title: backup
 desc: collection of repositories of computer engineering subjects at EPI Gijón.
 source: https://github.com/miermontoto/backup
 permalink: /backup/
-info: /backup
+demo: /backup
 keywords: backup, backup carrera, epi, epi gijón, asignaturas, giitin, informática, ingeniería informática, ingeniería, engineering, computer engineering, gijón
 icons: [fa-brands fa-markdown, fa-brands fa-square-github]
 project_css: /static/css/backup.css
+star: yes
 ---
 
 ## Resumen
