@@ -1,0 +1,104 @@
+{
+	"questions": [
+		{
+			"title": "¿Cuáles de las siguientes son herramientas de la práctica Análisis de Negocio?",
+			"answers": [
+				"análisis DAFO",
+				"historias de usuario",
+				"ambas",
+				"ninguna"
+			],
+			"correct": 2
+		},
+		{
+			"title": "El diseño de servicios informáticos requiere preparar y planificar el uso eficaz y eficiente de:",
+			"answers": [
+				"personas, procesos, partners y proveedores",
+				"personas, procesos, productos y tecnología",
+				"personas, procesos, tecnología y partners",
+				"personas, productos, tecnología y partners"
+			],
+			"correct": 2
+		},
+		{
+			"title": "¿Cuál es la MEJOR descripción de un Catálogo de Servicios?",
+			"answers": [
+				"Un documento que define todos los aspectos de un servicio de TI y sus requerimientos a través de cada etapa de su ciclo de vida",
+				"El conjunto completo de servicios que maneja un proveedor de servicios",
+				"Una base de datos o documento estructurado con información acerca de todos los servicios de TI operativos, incluyendo aquellos que están disponibles para desplegar",
+				"Un acuerdo entre el proveedor de servicios de TI y el usuario de servicios de TI"
+			],
+			"correct": 2
+		},
+		{
+			"title": "¿Cómo contribuye la gestión del nivel de servicio a la actividad \"Planificar\" de la cadena de valor del servicio?",
+			"answers": [
+				"Recoge información durante las interacciones y comunican los objetivos de rendimiento del servicio a los equipos de operaciones y apoyo",
+				"Recoge y procesa comentarios de clientes y usuarios",
+				"Proporciona información sobre el desempeño y las tendencias reales del servicio",
+				"Utiliza los comentarios de los usuarios sobre el servicio y los requisitos de los clientes para mejorar el servicio"
+			],
+			"correct": 2
+		},
+		{
+			"title": "¿Qué métricas de nivel de servicio son mejores para medir la experiencia del usuario?",
+			"answers": [
+				"Métricas únicas basadas en el sistema",
+				"Métricas de % de tiempo de actividad de un servicio",
+				"Métricas operacionales",
+				"Métricas vinculadas a resultados/salidas definidos/as"
+			],
+			"correct": 3
+		},
+		{
+			"title": "¿Cuál NO es un tipo de Arquitectura considerada por la práctica Gestión de la Arquitectura?",
+			"answers": [
+				"Arquitectura del entorno",
+				"Arquitectura de aplicaciones",
+				"Arquitectura de servicios",
+				"Arquitectura hardware"
+			],
+			"correct": 3
+		},
+		{
+			"title": "¿Cuáles son enfoques habituales en la entrega de proyectos?",
+			"answers": [
+				"Traditional y Agile",
+				"Traditional y Waterfall",
+				"Agile y Waterfall",
+				"Traditional, Waterfall y Agile"
+			],
+			"correct": 2
+		},
+		{
+			"title": "¿Qué práctica tiene un propósito que incluye ayudar a una organización a maximizar el valor, controlar los costos y gestionar los riesgos?",
+			"answers": [
+				"Gestión de relaciones",
+				"Gestión de activos de TI",
+				"Gestión de despliegues",
+				"Service Desk"
+			],
+			"correct": 1
+		},
+		{
+			"title": "¿Qué práctica asegura la disponibilidad de información precisa y confiable sobre los elementos de configuración y las relaciones entre ellos?",
+			"answers": [
+				"Gestión de configuración de los servicios",
+				"Service Desk",
+				"Gestión de activos de TI",
+				"Monitorización y gestión de eventos"
+			],
+			"correct": 0
+		},
+		{
+			"title": "¿En qué base de datos puede hallarse información sobre la estructura y la composición de la infraestructura de TI?",
+			"answers": [
+				"La Base de Datos de Gestión de la Capacidad (CMD)",
+				"La Base de Datos de Gestión de la Configuración (CMDB)",
+				"El Almacén de Hardware Definitivo (DHS)",
+				"La Biblioteca de Software Definitivo (DSL)"
+			],
+			"correct": 1
+		}
+	]
+}
