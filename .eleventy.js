@@ -7,12 +7,11 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./assets/**");
 
     eleventyConfig.setServerOptions({
-        watch: ["_site/static/css/**"]
+        watch: ["_site/static/**"]
     });
 
-
     eleventyConfig.addShortcode("version", function() {
-        return require("./package.json").version + ' (beta 9)';
+        return require("./package.json").version || 'unknown';
     });
 
     eleventyConfig.addShortcode("top", function() {
