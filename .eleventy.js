@@ -12,7 +12,7 @@ module.exports = function (eleventyConfig) {
 
 
     eleventyConfig.addShortcode("version", function() {
-        return require("./package.json").version + ' (beta 8)';
+        return require("./package.json").version + ' (beta 9)';
     });
 
     eleventyConfig.addShortcode("top", function() {
