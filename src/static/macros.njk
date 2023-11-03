@@ -11,45 +11,45 @@ permalink: false
 {% macro renderProjects(projects) %}
     <table id="projects">
         {% for project in projects %}
-            <tr> {{ renderProject(project) }} </tr>
+            {{ renderProject(project) }}
         {% endfor %}
     </table>
 {% endmacro %}
 
 {% macro renderProject(project) %}
-    <td class="project-title">
-        {% if project.data.demo %}
-            <a href="{{ project.data.demo }}" rel="noopener noreferrer">
+    <tr class="project {{ project.data.star }}" id="{{ project.data.title | slug }}">
+        <td class="project-title">
+            {% if project.data.demo %}
+                <a href="{{ project.data.demo }}" rel="noopener noreferrer">{{ project.data.title }}</a>
+            {% else %}
                 {{ project.data.title }}
-            </a>
-        {% else %}
-            {{ project.data.title }}
-        {% endif %}
-    </td>
+            {% endif %}
+        </td>
 
-    <td class="project-links">
-        {% if project.data.source %}
-            <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-github"></i></a>
-        {% endif %}
-        {% if project.data.info %}
-            <br>
-            <a href="{{ project.data.info }}" target="_blank" rel="noopener noreferrer">🛈</a>
-        {% endif %}
-    </td>
+        <td class="project-links">
+            {% if project.data.source %}
+                <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-github"></i></a>
+            {% endif %}
+            {% if project.data.info %}
+                <br>
+                <a href="{{ project.data.info }}" target="_blank" rel="noopener noreferrer">🛈</a>
+            {% endif %}
+        </td>
 
-    <td class="project-description">
-        {{ project.data.desc | safe }}
-    </td>
+        <td class="project-description">
+            {{ project.data.desc | safe }}
+        </td>
 
-    <td class="project-icons">
-        {{ renderIcons(project.data.icons) }}
-    </td>
+        <td class="project-icons">
+            {{ renderIcons(project.data.icons) }}
+        </td>
 
-    <td class="project-image">
-        {% if project.data.image %}
-            <img src="{{ project.data.image }}" alt="{{ project.data.title }} image">
-        {% endif %}
-    </td>
+        {# <td class="project-image">
+            {% if project.data.image %}
+                <img src="{{ project.data.image }}" alt="{{ project.data.title }} image">
+            {% endif %}
+        </td> #}
+    </tr>
 {% endmacro %}
 
 {% macro renderExperiences(experiences) %}

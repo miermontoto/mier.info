@@ -11,7 +11,10 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addShortcode("version", function() {
-        return require("./package.json").version || 'unknown';
+        let json = require('./package.json');
+        let version = json.version || 'unknown';
+        let release = json.release ? ` (${json.release})` : '';
+        return `${version}${release}`;
     });
 
     eleventyConfig.addShortcode("top", function() {
