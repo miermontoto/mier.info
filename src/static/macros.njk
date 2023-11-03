@@ -10,9 +10,20 @@ permalink: false
 
 {% macro renderProjects(projects) %}
     <table id="projects">
-        {% for project in projects %}
-            {{ renderProject(project) }}
-        {% endfor %}
+        <thead hidden>
+            <tr>
+                <th>Project</th>
+                <th>Links</th>
+                <th>Description</th>
+                <th>Icons</th>
+                {# <th>Image</th> #}
+            </tr>
+        </thead>
+        <tbody>
+            {% for project in projects %}
+                {{ renderProject(project) }}
+            {% endfor %}
+        </tbody>
     </table>
 {% endmacro %}
 
@@ -28,14 +39,15 @@ permalink: false
 
         <td class="project-links">
             {% if project.data.source %}
-                <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-github"></i></a>
+                <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer"
+                    aria-label="go to the source code for the {{ project.data.name | slug }} project">
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
             {% endif %}
-            {% if project.data.custom_links %}
-                {% for link in project.data.custom_links %}
-                    <br>
-                    <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.icon }}</a>
-                {% endfor %}
-            {% endif %}
+            {% for link in project.data.links %}
+                <br>
+                <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.icon | safe }}</a>
+            {% endfor %}
         </td>
 
         <td class="project-description">
