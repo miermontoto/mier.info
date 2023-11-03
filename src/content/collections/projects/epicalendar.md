@@ -8,7 +8,7 @@ permalink: /epiCalendar/
 icons: [devicon-flask-original, devicon-python-plain, devicon-react-plain]
 date: 1800-01-01
 status: https://dashboard.mier.info/api/badge/2/status?style=flat-square
-star: yes
+star: star
 ---
 
 # [\[enlace\]](https://epicalendar.mier.info)
