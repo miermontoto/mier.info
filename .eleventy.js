@@ -13,7 +13,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode("version", function() {
         let json = require('./package.json');
         let version = json.version || 'unknown';
-        let release = json.release ? ` (${json.release})` : '';
+        let release = json.release && json.release !== 'RTW' ? ` (${json.release})` : '';
         return `${version}${release}`;
     });
 
