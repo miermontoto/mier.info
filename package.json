@@ -1,6 +1,6 @@
 {
 	"name": "mier.info",
-	"version": "0.16.1",
+	"version": "0.16.2",
 	"release": "RTW",
 	"description": "personal portfolio website where i write about myself and my projects.",
 	"scripts": {
@@ -33,6 +33,7 @@
 		"@11ty/eleventy": "^2.0.1"
 	},
 	"dependencies": {
+		"firebase": "^10.5.2",
 		"npm": "^9.8.0",
 		"sass": "^1.69.5"
 	}

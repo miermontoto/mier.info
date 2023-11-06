@@ -8,6 +8,13 @@ permalink: false
     {% endfor %}
 {% endmacro %}
 
+{% macro renderSvgIcons(svgs) %}
+    {% for svg in svgs %}
+        {% set file = '/assets/logos/tech/' + svg + '.svg' %}
+        <img src="{{ file }}" class="icon svg" alt="{{ svg }} tech icon">
+    {% endfor %}
+{% endmacro %}
+
 {% macro renderProjects(projects) %}
     <table id="projects">
         <thead hidden>
@@ -56,6 +63,7 @@ permalink: false
 
         <td class="project-icons">
             {{ renderIcons(project.data.icons) }}
+            {{ renderSvgIcons(project.data.svgs) }}
         </td>
 
         {# <td class="project-image">
@@ -76,9 +84,8 @@ permalink: false
     <div class="model card" id="{{ experience.data.name | slug }}">
         <div class="card-title-col">
             <h1 class="card-title">
-                {% if experience.data.logo %}
-                    <img src="{{ experience.data.logo }}" class="experience-logo" alt="{{ experience.data.name }} logo">
-                {% endif %}
+                {% set logo = '/assets/logos/exp/' + (experience.data.logo or experience.data.name) + '.png' %}
+                <img src="{{ logo }}" class="experience-logo" alt="{{ experience.data.name }} logo">
                 {{ experience.data.name }}
             </h1>
             {% if experience.data.role %}

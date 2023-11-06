@@ -3,20 +3,20 @@
 		{
 			"title": "¿Cuáles de las siguientes son herramientas de la práctica Análisis de Negocio?",
 			"answers": [
-				"análisis DAFO",
-				"historias de usuario",
-				"ambas",
-				"ninguna"
+				"Análisis DAFO",
+				"Historias de usuario",
+				"Ambas",
+				"Ninguna"
 			],
 			"correct": 2
 		},
 		{
 			"title": "El diseño de servicios informáticos requiere preparar y planificar el uso eficaz y eficiente de:",
 			"answers": [
-				"personas, procesos, partners y proveedores",
-				"personas, procesos, productos y tecnología",
-				"personas, procesos, tecnología y partners",
-				"personas, productos, tecnología y partners"
+				"Personas, procesos, partners y proveedores",
+				"Personas, procesos, productos y tecnología",
+				"Personas, procesos, tecnología y partners",
+				"Personas, productos, tecnología y partners"
 			],
 			"correct": 2
 		},
@@ -99,6 +99,56 @@
 				"La Biblioteca de Software Definitivo (DSL)"
 			],
 			"correct": 1
+		},
+		{
+			"title": "¿Qué práctica ofrece un punto de contacto único para usuarios?",
+			"answers": [
+				"Mesa de servicios (service desk)",
+				"Gestión de incidentes",
+				"Control de cambios",
+				"Gestión de solicitudes de servicio"
+			],
+			"correct": 0
+		},
+		{
+			"title": "¿Qué práctica proporciona soporte para gestionar la retroalimentación, las felicitaciones y las quejas de los usuarios?",
+			"answers": [
+				"Habilitación del cambio",
+				"Gestión de solicitudes (peticiones) de servicio",
+				"Gestión de problemas",
+				"Gestión de incidentes"
+			],
+			"correct": 1
+		},
+		{
+			"title": "¿Qué práctica tiene un propósito que incluye restaurar la operación normal del servicio lo más rápidamente posible?",
+			"answers": [
+				"Gestión de proveedores",
+				"Gestión del despliegue",
+				"Gestión de problemas",
+				"Gestión de incidentes"
+			],
+			"correct": 3
+		},
+		{
+			"title": "¿De qué manera la clasificación de incidentes ayuda a la práctica de gestión de incidentes?",
+			"answers": [
+				"Asegura que los incidentes se resuelvan en los plazos de tiempo acordados con el cliente",
+				"Determina la manera en que se percibe al proveedor de servicios",
+				"Determina la prioridad asignada al incidente",
+				"Permite encauzar el incidente hacia el área de soporte correcta"
+			],
+			"correct": 3
+		},
+		{
+			"title": "¿Qué anfirmación acerca de los errores conocidos y los problemas es correcta?",
+			"answers": [
+				"Error conocido es el estado asignado a un problema después de que se ha analizado.",
+				"Un error conocido es la causa de uno o más problemas",
+				"Los errores conocidos causan vulnerabilidades, los problemas causan incidentes",
+				"El personal técnico gestiona los errores conocidos, y el personal de gestión de servicios gestiona los problemas"
+			],
+			"correct": 0
 		}
 	]
 }

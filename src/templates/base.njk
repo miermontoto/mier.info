@@ -26,6 +26,24 @@
     {% if css %}
         <link rel="stylesheet" href="{{ css }}">
     {% endif %}
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDpzq7qtilzYLKprqSaGt1HaxoGAXqZ5N8",
+            authDomain: "mier-f6277.firebaseapp.com",
+            projectId: "mier-f6277",
+            storageBucket: "mier-f6277.appspot.com",
+            messagingSenderId: "427767389600",
+            appId: "1:427767389600:web:65a83378aeb9ad53a498c5",
+            measurementId: "G-R0SHSFGF3Y"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
 </head>
 <body>
     <div id="browser-info">
