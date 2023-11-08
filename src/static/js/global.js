@@ -16,7 +16,10 @@ function christmas() {
 
     if (month == 11 || month == 0 && date.getDate() < 7) {
         snow();
+        return true;
     }
+
+    return false;
 }
 
 function snow() {

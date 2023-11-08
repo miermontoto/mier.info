@@ -4,11 +4,15 @@ css: /static/css/project.css
 ---
 
 {% if project_css %}
-    <link rel="stylesheet" href="{{ project_css }}">
+    {% set temp = title if project_css === true else project_css %}
+    {% set target = '/static/css/project/' + temp + '.css' %}
+    <link rel="stylesheet" href="{{ target }}">
 {% endif %}
 
 {% if project_js %}
-    <script src="{{ project_js }}"></script>
+    {% set temp = title if project_js === true else project_js %}
+    {% set target = '/static/js/project/' + temp + '.js' %}
+    <script src="{{ target }}"></script>
 {% endif %}
 
 <a href="/" id="back">< go back</a>

@@ -1,0 +1,6 @@
+{
+    "tags": "webutils",
+    "layout": "project.njk",
+	"permalink": "/{{ page.fileSlug }}/",
+    "project_js": true
+}
