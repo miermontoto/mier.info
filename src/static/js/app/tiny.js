@@ -1,8 +1,9 @@
 window.addEventListener("load", function(event) {
-	const input = document.querySelector('#input');
-	const output = document.querySelector('#output');
+	const input = document.querySelector('#tiny-input');
+	const output = document.querySelector('#tiny-output');
 
-	clear(input);
+	input.value = '';
+	output.innerHTML = '';
 
 	const update = () => {
 		output.innerHTML = tinify(input.value);
@@ -18,9 +19,4 @@ const superscript = { 'a': 'ᵃ', 'b': 'ᵇ', 'c': 'ᶜ', 'd': 'ᵈ', 'e': 'ᵉ'
 
 function tinify(str) {
 	return str.split('').map(c => superscript[c] || c).join('');
-}
-
-function clear(dom) {
-	dom.innerHTML = '';
-	dom.value = '';
 }
