@@ -10,16 +10,24 @@ module.exports = function (eleventyConfig) {
         watch: ["_site/static/**"]
     });
 
+    eleventyConfig.addShortcode("addScript", function (filename) {
+        return `<script src="/static/js/app/${filename}.js"></script>`;
+    });
+
+    eleventyConfig.addShortcode("addStyle", function (filename) {
+        return `<link rel="stylesheet" href="/static/css/app/${filename}.css">`;
+    });
+
     eleventyConfig.addShortcode("version", function() {
         let json = require('./package.json');
-        let version = json.version || 'unknown';
-        let release = json.release && json.release !== 'RTW' ? ` (${json.release})` : '';
-        return `${version}${release}`;
+        let version = json.version;
+        let channel = json.channel && json.channel !== 'RTW' ? ` (${json.channel})` : '';
+        return `${version}${channel}`;
     });
 
     eleventyConfig.addShortcode("top", function() {
         return `
-        <span id="top" class="button">top ↑</span>
+        <span id="top" class="button topbtn">top ↑</span>
         `;
     });
 

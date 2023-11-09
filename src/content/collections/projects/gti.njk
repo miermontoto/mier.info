@@ -3,10 +3,11 @@ title: gti quiz
 desc: homemade quiz made up of official questions of the course <i>Gestión de Tecnologías de la Información</i>
 icons: [devicon-eleventy-plain, devicon-javascript-plain]
 permalink: /gti/
-project_css: gti
-project_js: gti
 demo: /gti/
 ---
+
+{% addStyle 'gti' %}
+{% addScript 'gti' %}
 
 <div id="results">
 	<span id="correct">0</span> / <span id="total">?</span>

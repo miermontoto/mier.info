@@ -6,9 +6,10 @@ permalink: /backup/
 demo: /backup
 keywords: backup, backup carrera, epi, epi gijón, asignaturas, giitin, informática, ingeniería informática, ingeniería, engineering, computer engineering, gijón
 icons: [fa-brands fa-markdown, fa-brands fa-github]
-project_css: /static/css/backup.css
 star: star
 ---
+
+{% addStyle 'backup' %}
 
 ## Resumen
 backup es una colección de repositorios de todas las asignaturas de la carrera de Ingeniería Informática en Tecnologías de la Información (GIITIN) en la Escuela Politécnica de Ingeniería de Gijón (EPI Gijón).

@@ -1,4 +1,4 @@
-window.onload = function () {
+window.addEventListener("load", function(event) {
 	const decoded = document.querySelector('#decoded');
 	const encoded = document.querySelector('#encoded');
 
@@ -20,7 +20,7 @@ window.onload = function () {
 
 	decoded.addEventListener('input', encode);
 	encoded.addEventListener('input', decode);
-}
+});
 
 function a2b(str) {
 	return decodeURIComponent(atob(str).split('').map(function(c) {
