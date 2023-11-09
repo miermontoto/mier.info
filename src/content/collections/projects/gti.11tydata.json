@@ -149,6 +149,46 @@
 				"El personal técnico gestiona los errores conocidos, y el personal de gestión de servicios gestiona los problemas"
 			],
 			"correct": 0
+		},
+		{
+			"title": "¿Qué palabra falta en la siguiente frase?: <i>\"La práctica Gestión del cambio organizacional trata de [?] la resistencia al cambio\"",
+			"answers": [
+				"influenciar",
+				"mitigar",
+				"potenciar",
+				"comprender"
+			],
+			"correct": 1
+		},
+		{
+			"title": "¿Qué tipo de cambio necesita ser evaluado, autorizado y programado por una autoridad de cambio antes de implementarlo?",
+			"answers": [
+				"Emergencia",
+				"Normal",
+				"Estándar",
+				"Los tres"
+			],
+			"correct": 1
+		},
+		{
+			"title": "¿Qué práctica tiene como propósito que las funciones y los servicios, tanto nuevos como modificados, estén disponibles para usarse?",
+			"answers": [
+				"Gestión de solicitudes (peticiones) de servicio",
+				"Gestión de despliegues",
+				"Gestión de liberaciones (versiones)",
+				"Control de cambios"
+			],
+			"correct": 2
+		},
+		{
+			"title": "¿Qué práctica es responsable de pasar componentes a entornos de producción?",
+			"answers": [
+				"Gestión de despliegues",
+				"Habilitación del cambio",
+				"Gestión de versiones",
+				"Gestión de activos de TI"
+			],
+			"correct": 0
 		}
 	]
 }
