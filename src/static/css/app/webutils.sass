@@ -4,6 +4,20 @@ span.output
 	$padding: 10px
 
 	border-radius: base.$radius
-	border: 3px solid base.$light
+	border: 2px solid base.$light
 	padding: $padding
-	margin: 25em 0
+	overflow-wrap: anywhere
+
+.input, .output
+	width: 80%
+	height: max(1em, auto)
+
+.output:not(textarea)
+	text-align: center
+
+.utils
+	width: 100%
+
+.util.card
+	width: max(29%, 450px)
+	padding-bottom: 2em

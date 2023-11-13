@@ -1,6 +1,12 @@
 {% addScript 'base64' %}
 {% addStyle 'webutils' %}
 
-<textarea id="decoded" class="input"></textarea>
+<div id="decoded">
+	<textarea class="input" id="decoded-text" placeholder="Plain text"></textarea>
+	<span class="button" id="decoded-copy">⎘</span>
+</div>
 <span><=></span>
-<textarea id="encoded" class="output"></textarea>
+<div id="encoded">
+	<textarea class="output" id="encoded-text" placeholder="Encoded text"></textarea>
+	<span class="button" id="encoded-copy">⎘</span>
+</div>

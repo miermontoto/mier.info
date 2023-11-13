@@ -81,7 +81,7 @@ permalink: false
 {% endmacro %}
 
 {% macro renderExperience(experience) %}
-    <div class="model card" id="{{ experience.data.name | slug }}">
+    <div class="card {{ experience.data.class }}" id="{{ experience.data.name | slug }}">
         <div class="card-title-col">
             <h1 class="card-title">
                 {% set logo = '/assets/logos/exp/' + (experience.data.logo or experience.data.name) + '.png' %}

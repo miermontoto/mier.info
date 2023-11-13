@@ -1,6 +1,8 @@
 window.addEventListener("load", function(event) {
-	const decoded = document.querySelector('#decoded');
-	const encoded = document.querySelector('#encoded');
+	const decoded = document.querySelector('#decoded-text');
+	const encoded = document.querySelector('#encoded-text');
+	const copyDecoded = document.querySelector('#decoded-copy');
+	const copyEncoded = document.querySelector('#encoded-copy');
 
 	const encode = () => {
 		encoded.value = b2a(decoded.value);
@@ -18,8 +20,15 @@ window.addEventListener("load", function(event) {
 		decoded.value = text;
 	}
 
+	const copyToClipboard = (dom) => {
+		this.navigator.clipboard.writeText(dom.value);
+	};
+
 	decoded.addEventListener('input', encode);
 	encoded.addEventListener('input', decode);
+
+	copyDecoded.addEventListener('click', () => copyToClipboard(decoded));
+	copyEncoded.addEventListener('click', () => copyToClipboard(encoded));
 });
 
 function a2b(str) {

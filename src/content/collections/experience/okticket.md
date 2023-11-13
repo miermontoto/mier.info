@@ -3,6 +3,7 @@ name: okticket
 role: software engineer, intership
 period: 2023 (3 months)
 icons: [fa-brands fa-laravel fa-solid, fa-brands fa-php, fa-brands fa-docker, devicon-ruby-plain]
+class: okticket
 ---
 extracurricular internship at *okticket*, a Fintech SaaS that digitizes and manages employee tickets.
 

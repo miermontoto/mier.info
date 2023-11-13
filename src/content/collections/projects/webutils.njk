@@ -6,11 +6,12 @@ permalink: /webutils/
 demo: /webutils/
 ---
 
+<div class="carded" id="utils">
 {% for util in collections.webutils %}
-	<div id="{{ util.fileSlug }}" class="util">
-		<h2><a href="/{{ util.fileSlug }}">{{ util.fileSlug }}</a></h2>
+	<div id="{{ util.fileSlug }}" class="util card">
+		<h2 class="card-title"><a href="/{{ util.fileSlug }}">{{ util.fileSlug }}</a></h2>
 		{% set name = './src/content/collections/webutils/' + util.fileSlug + '.njk' %}
 		{% renderFile name %}
 	</div>
-	<hr>
 {% endfor %}
+</div>

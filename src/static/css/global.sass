@@ -1,7 +1,9 @@
 @use 'base'
 
-body
+*
     font-family: base.$fonts
+
+body
     color: base.$white
     background-color: base.$primary
     text-align: center
@@ -29,6 +31,13 @@ a, a:visited
     &:hover, .active
         animation: base.$animation
         cursor: pointer
+
+    &.disabled
+        cursor: not-allowed
+        opacity: 0.5
+
+        &:hover
+            animation: none
 
 code
     color: base.$white
@@ -73,3 +82,58 @@ hr
     margin-top: 3em
     margin-bottom: 3em
     width: 95%
+
+$rotation: 2.5rad
+:root
+    --rotation: variables.$rotation
+
+// cards
+.carded
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+    .card
+        width: max(20%, 300px)
+        display: grid
+        gap: 1em
+        align-items: center
+        justify-items: center
+        border-radius: base.$radius
+        border: 2px solid transparent
+        box-shadow: 0 0 0 2px base.$dark
+        padding: 1.5em
+        margin: 1.5em
+        background-color: base.$primary
+
+        p
+            margin: 1em
+
+        .card-bottom
+            display: flex
+            align-items: center
+            justify-content: center
+            height: 100%
+
+        .card-title
+            display: flex
+            align-items: center
+            justify-content: center
+
+        .card-icons
+            user-select: none
+
+.bordered
+    background-image: linear-gradient(black, black), linear-gradient(calc(var(--rotation)), base.$light 0, base.$secondary 20%, transparent 80%)
+    background-origin: border-box
+    background-clip: content-box, border-box
+    border: 2px solid transparent
+
+.icon
+    margin: 0 2px
+    font-size: 1.25em
+
+    &.svg
+        height: auto
+        width: 1.25em
+        filter: invert(1) grayscale(1) brightness(1.5)

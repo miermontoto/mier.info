@@ -1,14 +1,20 @@
 @use 'base'
 @import url("https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css")
-@font-face
+@font-face // title font
     font-family: 'Daft Font'
     font-display: swap
     src: local('Daft Font'), url('/assets/fonts/DaftFont.woff') format('woff')
 
-@font-face
+@font-face // marquee font
     font-family: "Ndot-55"
     font-display: swap
     src: local('Ndot-55'), url('/assets/fonts/Ndot-55.otf')
+
+@font-face // okticket font
+    font-family: 'Dosis'
+    font-display: swap
+    src: local('Dosis'), url('/assets/fonts/Dosis.ttf') format('truetype')
+
 $dot: base.$white
 
 // main
@@ -39,13 +45,6 @@ ul
     opacity: 1
     max-height: 9999em
 
-.model
-    border-radius: base.$radius
-    border: 2px solid base.$light
-    background-color: base.$secondary
-    margin: 1em
-    display: inline-block
-    padding: 1em
 
 #about
     line-height: 1.5em
@@ -94,44 +93,8 @@ a:hover .dot, span:hover .dot
     100%
         transform: translateX(-100%)
 
-// cards
-.carded
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
-
-    .card
-        width: max(20%, 300px)
-        display: grid
-        gap: 1em
-        align-items: center
-
-        p
-            margin: 1em
-
-        .card-bottom
-            display: flex
-            align-items: center
-            justify-content: center
-            height: 100%
-
-        .card-title
-            display: flex
-            align-items: center
-            justify-content: center
-
-        .card-icons
-            user-select: none
-
-// icons
-.icon
-    margin: 0 2px
-    font-size: 1.25em
-
-    &.svg
-        height: auto
-        width: 1.25em
-        filter: invert(1) grayscale(1) brightness(1.5)
+.okticket .card-title
+    font-family: 'Dosis', sans-serif
 
 .experience-logo
     width: 1.5em
@@ -142,10 +105,9 @@ a:hover .dot, span:hover .dot
 // projects table
 table#projects
     table-layout: auto
-    margin: 1em 0
-    border: 3px solid base.$light
+    border: 2px solid base.$light
     border-radius: base.$radius
-    padding: 1em
+    padding: 0.5em
 
     .project.star > .project-title
         font-size: 1.5em
