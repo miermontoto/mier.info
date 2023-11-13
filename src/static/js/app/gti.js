@@ -7,12 +7,17 @@ window.addEventListener('load', () => { // when the page loads (the content is r
 
 	// shuffle questions
 	let questions = document.querySelectorAll('.question-block');
-	shuffle(questions).forEach((q) => document.querySelector('#questions').appendChild(q));
+	let i = 1;
+	shuffle(questions).forEach((q) => {
+		document.querySelector('#questions').appendChild(q);
+		let title = q.querySelector('.question');
+		title.innerHTML = `${i++}. ${title.innerHTML}`; // add index to each question title
+	});
 
 	// shuffle 'shuffable' answer blocks
 	document.querySelectorAll('.answer-block').forEach((block) => {
 		let j = 0;
-		if (block.getAttribute('shuffle') == 'true') {                 // if it's shuffable
+		if (block.getAttribute('shuffle') !== 'false') {                 // if it's shuffable
 			block.querySelectorAll('br').forEach((br) => br.remove()); // remove all <br> tags
 			let answers = block.querySelectorAll('.answer');           // get all answers
 			shuffle(answers).forEach((ans) => {                        // shuffle them and for each

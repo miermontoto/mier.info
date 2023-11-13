@@ -8,7 +8,8 @@
 				"Ambas",
 				"Ninguna"
 			],
-			"correct": 2
+			"correct": 2,
+			"shuffle": "false"
 		},
 		{
 			"title": "El diseño de servicios informáticos requiere preparar y planificar el uso eficaz y eficiente de:",
@@ -189,6 +190,47 @@
 				"Gestión de activos de TI"
 			],
 			"correct": 0
+		},
+		{
+			"title": "¿Qué tipo de aplicaciones gestiona la práctica \"Desarrollo y gestión de software\"?",
+			"answers": [
+				"Las desarrolladas internamente",
+				"Las adquiridas",
+				"Los dos tipos anteriores",
+				"Otro tipo de aplicaciones"
+			],
+			"correct": 2,
+			"shuffle": "false"
+		},
+		{
+			"title": "¿Qué práctica es la responsable de supervisar los recursos tecnológicos virtuales y/o físicos, como servidores, almacenamiento, redes, hardware de cliente, middleware y software de los sistemas operacionales, que proporcionan los entornos necesarios para entregar servicios de TI?",
+			"answers": [
+				"Desarrollo y gestión de software",
+				"Gestión de despliegues",
+				"Service Desk",
+				"Gestión de infraestructura y plataformas"
+			],
+			"correct": 3
+		},
+		{
+			"title": "¿Qué práctica asegura que los productos y servicios nuevos o modificados cumplen con los requerimientos definidos?",
+			"answers": [
+				"Habitación del cambio",
+				"Gestión de versiones",
+				"Validación y pruebas del servicio",
+				"Gestión de despliegues"
+			],
+			"correct": 2
+		},
+		{
+			"title": "¿Cuáles son los tipos de eventos?",
+			"answers": [
+				"Informativo, Reactivo, Normal",
+				"Normal, Proactivo, Emergencia",
+				"Informativo, Advertencia, Excepción",
+				"Advertencia, Reactivo, Proactivo"
+			],
+			"correct": 2
 		}
 	]
 }
