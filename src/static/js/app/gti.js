@@ -50,9 +50,7 @@ function recalc() {
 	let i = 1;
 	document.querySelectorAll('.question').forEach((q) => {
 		q.innerHTML = `<span class="number">${i++}.</span> ${q.innerHTML}`; 		  // add index to each question title
-	});
 
-	document.querySelectorAll('.answer-block').forEach((block) => {    				  // for each answer block
 		let j = 0;
 		block.querySelectorAll('.answer').forEach((ans) => {           				  // for each answer
 			let letter = String.fromCharCode(97 + j++);                               // convert index to letter
