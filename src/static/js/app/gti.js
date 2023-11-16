@@ -48,11 +48,12 @@ window.addEventListener('scroll', () => {
 
 function recalc() {
 	let i = 1;
-	document.querySelectorAll('.question').forEach((q) => {
-		q.innerHTML = `<span class="number">${i++}.</span> ${q.innerHTML}`; 		  // add index to each question title
+	document.querySelectorAll('.question-block').forEach((q) => {
+		let title = q.querySelector('.question');
+		title.innerHTML = `<span class="number">${i++}.</span> ${title.innerHTML}`;   // add index to each question title
 
 		let j = 0;
-		block.querySelectorAll('.answer').forEach((ans) => {           				  // for each answer
+		q.querySelectorAll('.answer').forEach((ans) => {           				      // for each answer
 			let letter = String.fromCharCode(97 + j++);                               // convert index to letter
 			ans.innerHTML = `<span class="letter">${letter}.</span>${ans.innerHTML}`; // add letter to answer
 		});
