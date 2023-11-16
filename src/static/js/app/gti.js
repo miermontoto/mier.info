@@ -5,32 +5,16 @@ let total;
 let originalQuestions;
 
 window.addEventListener('load', () => { // when the page loads (the content is rendered)
-	resetAll();
+	originalQuestions = document.querySelector('#questions').innerHTML;
 	document.querySelector('#reset').addEventListener('click', resetAll);
 	total = document.querySelectorAll('.question-block').length;
 	document.querySelector('#total').innerHTML = total;
-	originalQuestions = document.querySelector('#questions').innerHTML;
 
 	document.querySelectorAll('#shuffle-questions, #shuffle-answers').forEach((checkbox) => {
-		checkbox.addEventListener('change', () => {
-			document.querySelector('#questions').innerHTML = originalQuestions;
-
-			if (document.querySelector('#shuffle-questions').checked) {
-				shuffleQuestions();
-			}
-
-			if (document.querySelector('#shuffle-answers').checked) {
-				shuffleAnswers();
-			}
-
-			resetAll();
-			recalc();
-		});
+		checkbox.addEventListener('change', resetAll);
 	});
 
-	shuffleQuestions();
-	shuffleAnswers();
-	recalc();
+	resetAll();
 });
 
 window.addEventListener('scroll', () => {
@@ -120,6 +104,18 @@ function round(number) {
 }
 
 function resetAll() {
+	document.querySelector('#questions').innerHTML = originalQuestions;
+
+	if (document.querySelector('#shuffle-questions').checked) {
+		shuffleQuestions();
+	}
+
+	if (document.querySelector('#shuffle-answers').checked) {
+		shuffleAnswers();
+	}
+
+	recalc();
+
 	document.querySelectorAll('.question-block').forEach((block) => {
 		block.classList.remove('correct');
 		block.classList.remove('wrong');

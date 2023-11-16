@@ -9,11 +9,9 @@ css: project
     <a href="{{ source }}" id="source">source code ></a>
 {% endif %}
 <h1>{{ title }}</h1>
-{% if buttons %}
-    {% for button in buttons %}
-        {{ button | safe }}
-    {% endfor %}
-{% endif %}
+{% for button in buttons %}
+    {{ button | safe }}
+{% endfor %}
 <hr>
 {% if content %}
     {{ content | safe }}
