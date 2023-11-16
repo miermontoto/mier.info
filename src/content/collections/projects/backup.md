@@ -23,8 +23,8 @@ el repositorio general se actualiza de manera automática todos los días, los r
 ### Backup Carrera
 el repositorio es una especie de continuación al conocido "Backup", que contiene mucha información y exámenes de otros años recopilados por ex-estudaintes de la carrera.
 
-- [backup original (onedrive UO)](https://unioviedo-my.sharepoint.com/:f:/g/personal/uo257355_uniovi_es/EjUyVaf6mAhMh1TqxDFey8kB-CKEk7KP6CqwkYylcYdRQg?e=xbMQHT) (se necesita cuenta de uniovi)
-- [backup carrera (gdrive mirror)](https://drive.google.com/drive/folders/1z8Sc4v4nRte7a7H5TaDDtwROzoN4_Cu3?usp=share_link)
+- [Backup Carrera (original)](https://unioviedo-my.sharepoint.com/:f:/g/personal/uo257355_uniovi_esEjUyVaf6mAhMh1TqxDFey8kB-CKEk7KP6CqwkYylcYdRQg?e=xbMQHT) *se necesita cuenta de uniovi*
+- [Backup Carrera (mirror, google drive)](https://drive.google.com/drive/folders/1z8Sc4v4nRte7a7H5TaDDtwROzoN4_Cu3?usp=share_link)
 
 ## Descarga
 para descargar un repositorio, se puede clonar de forma individual o descargar en formato zip desde GitHub.
@@ -89,12 +89,14 @@ para descargar todos los repositorios, usar el siguiente comando en una terminal
 
 ## y4t1
 - [Gestión de Tecnologías de la Información](https://github.com/miermontoto/GTI)
+  - ["gti quiz", colección de preguntas de examen del segundo parcial](https://mier.info/gti/)
 - [Ingeniería de Servicios](https://github.com/miermontoto/Servicios)
 - [Inteligencia de Negocio](https://github.com/miermontoto/Negocio)
 - [Seguridad](https://github.com/miermontoto/Servicios)
 - [Tecnologías Web](https://github.com/miermontoto/Web)
   - <span class="unavailable">["tew-lab-jee", prácticas de laboratorio](https://github.com/miermontoto/tew-2324-4-UO283319-lab-jee)</span>
-  - <span class="unavailable">"2324-tew1-41", trabajo en grupo</span>
+  - <span class="unavailable">"2324-tew1-41", primer trabajo en grupo</span>
+  - <span class="unavailable">"2324-tew2-41", segundo trabajo en grupo</span>
 
 </div>
 

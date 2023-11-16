@@ -3,14 +3,16 @@ layout: base.njk
 css: project
 ---
 
-<a href="/" id="back">< go back</a>
+<a href="{{ back or "/" }}" id="back">< go back</a>
 {% if source %}
     <span id="sep"> | </span>
     <a href="{{ source }}" id="source">source code ></a>
 {% endif %}
 <h1>{{ title }}</h1>
-{% if download %}
-    <a class="button" id="download" href="{{ download }}"><i class="fa-solid fa-download"></i>download</a>
+{% if buttons %}
+    {% for button in buttons %}
+        {{ button | safe }}
+    {% endfor %}
 {% endif %}
 <hr>
 {% if content %}
