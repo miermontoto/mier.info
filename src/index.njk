@@ -1,5 +1,4 @@
 ---
-title: mier
 layout: base.njk
 css: /static/css/index.css
 js: /static/js/index.js
@@ -12,9 +11,9 @@ js: /static/js/index.js
     <div id="marquee"><noscript>js isn't enabled :')</noscript></div>
 
     <div id="socials">
-        {% for item in collections.socials %}
-            <a href="{{ item.data.target }}" rel="noopener noreferrer">
-                <span class="dot"></span> {{ item.data.title }}
+        {% for link in links %}
+            <a href="{{ link.url }}" rel="noopener noreferrer">
+                <span class="dot"></span> {{ link.text }}
             </a>
         {% endfor %}
     </div>

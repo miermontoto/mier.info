@@ -27,14 +27,14 @@ function christmas() {
     let month = date.getMonth();
 
     if (month == 11 || month == 0 && date.getDate() < 7) {
-        snow();
+        letitsnow();
         return true;
     }
 
     return false;
 }
 
-function snow() {
+function letitsnow() {
     let script = document.createElement('script');
     script.src = '/static/js/snow.js';
 

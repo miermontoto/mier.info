@@ -5,7 +5,9 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy("./src/static/js/**");
     eleventyConfig.addPassthroughCopy("./assets/**");
-
+    eleventyConfig.addPassthroughCopy("**.data.json");
+    eleventyConfig.addGlobalData('repo', async () => fetch('https://api.github.com/repos/11ty/eleventy'));
+    eleventyConfig.setDataFileSuffixes([".data", ""]);
     eleventyConfig.setServerOptions({
         watch: ["_site/static/**"]
     });
@@ -16,6 +18,10 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addShortcode("addStyle", function (filename) {
         return `<link rel="stylesheet" href="/static/css/app/${filename}.css">`;
+    });
+
+    eleventyConfig.addShortcode("keywords", function() {
+        return `<meta name="keywords" content="${require('./package.json').keywords.join(', ')}">`;
     });
 
     eleventyConfig.addShortcode("version", function() {

@@ -1,9 +1,12 @@
 const isCorrect = (ans) => ans.classList.contains('correct') && ans.classList.contains('selected');
 let responded = 0;
+let total;
 
 window.addEventListener('load', () => { // when the page loads (the content is rendered)
 	resetAll();
 	document.querySelector('#reset').addEventListener('click', resetAll);
+	total = document.querySelectorAll('.question-block').length;
+	document.querySelector('#total').innerHTML = total;
 
 	// shuffle questions
 	let questions = document.querySelectorAll('.question-block');
@@ -17,7 +20,7 @@ window.addEventListener('load', () => { // when the page loads (the content is r
 	// shuffle 'shuffable' answer blocks
 	document.querySelectorAll('.answer-block').forEach((block) => {
 		let j = 0;
-		if (block.getAttribute('shuffle') !== 'false') {                 // if it's shuffable
+		if (block.getAttribute('shuffle') !== 'false') {               // if it's shuffable
 			block.querySelectorAll('br').forEach((br) => br.remove()); // remove all <br> tags
 			let answers = block.querySelectorAll('.answer');           // get all answers
 			shuffle(answers).forEach((ans) => {                        // shuffle them and for each
@@ -70,6 +73,10 @@ function handleAnswerClick(e) {
 
 	let score = document.querySelector('#correct').innerHTML / responded * 100;
 	document.querySelector('#score').innerHTML = round(score);
+
+	if (responded == total) {
+		document.querySelector('#results').classList.add('finished');
+	}
 }
 
 function round(number) {
@@ -92,10 +99,11 @@ function resetAll() {
 		ans.addEventListener('click', handleAnswerClick);
 	});
 
-	document.querySelector('#total').innerHTML = document.querySelectorAll('.question-block').length;
 	document.querySelector('#correct').innerHTML = 0;
 	document.querySelector('#score').innerHTML = 0;
 	responded = 0;
+
+	document.querySelector('#results').classList.remove('finished');
 }
 
 function shuffle(collection) {
