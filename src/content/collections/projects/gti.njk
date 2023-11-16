@@ -5,6 +5,7 @@ icons: [devicon-eleventy-plain, devicon-javascript-plain]
 permalink: /gti/
 demo: /gti/
 source: https://github.com/search?q=repo%3Amiermontoto%2Fmiermontoto+gti.&type=code
+download: /content/collections/projects/gti.data.json
 ---
 
 {% addStyle 'gti' %}
@@ -17,6 +18,13 @@ source: https://github.com/search?q=repo%3Amiermontoto%2Fmiermontoto+gti.&type=c
 	<noscript class=".error">ERROR: JavaScript is NEEDED for the quiz to work!</noscript>
 </div>
 <span class="button" id="reset">reset</span>
+<div id="options">
+	<input type="checkbox" id="shuffle-questions" checked>
+	<label for="shuffle">shuffle questions</label>
+	<br>
+	<input type="checkbox" id="shuffle-answers" checked>
+	<label for="shuffle">shuffle answers</label>
+</div>
 
 <hr>
 <div id="questions">

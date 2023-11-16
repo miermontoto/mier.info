@@ -28,7 +28,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setDataFileSuffixes([".data", ""]);
     eleventyConfig.setQuietMode(true);
     eleventyConfig.setServerOptions({
-        watch: ["_site/static/css/**"]
+        watch: ["src/static/css/**"]
     });
 
     eleventyConfig.addShortcode("addScript", function (filename) {
@@ -47,7 +47,7 @@ module.exports = function (eleventyConfig) {
             return `<link rel="stylesheet" href="${filepath.replace('src', '').replace('.sass', '.css')}">`;
         }
 
-        console.log(`JS file ${filename} not found in ./src/static/js`);
+        console.log(`CSS file ${filename} not found in ./src/static/css`);
         return '';
     });
 
@@ -91,6 +91,7 @@ module.exports = function (eleventyConfig) {
 
             template += `
                 </div>
+                ${shuffle == "false" ? '<i>* orden de respuestas fijado</i>' : ''}
             </div>
             `;
         });

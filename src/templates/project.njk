@@ -9,6 +9,9 @@ css: project
     <a href="{{ source }}" id="source">source code ></a>
 {% endif %}
 <h1>{{ title }}</h1>
+{% if download %}
+    <a class="button" id="download" href="{{ download }}"><i class="fa-solid fa-download"></i>download</a>
+{% endif %}
 <hr>
 {% if content %}
     {{ content | safe }}

@@ -2,39 +2,35 @@ const isCorrect = (ans) => ans.classList.contains('correct') && ans.classList.co
 let responded = 0;
 let total;
 
+let originalQuestions;
+
 window.addEventListener('load', () => { // when the page loads (the content is rendered)
 	resetAll();
 	document.querySelector('#reset').addEventListener('click', resetAll);
 	total = document.querySelectorAll('.question-block').length;
 	document.querySelector('#total').innerHTML = total;
+	originalQuestions = document.querySelector('#questions').innerHTML;
 
-	// shuffle questions
-	let questions = document.querySelectorAll('.question-block');
-	let i = 1;
-	shuffle(questions).forEach((q) => {
-		document.querySelector('#questions').appendChild(q);
-		let title = q.querySelector('.question');
-		title.innerHTML = `${i++}. ${title.innerHTML}`; // add index to each question title
-	});
+	document.querySelectorAll('#shuffle-questions, #shuffle-answers').forEach((checkbox) => {
+		checkbox.addEventListener('change', () => {
+			document.querySelector('#questions').innerHTML = originalQuestions;
 
-	// shuffle 'shuffable' answer blocks
-	document.querySelectorAll('.answer-block').forEach((block) => {
-		let j = 0;
-		if (block.getAttribute('shuffle') !== 'false') {               // if it's shuffable
-			block.querySelectorAll('br').forEach((br) => br.remove()); // remove all <br> tags
-			let answers = block.querySelectorAll('.answer');           // get all answers
-			shuffle(answers).forEach((ans) => {                        // shuffle them and for each
-				block.appendChild(ans);                                // append them to the block
-				block.appendChild(document.createElement('br'));       // and add a <br> tag
-			});
-		}
+			if (document.querySelector('#shuffle-questions').checked) {
+				shuffleQuestions();
+			}
 
-		block.querySelectorAll('.answer').forEach((ans) => {           // for each answer
-			let letter = String.fromCharCode(97 + j);                  // convert index to letter
-			ans.innerHTML = '<b>' + letter + '.</b> ' + ans.innerHTML; // add letter to answer
-			j++;
+			if (document.querySelector('#shuffle-answers').checked) {
+				shuffleAnswers();
+			}
+
+			resetAll();
+			recalc();
 		});
 	});
+
+	shuffleQuestions();
+	shuffleAnswers();
+	recalc();
 });
 
 window.addEventListener('scroll', () => {
@@ -49,6 +45,43 @@ window.addEventListener('scroll', () => {
 		element.style.top = 'initial';
 	}
 });
+
+function recalc() {
+	let i = 1;
+	document.querySelectorAll('.question').forEach((q) => {
+		q.innerHTML = `<span class="number">${i++}.</span> ${q.innerHTML}`; 		  // add index to each question title
+	});
+
+	document.querySelectorAll('.answer-block').forEach((block) => {    				  // for each answer block
+		let j = 0;
+		block.querySelectorAll('.answer').forEach((ans) => {           				  // for each answer
+			let letter = String.fromCharCode(97 + j++);                               // convert index to letter
+			ans.innerHTML = `<span class="letter">${letter}.</span>${ans.innerHTML}`; // add letter to answer
+		});
+	});
+}
+
+// shuffle questions
+function shuffleQuestions() {
+	let questions = document.querySelectorAll('.question-block');
+	shuffle(questions).forEach((q) => {
+		document.querySelector('#questions').appendChild(q);
+	});
+}
+
+// shuffle 'shuffable' answer blocks
+function shuffleAnswers() {
+	document.querySelectorAll('.answer-block').forEach((block) => {
+		if (block.getAttribute('shuffle') !== 'false') {               // if it's shuffable
+			block.querySelectorAll('br').forEach((br) => br.remove()); // remove all <br> tags
+			let answers = block.querySelectorAll('.answer');           // get all answers
+			shuffle(answers).forEach((ans) => {                        // shuffle them and for each
+				block.appendChild(ans);                                // append them to the block
+				block.appendChild(document.createElement('br'));       // and add a <br> tag
+			});
+		}
+	});
+}
 
 function disableBlock(block) {
 	block.querySelectorAll('.answer').forEach((ans) => {
