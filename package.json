@@ -1,7 +1,7 @@
 {
 	"name": "mier.info",
 	"version": "0.17.0",
-	"channel": "beta 2",
+	"channel": "RC1",
 	"description": "personal portfolio website where i write about myself and my projects.",
 	"scripts": {
 		"start": "npm run clean; eleventy --serve & npm run sass-dev",
@@ -33,7 +33,9 @@
 		"@11ty/eleventy": "^2.0.1"
 	},
 	"dependencies": {
+		"fs": "^0.0.1-security",
 		"npm": "^9.8.0",
+		"path": "^0.12.7",
 		"sass": "^1.69.5"
 	}
 }

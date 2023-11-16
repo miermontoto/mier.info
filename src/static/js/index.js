@@ -1,35 +1,37 @@
-const sections = [
-    { button: document.getElementById('project-button'), section: document.getElementById('project-section') },
-    { button: document.getElementById('about-button'), section: document.getElementById('about-section') }
-];
+window.addEventListener('load', () => {
+    const sections = [
+        { button: document.querySelector('#project-button'), section: document.querySelector('#project-section') },
+        { button: document.querySelector('#about-button'), section: document.querySelector('#about-section') }
+    ];
 
-const projects = document.querySelector('table#projects');
+    const projects = document.querySelector('table#projects');
 
-sections.forEach(({ button, section }) => {
-    button.addEventListener('click', () => {
-        toggleSection(section);
+    sections.forEach(({ button, section }) => {
+        button.addEventListener('click', () => {
+            toggleSection(section);
+        });
     });
-});
 
-document.getElementById('title').addEventListener('click', () => {
+    document.querySelector('#title').addEventListener('click', () => {
+        marqueeString();
+    });
+
     marqueeString();
-});
 
-marqueeString();
+    // order projects by starred
+    projects.querySelectorAll('.project').forEach((project) => {
+        if (project.classList.contains('star')) {
+            projects.append(project);
 
-// order projects by starred
-projects.querySelectorAll('.project').forEach((project) => {
-    if (project.classList.contains('star')) {
-        projects.append(project);
+            project.querySelector('.project-title').innerHTML += ' ⭐';
+        }
+    });
 
-        project.querySelector('.project-title').innerHTML += ' ⭐';
-    }
-});
-
-projects.querySelectorAll('.project').forEach((project) => {
-    if (!project.classList.contains('star')) {
-        projects.append(project);
-    }
+    projects.querySelectorAll('.project').forEach((project) => {
+        if (!project.classList.contains('star')) {
+            projects.append(project);
+        }
+    });
 });
 
 // --------------------------------------------- //

@@ -12,15 +12,15 @@
         {% keywords %}
     {% endif %}
     <meta name="author" content="Juan Mier">
-    <link rel="stylesheet" href="/static/css/global.css">
-    <script src="/static/js/global.js" defer></script>
+    {% addStyle 'global' %}
+    {% addScript 'global' %}
     <link rel="icon" href="/assets/favicon.svg" type="image/x-icon">
     <title>{{ title or "mier" }}</title>
     {% if js %}
-        <script src="{{ js }}" defer></script>
+        {% addScript js %}
     {% endif %}
     {% if css %}
-        <link rel="stylesheet" href="{{ css }}">
+        {% addStyle css %}
     {% endif %}
 </head>
 <body>

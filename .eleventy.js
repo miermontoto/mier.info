@@ -1,23 +1,54 @@
+const fs = require("fs");
+const path = require("path");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
+
+function findFileInDir(dir, filename) {
+    let files = fs.readdirSync(dir);
+
+    for (const file of files) {
+        let filepath = path.join(dir, file);
+
+        if (fs.statSync(filepath).isDirectory()) {
+            let result = findFileInDir(filepath, filename);
+            if (result) return result;
+        } else if (path.basename(filepath) === filename) {
+            return filepath;
+        }
+    }
+
+    return null;
+}
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(EleventyRenderPlugin);
 
-    eleventyConfig.addPassthroughCopy("./src/static/js/**");
-    eleventyConfig.addPassthroughCopy("./assets/**");
+    eleventyConfig.addPassthroughCopy("./src/static/js");
+    eleventyConfig.addPassthroughCopy("./assets");
     eleventyConfig.addPassthroughCopy("**.data.json");
-    eleventyConfig.addGlobalData('repo', async () => fetch('https://api.github.com/repos/11ty/eleventy'));
     eleventyConfig.setDataFileSuffixes([".data", ""]);
+    eleventyConfig.setQuietMode(true);
     eleventyConfig.setServerOptions({
-        watch: ["_site/static/**"]
+        watch: ["_site/static/css/**"]
     });
 
     eleventyConfig.addShortcode("addScript", function (filename) {
-        return `<script src="/static/js/app/${filename}.js"></script>`;
+        let filepath = findFileInDir("./src/static/js", `${filename}.js`);
+        if (filepath) {
+            return `<script src="${filepath.replace('src', '')}"></script>`;
+        }
+
+        console.log(`JS file ${filename} not found in ./src/static/js`);
+        return '';
     });
 
     eleventyConfig.addShortcode("addStyle", function (filename) {
-        return `<link rel="stylesheet" href="/static/css/app/${filename}.css">`;
+        let filepath = findFileInDir("./src/static/css", `${filename}.sass`);
+        if (filepath) {
+            return `<link rel="stylesheet" href="${filepath.replace('src', '').replace('.sass', '.css')}">`;
+        }
+
+        console.log(`JS file ${filename} not found in ./src/static/js`);
+        return '';
     });
 
     eleventyConfig.addShortcode("keywords", function() {
