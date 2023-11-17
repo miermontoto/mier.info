@@ -5,10 +5,10 @@ let total;
 let originalQuestions;
 
 window.addEventListener('load', () => { // when the page loads (the content is rendered)
-	originalQuestions = document.querySelector('#questions').innerHTML;
-	document.querySelector('#reset').addEventListener('click', resetAll);
+	originalQuestions = document.getElementById('questions').innerHTML;
+	document.getElementById('reset').addEventListener('click', resetAll);
 	total = document.querySelectorAll('.question-block').length;
-	document.querySelector('#total').innerHTML = total;
+	document.getElementById('total').innerHTML = total;
 
 	document.querySelectorAll('#shuffle-questions, #shuffle-answers').forEach((checkbox) => {
 		checkbox.addEventListener('change', resetAll);
@@ -18,7 +18,7 @@ window.addEventListener('load', () => { // when the page loads (the content is r
 });
 
 window.addEventListener('scroll', () => {
-	let element = document.querySelector('#results');
+	let element = document.getElementById('results');
 	let stickyPos = element.getBoundingClientRect().top + window.scrollY;
 
 	if (window.pageY >= stickyPos) {
@@ -48,7 +48,7 @@ function recalc() {
 function shuffleQuestions() {
 	let questions = document.querySelectorAll('.question-block');
 	shuffle(questions).forEach((q) => {
-		document.querySelector('#questions').appendChild(q);
+		document.getElementById('questions').appendChild(q);
 	});
 }
 
@@ -83,15 +83,15 @@ function handleAnswerClick(e) {
 
 	let correct = isCorrect(target);
 	if (correct) {
-		document.querySelector('#correct').innerHTML++;
+		document.getElementById('correct').innerHTML++;
 	}
 	block.parentNode.classList.add(correct ? 'correct' : 'wrong');
 
-	let score = document.querySelector('#correct').innerHTML / responded * 100;
-	document.querySelector('#score').innerHTML = round(score);
+	let score = document.getElementById('correct').innerHTML / responded * 100;
+	document.getElementById('score').innerHTML = round(score);
 
 	if (responded == total) {
-		document.querySelector('#results').classList.add('finished');
+		document.getElementById('results').classList.add('finished');
 	}
 }
 
@@ -104,13 +104,13 @@ function round(number) {
 }
 
 function resetAll() {
-	document.querySelector('#questions').innerHTML = originalQuestions;
+	document.getElementById('questions').innerHTML = originalQuestions;
 
-	if (document.querySelector('#shuffle-questions').checked) {
+	if (document.getElementById('shuffle-questions').checked) {
 		shuffleQuestions();
 	}
 
-	if (document.querySelector('#shuffle-answers').checked) {
+	if (document.getElementById('shuffle-answers').checked) {
 		shuffleAnswers();
 	}
 
@@ -127,11 +127,11 @@ function resetAll() {
 		ans.addEventListener('click', handleAnswerClick);
 	});
 
-	document.querySelector('#correct').innerHTML = 0;
-	document.querySelector('#score').innerHTML = 0;
+	document.getElementById('correct').innerHTML = 0;
+	document.getElementById('score').innerHTML = 0;
 	responded = 0;
 
-	document.querySelector('#results').classList.remove('finished');
+	document.getElementById('results').classList.remove('finished');
 }
 
 function shuffle(collection) {

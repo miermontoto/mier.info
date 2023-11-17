@@ -34,7 +34,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode("addScript", function (filename) {
         let filepath = findFileInDir("./src/static/js", `${filename}.js`);
         if (filepath) {
-            return `<script src="${filepath.replace('src', '')}"></script>`;
+            return `<script src="${filepath.replace('src', '')}" defer></script>`;
         }
 
         console.log(`JS file ${filename} not found in ./src/static/js`);

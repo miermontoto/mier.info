@@ -1,8 +1,8 @@
 {
 	"name": "mier.info",
-	"version": "0.17.2",
+	"version": "0.17.3",
 	"channel": "RTW",
-	"description": "personal portfolio website where i write about myself and my projects.",
+	"description": "personal portfolio website that showcases my projects and professional experience.",
 	"scripts": {
 		"start": "npm run clean; eleventy --serve & npm run sass-dev",
 		"build": "npm run clean; eleventy & npm run sass-prod",

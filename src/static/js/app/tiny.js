@@ -1,8 +1,8 @@
 window.addEventListener("load", function(event) {
-	const input = document.querySelector('#tiny-input');
-	const output = document.querySelector('#tiny-output');
-	const ignore = document.querySelector('#tiny-ignore');
-	const copy = document.querySelector('#tiny-copy');
+	const input = document.getElementById('tiny-input');
+	const output = document.getElementById('tiny-output');
+	const ignore = document.getElementById('tiny-ignore');
+	const copy = document.getElementById('tiny-copy');
 
 	input.value = '';
 	output.innerHTML = '';

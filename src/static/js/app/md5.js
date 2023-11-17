@@ -1,7 +1,7 @@
 window.addEventListener("load", function(event) {
-	const input = document.querySelector('#md5-input');
-	const output = document.querySelector('#md5-output');
-	const copy = document.querySelector('#md5-copy');
+	const input = document.getElementById('md5-input');
+	const output = document.getElementById('md5-output');
+	const copy = document.getElementById('md5-copy');
 
 	input.value = '';
 	output.innerHTML = '';

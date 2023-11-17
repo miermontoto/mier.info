@@ -1,25 +1,23 @@
-window.addEventListener('load', () => {
-    christmas();
+christmas();
 
-    document.querySelector('#general-info').innerHTML = navigator.userAgent; // get user agent
-    updateInfo();
-    setInterval(updateInfo, 1000);
+document.getElementById('user-agent').innerHTML = navigator.userAgent; // get user agent
+updateInfo();
+setInterval(updateInfo, 1000);
 
-    document.querySelectorAll('.topbtn').forEach((btn) => {
-        btn.addEventListener('click', () => {
-            window.scrollTo(0, 0);
-        });
+document.querySelectorAll('.topbtn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+        window.scrollTo(0, 0);
     });
+});
 
-    document.querySelectorAll('.bordered').forEach((card) => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width / 2;
-            const y = e.clientY - rect.top - rect.height / 2;
-            const angle = Math.atan2(-x, y);
+document.querySelectorAll('.bordered').forEach((card) => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        const angle = Math.atan2(-x, y);
 
-            card.style.setProperty('--rotation', angle + 'rad')
-        });
+        card.style.setProperty('--rotation', angle + 'rad')
     });
 });
 
@@ -58,13 +56,13 @@ function updateInfo() {
 }
 
 function getWindowSize() {
-    let wInfo = document.querySelector('#window-info');
-    wInfo.innerHTML = '<br>' + window.screen.width + 'x' + window.screen.height; // get window size
+    let wInfo = document.getElementById('window');
+    wInfo.innerHTML = window.screen.width + 'x' + window.screen.height; // get window size
     wInfo.innerHTML += ' ' + window.innerWidth + 'px ' + window.innerHeight + 'px';
 }
 
 function getTime() {
-    let dom = document.querySelector('#time-info');
+    let dom = document.getElementById('time');
     let date = new Date();
     let time = date.getHours().toString().padStart(2, '0') + ':' + date.getMinutes().toString().padStart(2, '0') + ':' + date.getSeconds().toString().padStart(2, '0');
     let day = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();

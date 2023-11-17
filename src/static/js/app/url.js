@@ -1,6 +1,6 @@
 window.addEventListener("load", function(event) {
-	const decoded = document.querySelector('#url-decoded');
-	const encoded = document.querySelector('#url-encoded');
+	const decoded = document.getElementById('url-decoded');
+	const encoded = document.getElementById('url-encoded');
 
 	const encode = () => {
 		encoded.value = encodeURIComponent(decoded.value);

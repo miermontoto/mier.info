@@ -5,20 +5,22 @@
 		{"text": "mail", "url": "mailto:mier@mier.info"}
 	],
 	"marquee": [
-		"still celebrating Homework 25th anniversary.",
-		"the prime time of your life. now, live it.",
-		"something's in the air.",
-		"we are human, after all.",
-		"WDPK 83.7, the sound of tomorrow the music of today, brings you exclusively the essential mix.",
-		"if love is the answer, you're home.",
-		"the perfect song is framed with silence.",
-		"make love.",
-		"and we will never be alone again.",
-		"many rooms to explore but the doors look the same.",
-		"ROCK. ROBOT ROCK.",
-		"touch it. bring it. pay it. watch it. turn it. leave it. stop. format it.",
-		"around the world.",
-		"music sounds better with you.",
-		"one more time."
+		{"text": "still celebrating Homework 25th anniversary.", "url": ""},
+		{"text": "the prime time of your life. now, live it.", "url": "https://www.youtube.com/watch?v=Kg_WWb181q8"},
+		{"text": "something's in the air.", "url": ""},
+		{"text": "we are human, after all.", "url": ""},
+		{"text": "WDPK 83.7, the sound of tomorrow the music of today, brings you exclusively the essential mix.", "url": ""},
+		{"text": "if love is the answer, you're home.", "url": ""},
+		{"text": "the perfect song is framed with silence.", "url": ""},
+		{"text": "make love.", "url": ""},
+		{"text": "and we will never be alone again.", "url": ""},
+		{"text": "many rooms to explore but the doors look the same.", "url": ""},
+		{"text": "ROCK. ROBOT ROCK.", "url": ""},
+		{"text": "touch it. bring it. pay it. watch it. turn it. leave it. stop. format it.", "url": ""},
+		{"text": "around the world.", "url": ""},
+		{"text": "music sounds better with you.", "url": ""},
+		{"text": "one more time.", "url": ""},
+		{"text": "D.V.N.O., four capital letters.", "url": ""},
+		{"text": "use imagination as a destination.", "url": ""}
 	]
 }

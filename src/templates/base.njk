@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Eleventy">
+    <meta name="generator" content="{{ eleventy.generator }}">
     <meta name="description" content="{{ desc or "personal portfolio website that collects all my projects and professional experiences." }}">
     {% if keywords %}
         <meta name="keywords" content="{{ keywords }}">
@@ -25,10 +25,9 @@
 </head>
 <body>
     <div id="browser-info">
-        <span id="general-info"></span>
-        <span id="window-info"></span>
-        <span id="time-info"></span>
-        <span id="click-info"></span>
+        <span id="user-agent">user-agent</span><br>
+        <span id="window">window-size</span>
+        <span id="time">time</span>
     </div>
 
     {{ content | safe }}

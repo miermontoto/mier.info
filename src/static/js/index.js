@@ -1,37 +1,42 @@
-window.addEventListener('load', () => {
-    const sections = [
-        { button: document.querySelector('#project-button'), section: document.querySelector('#project-section') },
-        { button: document.querySelector('#about-button'), section: document.querySelector('#about-section') }
-    ];
-
-    const projects = document.querySelector('table#projects');
-
-    sections.forEach(({ button, section }) => {
-        button.addEventListener('click', () => {
-            toggleSection(section);
+fetch('index.data.json').then(response => response.json()).then(data => {
+    let strings = data.marquee;
+    let string = strings[Math.floor(Math.random() * strings.length)];
+    let marquee = document.getElementById('marquee');
+    marquee.innerHTML = string.text;
+    if (string.url && string.url !== '') {
+        marquee.addEventListener('click', () => {
+            window.open(string.url, '_blank');
         });
+        marquee.style.cursor = 'help';
+    }
+});
+
+const sections = [
+    { button: document.getElementById('project-button'), section: document.getElementById('project-section') },
+    { button: document.getElementById('about-button'), section: document.getElementById('about-section') }
+];
+
+const projects = document.getElementById('projects');
+
+sections.forEach(({ button, section }) => {
+    button.addEventListener('click', () => {
+        toggleSection(section);
     });
+});
 
-    document.querySelector('#title').addEventListener('click', () => {
-        marqueeString();
-    });
+// order projects by starred
+projects.querySelectorAll('.project').forEach((project) => {
+    if (project.classList.contains('star')) {
+        projects.append(project);
 
-    marqueeString();
+        project.querySelector('.project-title').innerHTML += ' ⭐';
+    }
+});
 
-    // order projects by starred
-    projects.querySelectorAll('.project').forEach((project) => {
-        if (project.classList.contains('star')) {
-            projects.append(project);
-
-            project.querySelector('.project-title').innerHTML += ' ⭐';
-        }
-    });
-
-    projects.querySelectorAll('.project').forEach((project) => {
-        if (!project.classList.contains('star')) {
-            projects.append(project);
-        }
-    });
+projects.querySelectorAll('.project').forEach((project) => {
+    if (!project.classList.contains('star')) {
+        projects.append(project);
+    }
 });
 
 // --------------------------------------------- //
@@ -49,12 +54,4 @@ function toggleSection(section) {
     if (!sectionIsActive) {
         section.classList.add('active');
     }
-}
-
-function marqueeString() {
-    fetch('index.data.json').then(response => response.json()).then(data => {
-        let strings = data.marquee;
-        let randomString = strings[Math.floor(Math.random() * strings.length)];
-        document.getElementById('marquee').innerHTML = randomString;
-    });
 }

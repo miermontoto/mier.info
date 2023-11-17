@@ -1,8 +1,8 @@
 window.addEventListener("load", function(event) {
-	const decoded = document.querySelector('#decoded-text');
-	const encoded = document.querySelector('#encoded-text');
-	const copyDecoded = document.querySelector('#decoded-copy');
-	const copyEncoded = document.querySelector('#encoded-copy');
+	const decoded = document.getElementById('decoded-text');
+	const encoded = document.getElementById('encoded-text');
+	const copyDecoded = document.getElementById('decoded-copy');
+	const copyEncoded = document.getElementById('encoded-copy');
 
 	const encode = () => {
 		encoded.value = b2a(decoded.value);
