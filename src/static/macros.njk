@@ -2,17 +2,15 @@
 permalink: false
 ---
 
-{% macro renderIcons(icons) %}
-    {% for icon in icons %}
-        <i class="{{ icon }} icon"></i>
+{% macro renderIcons(svgs) %}
+    {% for svg in svgs %}
+        {{ renderIcon(svg) }}
     {% endfor %}
 {% endmacro %}
 
-{% macro renderSvgIcons(svgs) %}
-    {% for svg in svgs %}
-        {% set file = '/assets/logos/tech/' + svg + '.svg' %}
-        <img src="{{ file }}" class="icon svg" alt="{{ svg }} tech icon">
-    {% endfor %}
+{% macro renderIcon(svg) %}
+    {% set file = '/assets/logos/tech/' + svg + '.svg' %}
+    <img src="{{ file }}" class="icon svg" alt="{{ svg }}" title="{{ svg }}">
 {% endmacro %}
 
 {% macro renderProjects(projects) %}
@@ -48,7 +46,7 @@ permalink: false
             {% if project.data.source %}
                 <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer"
                     aria-label="go to the source code for the {{ project.data.name | slug }} project">
-                    <i class="fa-brands fa-square-github"></i>
+                    {{ renderIcon('git') }}
                 </a>
             {% endif %}
             {% for link in project.data.links %}
@@ -63,7 +61,6 @@ permalink: false
 
         <td class="project-icons">
             {{ renderIcons(project.data.icons) }}
-            {{ renderSvgIcons(project.data.svgs) }}
         </td>
 
         {# <td class="project-image">
