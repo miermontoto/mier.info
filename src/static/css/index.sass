@@ -35,9 +35,9 @@ ul
     overflow: hidden
     transition: all 0.5s ease
 
-.section.active
-    opacity: 1
-    max-height: 9999em
+    &.active
+        opacity: 1
+        max-height: 9999em
 
 
 #about
@@ -55,7 +55,7 @@ ul
     a
         display: inline-block
         text-decoration: none
-        font-size: 11px
+        font-size: 11.5px
         margin-left: 5px
         padding: 2px 0
         user-select: none
@@ -70,8 +70,8 @@ ul
     width: 7px
     height: 7px
 
-a:hover .dot, span:hover .dot
-    background-color: base.$primary
+    a:hover &
+        background-color: base.$primary
 
 #marquee
     text-align: center
@@ -94,29 +94,40 @@ a:hover .dot, span:hover .dot
     user-select: none
 
 // projects table
-table#projects
+#projects
     table-layout: auto
     border: 2px solid base.$light
     border-radius: base.$radius
-    padding: 0.5em
+    margin: 1em
 
-    .project.star > .project-title
+    .project.star .project-title
         font-size: 1.5em
 
     .project-title
         font-size: 1.25em
+
+    .project-icons
+        vertical-align: middle
+
+        .project-icons-container
+            display: grid
+
+            img:not(:last-child)
+                margin: 6px 0
 
     .project-links
         a
             text-decoration: none
             font-size: 1.25em
 
-        i
-            font-size: 1.25em
+        img
+            font-size: 1em
 
-    td:not(.project-icons)
+    td:not(.project-icons):not(.project-links)
         padding: 1.5em 0.75em
 
-    tr:not(:last-child)
-        td
-            border-bottom: 1px solid base.$dark
+    .project-icons, .project-links
+        padding: 0.75em
+
+    tr:not(:last-child) td
+        border-bottom: 1px solid base.$dark

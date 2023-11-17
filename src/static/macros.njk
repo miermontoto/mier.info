@@ -60,7 +60,9 @@ permalink: false
         </td>
 
         <td class="project-icons">
-            {{ renderIcons(project.data.icons) }}
+            <div class="project-icons-container">
+                {{ renderIcons(project.data.icons) }}
+            </div>
         </td>
 
         {# <td class="project-image">
