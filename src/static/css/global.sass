@@ -133,12 +133,15 @@ $rotation: 2.5rad
     border: 2px solid transparent
 
 .icon
-    font-size: 1.25em
+    font-size: 1em
     height: auto
     width: 1em
     filter: invert(1) grayscale(1) brightness(2)
     position: relative
     top: 0.125em
+
+    .project-btn &
+        filter: invert(0) grayscale(1) brightness(1)
 
 .error, noscript
     color: base.$wrong

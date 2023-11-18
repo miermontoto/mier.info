@@ -9,8 +9,8 @@ permalink: false
 {% endmacro %}
 
 {% macro renderIcon(svg) %}
-    {% set file = '/assets/logos/tech/' + svg + '.svg' %}
-    <img src="{{ file }}" class="icon svg" alt="{{ svg }}" title="{{ svg }}">
+    {% set file = '/assets/icons/tech/' + svg + '.svg' %}
+    <img src="{{ file }}" class="icon" alt="{{ svg }}" title="{{ svg }}">
 {% endmacro %}
 
 {% macro renderProjects(projects) %}
@@ -83,7 +83,7 @@ permalink: false
     <div class="card {{ experience.data.class }}" id="{{ experience.data.name | slug }}">
         <div class="card-title-col">
             <h1 class="card-title">
-                {% set logo = '/assets/logos/exp/' + (experience.data.logo or experience.data.name) + '.png' %}
+                {% set logo = '/assets/icons/exp/' + (experience.data.logo or experience.data.name) + '.png' %}
                 <img src="{{ logo }}" class="experience-logo" alt="{{ experience.data.name }} logo">
                 {{ experience.data.name }}
             </h1>

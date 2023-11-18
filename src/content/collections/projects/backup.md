@@ -23,7 +23,7 @@ el repositorio general se actualiza de manera automática todos los días, los r
 ### Backup Carrera
 el repositorio es una especie de continuación al conocido "Backup", que contiene mucha información y exámenes de otros años recopilados por ex-estudaintes de la carrera.
 
-- [Backup Carrera (original)](https://unioviedo-my.sharepoint.com/:f:/g/personal/uo257355_uniovi_esEjUyVaf6mAhMh1TqxDFey8kB-CKEk7KP6CqwkYylcYdRQg?e=xbMQHT) *se necesita cuenta de uniovi*
+- [Backup Carrera (original)](https://unioviedo-my.sharepoint.com/:f:/g/personal/uo257355_uniovi_es/EjUyVaf6mAhMh1TqxDFey8kB-CKEk7KP6CqwkYylcYdRQg?e=xbMQHT) *se necesita cuenta de uniovi*
 - [Backup Carrera (mirror, google drive)](https://drive.google.com/drive/folders/1z8Sc4v4nRte7a7H5TaDDtwROzoN4_Cu3?usp=share_link)
 
 ## Descarga
