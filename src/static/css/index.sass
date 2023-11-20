@@ -131,3 +131,34 @@ ul
 
     tr:not(:last-child) td
         border-bottom: 1px solid base.$dark
+
+video#background
+    position: fixed
+    top: 0
+    left: 0
+    min-width: 100%
+    min-height: 100%
+    width: 100%
+    z-index: -2
+    opacity: 0.05
+    transition: all 0.5s ease
+
+    &.fullscreen
+        z-index: 2
+        opacity: 1
+
+#overlay
+    position: fixed
+    bottom: 16px
+    left: 16px
+    margin-bottom: 0
+    z-index: 3
+
+    .button
+        color: white
+
+    #fullscreen-background
+        font-size: 0.85em
+
+    #stop-background
+        font-size: 1.15em
