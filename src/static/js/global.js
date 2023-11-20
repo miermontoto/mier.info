@@ -1,9 +1,5 @@
 christmas();
 
-document.getElementById('user-agent').innerHTML = navigator.userAgent; // get user agent
-updateInfo();
-setInterval(updateInfo, 1000);
-
 document.querySelectorAll('.topbtn').forEach((btn) => {
     btn.addEventListener('click', () => {
         window.scrollTo(0, 0);
@@ -48,26 +44,4 @@ function letitsnow() {
     }
 
     document.head.appendChild(script);
-}
-
-function updateInfo() {
-    getWindowSize();
-    getTime();
-}
-
-function getWindowSize() {
-    let wInfo = document.getElementById('window');
-    wInfo.innerHTML = window.screen.width + 'x' + window.screen.height; // get window size
-    wInfo.innerHTML += ' ' + window.innerWidth + 'px ' + window.innerHeight + 'px';
-}
-
-function getTime() {
-    let dom = document.getElementById('time');
-    let date = new Date();
-    let time = date.getHours().toString().padStart(2, '0') + ':' + date.getMinutes().toString().padStart(2, '0') + ':' + date.getSeconds().toString().padStart(2, '0');
-    let day = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
-    dom.innerHTML = day + ' ' + time;
-    try {
-        dom.innerHTML += ', ' + (new Date().getTime() - loadTime) + 'ms';
-    } catch (e) {}
 }

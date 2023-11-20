@@ -44,8 +44,7 @@ permalink: false
 
         <td class="project-links">
             {% if project.data.source %}
-                <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer"
-                    aria-label="go to the source code for the {{ project.data.name | slug }} project">
+                <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer" aria-label="source code for {{ project.data.title }}">
                     {{ renderIcon('git') }}
                 </a>
             {% endif %}
