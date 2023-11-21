@@ -271,6 +271,46 @@
 				"Habilitación del cambio"
 			],
 			"correct": 2
+		},
+		{
+			"title": "¿Qué práctica tiene como propósito asegurar que una organización disponga de las personas adecuadas, con las habilidades y el conocimiento apropiado, y asignadas en los roles correctos para soportar sus objetivos de negocio?",
+			"answers": [
+				"Gestión de relaciones",
+				"Gestión de la fuerza de trabajo y el talento",
+				"Service Desk",
+				"Gestión del personal"
+			],
+			"correct": 1
+		},
+		{
+			"title": "¿En qué concepto se basa la práctica de Gestión de la Disponibilidad para definir los objetivos de disponibilidad de los componentes y servicios?",
+			"answers": [
+				"La fiabilidad de los componentes y servicios",
+				"La vulnerabilidad",
+				"La depreciación de los componentes",
+				"La disponibilidad de los datos"
+			],
+			"correct": 0
+		},
+		{
+			"title": "¿Cuál de las siguientes actividades forma parte del proceso de la gestión de disponibilidad?",
+			"answers": [
+				"La clasificación de solicitudes de cambio",
+				"La definición de la codificación de impacto de incidencias",
+				"La identificación de problemas relacionados con la disponibilidad de servicios de TI",
+				"La mediación de disponibilidad de los servicios de TI"
+			],
+			"correct": 3
+		},
+		{
+			"title": "¿En qué práctica se hace un análisis de las amenazas y vulnerabilidades de los servicios de TI ante situaciones desastrosas y se determinan las contramedidas a tomar para combatirlas?",
+			"answers": [
+				"Gestión de la Disponibilidad",
+				"Gestión de la Continuidad del Servicio",
+				"Gestión de Problemas",
+				"Gestión de Niveles de Servicio"
+			],
+			"correct": 1
 		}
 	],
 	"author": "Juan Mier",

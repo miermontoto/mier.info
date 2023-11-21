@@ -30,15 +30,18 @@ sections.forEach(({ button, section }) => {
 });
 
 let fullscreen = document.getElementById('fullscreen-background');
+let overlay = document.getElementById('overlay');
 fullscreen.addEventListener('click', () => {
     let videoElement = document.getElementById('background');
 
     if (videoElement.classList.contains('fullscreen')) {
         videoElement.classList.remove('fullscreen');
-        fullscreen.classList.remove('active')
+        fullscreen.classList.remove('active');
+        overlay.style.zIndex = '2';
     } else {
         videoElement.classList.add('fullscreen');
-        fullscreen.classList.add('active')
+        fullscreen.classList.add('active');
+        overlay.style.zIndex = '4';
     }
 });
 
