@@ -1,6 +1,3 @@
-let videos;
-let playing = true;
-
 fetch('index.data.json').then(response => response.json()).then(data => {
     let string = randomize(data.marquee);
     let marquee = document.getElementById('marquee');
@@ -12,8 +9,13 @@ fetch('index.data.json').then(response => response.json()).then(data => {
         marquee.style.cursor = 'help';
     }
 
-    videos = data.videos;
-    injectVideo();
+    let videoElement = document.getElementById('background');
+
+    let source = document.createElement('source');
+    source.src = `/assets/media/${randomize(data.videos)}`;
+    source.type = 'video/mp4';
+    videoElement.appendChild(source);
+    videoElement.play();
 });
 
 const sections = [
@@ -81,17 +83,6 @@ function toggleSection(section) {
     if (!sectionIsActive) {
         section.classList.add('active');
     }
-}
-
-function injectVideo() {
-    let video = randomize(videos);
-    let videoElement = document.getElementById('background');
-
-    let source = document.createElement('source');
-    source.src = `/assets/media/${video}`;
-    source.type = 'video/mp4';
-    videoElement.appendChild(source);
-    videoElement.play();
 }
 
 function randomize(col) {
