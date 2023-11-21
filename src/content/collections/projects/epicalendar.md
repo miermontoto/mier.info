@@ -9,9 +9,10 @@ icons: [flask, python, react]
 date: 1800-01-01
 status: https://dashboard.mier.info/api/badge/2/status?style=flat-square
 star: star
+buttons: [
+    {'url': 'https://epicalendar.mier.info', 'img': '🌐', 'text': 'página web'}
+]
 ---
-
-# [\[enlace\]](https://epicalendar.mier.info)
 
 ## JSESSION tutorial
 1. Inicia sesión en el [SIES](https://sies.uniovi.es/serviciosacademicos/) con tu cuenta.

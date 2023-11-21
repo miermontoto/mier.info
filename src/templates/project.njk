@@ -10,7 +10,7 @@ css: project
 {% endif %}
 <h1>{{ title }}</h1>
 {% for button in buttons %}
-    {{ button | safe }}
+    <a class="button" href="{{ button.url }}">{{ button.img | safe }} {{ button.text }}</a>
 {% endfor %}
 <hr>
 {% if content %}

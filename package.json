@@ -1,7 +1,7 @@
 {
 	"name": "mier.info",
 	"version": "0.18.0",
-	"channel": "beta",
+	"channel": "beta 2",
 	"description": "personal portfolio website that showcases my projects and professional experience.",
 	"scripts": {
 		"start": "npm run clean; eleventy --serve & npm run sass-dev",

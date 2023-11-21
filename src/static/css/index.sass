@@ -39,7 +39,6 @@ ul
         opacity: 1
         max-height: 9999em
 
-
 #about
     line-height: 1.5em
 
@@ -48,6 +47,9 @@ ul
 
 .sections
     margin-top: 5em
+
+.section
+    display: inline-block
 
 #socials
     user-select: none
@@ -99,6 +101,10 @@ ul
     border: 2px solid base.$light
     border-radius: base.$radius
     margin: 1em
+    width: 90%
+    backdrop-filter: blur(10px)
+    margin-left: auto
+    margin-right: auto
 
     .project.star .project-title
         font-size: 1.5em
@@ -134,14 +140,15 @@ ul
 
 video#background
     position: fixed
-    top: 0
-    left: 0
-    min-width: 100%
-    min-height: 100%
-    width: 100%
-    z-index: -2
-    opacity: 0.05
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: -3
+    opacity: 0.1
     transition: all 0.5s ease
+    width: 100%
+    height: 100%
+    object-fit: cover
 
     &.fullscreen
         z-index: 2
@@ -152,7 +159,7 @@ video#background
     bottom: 16px
     left: 16px
     margin-bottom: 0
-    z-index: 3
+    z-index: 2
 
     .button
         color: white
