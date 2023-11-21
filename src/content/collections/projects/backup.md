@@ -94,7 +94,7 @@ para descargar todos los repositorios, usar el siguiente comando en una terminal
 - [Inteligencia de Negocio](https://github.com/miermontoto/Negocio)
 - [Seguridad](https://github.com/miermontoto/Servicios)
 - [Tecnologías Web](https://github.com/miermontoto/Web)
-  - <span class="unavailable">["tew-lab-jee", prácticas de laboratorio](https://github.com/miermontoto/tew-2324-4-UO283319-lab-jee)</span>
+  - ["tew-lab-jee", prácticas de laboratorio](https://github.com/miermontoto/tew-2324-4-UO283319-lab-jee)
   - <span class="unavailable">"2324-tew1-41", primer trabajo en grupo</span>
   - <span class="unavailable">"2324-tew2-41", segundo trabajo en grupo</span>
 
