@@ -79,6 +79,18 @@ module.exports = function (eleventyConfig) {
                 </h2>
             `;
 
+            if (q.options) {
+                template += `<div class="options">`;
+
+                q.options.forEach((o, j) => {
+                    template += `
+                        <h3 class="option">${j+1}. ${o}</h3>
+                    `;
+                });
+
+                template += `</div>`;
+            }
+
             let shuffle = q.shuffle || true;
 
             template += `<div class="answer-block" shuffle="${shuffle}">`;

@@ -63,11 +63,16 @@
 		},
 		{
 			"title": "¿Cuáles son enfoques habituales en la entrega de proyectos?",
+			"options": [
+				"Traditional",
+				"Agile",
+				"Waterfall"
+			],
 			"answers": [
-				"Traditional y Agile",
-				"Traditional y Waterfall",
-				"Agile y Waterfall",
-				"Traditional, Waterfall y Agile"
+				"1 y 2",
+				"1 y 3",
+				"2 y 3",
+				"Todas"
 			],
 			"correct": 2
 		},
@@ -309,6 +314,51 @@
 				"Gestión de la Continuidad del Servicio",
 				"Gestión de Problemas",
 				"Gestión de Niveles de Servicio"
+			],
+			"correct": 1
+		},
+		{
+			"title": "¿Qué práctica tiene como propósito mantener y mejorar el uso eficaz, eficiente y conveniente de la información y el conocimiento a lo largo de la organización?",
+			"answers": [
+				"Mejora continua",
+				"Medición e Informes",
+				"Gestión de la información",
+				"Gestión del conocimiento"
+			],
+			"correct": 3
+		},
+		{
+			"title": "¿Cuáles de los siguientes roles son responsables de la identificación de oportunidades de mejora?",
+			"options": [
+				"Propietario del servicio",
+				"Gestor de Mejora Continua",
+				"Propietarios de Procesos"
+			],
+			"answers": [
+				"1 y 2",
+				"1 y 3",
+				"2 y 3",
+				"Todos"
+			],
+			"correct": 3
+		},
+		{
+			"title": "¿En qué se deben basar todas las decisiones de mejora continua?",
+			"answers": [
+				"Información sobre cómo se miden los servicios",
+				"Datos analizados de manera precisa y cuidadosa",
+				"Un cuadro de mando integral actualizado",
+				"Una evaluación de madurez reciente"
+			],
+			"correct": 1
+		},
+		{
+			"title": "El porcentaje de gastos de TI que excede el presupuesto es:",
+			"answers": [
+				"No es posible exceder el prespuesto en ITIL",
+				"Un KPI",
+				"Un CSF",
+				"Una métrica"
 			],
 			"correct": 1
 		}

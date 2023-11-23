@@ -15,7 +15,15 @@ fetch('index.data.json').then(response => response.json()).then(data => {
     source.src = `/assets/media/${randomize(data.videos)}`;
     source.type = 'video/mp4';
     videoElement.appendChild(source);
-    videoElement.play();
+    let promise = videoElement.play();
+
+    if (promise !== undefined) {
+        promise.catch(error => { // autoplay prevented (safari?)
+            console.log('autoplay was prevented by user or browser settings');
+            console.log('use a proper browser (firefox)');
+            console.log('autoplay can be resumed by clicking the fullscreen button in the bottom-left corner');
+        });
+    }
 });
 
 const sections = [

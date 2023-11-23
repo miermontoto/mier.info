@@ -14,20 +14,7 @@ window.addEventListener('load', () => { // when the page loads (the content is r
 		checkbox.addEventListener('change', resetAll);
 	});
 
-	resetAll();
-});
-
-window.addEventListener('scroll', () => {
-	let element = document.getElementById('results');
-	let stickyPos = element.getBoundingClientRect().top + window.scrollY;
-
-	if (window.pageY >= stickyPos) {
-		element.style.position = 'fixed';
-		element.style.top = '0';
-	} else {
-		element.style.position = 'relative';
-		element.style.top = 'initial';
-	}
+	resetAll(false);
 });
 
 function recalc() {
@@ -103,7 +90,10 @@ function round(number) {
 	return rounded;
 }
 
-function resetAll() {
+function resetAll(alert = true) {
+	if (alert && responded != 0 && !window.confirm('esta acción reinicia el progreso del quiz. pulsa OK para continuar.')) {
+		return;
+	}
 	document.getElementById('questions').innerHTML = originalQuestions;
 
 	if (document.getElementById('shuffle-questions').checked) {
