@@ -23,17 +23,15 @@ buttons: [
 </div>
 <span class="button" id="reset"><img src="/assets/icons/button/reset.svg" class="icon invert" alt="reset"> reset</span>
 <div id="options">
+	<h3>opciones.</h3>
 	<input type="checkbox" id="shuffle-questions" checked>
-	<label for="shuffle-questions">shuffle questions</label>
+	<label for="shuffle-questions">saltear preguntas</label>
 	<br>
 	<input type="checkbox" id="shuffle-answers" checked>
-	<label for="shuffle-answers">shuffle answers</label>
+	<label for="shuffle-answers">saltear respuestas</label>
 </div>
 
-<hr>
-<div id="questions">
-	{% questions questions %}
-</div>
-<hr>
+{% questions data %}
 
+<hr>
 {% top %}

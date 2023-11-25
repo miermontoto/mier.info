@@ -1,373 +1,598 @@
 {
-	"questions": [
-		{
-			"title": "¿Cuáles de las siguientes son herramientas de la práctica Análisis de Negocio?",
-			"answers": [
-				"Análisis DAFO",
-				"Historias de usuario",
-				"Ambas",
-				"Ninguna"
-			],
-			"correct": 2,
-			"shuffle": "false"
+	"data": {
+		"socrative": {
+			"info": "preguntas de tests de socrative, oficiales y actualizadas (23-24) ⭐",
+			"questions": [
+				{
+					"title": "¿Cuáles de las siguientes son herramientas de la práctica Análisis de Negocio?",
+					"answers": [
+						"Análisis DAFO",
+						"Historias de usuario",
+						"Ambas",
+						"Ninguna"
+					],
+					"correct": 2,
+					"shuffle": "false"
+				},
+				{
+					"title": "El diseño de servicios informáticos requiere preparar y planificar el uso eficaz y eficiente de:",
+					"answers": [
+						"Personas, procesos, partners y proveedores",
+						"Personas, procesos, productos y tecnología",
+						"Personas, procesos, tecnología y partners",
+						"Personas, productos, tecnología y partners"
+					],
+					"correct": 2
+				},
+				{
+					"title": "¿Cuál es la MEJOR descripción de un Catálogo de Servicios?",
+					"answers": [
+						"Un documento que define todos los aspectos de un servicio de TI y sus requerimientos a través de cada etapa de su ciclo de vida",
+						"El conjunto completo de servicios que maneja un proveedor de servicios",
+						"Una base de datos o documento estructurado con información acerca de todos los servicios de TI operativos, incluyendo aquellos que están disponibles para desplegar",
+						"Un acuerdo entre el proveedor de servicios de TI y el usuario de servicios de TI"
+					],
+					"correct": 2
+				},
+				{
+					"title": "¿Cómo contribuye la gestión del nivel de servicio a la actividad \"Planificar\" de la cadena de valor del servicio?",
+					"answers": [
+						"Recoge información durante las interacciones y comunican los objetivos de rendimiento del servicio a los equipos de operaciones y apoyo",
+						"Recoge y procesa comentarios de clientes y usuarios",
+						"Proporciona información sobre el desempeño y las tendencias reales del servicio",
+						"Utiliza los comentarios de los usuarios sobre el servicio y los requisitos de los clientes para mejorar el servicio"
+					],
+					"correct": 2
+				},
+				{
+					"title": "¿Qué métricas de nivel de servicio son mejores para medir la experiencia del usuario?",
+					"answers": [
+						"Métricas únicas basadas en el sistema",
+						"Métricas de % de tiempo de actividad de un servicio",
+						"Métricas operacionales",
+						"Métricas vinculadas a resultados/salidas definidos/as"
+					],
+					"correct": 3
+				},
+				{
+					"title": "¿Cuál NO es un tipo de Arquitectura considerada por la práctica Gestión de la Arquitectura?",
+					"answers": [
+						"Arquitectura del entorno",
+						"Arquitectura de aplicaciones",
+						"Arquitectura de servicios",
+						"Arquitectura hardware"
+					],
+					"correct": 3
+				},
+				{
+					"title": "¿Cuáles son enfoques habituales en la entrega de proyectos?",
+					"options": [
+						"Traditional",
+						"Agile",
+						"Waterfall"
+					],
+					"answers": [
+						"1 y 2",
+						"1 y 3",
+						"2 y 3",
+						"Todas"
+					],
+					"correct": 2
+				},
+				{
+					"title": "¿Qué práctica tiene un propósito que incluye ayudar a una organización a maximizar el valor, controlar los costos y gestionar los riesgos?",
+					"answers": [
+						"Gestión de relaciones",
+						"Gestión de activos de TI",
+						"Gestión de despliegues",
+						"Service Desk"
+					],
+					"correct": 1
+				},
+				{
+					"title": "¿Qué práctica asegura la disponibilidad de información precisa y confiable sobre los elementos de configuración y las relaciones entre ellos?",
+					"answers": [
+						"Gestión de configuración de los servicios",
+						"Service Desk",
+						"Gestión de activos de TI",
+						"Monitorización y gestión de eventos"
+					],
+					"correct": 0
+				},
+				{
+					"title": "¿En qué base de datos puede hallarse información sobre la estructura y la composición de la infraestructura de TI?",
+					"answers": [
+						"La Base de Datos de Gestión de la Capacidad (CMD)",
+						"La Base de Datos de Gestión de la Configuración (CMDB)",
+						"El Almacén de Hardware Definitivo (DHS)",
+						"La Biblioteca de Software Definitivo (DSL)"
+					],
+					"correct": 1
+				},
+				{
+					"title": "¿Qué práctica ofrece un punto de contacto único para usuarios?",
+					"answers": [
+						"Mesa de servicios (service desk)",
+						"Gestión de incidentes",
+						"Control de cambios",
+						"Gestión de solicitudes de servicio"
+					],
+					"correct": 0
+				},
+				{
+					"title": "¿Qué práctica proporciona soporte para gestionar la retroalimentación, las felicitaciones y las quejas de los usuarios?",
+					"answers": [
+						"Habilitación del cambio",
+						"Gestión de solicitudes (peticiones) de servicio",
+						"Gestión de problemas",
+						"Gestión de incidentes"
+					],
+					"correct": 1
+				},
+				{
+					"title": "¿Qué práctica tiene un propósito que incluye restaurar la operación normal del servicio lo más rápidamente posible?",
+					"answers": [
+						"Gestión de proveedores",
+						"Gestión del despliegue",
+						"Gestión de problemas",
+						"Gestión de incidentes"
+					],
+					"correct": 3
+				},
+				{
+					"title": "¿De qué manera la clasificación de incidentes ayuda a la práctica de gestión de incidentes?",
+					"answers": [
+						"Asegura que los incidentes se resuelvan en los plazos de tiempo acordados con el cliente",
+						"Determina la manera en que se percibe al proveedor de servicios",
+						"Determina la prioridad asignada al incidente",
+						"Permite encauzar el incidente hacia el área de soporte correcta"
+					],
+					"correct": 3
+				},
+				{
+					"title": "¿Qué afirmación acerca de los errores conocidos y los problemas es correcta?",
+					"answers": [
+						"Error conocido es el estado asignado a un problema después de que se ha analizado.",
+						"Un error conocido es la causa de uno o más problemas",
+						"Los errores conocidos causan vulnerabilidades, los problemas causan incidentes",
+						"El personal técnico gestiona los errores conocidos, y el personal de gestión de servicios gestiona los problemas"
+					],
+					"correct": 0
+				},
+				{
+					"title": "¿Qué palabra falta en la siguiente frase?: <quote>\"La práctica Gestión del cambio organizacional trata de [?] la resistencia al cambio\"</quote>",
+					"answers": [
+						"influenciar",
+						"mitigar",
+						"potenciar",
+						"comprender"
+					],
+					"correct": 1
+				},
+				{
+					"title": "¿Qué tipo de cambio necesita ser evaluado, autorizado y programado por una autoridad de cambio antes de implementarlo?",
+					"answers": [
+						"Emergencia",
+						"Normal",
+						"Estándar",
+						"Los tres"
+					],
+					"correct": 1
+				},
+				{
+					"title": "¿Qué práctica tiene como propósito que las funciones y los servicios, tanto nuevos como modificados, estén disponibles para usarse?",
+					"answers": [
+						"Gestión de solicitudes (peticiones) de servicio",
+						"Gestión de despliegues",
+						"Gestión de liberaciones (versiones)",
+						"Control de cambios"
+					],
+					"correct": 2
+				},
+				{
+					"title": "¿Qué práctica es responsable de pasar componentes a entornos de producción?",
+					"answers": [
+						"Gestión de despliegues",
+						"Habilitación del cambio",
+						"Gestión de versiones",
+						"Gestión de activos de TI"
+					],
+					"correct": 0
+				},
+				{
+					"title": "¿Cuáles son los tipos de eventos?",
+					"answers": [
+						"Informativo, Reactivo, Normal",
+						"Normal, Proactivo, Emergencia",
+						"Informativo, Advertencia, Excepción",
+						"Advertencia, Reactivo, Proactivo"
+					],
+					"correct": 2
+				},
+				{
+					"title": "¿Qué práctica es la responsable de supervisar los recursos tecnológicos virtuales y/o físicos, como servidores, almacenamiento, redes, hardware de cliente, middleware y software de los sistemas operacionales, que proporcionan los entornos necesarios para entregar servicios de TI?",
+					"answers": [
+						"Desarrollo y gestión de software",
+						"Gestión de despliegues",
+						"Service Desk",
+						"Gestión de infraestructura y plataformas"
+					],
+					"correct": 3
+				},
+				{
+					"title": "¿Qué práctica asegura que los productos y servicios nuevos o modificados cumplen con los requerimientos definidos?",
+					"answers": [
+						"Habilitación del cambio",
+						"Gestión de versiones",
+						"Validación y pruebas del servicio",
+						"Gestión de despliegues"
+					],
+					"correct": 2
+				},
+				{
+					"title": "¿Qué tipo de aplicaciones gestiona la práctica \"Desarrollo y gestión de software\"?",
+					"answers": [
+						"Las desarrolladas internamente",
+						"Las adquiridas",
+						"Los dos tipos anteriores",
+						"Otro tipo de aplicaciones"
+					],
+					"correct": 2,
+					"shuffle": "false"
+				},
+				{
+					"title": "¿Cuál NO es acción principal en la práctica gestión de riesgos?",
+					"answers": [
+						"Tratamiento",
+						"Evaluación",
+						"Eliminación",
+						"Identificación"
+					],
+					"correct": 2
+				},
+				{
+					"title": "¿Cuál de las siguientes tareas en el proceso de gestión financiera NO se suele llevar a cabo cuando los clientes son internos?",
+					"answers": [
+						"Facturar",
+						"Contabilizar",
+						"Presupuestar",
+						"Ninguna de los anteriores"
+					],
+					"correct": 0
+				},
+				{
+					"title": "El proceso de Gestión de la Seguridad de la Información debe sensibilizar e informar sobre la política de seguridad de la información. ¿Cuáles son las personas afectadas por esta actividad?",
+					"answers": [
+						"Los propietarios y gestores de procesos",
+						"Los directivos de la empresa, los directores de TI y el personal de gestión de la empresa",
+						"Todos los clientes, usuarios y personal de TI",
+						"Solo los actores del proceso de getsión de la seguridad de la información"
+					],
+					"correct": 2
+				},
+				{
+					"title": "¿Cuál asistiría en la identificación y resolución de incidencias y problemas asociados con el rendimiento de un servicio o componente?",
+					"answers": [
+						"Gestión de proveedores",
+						"Monitorización y gestión de eventos",
+						"Gestión de la capacidad y el rendimiento",
+						"Habilitación del cambio"
+					],
+					"correct": 2
+				},
+				{
+					"title": "¿Qué práctica tiene como propósito asegurar que una organización disponga de las personas adecuadas, con las habilidades y el conocimiento apropiado, y asignadas en los roles correctos para soportar sus objetivos de negocio?",
+					"answers": [
+						"Gestión de relaciones",
+						"Gestión de la fuerza de trabajo y el talento",
+						"Service Desk",
+						"Gestión del personal"
+					],
+					"correct": 1
+				},
+				{
+					"title": "¿En qué concepto se basa la práctica de Gestión de la Disponibilidad para definir los objetivos de disponibilidad de los componentes y servicios?",
+					"answers": [
+						"La fiabilidad de los componentes y servicios",
+						"La vulnerabilidad",
+						"La depreciación de los componentes",
+						"La disponibilidad de los datos"
+					],
+					"correct": 0
+				},
+				{
+					"title": "¿Cuál de las siguientes actividades forma parte del proceso de la gestión de disponibilidad?",
+					"answers": [
+						"La clasificación de solicitudes de cambio",
+						"La definición de la codificación de impacto de incidencias",
+						"La identificación de problemas relacionados con la disponibilidad de servicios de TI",
+						"La medición de disponibilidad de los servicios de TI"
+					],
+					"correct": 3
+				},
+				{
+					"title": "¿En qué práctica se hace un análisis de las amenazas y vulnerabilidades de los servicios de TI ante situaciones desastrosas y se determinan las contramedidas a tomar para combatirlas?",
+					"answers": [
+						"Gestión de la Disponibilidad",
+						"Gestión de la Continuidad del Servicio",
+						"Gestión de Problemas",
+						"Gestión de Niveles de Servicio"
+					],
+					"correct": 1
+				},
+				{
+					"title": "¿Qué práctica tiene como propósito mantener y mejorar el uso eficaz, eficiente y conveniente de la información y el conocimiento a lo largo de la organización?",
+					"answers": [
+						"Mejora continua",
+						"Medición e Informes",
+						"Gestión de la información",
+						"Gestión del conocimiento"
+					],
+					"correct": 3
+				},
+				{
+					"title": "¿Cuáles de los siguientes roles son responsables de la identificación de oportunidades de mejora?",
+					"options": [
+						"Propietario del servicio",
+						"Gestor de Mejora Continua",
+						"Propietarios de Procesos"
+					],
+					"answers": [
+						"1 y 2",
+						"1 y 3",
+						"2 y 3",
+						"Todos"
+					],
+					"correct": 3
+				},
+				{
+					"title": "¿En qué se deben basar todas las decisiones de mejora continua?",
+					"answers": [
+						"Información sobre cómo se miden los servicios",
+						"Datos analizados de manera precisa y cuidadosa",
+						"Un cuadro de mando integral actualizado",
+						"Una evaluación de madurez reciente"
+					],
+					"correct": 1
+				},
+				{
+					"title": "El porcentaje de gastos de TI que excede el presupuesto es:",
+					"answers": [
+						"No es posible exceder el prespuesto en ITIL",
+						"Un KPI",
+						"Un CSF",
+						"Una métrica"
+					],
+					"correct": 1
+				}
+			]
 		},
-		{
-			"title": "El diseño de servicios informáticos requiere preparar y planificar el uso eficaz y eficiente de:",
-			"answers": [
-				"Personas, procesos, partners y proveedores",
-				"Personas, procesos, productos y tecnología",
-				"Personas, procesos, tecnología y partners",
-				"Personas, productos, tecnología y partners"
-			],
-			"correct": 2
-		},
-		{
-			"title": "¿Cuál es la MEJOR descripción de un Catálogo de Servicios?",
-			"answers": [
-				"Un documento que define todos los aspectos de un servicio de TI y sus requerimientos a través de cada etapa de su ciclo de vida",
-				"El conjunto completo de servicios que maneja un proveedor de servicios",
-				"Una base de datos o documento estructurado con información acerca de todos los servicios de TI operativos, incluyendo aquellos que están disponibles para desplegar",
-				"Un acuerdo entre el proveedor de servicios de TI y el usuario de servicios de TI"
-			],
-			"correct": 2
-		},
-		{
-			"title": "¿Cómo contribuye la gestión del nivel de servicio a la actividad \"Planificar\" de la cadena de valor del servicio?",
-			"answers": [
-				"Recoge información durante las interacciones y comunican los objetivos de rendimiento del servicio a los equipos de operaciones y apoyo",
-				"Recoge y procesa comentarios de clientes y usuarios",
-				"Proporciona información sobre el desempeño y las tendencias reales del servicio",
-				"Utiliza los comentarios de los usuarios sobre el servicio y los requisitos de los clientes para mejorar el servicio"
-			],
-			"correct": 2
-		},
-		{
-			"title": "¿Qué métricas de nivel de servicio son mejores para medir la experiencia del usuario?",
-			"answers": [
-				"Métricas únicas basadas en el sistema",
-				"Métricas de % de tiempo de actividad de un servicio",
-				"Métricas operacionales",
-				"Métricas vinculadas a resultados/salidas definidos/as"
-			],
-			"correct": 3
-		},
-		{
-			"title": "¿Cuál NO es un tipo de Arquitectura considerada por la práctica Gestión de la Arquitectura?",
-			"answers": [
-				"Arquitectura del entorno",
-				"Arquitectura de aplicaciones",
-				"Arquitectura de servicios",
-				"Arquitectura hardware"
-			],
-			"correct": 3
-		},
-		{
-			"title": "¿Cuáles son enfoques habituales en la entrega de proyectos?",
-			"options": [
-				"Traditional",
-				"Agile",
-				"Waterfall"
-			],
-			"answers": [
-				"1 y 2",
-				"1 y 3",
-				"2 y 3",
-				"Todas"
-			],
-			"correct": 2
-		},
-		{
-			"title": "¿Qué práctica tiene un propósito que incluye ayudar a una organización a maximizar el valor, controlar los costos y gestionar los riesgos?",
-			"answers": [
-				"Gestión de relaciones",
-				"Gestión de activos de TI",
-				"Gestión de despliegues",
-				"Service Desk"
-			],
-			"correct": 1
-		},
-		{
-			"title": "¿Qué práctica asegura la disponibilidad de información precisa y confiable sobre los elementos de configuración y las relaciones entre ellos?",
-			"answers": [
-				"Gestión de configuración de los servicios",
-				"Service Desk",
-				"Gestión de activos de TI",
-				"Monitorización y gestión de eventos"
-			],
-			"correct": 0
-		},
-		{
-			"title": "¿En qué base de datos puede hallarse información sobre la estructura y la composición de la infraestructura de TI?",
-			"answers": [
-				"La Base de Datos de Gestión de la Capacidad (CMD)",
-				"La Base de Datos de Gestión de la Configuración (CMDB)",
-				"El Almacén de Hardware Definitivo (DHS)",
-				"La Biblioteca de Software Definitivo (DSL)"
-			],
-			"correct": 1
-		},
-		{
-			"title": "¿Qué práctica ofrece un punto de contacto único para usuarios?",
-			"answers": [
-				"Mesa de servicios (service desk)",
-				"Gestión de incidentes",
-				"Control de cambios",
-				"Gestión de solicitudes de servicio"
-			],
-			"correct": 0
-		},
-		{
-			"title": "¿Qué práctica proporciona soporte para gestionar la retroalimentación, las felicitaciones y las quejas de los usuarios?",
-			"answers": [
-				"Habilitación del cambio",
-				"Gestión de solicitudes (peticiones) de servicio",
-				"Gestión de problemas",
-				"Gestión de incidentes"
-			],
-			"correct": 1
-		},
-		{
-			"title": "¿Qué práctica tiene un propósito que incluye restaurar la operación normal del servicio lo más rápidamente posible?",
-			"answers": [
-				"Gestión de proveedores",
-				"Gestión del despliegue",
-				"Gestión de problemas",
-				"Gestión de incidentes"
-			],
-			"correct": 3
-		},
-		{
-			"title": "¿De qué manera la clasificación de incidentes ayuda a la práctica de gestión de incidentes?",
-			"answers": [
-				"Asegura que los incidentes se resuelvan en los plazos de tiempo acordados con el cliente",
-				"Determina la manera en que se percibe al proveedor de servicios",
-				"Determina la prioridad asignada al incidente",
-				"Permite encauzar el incidente hacia el área de soporte correcta"
-			],
-			"correct": 3
-		},
-		{
-			"title": "¿Qué anfirmación acerca de los errores conocidos y los problemas es correcta?",
-			"answers": [
-				"Error conocido es el estado asignado a un problema después de que se ha analizado.",
-				"Un error conocido es la causa de uno o más problemas",
-				"Los errores conocidos causan vulnerabilidades, los problemas causan incidentes",
-				"El personal técnico gestiona los errores conocidos, y el personal de gestión de servicios gestiona los problemas"
-			],
-			"correct": 0
-		},
-		{
-			"title": "¿Qué palabra falta en la siguiente frase?: <quote>\"La práctica Gestión del cambio organizacional trata de [?] la resistencia al cambio\"</quote>",
-			"answers": [
-				"influenciar",
-				"mitigar",
-				"potenciar",
-				"comprender"
-			],
-			"correct": 1
-		},
-		{
-			"title": "¿Qué tipo de cambio necesita ser evaluado, autorizado y programado por una autoridad de cambio antes de implementarlo?",
-			"answers": [
-				"Emergencia",
-				"Normal",
-				"Estándar",
-				"Los tres"
-			],
-			"correct": 1
-		},
-		{
-			"title": "¿Qué práctica tiene como propósito que las funciones y los servicios, tanto nuevos como modificados, estén disponibles para usarse?",
-			"answers": [
-				"Gestión de solicitudes (peticiones) de servicio",
-				"Gestión de despliegues",
-				"Gestión de liberaciones (versiones)",
-				"Control de cambios"
-			],
-			"correct": 2
-		},
-		{
-			"title": "¿Qué práctica es responsable de pasar componentes a entornos de producción?",
-			"answers": [
-				"Gestión de despliegues",
-				"Habilitación del cambio",
-				"Gestión de versiones",
-				"Gestión de activos de TI"
-			],
-			"correct": 0
-		},
-		{
-			"title": "¿Cuáles son los tipos de eventos?",
-			"answers": [
-				"Informativo, Reactivo, Normal",
-				"Normal, Proactivo, Emergencia",
-				"Informativo, Advertencia, Excepción",
-				"Advertencia, Reactivo, Proactivo"
-			],
-			"correct": 2
-		},
-		{
-			"title": "¿Qué práctica es la responsable de supervisar los recursos tecnológicos virtuales y/o físicos, como servidores, almacenamiento, redes, hardware de cliente, middleware y software de los sistemas operacionales, que proporcionan los entornos necesarios para entregar servicios de TI?",
-			"answers": [
-				"Desarrollo y gestión de software",
-				"Gestión de despliegues",
-				"Service Desk",
-				"Gestión de infraestructura y plataformas"
-			],
-			"correct": 3
-		},
-		{
-			"title": "¿Qué práctica asegura que los productos y servicios nuevos o modificados cumplen con los requerimientos definidos?",
-			"answers": [
-				"Habitación del cambio",
-				"Gestión de versiones",
-				"Validación y pruebas del servicio",
-				"Gestión de despliegues"
-			],
-			"correct": 2
-		},
-		{
-			"title": "¿Qué tipo de aplicaciones gestiona la práctica \"Desarrollo y gestión de software\"?",
-			"answers": [
-				"Las desarrolladas internamente",
-				"Las adquiridas",
-				"Los dos tipos anteriores",
-				"Otro tipo de aplicaciones"
-			],
-			"correct": 2,
-			"shuffle": "false"
-		},
-		{
-			"title": "¿Cuál NO es acción principal en la práctica gestión de riesgos?",
-			"answers": [
-				"Tratamiento",
-				"Evaluación",
-				"Eliminación",
-				"Identificación"
-			],
-			"correct": 2
-		},
-		{
-			"title": "¿Cuál de las siguientes tareas en el proceso de gestión financiera NO se suele llevar a cabo cuando los clientes son internos?",
-			"answers": [
-				"Facturar",
-				"Contabilizar",
-				"Presupuestar",
-				"Ninguna de los anteriores"
-			],
-			"correct": 0
-		},
-		{
-			"title": "El proceso de Gestión de la Seguridad de la Información debe sensibilizar e informar sobre la política de seguridad de la información. ¿Cuáles son las personas afectadas por esta actividad?",
-			"answers": [
-				"Los propietarios y gestores de procesos",
-				"Los directivos de la empresa, los directores de TI y el personal de gestión de la empresa",
-				"Todos los clientes, usuarios y personal de TI",
-				"Solo los actores del proceso de getsión de la seguridad de la información"
-			],
-			"correct": 2
-		},
-		{
-			"title": "¿Cuál asistiría en la identificación y resolución de incidencias y problemas asociados con el rendimiento de un servicio o componente?",
-			"answers": [
-				"Gestión de proveedores",
-				"Monitorización y gestión de eventos",
-				"Gestión de la capacidad y el rendimiento",
-				"Habilitación del cambio"
-			],
-			"correct": 2
-		},
-		{
-			"title": "¿Qué práctica tiene como propósito asegurar que una organización disponga de las personas adecuadas, con las habilidades y el conocimiento apropiado, y asignadas en los roles correctos para soportar sus objetivos de negocio?",
-			"answers": [
-				"Gestión de relaciones",
-				"Gestión de la fuerza de trabajo y el talento",
-				"Service Desk",
-				"Gestión del personal"
-			],
-			"correct": 1
-		},
-		{
-			"title": "¿En qué concepto se basa la práctica de Gestión de la Disponibilidad para definir los objetivos de disponibilidad de los componentes y servicios?",
-			"answers": [
-				"La fiabilidad de los componentes y servicios",
-				"La vulnerabilidad",
-				"La depreciación de los componentes",
-				"La disponibilidad de los datos"
-			],
-			"correct": 0
-		},
-		{
-			"title": "¿Cuál de las siguientes actividades forma parte del proceso de la gestión de disponibilidad?",
-			"answers": [
-				"La clasificación de solicitudes de cambio",
-				"La definición de la codificación de impacto de incidencias",
-				"La identificación de problemas relacionados con la disponibilidad de servicios de TI",
-				"La mediación de disponibilidad de los servicios de TI"
-			],
-			"correct": 3
-		},
-		{
-			"title": "¿En qué práctica se hace un análisis de las amenazas y vulnerabilidades de los servicios de TI ante situaciones desastrosas y se determinan las contramedidas a tomar para combatirlas?",
-			"answers": [
-				"Gestión de la Disponibilidad",
-				"Gestión de la Continuidad del Servicio",
-				"Gestión de Problemas",
-				"Gestión de Niveles de Servicio"
-			],
-			"correct": 1
-		},
-		{
-			"title": "¿Qué práctica tiene como propósito mantener y mejorar el uso eficaz, eficiente y conveniente de la información y el conocimiento a lo largo de la organización?",
-			"answers": [
-				"Mejora continua",
-				"Medición e Informes",
-				"Gestión de la información",
-				"Gestión del conocimiento"
-			],
-			"correct": 3
-		},
-		{
-			"title": "¿Cuáles de los siguientes roles son responsables de la identificación de oportunidades de mejora?",
-			"options": [
-				"Propietario del servicio",
-				"Gestor de Mejora Continua",
-				"Propietarios de Procesos"
-			],
-			"answers": [
-				"1 y 2",
-				"1 y 3",
-				"2 y 3",
-				"Todos"
-			],
-			"correct": 3
-		},
-		{
-			"title": "¿En qué se deben basar todas las decisiones de mejora continua?",
-			"answers": [
-				"Información sobre cómo se miden los servicios",
-				"Datos analizados de manera precisa y cuidadosa",
-				"Un cuadro de mando integral actualizado",
-				"Una evaluación de madurez reciente"
-			],
-			"correct": 1
-		},
-		{
-			"title": "El porcentaje de gastos de TI que excede el presupuesto es:",
-			"answers": [
-				"No es posible exceder el prespuesto en ITIL",
-				"Un KPI",
-				"Un CSF",
-				"Una métrica"
-			],
-			"correct": 1
+		"backup": {
+			"info": "preguntas de exámenes de años pasados y otras fuentes. <span class='warning'>⚠️ pueden estar desactualizadas o ser incorrectas ⚠️</span>",
+			"questions": [
+				{
+					"title": "¿Cuál de los siguientes se almacenaría en la Biblioteca Definitiva de Medios (DML)?",
+					"options": [
+						"Copias del software que se ha comprado",
+						"Copias de software desarrollando internamente",
+						"Documentación relevante de las licencias",
+						"La Agenda de Cambios"
+					],
+					"answers": [
+						"Todas",
+						"1 y 2 solamente",
+						"2, 3 y 4 solamente",
+						"1, 2 y 3 solamente"
+					],
+					"correct": 3
+				},
+				{
+					"title": "El implantar una nueva versión de un paquete de software en un entorno de escritorio o de cliente/servidor puede tener consecuencias para otros paquetes de software. ¿Qué proceso de ITIL se encarga de vigilar si en tal situación es neceario someter a pruebas dicha implantación?",
+					"answers": [
+						"Gestión del Cambio Organizacional",
+						"Gestión de la Continuidad del Servicio TI",
+						"Gestón de Problemas",
+						"Gestión de Versiones"
+					],
+					"correct": 0
+				},
+				{
+					"title": "El mantenimiento de la calidad de servicio es:",
+					"answers": [
+						"Un indicador clave de rendimiento (KPI)",
+						"Un factor crítico de éxito (CSF)",
+						"Una métrica",
+						"Ninguna de las anteriores"
+					],
+					"correct": 1,
+					"shuffle": "false"
+				},
+				{
+					"title": "¿Cuál de las siguientes actividades normalmente la realizaría un Centro de Servicio al Usuario?",
+					"options": [
+						"Registrar con detalle incidencias y peticiones de servicio",
+						"Proveer investigación y diagnóstico de primera línea",
+						"Restaurar el servicio",
+						"Diagnosticar la causa raíz de los problemas"
+					],
+					"answers": [
+						"Todas",
+						"1, 2 y 3 solamente",
+						"2 y 4 solamente",
+						"3 y 4 solamente"
+					],
+					"correct": 1
+				},
+				{
+					"title": "¿Cuál es un ejemplo de una petición de servicio?",
+					"answers": [
+						"Una queja sobre la prestación del servicio",
+						"Un informe de errores",
+						"Una solicitud de traslado de equipo",
+						"Una solicitud de documentación"
+					],
+					"correct": 2
+				},
+				{
+					"title": "¿Cuál es el objetivo principal del proceso de gestión de la configuración y activos del servicio?",
+					"answers": [
+						"Rendir cuentas de todos los activos financieros de la organización",
+						"Proporcionar un modelo lógico de la infraestructura informática, identificando las relaciones entre los servicios informáticos y los diferentes componentes tecnológicos",
+						"Establecer una modelización de los incidentes y problemas, identificando sus relaciones",
+						"Proporcionar información que permita identificar la prioridad de los incidentes"
+					],
+					"correct": 1
+				},
+				{
+					"title": "¿Cuál es una actividad de la Gestión Proactiva de Problemas?",
+					"answers": [
+						"Tratamiento de Solicitudes de Cambio",
+						"Llevar a cabo un análisis de tendencias e identificación de posibles problemas a partir de las incidencias",
+						"Seguimiento de todas las incidencias e interrupciones",
+						"Prevenir nuevos interrupciones de servicios como consecuencia de cambios ya realizados"
+					],
+					"correct": 1
+				},
+				{
+					"title": "Un usuario de TI tiene una interrupción en su PC. No es la primera vez que el aparato muestra deficiencias en su funcionamiento. Hace tres meses también dejó de funcionar. El usuario informa al Centro de Servicio de esta interrupción. ¿De qué se trata?",
+					"answers": [
+						"Una incidencia",
+						"Un error conocido",
+						"Una problema",
+						"Una solicitud de cambio"
+					],
+					"correct": 0
+				},
+				{
+					"title": "¿Cuál es la segunda actividad del modelo de mejora continua de servicios en seis etapas?",
+					"answers": [
+						"Entender los objetivos de los negocios",
+						"Evaluar y entender la situación actual",
+						"Ponerse de acuerdo sobre las prioridades de mejora",
+						"Crear y comprobar un plan de acción"
+					],
+					"correct": 1
+				},
+				{
+					"title": "¿Cuáles son los procesos dentro de la Operación del Servicio?",
+					"answers": [
+						"Gestión de Eventos, Gestión de Incidencias, Gestión de Problemas, Gestión de Peticiones y Gestión de Accesos",
+						"Gestión de Eventos, Gestión de Incidencias, Gestión de Cambios y Gestión de Cambios",
+						"Gestión de Incidencias, Gestión de Problemas, Centro de Servicio al Usuario, Gestión de Peticiones y Gestión de Eventos",
+						"Gestión de Incidencias, Centro de Servicio al Usuario y Gestión de Peticiones"
+					],
+					"correct": 2
+				},
+				{
+					"title": "El objetivo de la Fase de Mejora Continua del Servicio se describe MEJOR como, de forma continua:",
+					"answers": [
+						"Alinear los servicios de TI a las necesidades cambiantes del negocio, identificando e implementando mejoras a los servicios de TI que soportan los procesos de negocio",
+						"Alentar a los proveedores de servicio a parar y pensar que se debe hacer algo antes de pensar en cómo",
+						"Identificar e implementar nuevas tecnologías",
+						"Diseñar servicios que cumplan los objetivos de negocio"
+					],
+					"correct": 0
+				},
+				{
+					"title": "¿Qué función proporciona el personal para detectar y gestionar los eventos de tipo alerta y excepción?",
+					"answers": [
+						"La gestión técnica",
+						"La gestión de operaciones",
+						"El centro de servicios",
+						"Los medios generales"
+					],
+					"correct": 1
+				},
+				{
+					"title": "¿Cuál de las siguientes afirmaciones describe DE LA MEJOR MANERA un problema?",
+					"answers": [
+						"Un error conocido para el que la causa y la solución no se conocen todavía",
+						"La causa de dos o más incidentes",
+						"Un incidente imporatnte que tiene un impacto crítico para el negocio",
+						"La causa de uno o varios incidentes"
+					],
+					"correct": 3
+				},
+				{
+					"title": "¿Cuál de las siguientes es la MEJOR definición de un evento?",
+					"answers": [
+						"Una situación donde el umbral de rendimiento se ha superado y esto impacta a un nivel de servicio acordado",
+						"Un cambio de estado significativo para la gestión de un servicio de TI",
+						"Un defecto conocido del sistema que genera múltiples incidencias",
+						"Una reunión planificada entre los clientes y el personal de TI para anunciar un servicio nuevo"
+					],
+					"correct": 1
+				},
+				{
+					"title": "¿Dónde se mantiene el contenido de las versiones de las versiones (<i>releases</i>)?",
+					"answers": [
+						"Base de datos de capacidad (CDB)",
+						"Base de datos de configuración (CMDB)",
+						"Almacén de hardware definitivo (DHS)",
+						"Biblioteca de software/medios definitiva (DSL/DML)"
+					],
+					"correct": 3
+				},
+				{
+					"title": "¿Cuál de los siguientes pasos corresponde a la fase <i>Act</i> del ciclo de Deming dentro del proceso CSI?",
+					"answers": [
+						"Implementar las mejoras",
+						"Procesar los datos",
+						"Identificar la estrategia para la mejora",
+						"Presentar los análisis y plantear las mejoras"
+					],
+					"correct": 0
+				},
+				{
+					"title": "¿Cuál de los procesos ITIL hace la contribución sustancial MÁS IMPORTANTE y MÁS FRECUENTE para mantener actualizada la base de datos de la gestión de la configuración (CMDB)?",
+					"answers": [
+						"Gestión de cambios",
+						"Gestión de la configuración",
+						"Gestión de incidencias",
+						"Gestión de problemas"
+					],
+					"correct": 1
+				},
+				{
+					"title": "La gestión de incidencias produce valor a los negocios",
+					"answers": [
+						"Ayudando a controlar los costes asociados a la infraestructura cuando se adquiere una nueva tecnología",
+						"Permitiendo a los usuarios resolver los problemas",
+						"Ayudando a alinear las personas y procesos para el suministro del servicio",
+						"Contribuyendo a la reducción del impacto de las interrupciones del servicio"
+					],
+					"correct": 3
+				},
+				{
+					"title": "Un técnico uso una técnica predefinida para restaurar el servicio porque la incidencia ya se ha producido en el pasado. Esto es un ejemplo de:",
+					"answers": [
+						"Una solución workaround",
+						"Un cambio estándar",
+						"Un modelo de incidencia",
+						"Un error conocido"
+					],
+					"correct": 0
+				},
+				{
+					"title": "¿Qué fase del ciclo de vida del servicio provee un marco de referencia para evaluar las capacidades del servicio y los perfiles de riesgo antes que un servicio o un cambio sea desplegado?",
+					"answers": [
+						"Estrategia del servicio",
+						"Mejora continua del servicio",
+						"Transición del servicio",
+						"Operación del servicio"
+					],
+					"correct": 2
+				}
+			]
 		}
-	],
+	},
 	"author": "Juan Mier",
 	"website": "https://mier.info/gti/",
 	"location": "https://mier.info/content/collections/projects/gti.data.json",
 	"contributors": [
 		"Juan Mier",
-		"Rubén Martínez"
+		"Rubén Martínez",
+		"Alejandro Rodríguez",
+		"Alejandro Gallego"
 	]
 }

@@ -37,7 +37,7 @@ module.exports = function (eleventyConfig) {
             return `<script src="${filepath.replace('src', '')}" defer></script>`;
         }
 
-        console.log(`JS file ${filename} not found in ./src/static/js`);
+        console.log(`Script file ${filename}.js not found in /src/static/js/`);
         return '';
     });
 
@@ -47,7 +47,7 @@ module.exports = function (eleventyConfig) {
             return `<link rel="stylesheet" href="${filepath.replace('src', '').replace('.sass', '.css')}">`;
         }
 
-        console.log(`CSS file ${filename} not found in ./src/static/css`);
+        console.log(`Style file ${filename}.sass not found in /src/static/css/`);
         return '';
     });
 
@@ -63,51 +63,64 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addShortcode("top", function() {
-        return `
-        <span id="top" class="button topbtn">top ↑</span>
-        `;
+        return `<span id="top" class="button topbtn">top ↑</span>`;
     });
 
-    eleventyConfig.addShortcode("questions", function(qs) {
-        let template = ``;
+    eleventyConfig.addShortcode("questions", function(json) {
+        let blocks = ['socrative', 'backup'];
+        let template = '<h3>preguntas.</h3> <ul>';
+        blocks.forEach(b => {
+            template += `<li><code>${b}</code>: ${json[b]['info']}</li>`
+        });
+        template += '<li><code>todas</code>: todas las preguntas</li></ul>';
 
-        qs.forEach((q, i) => {
-            template += `
-            <div class="question-block">
-                <h2 class="question">
-                    ${q.title}
-                </h2>
-            `;
-
-            if (q.options) {
-                template += `<div class="options">`;
-
-                q.options.forEach((o, j) => {
-                    template += `
-                        <h3 class="option">${j+1}. ${o}</h3>
-                    `;
-                });
-
-                template += `</div>`;
-            }
-
-            let shuffle = q.shuffle || true;
-
-            template += `<div class="answer-block" shuffle="${shuffle}">`;
-            q.answers.forEach((a, j) => {
-                template += `
-                <span class="button answer${j == q.correct ? " correct" : ""}">
-                    ${a}
-                </span> <br>`;
-            });
-
-            template += `
-                </div>
-                ${shuffle == "false" ? '<i>* orden de respuestas fijado</i>' : ''}
-            </div>
-            `;
+        blocks.forEach((b) => {
+            template += `<span class="button select-block" id="${b}">${b}</span>`
         });
 
+        template += `<span class="button select-block" id="all">todas</span>`;
+        template += `<hr> <div id="questions">`;
+
+        blocks.forEach((block) => {
+            let questions = json[block]['questions'];
+
+            questions.forEach((q) => {
+                template += `
+                    <div class="question-block" block="${block}">
+                        <h2 class="question">
+                            ${q.title}
+                        </h2>
+                `;
+
+                if (q.options) {
+                    template += `<div class="options">`;
+
+                    q.options.forEach((o, j) => {
+                        template += `<h3 class="option">${j+1}. ${o}</h3>`;
+                    });
+
+                    template += `</div>`;
+                }
+
+                let shuffle = q.shuffle || true;
+
+                template += `<div class="answer-block" shuffle="${shuffle}">`;
+                q.answers.forEach((a, j) => {
+                    template += `
+                    <span class="button answer${j == q.correct ? " correct" : ""}">
+                        ${a}
+                    </span> <br>`;
+                });
+
+                template += `
+                    </div>
+                    ${shuffle == "false" ? '<i>* orden de respuestas fijado</i>' : ''}
+                </div>
+                `;
+            });
+        });
+
+        template += `</div>`;
         return template;
     });
 

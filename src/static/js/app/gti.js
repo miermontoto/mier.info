@@ -2,19 +2,38 @@ const isCorrect = (ans) => ans.classList.contains('correct') && ans.classList.co
 let responded = 0;
 let total;
 
-let originalQuestions;
+let allQuestions;
+let currentQuestionsDiv = document.createElement('div');
 
 window.addEventListener('load', () => { // when the page loads (the content is rendered)
-	originalQuestions = document.getElementById('questions').innerHTML;
-	document.getElementById('reset').addEventListener('click', resetAll);
-	total = document.querySelectorAll('.question-block').length;
-	document.getElementById('total').innerHTML = total;
+	let questionsBlock = document.getElementById('questions');
 
-	document.querySelectorAll('#shuffle-questions, #shuffle-answers').forEach((checkbox) => {
-		checkbox.addEventListener('change', resetAll);
+	allQuestions = document.querySelectorAll('.question-block');
+	document.querySelectorAll('.select-block').forEach((block) => {
+		block.addEventListener('click', () => {
+			if (warn()) return;
+			let blockId = block.getAttribute('id');
+			questionsBlock.innerHTML = ''; // empty all questions
+			allQuestions.forEach((q) => {
+				console.log(q.getAttribute('block'), blockId, q.getAttribute('block') == blockId);
+				if (q.getAttribute('block') == blockId || blockId == 'all') {
+					questionsBlock.appendChild(q);
+				}
+			});
+			currentQuestionsDiv.innerHTML = questionsBlock.innerHTML;
+
+			resetAll(false);
+			document.querySelectorAll('.select-block').forEach((b) => b.classList.remove('active'));
+			block.classList.add('active');
+		});
 	});
 
-	resetAll(false);
+	document.querySelector('.select-block').click(); // send click event to the first block (select socrative)
+	document.getElementById('reset').addEventListener('click', resetAll);
+
+	document.querySelectorAll('#shuffle-questions, #shuffle-answers').forEach((checkbox) => checkbox.addEventListener('change', resetAll));
+
+	resetAll(false); // reset everything and calculate indices
 });
 
 function recalc() {
@@ -29,6 +48,8 @@ function recalc() {
 			ans.innerHTML = `<span class="letter">${letter}.</span>${ans.innerHTML}`; // add letter to answer
 		});
 	});
+	total = document.querySelectorAll('.question-block').length;
+	document.getElementById('total').innerHTML = total;
 }
 
 // shuffle questions
@@ -90,11 +111,13 @@ function round(number) {
 	return rounded;
 }
 
+function warn() {
+	return alert && responded != 0 && !window.confirm('esta acción reinicia el progreso del quiz. pulsa OK para continuar.');
+}
+
 function resetAll(alert = true) {
-	if (alert && responded != 0 && !window.confirm('esta acción reinicia el progreso del quiz. pulsa OK para continuar.')) {
-		return;
-	}
-	document.getElementById('questions').innerHTML = originalQuestions;
+	if (alert && warn()) return;
+	document.getElementById('questions').innerHTML = currentQuestionsDiv.innerHTML;
 
 	if (document.getElementById('shuffle-questions').checked) {
 		shuffleQuestions();
@@ -114,6 +137,8 @@ function resetAll(alert = true) {
 	document.querySelectorAll('.answer').forEach((ans) => {
 		ans.classList.remove('selected');
 		ans.classList.remove('disabled');
+		ans.removeEventListener('click', handleAnswerClick);
+
 		ans.addEventListener('click', handleAnswerClick);
 	});
 

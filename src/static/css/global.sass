@@ -44,12 +44,15 @@ a, a:visited
         animation: base.$animation
         cursor: pointer
 
-    &.disabled
-        cursor: not-allowed
-        opacity: 0.5
+    &.disabled:hover
+        animation: none
 
-        &:hover
-            animation: none
+.active
+    animation: base.$animation
+
+.disabled
+    cursor: not-allowed !important
+    opacity: 0.5
 
 code
     color: base.$white
@@ -159,5 +162,12 @@ $rotation: 2.5rad
     font-weight: bold
     font-size: 2em
 
+.warning
+    color: base.$warning
+    font-style: italic
+
 quote
     font-style: italic
+
+.hidden
+    display: none
