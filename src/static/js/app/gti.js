@@ -23,8 +23,8 @@ window.addEventListener('load', () => { // when the page loads (the content is r
 			currentQuestionsDiv.innerHTML = questionsBlock.innerHTML;
 
 			resetAll(false);
-			document.querySelectorAll('.select-block').forEach((b) => b.classList.remove('active'));
-			block.classList.add('active');
+			document.querySelectorAll('.select-block').forEach((b) => b.classList.remove('selected'));
+			block.classList.add('selected');
 		});
 	});
 

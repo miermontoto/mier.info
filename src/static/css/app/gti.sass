@@ -1,22 +1,30 @@
 @use '../base'
 
-.disabled.selected
-	background-color: base.$wrong
+.selected // selected answers
+	&.correct
+		background-color: base.$correct !important
 
-.correct.selected
-	background-color: base.$correct
+	&.disabled
+		background-color: base.$wrong
 
-.disabled
+.disabled // not selected answers
+	background-color: base.$dark
+
+	&.correct:not(.selected)
+		background-color: base.$correct-background
+
+.question-block
+	&.correct
+		border-color: base.$correct-background
+
+	&.wrong
+		border-color: base.$wrong-background
+
+.select-block
 	background-color: base.$light
 
-.disabled.correct:not(.selected)
-	background-color: base.$correct-background
-
-.question-block.correct
-	border-color: base.$correct-background
-
-.question-block.wrong
-	border-color: base.$wrong-background
+	&.selected
+		background-color: base.$white
 
 .disabled:hover
 	cursor: auto
@@ -73,3 +81,4 @@
 #options input
 	height: 1.25em
 	width: 1.25em
+	margin: 6px
