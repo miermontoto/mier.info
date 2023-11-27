@@ -31,15 +31,32 @@ js: index
 {% import "src/static/macros.njk" as macros %}
 
 <section id="project-section" class="section">
-    <h1>projects.</h1>
-    {{ macros.renderProjects(collections.projects) }}
+    <table id="projects">
+        <caption><h1>projects.</h1></caption>
+        <thead hidden>
+            <tr>
+                <th>Project</th>
+                <th>Links</th>
+                <th>Description</th>
+                <th>Icons</th>
+                {# <th>Image</th> #}
+            </tr>
+        </thead>
+        <tbody>
+            {% for project in collections.project %}
+                {{ macros.renderProject(project) }}
+            {% endfor %}
+        </tbody>
+    </table>
 </section>
 
 <section id="about-section" class="section">
     <div id="experience-container">
         <h1>experience.</h1>
         <div id="experience" class="carded">
-            {{ macros.renderExperiences(collections.experience) }}
+            {% for experience in collections.experience %}
+                {{ macros.renderExperience(experience) }}
+            {% endfor %}
         </div>
     </div>
     <br>

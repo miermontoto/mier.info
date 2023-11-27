@@ -13,25 +13,6 @@ permalink: false
     <img src="{{ file }}" class="icon" alt="{{ svg }}" title="{{ svg }}">
 {% endmacro %}
 
-{% macro renderProjects(projects) %}
-    <table id="projects">
-        <thead hidden>
-            <tr>
-                <th>Project</th>
-                <th>Links</th>
-                <th>Description</th>
-                <th>Icons</th>
-                {# <th>Image</th> #}
-            </tr>
-        </thead>
-        <tbody>
-            {% for project in projects %}
-                {{ renderProject(project) }}
-            {% endfor %}
-        </tbody>
-    </table>
-{% endmacro %}
-
 {% macro renderProject(project) %}
     <tr class="project {{ project.data.star }}" id="{{ project.data.title | slug }}">
         <td class="project-title">
@@ -70,12 +51,6 @@ permalink: false
             {% endif %}
         </td> #}
     </tr>
-{% endmacro %}
-
-{% macro renderExperiences(experiences) %}
-    {% for experience in experiences %}
-        {{ renderExperience(experience) }}
-    {% endfor %}
 {% endmacro %}
 
 {% macro renderExperience(experience) %}

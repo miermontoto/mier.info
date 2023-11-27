@@ -68,9 +68,9 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addShortcode("questions", function(json) {
         let blocks = ['socrative', 'backup'];
-        let template = '<h3>preguntas.</h3> <ul>';
+        let template = `<div id="block-selection"> <h3>preguntas.</h3> <ul>`;
         blocks.forEach(b => {
-            template += `<li><code>${b}</code>: ${json[b]['info']}</li>`
+            template += `<li><code>${b}</code>: ${json[b]['info']}</li>`;
         });
         template += '<li><code>todas</code>: todas las preguntas</li></ul>';
 
@@ -78,8 +78,8 @@ module.exports = function (eleventyConfig) {
             template += `<span class="button select-block" id="${b}">${b}</span>`
         });
 
-        template += `<span class="button select-block" id="all">todas</span>`;
-        template += `<hr> <div id="questions">`;
+        template += '<span class="button select-block" id="all">todas</span>';
+        template += '</div> <hr> <div id="questions">';
 
         blocks.forEach((block) => {
             let questions = json[block]['questions'];

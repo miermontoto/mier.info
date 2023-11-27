@@ -1,0 +1,49 @@
+{% addScript 'img' %}
+{% addStyle 'webutils' %}
+
+<span class="info">convert </span>
+<input type="file" id="img-input" accept="image/png, image/jpeg, image/svg+xml, image/webp, image/ico, image/bmp" />
+<span class="info"> to </span>
+<select id="img-format">
+	<option value="png">png</option>
+	<option value="jpeg">jpg</option>
+	<option value="webp">webp</option>
+	<option value="ico">ico</option>
+	<option value="bmp">bmp</option>
+</select>
+<span id="img-formatInfo" class="warning hidden" title="not supported by all browsers & platforms">⚠️</span>
+<br>
+<table id="img-options" class="disabled">
+	<caption>options</caption>
+	<thead hidden>
+		<tr>
+			<th>option</th>
+			<th>value</th>
+		</tr>
+	</thead>
+	<tr id="quality">
+		<td class="info">quality</td>
+		<td>
+			<input type="range" min="0" max="100" value="100" step="10" id="qualitySlider" disabled />
+			<span id="qualityValue">loseless</span>
+		</td>
+	</tr>
+	<tr id="width">
+		<td class="info">width</td>
+		<td><input type="number" min="0" max="5000" value="0" id="widthInput" disabled /> px</td>
+	</tr>
+	<tr id="height">
+		<td class="info">height</td>
+		<td><input type="number" min="0" max="5000" value="0" id="heightInput" disabled /> px</td>
+	</tr>
+	<tr id="keepRatioRow">
+		<td><label for="keepRatio" class="info">keep ratio</label></td>
+		<td><input type="checkbox" id="keepRatio" checked disabled /></td>
+	</tr>
+</table>
+<br>
+<span class="button disabled" id="img-convert">convert</span>
+<hr>
+<a class="button hidden" id="img-download"><img src="/assets/icons/button/download.svg" class="icon invert" alt=""> download</a> <br>
+<span class="info" id="img-filename"></span><br>
+<img id="img-canvas" alt="converted image" hidden />
