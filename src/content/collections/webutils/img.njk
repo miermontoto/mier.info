@@ -1,9 +1,9 @@
 {% addScript 'img' %}
 {% addStyle 'webutils' %}
 
-<span class="info">convert </span>
+<label for="img-input" class="info">convert </label>
 <input type="file" id="img-input" accept="image/png, image/jpeg, image/svg+xml, image/webp, image/ico, image/bmp" />
-<span class="info"> to </span>
+<label for="img-format" class="info"> to </label>
 <select id="img-format">
 	<option value="png">png</option>
 	<option value="jpeg">jpg</option>
@@ -12,7 +12,7 @@
 	<option value="bmp">bmp</option>
 </select>
 <span id="img-formatInfo" class="warning hidden" title="not supported by all browsers & platforms">⚠️</span>
-<br>
+<br> <br>
 <table id="img-options" class="disabled">
 	<caption>options</caption>
 	<thead hidden>
@@ -22,18 +22,18 @@
 		</tr>
 	</thead>
 	<tr id="quality">
-		<td class="info">quality</td>
+		<td><label for="qualitySlider" class="info">quality</label></td>
 		<td>
 			<input type="range" min="0" max="100" value="100" step="10" id="qualitySlider" disabled />
 			<span id="qualityValue">loseless</span>
 		</td>
 	</tr>
 	<tr id="width">
-		<td class="info">width</td>
+		<td><label for="widthInput" class="info">width</label></td>
 		<td><input type="number" min="0" max="5000" value="0" id="widthInput" disabled /> px</td>
 	</tr>
 	<tr id="height">
-		<td class="info">height</td>
+		<td><label for="heightInput" class="info">height</label></td>
 		<td><input type="number" min="0" max="5000" value="0" id="heightInput" disabled /> px</td>
 	</tr>
 	<tr id="keepRatioRow">
