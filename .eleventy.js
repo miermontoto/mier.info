@@ -59,7 +59,8 @@ module.exports = function (eleventyConfig) {
         let json = require('./package.json');
         let version = json.version;
         let channel = json.channel && json.channel !== 'RTW' ? ` (${json.channel})` : '';
-        return `${version}${channel}`;
+        let versionString = `${version}${channel}`;
+        return `<a id="version-tag" href="https://github.com/miermontoto/miermontoto/commit/${json.channel === "RTW" ? 'main' : 'beta'}" target="_blank">${versionString}</span>`;
     });
 
     eleventyConfig.addShortcode("top", function() {
@@ -67,17 +68,19 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addShortcode("questions", function(json) {
-        let blocks = ['socrative', 'backup'];
+        let blocks = ['socrative', 'otros'];
         let template = `<div id="block-selection"> <h3>preguntas.</h3> <ul>`;
         blocks.forEach(b => {
             template += `<li><code>${b}</code>: ${json[b]['info']}</li>`;
         });
+        template += '<li><code>examen:</code> selección de preguntas que aparecieron en el examen de 23-24</li>'
         template += '<li><code>todas</code>: todas las preguntas</li></ul>';
 
         blocks.forEach((b) => {
             template += `<span class="button select-block" id="${b}">${b}</span>`
         });
 
+        template += '<span class="button select-block" id="exam">examen</span>'
         template += '<span class="button select-block" id="all">todas</span>';
         template += '</div> <hr> <div id="questions">';
 
@@ -85,8 +88,10 @@ module.exports = function (eleventyConfig) {
             let questions = json[block]['questions'];
 
             questions.forEach((q) => {
+                let exam = q.exam == "true";
+
                 template += `
-                    <div class="question-block" block="${block}">
+                    <div class="question-block" block="${block}" exam="${exam}">
                         <h2 class="question">
                             ${q.title}
                         </h2>
@@ -102,7 +107,7 @@ module.exports = function (eleventyConfig) {
                     template += `</div>`;
                 }
 
-                let shuffle = q.shuffle || true;
+                let shuffle = q.shuffle != "false";
 
                 template += `<div class="answer-block" shuffle="${shuffle}">`;
                 q.answers.forEach((a, j) => {
@@ -112,11 +117,14 @@ module.exports = function (eleventyConfig) {
                     </span> <br>`;
                 });
 
-                template += `
-                    </div>
-                    ${shuffle == "false" ? '<i>* orden de respuestas fijado</i>' : ''}
-                </div>
-                `;
+                template += '</div>';
+                if (exam || !shuffle) {
+                    template += `<ul class="asterisks">
+                        ${exam ? '<li class="exam">pregunta de examen reciente</span>' : ''}
+                        ${!shuffle ? '<li class="shuffle">orden de respuestas fijado</li>' : ''}
+                    </ul>`;
+                }
+                template += '</div>';
             });
         });
 

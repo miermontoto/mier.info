@@ -12,7 +12,8 @@
 						"Ninguna"
 					],
 					"correct": 2,
-					"shuffle": "false"
+					"shuffle": "false",
+					"exam": "true"
 				},
 				{
 					"title": "El diseño de servicios informáticos requiere preparar y planificar el uso eficaz y eficiente de:",
@@ -62,7 +63,8 @@
 						"Arquitectura de servicios",
 						"Arquitectura hardware"
 					],
-					"correct": 3
+					"correct": 3,
+					"exam": "true"
 				},
 				{
 					"title": "¿Cuáles son enfoques habituales en la entrega de proyectos?",
@@ -127,7 +129,8 @@
 						"Gestión de problemas",
 						"Gestión de incidentes"
 					],
-					"correct": 1
+					"correct": 1,
+					"exam": "true"
 				},
 				{
 					"title": "¿Qué práctica tiene un propósito que incluye restaurar la operación normal del servicio lo más rápidamente posible?",
@@ -167,7 +170,8 @@
 						"potenciar",
 						"comprender"
 					],
-					"correct": 1
+					"correct": 1,
+					"exam": "true"
 				},
 				{
 					"title": "¿Qué tipo de cambio necesita ser evaluado, autorizado y programado por una autoridad de cambio antes de implementarlo?",
@@ -187,7 +191,8 @@
 						"Gestión de liberaciones (versiones)",
 						"Control de cambios"
 					],
-					"correct": 2
+					"correct": 2,
+					"exam": "true"
 				},
 				{
 					"title": "¿Qué práctica es responsable de pasar componentes a entornos de producción?",
@@ -227,7 +232,8 @@
 						"Validación y pruebas del servicio",
 						"Gestión de despliegues"
 					],
-					"correct": 2
+					"correct": 2,
+					"exam": "true"
 				},
 				{
 					"title": "¿Qué tipo de aplicaciones gestiona la práctica \"Desarrollo y gestión de software\"?",
@@ -248,7 +254,8 @@
 						"Eliminación",
 						"Identificación"
 					],
-					"correct": 2
+					"correct": 2,
+					"exam": "true"
 				},
 				{
 					"title": "¿Cuál de las siguientes tareas en el proceso de gestión financiera NO se suele llevar a cabo cuando los clientes son internos?",
@@ -325,10 +332,11 @@
 					"answers": [
 						"Mejora continua",
 						"Medición e Informes",
-						"Gestión de la información",
-						"Gestión del conocimiento"
+						"Gestión de la Información",
+						"Gestión del Conocimiento"
 					],
-					"correct": 3
+					"correct": 3,
+					"exam": "true"
 				},
 				{
 					"title": "¿Cuáles de los siguientes roles son responsables de la identificación de oportunidades de mejora?",
@@ -367,7 +375,7 @@
 				}
 			]
 		},
-		"backup": {
+		"otros": {
 			"info": "preguntas de exámenes de años pasados y otras fuentes. <span class='warning'>⚠️ pueden estar desactualizadas o ser incorrectas ⚠️</span>",
 			"questions": [
 				{
@@ -405,7 +413,8 @@
 						"Ninguna de las anteriores"
 					],
 					"correct": 1,
-					"shuffle": "false"
+					"shuffle": "false",
+					"exam": "true"
 				},
 				{
 					"title": "¿Cuál de las siguientes actividades normalmente la realizaría un Centro de Servicio al Usuario?",
@@ -434,7 +443,7 @@
 					"correct": 2
 				},
 				{
-					"title": "¿Cuál es el objetivo principal del proceso de gestión de la configuración y activos del servicio?",
+					"title": "¿Cuál es el objetivo principal del proceso de Gestión de la configuración y activos del servicio?",
 					"answers": [
 						"Rendir cuentas de todos los activos financieros de la organización",
 						"Proporcionar un modelo lógico de la infraestructura informática, identificando las relaciones entre los servicios informáticos y los diferentes componentes tecnológicos",
@@ -452,16 +461,6 @@
 						"Prevenir nuevos interrupciones de servicios como consecuencia de cambios ya realizados"
 					],
 					"correct": 1
-				},
-				{
-					"title": "Un usuario de TI tiene una interrupción en su PC. No es la primera vez que el aparato muestra deficiencias en su funcionamiento. Hace tres meses también dejó de funcionar. El usuario informa al Centro de Servicio de esta interrupción. ¿De qué se trata?",
-					"answers": [
-						"Una incidencia",
-						"Un error conocido",
-						"Una problema",
-						"Una solicitud de cambio"
-					],
-					"correct": 0
 				},
 				{
 					"title": "¿Cuál es la segunda actividad del modelo de mejora continua de servicios en seis etapas?",
@@ -524,7 +523,7 @@
 					"correct": 1
 				},
 				{
-					"title": "¿Dónde se mantiene el contenido de las versiones de las versiones (<i>releases</i>)?",
+					"title": "¿Dónde se mantiene el contenido de las versiones (<i>releases</i>)?",
 					"answers": [
 						"Base de datos de capacidad (CDB)",
 						"Base de datos de configuración (CMDB)",
@@ -582,6 +581,290 @@
 						"Operación del servicio"
 					],
 					"correct": 2
+				},
+				{
+					"title": "Diseño del Servicio define cuatro \"Ps\": Proveedores, Personas, Productos y...",
+					"answers": [
+						"Políticas",
+						"Procesos",
+						"Prácticas",
+						"Personal"
+					],
+					"correct": 1,
+					"exam": "true"
+				},
+				{
+					"title": "¿Qué término corresponde a: la medida de cuánto tiempo un servicio de TI puede llevar a cabo su función acordada sin interrupción?",
+					"answers": [
+						"Disponibilidad",
+						"Fiabilidad",
+						"Capacidad de mantenimiento",
+						"Ninguna de las anteriores"
+					],
+					"shuffle": "false",
+					"exam": "true"
+				},
+				{
+					"title": "Identifique las palabras que faltan en el siguiente enunciado: \"<quote>El propósito de la práctica de Gestión de Proveedores es asegurar que los proveedores de la organización y [?] se gestionan adecuadamente para posibilitar el suministro de productos y servicios de calidad sin interrupciones.</quote>\"",
+					"answers": [
+						"sus usuarios",
+						"su valor",
+						"su desempeño",
+						"sus costes"
+					],
+					"correct": 2,
+					"exam": "true"
+				},
+				{
+					"title": "Su empresa cuenta con cinco sucursales por todo el país. Con el objetivo de prestar atención a los usuarios, cada sucursal cuenta con un puesto de atención al cliente. ¿Qué tipo de Service Desk se está definiendo?",
+					"answers": [
+						"Local",
+						"Centralizado",
+						"Virtual",
+						"Follow the Sun"
+					],
+					"correct": 0,
+					"exam": "true"
+				},
+				{
+					"title": "¿Qué termino cumple con la siguiente definición? \"<quote>Periodo de tiempo máximo aceptable que puede transcurrir desde la interrupción de un servicio antes de que su falta de funcionamiento para el negocio repercuta gravemente en la organización.</quote>\"",
+					"answers": [
+						"RPO",
+						"SCO",
+						"RTO",
+						"SPO"
+					],
+					"correct": 2,
+					"exam": "true"
+				},
+				{
+					"title": "¿Cuáles son los requisitos de continuidad del servicio?",
+					"options": [
+						"RPO",
+						"SCO",
+						"RTO",
+						"SPO"
+					],
+					"answers": [
+						"2 y 4",
+						"2",
+						"1 y 2",
+						"1 y 3"
+					],
+					"correct": 3
+				},
+				{
+					"title": "Si un problema no se puede resolver rápidamente, es posible que desee documentar y aplicar una solución temporal para reducir el impacto del problema. ¿Cómo se llama esto?",
+					"answers": [
+						"Workaround",
+						"Solución",
+						"Incidente",
+						"Error conocido"
+					],
+					"correct": 0,
+					"exam": "true"
+				},
+				{
+					"title": "¿Qué se define como la adición, modificación o eliminación de cualquier cosa que pueda tener un efecto directo o indirecto en los servicios?",
+					"answers": [
+						"Evento",
+						"Problema",
+						"Incidente",
+						"Cambio"
+					],
+					"correct": 3
+				},
+				{
+					"title": "Mantener la satisfacción del usuario:",
+					"answers": [
+						"No es un objetivo de ITIL",
+						"Es un objetivo secundario, lo importante es el gasto que supone el servicio",
+						"Es un Factor Crítico de Éxito (CSF)",
+						"C es correcta y además se consigue si aplicamos ITIL"
+					],
+					"correct": 2
+				},
+				{
+					"title": "¿Qué práctica tiene como propósito asegurar que los servicios logren el rendimiento esperado y acordado para satisfacer la demanda actual y futura de forma rentable?",
+					"answers": [
+						"Gestión de niveles de servicio",
+						"Gestión de la capacidad y el rendimiento",
+						"Análisis del negocio",
+						"Gestión de incidencias"
+					],
+					"correct": 1
+				},
+				{
+					"title": "¿Qué tipo de cambio tiene MÁS posibilidades de gestionarse mediante la práctica de gestión de solicitudes (peticiones) de servicio?",
+					"answers": [
+						"Un cambio normal",
+						"Un cambio de emergencia",
+						"Un cambio estándar",
+						"Un cambio de aplicación"
+					],
+					"correct": 2,
+					"exam": "true"
+				},
+				{
+					"title": "¿La orientación que da la práctica de gestión estratégica ayuda a contestar cuáles de las siguientes preguntas?",
+					"answers": [
+						"¿Qué servicios deberíamos ofrecer y a quién?",
+						"¿Cómo nos diferenciamos de la competición?",
+						"¿Cómo realmente creamos valor para nuestros clientes?",
+						"Todas las anteriores"
+					],
+					"correct": 3,
+					"shuffle": "false",
+					"exam": "true"
+				},
+				{
+					"title": "¿La práctica gestión de activos de TI puede incluir activos que no sean de TI como edificios o información?",
+					"answers": [
+						"Siempre",
+						"Nunca",
+						"En caso de que sean necesarios para entregar un servicio de TI",
+						"En caso de que tengan valor financiero"
+					],
+					"correct": 2,
+					"exam": "true"
+				},
+				{
+					"title": "¿Qué práctica es responsabilidad de todos los empleados de una empresa?",
+					"answers": [
+						"Medición e Informes",
+						"Gestión del Conocimiento",
+						"Mejora continua",
+						"Gestión de la Información"
+					],
+					"correct": 2,
+					"exam": "true"
+				},
+				{
+					"title": "¿Qué se define como la práctica de proteger una organización entendiendo y gestionando los riesgos para la confidencialidad, integridad y disponibilidad de la información?",
+					"answers": [
+						"Gestión de la disponibilidad",
+						"Gestión de la seguridad de la información",
+						"Habilitación del cambio",
+						"Gestión de la continuidad del servicio"
+					],
+					"correct": 1,
+					"exam": "true"
+				},
+				{
+					"title": "¿Qué práctica se centra en la observación del sistema de servicios y CIs para detectar condiciones que puedan ser consideradas de importancia?",
+					"answers": [
+						"Monitorización y gestión de eventos",
+						"Gestión de incidencias",
+						"Centro de servicio al usuario",
+						"Gestión de configuración del servicio"
+					],
+					"correct": 0
+				},
+				{
+					"title": "La cartera de servicios incluye:",
+					"answers": [
+						"Servicios personalizados a cada perfil de cliente",
+						"Servicios en producción",
+						"Servicios en estudio, retirados y en producción",
+						"Servicios críticos y servicios de alto valor"
+					],
+					"correct": 2
+				},
+				{
+					"title": "La MEJOR manera de definir los servicios en el Portafolio (cartera) de Servicios es basar las definiciones en:",
+					"answers": [
+						"Las capacidades requeridas para entregar el servicio",
+						"La composición del servicio",
+						"Los resultados de negocio que permite el servicio",
+						"Los recursos necesarios para entregar el servicio"
+					],
+					"correct": 2,
+					"exam": "true"
+				},
+				{
+					"title": "¿Qué información debería contener un Catálogo de Servicios?",
+					"answers": [
+						"Los detalles de todos los servicios operativos",
+						"La información de los activos",
+						"La información de las versiones de todo el software",
+						"La estructura organizativa de la empresa"
+					],
+					"correct": 0
+				},
+				{
+					"title": "¿Qué práctica tiene como propósito mover hardware, software, documentación, procesos o cualquier otro componente nuevo o cambiado a entornos de producción?",
+					"answers": [
+						"Gestión de infraestructura y plataformas",
+						"Gestión de despliegues",
+						"Desarrollo y gestión de software",
+						"Gestión de versiones"
+					],
+					"correct": 1,
+					"exam": "true"
+				},
+				{
+					"title": "El router externo de su empresa acaba de fallar y necesita ser reemplazado. La conexión de toda la organización a la red de área extendida permanecerá desconectada hasta que esté router sea reemplazado. ¿Qué tipo de cambio debe iniciarse?",
+					"answers": [
+						"Estándar",
+						"Emergencia",
+						"Rutinario",
+						"Normal"
+					],
+					"correct": 1,
+					"exam": "true"
+				},
+				{
+					"title": "¿Qué término corresponde a: la rapidez y eficacia en la recuperación en el contexto de la práctica de Gestión de la Disponibilidad?",
+					"answers": [
+						"Disponibilidad",
+						"Fiabilidad",
+						"Capacidad de mantenimiento",
+						"Ninguna de las anteriores"
+					],
+					"correct": 2,
+					"shuffle": "false"
+				},
+				{
+					"title": "¿Qué práctica tiene como propósito asegurar que los cambios que se realizan en una organización se implementan suavemente y sin contratiempos, y que se logren beneficios que perduren gracias a la gestión de los aspectos humanos de los cambios?",
+					"answers": [
+						"Gestión de relaciones",
+						"Gestión de configuración de servicios",
+						"Habilitación del cambio",
+						"Gestión del cambio organizacional"
+					],
+					"correct": 3,
+					"exam": "true"
+				},
+				{
+					"title": "¿Cuál es la definición de un evento?",
+					"answers": [
+						"Cualquier cambio de estado que es significativo para la gestión de un servicio u otros elementos de la configuración",
+						"Cualquier componente con valor financiero que pueda contribuir a la entrega de un servicio o producto de TI",
+						"La interrupción de un servicio o la reducción en la calidad de un servicio no planificadas",
+						"Cualquier componente que se necesite gestionar para entregar un servicio de TI"
+					],
+					"correct": 0
+				},
+				{
+					"title": "¿Cuál de las siguientes es actividad de Gestión de la Continuidad del Servicio?",
+					"answers": [
+						"Recuperación de respaldos y volcado de datos",
+						"Notificar al usuario un fallo del sistema",
+						"Garantizar al usuario un fallo del sistema",
+						"Facilitar informes sobre la disponibilidad"
+					],
+					"correct": 0
+				},
+				{
+					"title": "¿Qué práctica se encarga de mantener contentos a los stakeholders?",
+					"answers": [
+						"Gestión de relaciones",
+						"Gestión de la fuerza de trabajo y el talento",
+						"Gestión de activos de TI",
+						"Gestión de solicitudes (peticiones) de servicio"
+					],
+					"correct": 0,
+					"exam": "true"
 				}
 			]
 		}

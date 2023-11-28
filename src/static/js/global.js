@@ -6,7 +6,7 @@ document.querySelectorAll('.topbtn').forEach((btn) => {
     });
 });
 
-document.querySelectorAll('.bordered').forEach((card) => {
+/*document.querySelectorAll('.bordered').forEach((card) => {
     card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left - rect.width / 2;
@@ -15,7 +15,7 @@ document.querySelectorAll('.bordered').forEach((card) => {
 
         card.style.setProperty('--rotation', angle + 'rad')
     });
-});
+});*/
 
 function christmas() {
     let date = new Date();

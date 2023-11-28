@@ -15,8 +15,8 @@ window.addEventListener('load', () => { // when the page loads (the content is r
 			let blockId = block.getAttribute('id');
 			questionsBlock.innerHTML = ''; // empty all questions
 			allQuestions.forEach((q) => {
-				console.log(q.getAttribute('block'), blockId, q.getAttribute('block') == blockId);
-				if (q.getAttribute('block') == blockId || blockId == 'all') {
+				if (q.getAttribute('block') == blockId || blockId == 'all' || (q.getAttribute('exam') == "true" && blockId == "exam")) {
+					if (blockId == "exam") q.querySelector('.exam').remove();
 					questionsBlock.appendChild(q);
 				}
 			});

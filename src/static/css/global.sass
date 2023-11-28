@@ -96,9 +96,9 @@ hr
     margin-bottom: 3em
     width: 95%
 
-$rotation: 2.5rad
-:root
-    --rotation: variables.$rotation
+// $rotation: 2.5rad
+// :root
+//     --rotation: variables.$rotation
 
 // cards
 .carded
@@ -138,7 +138,7 @@ $rotation: 2.5rad
             font-size: 1.5em
 
 .bordered
-    background-image: linear-gradient(black, black), linear-gradient(calc(var(--rotation)), base.$light 0, base.$secondary 20%, transparent 80%)
+    // background-image: linear-gradient(black, black), linear-gradient(calc(var(--rotation)), base.$light 0, base.$secondary 20%, transparent 80%)
     background-origin: border-box
     background-clip: content-box, border-box
     border: 2px solid transparent
@@ -171,3 +171,7 @@ quote
 
 ul, ol
     line-height: 1.35em
+
+.easter
+    font-style: italic
+    color: base.$secondary
