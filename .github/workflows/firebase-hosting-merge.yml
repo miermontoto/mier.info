@@ -18,3 +18,5 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MIER_F6277 }}'
           channelId: live
           projectId: mier-f6277
+      - name: trigger speedlify deploy
+        run: 'curl -X POST -d "{}" -H "Content-Type: application/x-www-form-urlencoded" "https://api.netlify.com/build_hooks/${{ sectrets.NETLIFY_HOOK }}"'
