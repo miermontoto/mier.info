@@ -23,6 +23,7 @@ $dot: colors.$white
     font-family: 'Daft Font', cursive
     font-size: 3em
     user-select: none
+    font-weight: normal
 
 div
     margin-bottom: 1em
@@ -78,18 +79,13 @@ ul
     a:hover &
         background-color: colors.$primary
 
-.marquee
+#marquee
     text-align: center
     white-space: nowrap
-
-    &#marquee-scroll
-        animation: scroll-center 60s linear infinite
-
-    &#marquee-main
-        animation: scroll-right 30s linear infinite
-        filter: drop-shadow(0 0 3px colors.$white)
-        font-style: italic
-        font: 500 1.5em 'Ndot-55', sans-serif
+    animation: scroll-right 30s linear infinite
+    filter: drop-shadow(0 0 3px colors.$white)
+    font-style: italic !important
+    font: 500 1.5em 'Ndot-55', sans-serif
 
 .experience-logo
     width: 1.5em
@@ -153,7 +149,7 @@ video#background
     object-fit: cover
 
     &.fullscreen
-        z-index: 2
+        z-index: 3
         opacity: 1
 
 #overlay

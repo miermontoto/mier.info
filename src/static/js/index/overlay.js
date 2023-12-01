@@ -1,5 +1,6 @@
 let fullscreen = document.getElementById('fullscreen-background');
 let overlay = document.getElementById('overlay');
+
 fullscreen.addEventListener('click', () => {
     let videoElement = document.getElementById('background');
 
