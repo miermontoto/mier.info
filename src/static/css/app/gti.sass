@@ -1,30 +1,31 @@
 @use '../base'
+@use '../colors'
 
 .selected // selected answers
 	&.correct
-		background-color: base.$correct !important
+		background-color: colors.$correct !important
 
 	&.disabled
-		background-color: base.$wrong
+		background-color: colors.$wrong
 
 .disabled // not selected answers
-	background-color: base.$dark
+	background-color: colors.$dark
 
 	&.correct:not(.selected)
-		background-color: base.$correct-background
+		background-color: colors.$correct-background
 
 .question-block
 	&.correct
-		border-color: base.$correct-background
+		border-color: colors.$correct-background
 
 	&.wrong
-		border-color: base.$wrong-background
+		border-color: colors.$wrong-background
 
 .select-block
-	background-color: base.$light
+	background-color: colors.$light
 
 	&.selected
-		background-color: base.$white
+		background-color: colors.$white
 
 .disabled:hover
 	cursor: auto
@@ -43,7 +44,7 @@
 	margin: 0 auto
 	width: 90%
 	border-radius: 8px
-	border: 3px solid base.$dark
+	border: 3px solid colors.$dark
 	margin-bottom: 2em
 	padding: 2em
 
@@ -58,7 +59,7 @@
 	font-style: italic
 
 	&.finished
-		color: base.$white
+		color: colors.$white
 		font-size: 1.5em
 		font-style: normal
 

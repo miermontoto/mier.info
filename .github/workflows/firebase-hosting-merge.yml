@@ -19,4 +19,4 @@ jobs:
           channelId: live
           projectId: mier-f6277
       - name: trigger speedlify deploy
-        run: 'curl -X POST -d "{}" -H "Content-Type: application/x-www-form-urlencoded" "https://api.netlify.com/build_hooks/${{ sectrets.NETLIFY_HOOK }}"'
+        run: 'curl -X POST -d "{}" -H "Content-Type: application/x-www-form-urlencoded" "https://api.netlify.com/build_hooks/${{ secrets.NETLIFY_HOOK }}"'
