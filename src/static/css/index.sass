@@ -1,4 +1,7 @@
 @use 'base'
+@use 'animations'
+@use 'colors'
+
 @font-face // title font
     font-family: 'Daft Font'
     font-display: swap
@@ -9,7 +12,7 @@
     font-display: swap
     src: local('Ndot-55'), url('/assets/fonts/Ndot-55.otf')
 
-$dot: base.$white
+$dot: colors.$white
 
 // main
 #main-container
@@ -73,21 +76,20 @@ ul
     height: 7px
 
     a:hover &
-        background-color: base.$primary
+        background-color: colors.$primary
 
-#marquee
+.marquee
     text-align: center
-    font: 500 1.5em 'Ndot-55', sans-serif
     white-space: nowrap
-    animation: scroll-left 30s linear infinite
-    filter: drop-shadow(0 0 3px base.$white)
-    font-style: italic
 
-@keyframes scroll-left
-    0%
-        transform: translateX(100%)
-    100%
-        transform: translateX(-100%)
+    &#marquee-scroll
+        animation: scroll-center 60s linear infinite
+
+    &#marquee-main
+        animation: scroll-right 30s linear infinite
+        filter: drop-shadow(0 0 3px colors.$white)
+        font-style: italic
+        font: 500 1.5em 'Ndot-55', sans-serif
 
 .experience-logo
     width: 1.5em
@@ -98,7 +100,7 @@ ul
 // projects table
 #projects
     table-layout: auto
-    border: 2px solid base.$light
+    border: 2px solid colors.$light
     border-radius: base.$radius
     margin: 1em
     width: 90%
@@ -136,7 +138,7 @@ ul
         padding: 0.75em
 
     tr:not(:last-child) td
-        border-bottom: 1px solid base.$dark
+        border-bottom: 1px solid colors.$dark
 
 video#background
     position: fixed

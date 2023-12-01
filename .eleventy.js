@@ -24,7 +24,7 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy("./src/static/js");
     eleventyConfig.addPassthroughCopy("./assets");
-    eleventyConfig.addPassthroughCopy("**.data.json");
+    eleventyConfig.addPassthroughCopy("**.json");
     eleventyConfig.setDataFileSuffixes([".data", ""]);
     eleventyConfig.setQuietMode(true);
     eleventyConfig.setServerOptions({
@@ -34,7 +34,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode("addScript", function (filename) {
         let filepath = findFileInDir("./src/static/js", `${filename}.js`);
         if (filepath) {
-            return `<script src="${filepath.replace('src', '')}" defer></script>`;
+            return `<script type="module" src="${filepath.replace('src', '')}"></script>`;
         }
 
         console.log(`Script file ${filename}.js not found in /src/static/js/`);
@@ -135,7 +135,8 @@ module.exports = function (eleventyConfig) {
     return {
         dir: {
             input: "src",
-            includes: "templates"
+            includes: "templates",
+            data: "data"
         }
     };
 };

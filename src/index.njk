@@ -12,7 +12,7 @@ js: index
 
 <div id="main-container">
     <div id="title">juan<br>mier</div>
-    <div id="marquee">⠀<noscript>js isn't enabled :')</noscript></div>
+    <div id="marquee-main" class="marquee">⠀<noscript>js isn't enabled :')</noscript></div>
 
     <div id="socials">
         {% for link in links %}
@@ -26,6 +26,13 @@ js: index
         <span class="button" id="project-button">projects</span>
         <span class="button" id="about-button">about</span>
     </div>
+</div>
+
+<div id="marquee-scroll" class="marquee center">
+    SCROLL DOWN ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ PROJECTS ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ SCROLL DOWN
+    ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ PROJECTS ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ SCROLL DOWN ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+    PROJECTS ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ PROJECTS ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ PROJECTS
+    ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 </div>
 
 {% import "src/static/macros.njk" as macros %}
