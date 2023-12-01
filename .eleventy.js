@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 function findFileInDir(dir, filename) {
     let files = fs.readdirSync(dir);
@@ -21,6 +22,7 @@ function findFileInDir(dir, filename) {
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(EleventyRenderPlugin);
+    eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
     eleventyConfig.addPassthroughCopy("./src/static/js");
     eleventyConfig.addPassthroughCopy("./assets");
@@ -136,7 +138,7 @@ module.exports = function (eleventyConfig) {
         dir: {
             input: "src",
             includes: "templates",
-            data: "data"
+            data: "content/data"
         }
     };
 };

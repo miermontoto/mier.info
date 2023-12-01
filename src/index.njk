@@ -4,18 +4,12 @@ css: index
 js: index
 ---
 
-<video id="background" autoplay loop muted playsinline></video>
-<div id="overlay">
-    <span id="fullscreen-background" class="button light">⛶</span>
-    <span id="stop-background" class="button light">⨯</span>
-</div>
-
 <div id="main-container">
     <div id="title">juan<br>mier</div>
-    <div id="marquee-main" class="marquee">⠀<noscript>js isn't enabled :')</noscript></div>
+    <div id="marquee" class="marquee">⠀<noscript>js isn't enabled :')</noscript></div>
 
     <div id="socials">
-        {% for link in links %}
+        {% for link in socials %}
             <a href="{{ link.url }}" rel="noopener noreferrer">
                 <span class="dot"></span> {{ link.text }}
             </a>
@@ -26,13 +20,6 @@ js: index
         <span class="button" id="project-button">projects</span>
         <span class="button" id="about-button">about</span>
     </div>
-</div>
-
-<div id="marquee-scroll" class="marquee center">
-    SCROLL DOWN ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ PROJECTS ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ SCROLL DOWN
-    ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ PROJECTS ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ SCROLL DOWN ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
-    PROJECTS ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ PROJECTS ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ PROJECTS
-    ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 </div>
 
 {% import "src/static/macros.njk" as macros %}
@@ -74,3 +61,9 @@ js: index
         </div>
     </div>
 </section>
+
+<video id="background" autoplay loop muted playsinline></video>
+<div id="overlay">
+    <span id="fullscreen-background" class="button light">⛶</span>
+    <span id="stop-background" class="button light">⨯</span>
+</div>
