@@ -6,9 +6,7 @@ links: [{icon: 'ⓘ', url: "/epiCalendar"}]
 demo: https://epicalendar.mier.info
 permalink: /epiCalendar/
 icons: [flask, python, react]
-date: 1800-01-01
-status: https://dashboard.mier.info/api/badge/2/status?style=flat-square
-star: star
+img: ['epicalendar1.png', 'epicalendar2.png']
 buttons: [
     {'url': 'https://epicalendar.mier.info', 'img': '🌐', 'text': 'página web'}
 ]

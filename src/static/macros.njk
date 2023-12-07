@@ -14,43 +14,30 @@ permalink: false
 {% endmacro %}
 
 {% macro renderProject(project) %}
-    <tr class="project {{ project.data.star }}" id="{{ project.data.title | slug }}">
-        <td class="project-title">
+    <li class="project {{ project.data.star }}" id="{{ project.data.title | slug }}">
+        <div class="project-title">
             {% if project.data.demo %}
                 <a href="{{ project.data.demo }}" rel="noopener noreferrer">{{ project.data.title }}</a>
             {% else %}
                 {{ project.data.title }}
             {% endif %}
-        </td>
+        </div>
 
-        <td class="project-links">
+        <div class="project-links">
             {% if project.data.source %}
                 <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer" aria-label="source code for {{ project.data.title }}">
                     {{ renderIcon('git') }}
                 </a>
             {% endif %}
             {% for link in project.data.links %}
-                <br>
                 <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.icon | safe }}</a>
             {% endfor %}
-        </td>
+        </div>
 
-        <td class="project-description">
-            {{ project.data.desc | safe }}
-        </td>
-
-        <td class="project-icons">
-            <div class="project-icons-container">
-                {{ renderIcons(project.data.icons) }}
-            </div>
-        </td>
-
-        {# <td class="project-image">
-            {% if project.data.image %}
-                <img src="{{ project.data.image }}" alt="{{ project.data.title }} image">
-            {% endif %}
-        </td> #}
-    </tr>
+        {# <div class="project-icons">
+            {{ renderIcons(project.data.icons) }}
+        </div> #}
+    </li>
 {% endmacro %}
 
 {% macro renderExperience(experience) %}
