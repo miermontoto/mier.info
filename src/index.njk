@@ -25,23 +25,50 @@ js: index
 {% import "src/static/macros.njk" as macros %}
 
 <section id="project-section" class="section">
-    <table id="projects">
-        <caption><h1>projects.</h1></caption>
-        <thead hidden>
-            <tr>
-                <th>Project</th>
-                <th>Links</th>
-                <th>Description</th>
-                <th>Icons</th>
-                {# <th>Image</th> #}
-            </tr>
-        </thead>
-        <tbody>
+    <h1>projects.</h1>
+    <h2>featured projects</h2>
+    <div id="featured" class="carded">
+        {% for project in collections.project %}
+            {% if project.data.img %}
+                <div class="project card">
+                    <div class="project-title">
+                        <h3>
+                            {% if project.data.demo %}
+                                <a href="{{ project.data.demo }}" rel="noopener noreferrer">{{ project.data.title }}</a>
+                            {% else %}
+                                {{ project.data.title }}
+                            {% endif %}
+                        </h3>
+                    </div>
+
+                    <div class="project-img">
+                        <img src="/assets/media/projects/{{ project.data.img | first }}" alt="{{ project.data.title }} image" class="main">
+                        <img src="/assets/media/projects/{{ project.data.img | last }}" alt="{{ project.data.title }} alt image" class="hover">
+                    </div>
+
+                    <div class="project-links">
+                        {% if project.data.source %}
+                            <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer" aria-label="source code for {{ project.data.title }}">
+                                {{ macros.renderIcon('git') }}
+                            </a>
+                        {% endif %}
+                        {% for link in project.data.links %}
+                            <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.icon | safe }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <hr>
+    <h2>full works list</h2>
+    <div id="project-list">
+        <ul>
             {% for project in collections.project %}
                 {{ macros.renderProject(project) }}
             {% endfor %}
-        </tbody>
-    </table>
+        </ul>
+    </div>
 </section>
 
 <section id="about-section" class="section">
