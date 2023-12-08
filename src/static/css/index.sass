@@ -144,7 +144,8 @@ video#background
     width: max(35%, 300px)
 
     .project-title
-        margin: -1em
+        font-weight: bold
+        font-size: 1.5em
 
     .project-description
         font-weight: 500
@@ -167,8 +168,15 @@ video#background
             object-fit: contain
             transition: opacity .2s
 
-            &:hover
-                opacity: 1
+    &:hover
+        border: 2px solid colors.$light
+
+        .project-img .hover
+            opacity: 1
+
+
+    .project-links
+        font-size: 1.25em
 
 #project-list .project
     display: flex
@@ -180,7 +188,7 @@ video#background
         margin: 0.75em
 
     &:hover
-        border: 1px solid colors.$light
+        border-color: colors.$light
 
         .project-tech
             opacity: 1

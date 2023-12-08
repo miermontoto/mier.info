@@ -31,18 +31,16 @@ js: index
             {% if project.data.img %}
                 <div class="project card">
                     <div class="project-img">
-                        <img src="/assets/media/projects/{{ project.fileSlug }}/front.png" alt="{{ project.data.title }} image" class="main">
-                        <img src="/assets/media/projects/{{ project.fileSlug }}/back.png" alt="{{ project.data.title }} alt image" class="hover">
+                        <img src="/assets/media/projects/{{ project.fileSlug }}/front.webp" alt="{{ project.data.title }} image" class="main">
+                        <img src="/assets/media/projects/{{ project.fileSlug }}/back.webp" alt="{{ project.data.title }} alt image" class="hover">
                     </div>
 
                     <div class="project-title">
-                        <h3>
-                            {% if project.data.demo %}
-                                <a href="{{ project.data.demo }}" rel="noopener noreferrer">{{ project.data.title }}</a>
-                            {% else %}
-                                {{ project.data.title }}
-                            {% endif %}
-                        </h3>
+                        {% if project.data.demo %}
+                            <a href="{{ project.data.demo }}" rel="noopener noreferrer">{{ project.data.title }}</a>
+                        {% else %}
+                            {{ project.data.title }}
+                        {% endif %}
                     </div>
 
                     <div class="project-description">
