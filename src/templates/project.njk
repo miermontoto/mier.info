@@ -1,20 +1,22 @@
 ---
-layout: base.njk
+layout: navigated.njk
 css: project
 ---
 
-<a href="{{ back or "/" }}" id="back">< go back</a>
-{% if source %}
-    <span id="sep"> | </span>
-    <a href="{{ source }}" id="source">source code ></a>
-{% endif %}
 <h1>{{ title }}</h1>
-{% for button in buttons %}
-    <a class="button" href="{{ button.url }}">{{ button.img | safe }} {{ button.text }}</a>
-{% endfor %}
+<div id="project-buttons">
+    {% for button in buttons %}
+        <a class="button" href="{{ button.url }}">{{ button.img | safe }}{{ button.text }}</a>
+    {% endfor %}
+    {% if source %}
+        <a href="{{ source }}" id="source" class="button"><img src="/assets/icons/tech/git.svg" class="icon invert">source</a>
+    {% endif %}
+</div>
 <hr>
 {% if content %}
     {{ content | safe }}
 {% else %}
     <br> work in progress!
 {% endif %}
+
+{% include "src/templates/snippets/footer.njk" %}

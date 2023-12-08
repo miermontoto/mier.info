@@ -1,0 +1,7 @@
+{
+	"permalink": "/writeups/{{ page.fileSlug }}/",
+	"tags": "writeup",
+	"eleventyNavigation": {
+		"parent": "writeups"
+	}
+}

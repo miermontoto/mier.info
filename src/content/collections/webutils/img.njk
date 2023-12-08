@@ -1,3 +1,10 @@
+---
+title: img
+desc: 'convert/rescale images using the html5 canvas'
+eleventyNavigation:
+  key: img
+---
+
 {% addScript 'img' %}
 {% addStyle 'webutils' %}
 
@@ -44,6 +51,6 @@
 <br>
 <span class="button disabled" id="img-convert">convert</span>
 <hr>
-<a class="button hidden" id="img-download"><img src="/assets/icons/button/download.svg" class="icon invert" alt=""> download</a> <br>
+<a class="button hidden" id="img-download"><img src="/assets/icons/misc/download.svg" class="icon invert" alt=""> download</a> <br>
 <span class="info" id="img-filename"></span><br>
 <img id="img-canvas" alt="converted image" hidden />

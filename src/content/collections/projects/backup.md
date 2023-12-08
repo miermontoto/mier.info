@@ -7,6 +7,9 @@ demo: /backup
 keywords: backup, backup carrera, epi, epi gijón, asignaturas, giitin, informática, ingeniería informática, ingeniería, engineering, computer engineering, gijón
 icons: [markdown, github]
 star: star
+lang: es
+eleventyNavigation:
+  key: backup
 ---
 
 {% addStyle 'backup' %}

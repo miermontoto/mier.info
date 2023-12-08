@@ -1,11 +1,11 @@
 ---
 name: okticket
-role: software engineer, intership
-period: 2023 (3 months)
+role: software engineer
+period: 2023, 2024-
 icons: [ruby, laravel, docker, php]
 class: okticket
 ---
-extracurricular internship at *okticket*, a fintech SaaS that digitizes and manages employee tickets.
+*okticket* is a fintech SaaS that digitizes and manages employee tickets.
 
 ---
 
@@ -13,5 +13,5 @@ extracurricular internship at *okticket*, a fintech SaaS that digitizes and mana
 - local deploy automation with Docker and Ruby.
 - load and stress tests with [Locust](https://locust.io/).
 - implementation of code styling and linting tools such as [duster](https://github.com/tighten/duster).
-- deployment of brand new features to testing environments in Mexico.
-- general back-end and development tasks.
+- configuration of brand new environments for Mexico.
+- optimization and refactoring of legacy code.
