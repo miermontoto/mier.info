@@ -23,7 +23,6 @@ function findFileInDir(dir, filename) {
 
 function findSelfInNavPages(navPages, url) {
     for (const page of navPages) {
-        console.log(page.key);
         if (page.key == url) {
             return page;
         }
@@ -84,11 +83,10 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode("breadcrumbs", function(navPages) {
         if (!this.page.url) return ''; // if permalink is false in frontmatter, don't show breadcrumbs
         let targetName = this.page.url.replace('/', '').replace('/', '').replace('.html', '').toLowerCase();
-        let beta = this.page.url.replace('.html', '').split('/');
-        beta.shift();
-        beta = beta.join('/');
-        if (beta.endsWith('/')) beta = beta.slice(0, -1);
-        console.log(`targetName: ${beta}`);
+        // let beta = this.page.url.replace('.html', '').split('/');
+        // beta.shift();
+        // beta = beta.join('/');
+        // if (beta.endsWith('/')) beta = beta.slice(0, -1);
         let currentPage = findSelfInNavPages(navPages, targetName);
         if (!currentPage) {
             console.log(`unable to produce breadcrumbs for ${targetName}.`);
