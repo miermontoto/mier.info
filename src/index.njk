@@ -26,11 +26,15 @@ js: index
 
 <section id="project-section" class="section">
     <h1>projects.</h1>
-    <h2>featured projects</h2>
     <div id="featured" class="carded">
         {% for project in collections.project %}
             {% if project.data.img %}
                 <div class="project card">
+                    <div class="project-img">
+                        <img src="/assets/media/projects/{{ project.fileSlug }}/front.png" alt="{{ project.data.title }} image" class="main">
+                        <img src="/assets/media/projects/{{ project.fileSlug }}/back.png" alt="{{ project.data.title }} alt image" class="hover">
+                    </div>
+
                     <div class="project-title">
                         <h3>
                             {% if project.data.demo %}
@@ -41,9 +45,8 @@ js: index
                         </h3>
                     </div>
 
-                    <div class="project-img">
-                        <img src="/assets/media/projects/{{ project.data.img | first }}" alt="{{ project.data.title }} image" class="main">
-                        <img src="/assets/media/projects/{{ project.data.img | last }}" alt="{{ project.data.title }} alt image" class="hover">
+                    <div class="project-description">
+                        {{ project.data.desc }}
                     </div>
 
                     <div class="project-links">
@@ -60,12 +63,40 @@ js: index
             {% endif %}
         {% endfor %}
     </div>
-    <hr>
-    <h2>full works list</h2>
     <div id="project-list">
+        <h2>full works list</h2>
         <ul>
             {% for project in collections.project %}
-                {{ macros.renderProject(project) }}
+                <li class="project {{ project.data.star }}" id="{{ project.data.title | slug }}">
+                    <div class="project-title">
+                        {% if project.data.demo %}
+                            <a href="{{ project.data.demo }}" rel="noopener noreferrer">{{ project.data.title }}</a>
+                        {% elif project.data.source %}
+                            <a href="{{ project.data.source }}" rel="noopener noreferrer">{{ project.data.title }}</a>
+                        {% else %}
+                            {{ project.data.title }}
+                        {% endif %}
+                    </div>
+
+                    <div class="project-links">
+                        {% if project.data.source and project.data.demo %}
+                            <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer" aria-label="source code for {{ project.data.title }}">
+                                {{ macros.renderIcon('git') }}
+                            </a>
+                        {% endif %}
+                        {% for link in project.data.links %}
+                            <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.icon | safe }}</a>
+                        {% endfor %}
+                    </div>
+
+                    <div class="project-description">
+                        {{ project.data.desc | safe }}
+                    </div>
+
+                    <div class="project-tech">
+                        {{ macros.renderIcons(project.data.icons) }}
+                    </div>
+                </li>
             {% endfor %}
         </ul>
     </div>
@@ -76,14 +107,39 @@ js: index
         <h1>experience.</h1>
         <div id="experience" class="carded">
             {% for experience in collections.experience %}
-                {{ macros.renderExperience(experience) }}
+                <div class="card {{ experience.data.class }}" id="{{ experience.data.name | slug }}">
+                    <div class="card-title-col">
+                        <h1 class="card-title">
+                            {% set logo = '/assets/icons/exp/' + (experience.data.logo or experience.data.name) + '.png' %}
+                            <img src="{{ logo }}" class="experience-logo" alt="{{ experience.data.name }} logo">
+                            {{ experience.data.name }}
+                        </h1>
+                        {% if experience.data.role %}
+                            <b>{{ experience.data.role }}</b>
+                        {% endif %}
+                        {% if experience.data.period %}
+                            <br>
+                            <i>{{ experience.data.period }}</i>
+                        {% endif %}
+                    </div>
+                    <div class="card-description">
+                        {{ experience.content | safe }}
+                    </div>
+                    {% if experience.data.icons %}
+                        <div class="card-bottom">
+                            <div class="card-icons">
+                                {{ macros.renderIcons(experience.data.icons) }}
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
             {% endfor %}
         </div>
     </div>
     <br>
     <div id="about-container">
-        <h1>about.</h1>
         <div id="about">
+            <h1>about.</h1>
             {% renderFile "./src/content/about.md" %}
         </div>
     </div>

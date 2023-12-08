@@ -13,6 +13,21 @@ body
     overflow-x: hidden
     overflow-y: scroll
 
+footer
+    text-align: center
+    position: fixed
+    bottom: 0
+    left: 0
+    width: 100%
+    border-top: 2px solid colors.$dark
+    color: colors.$light
+    background: colors.$primary
+    padding: 1em
+
+    img
+        height: 2em
+        margin-bottom: -0.65em
+
 a, a:visited
     color: colors.$white
 
@@ -85,23 +100,25 @@ hr
     margin-bottom: 3em
     width: 95%
 
+.model
+    border-radius: base.$radius
+    border: 2px solid colors.$dark
+    background-color: colors.$primary
+
 .carded
     display: flex
     flex-wrap: wrap
     justify-content: center
 
     .card
-        width: max(20%, 300px)
+        @extend .model
+        width: max(30%, 300px)
         display: grid
         gap: 1em
         align-items: center
         justify-items: center
-        border-radius: base.$radius
-        border: 2px solid transparent
-        box-shadow: 0 0 0 2px colors.$dark
         padding: 1.5em
         margin: 1.5em
-        background-color: colors.$primary
 
         p
             margin: 1em
@@ -127,7 +144,8 @@ hr
     width: 1em
     filter: invert(1) grayscale(1) brightness(2)
     position: relative
-    top: 0.25em
+    top: 0.125em
+    user-select: none
 
     &.invert
         filter: invert(0) grayscale(1) brightness(1)
@@ -153,3 +171,14 @@ ul, ol
 .easter
     font-style: italic
     color: colors.$secondary
+
+#breadcrumbs
+    color: colors.$light
+    user-select: none
+
+    .bc-target
+        font-size: 1.1em
+        color: colors.$white
+
+img
+    user-select: none

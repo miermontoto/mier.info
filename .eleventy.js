@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const Nunjucks = require("nunjucks");
 
 function findFileInDir(dir, filename) {
     let files = fs.readdirSync(dir);
@@ -14,6 +15,21 @@ function findFileInDir(dir, filename) {
             if (result) return result;
         } else if (path.basename(filepath) === filename) {
             return filepath;
+        }
+    }
+
+    return null;
+}
+
+function findSelfInNavPages(navPages, url) {
+    for (const page of navPages) {
+        console.log(page.key);
+        if (page.key == url) {
+            return page;
+        }
+        if (page.children) {
+            let result = findSelfInNavPages(page.children, url);
+            if (result) return result;
         }
     }
 
@@ -39,7 +55,7 @@ module.exports = function (eleventyConfig) {
             return `<script type="module" src="${filepath.replace('src', '')}"></script>`;
         }
 
-        console.log(`Script file ${filename}.js not found in /src/static/js/`);
+        console.log(`script file ${filename}.js not found in /src/static/js/`);
         return '';
     });
 
@@ -49,7 +65,7 @@ module.exports = function (eleventyConfig) {
             return `<link rel="stylesheet" href="${filepath.replace('src', '').replace('.sass', '.css')}">`;
         }
 
-        console.log(`Style file ${filename}.sass not found in /src/static/css/`);
+        console.log(`style file ${filename}.sass not found in /src/static/css/`);
         return '';
     });
 
@@ -62,7 +78,32 @@ module.exports = function (eleventyConfig) {
         let version = json.version;
         let channel = json.channel && json.channel !== 'RTW' ? ` (${json.channel})` : '';
         let versionString = `${version}${channel}`;
-        return `<a id="version-tag" href="https://github.com/miermontoto/miermontoto/commit/${json.channel === "RTW" ? 'main' : 'beta'}" target="_blank">${versionString}</span>`;
+        return `<a id="version-tag" href="https://github.com/miermontoto/miermontoto/commit/${json.channel === "RTW" ? 'main' : 'beta'}" target="_blank">${versionString}</a>`;
+    });
+
+    eleventyConfig.addShortcode("breadcrumbs", function(navPages) {
+        if (!this.page.url) return ''; // if permalink is false in frontmatter, don't show breadcrumbs
+        let targetName = this.page.url.replace('/', '').replace('/', '').replace('.html', '').toLowerCase();
+        let beta = this.page.url.replace('.html', '').split('/');
+        beta.shift();
+        beta = beta.join('/');
+        if (beta.endsWith('/')) beta = beta.slice(0, -1);
+        console.log(`targetName: ${beta}`);
+        let currentPage = findSelfInNavPages(navPages, targetName);
+        if (!currentPage) {
+            console.log(`unable to produce breadcrumbs for ${targetName}.`);
+            return '';
+        }
+        let html = `<nav aria-label="breadcrumbs" id="breadcrumbs">$ <a href="/">/</a>`;
+
+
+        if (currentPage.parent) {
+            let parentPage = findSelfInNavPages(navPages, currentPage.parent);
+            html += `<span class="bc-spacer"> > </span><a class="bc-target" href="${parentPage.url}">${parentPage.key}</a>`;
+        }
+        html += `<span class="bc-spacer"> > </span><b class="bc-target">${currentPage.title || currentPage.key}</b>`;
+        html += `</nav>`;
+        return html;
     });
 
     eleventyConfig.addShortcode("top", function() {
@@ -122,7 +163,7 @@ module.exports = function (eleventyConfig) {
                 template += '</div>';
                 if (exam || !shuffle) {
                     template += `<ul class="asterisks">
-                        ${exam ? '<li class="exam">pregunta de examen reciente</span>' : ''}
+                        ${exam ? '<li class="exam">pregunta de examen reciente</li>' : ''}
                         ${!shuffle ? '<li class="shuffle">orden de respuestas fijado</li>' : ''}
                     </ul>`;
                 }
@@ -133,6 +174,16 @@ module.exports = function (eleventyConfig) {
         template += `</div>`;
         return template;
     });
+
+    const nunjucksEnvironment = new Nunjucks.Environment(
+        new Nunjucks.FileSystemLoader("./"),
+        {
+            lstripBlocks: true,
+            trimBlocks: true
+        }
+    );
+
+    eleventyConfig.setLibrary("njk", nunjucksEnvironment);
 
     return {
         dir: {

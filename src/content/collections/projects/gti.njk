@@ -7,10 +7,13 @@ demo: /gti/
 keywords: gti, quiz, test, daypo, epi, itil, itil4, examen, backup, backup carrera, epi gijon, epi gti, gti daypo epi
 source: https://github.com/search?q=repo%3Amiermontoto%2Fmiermontoto+gti.&type=code
 download: /content/collections/projects/gti.data.json
+lang: es
 buttons: [
-	{'url': '/content/collections/projects/gti.data.json', 'img': '<img src="/assets/icons/button/download.svg" class="icon invert" alt="download">', 'text': 'download json'},
-	{'url': 'https://github.com/miermontoto/miermontoto/issues/new', 'img': '<img src="/assets/icons/button/bug.svg" class="icon invert" alt="issue">', 'text': 'report bug'}
+	{'url': '/content/collections/projects/gti.data.json', 'img': '<img src="/assets/icons/misc/download.svg" class="icon invert" alt="download">', 'text': 'download json'},
+	{'url': 'https://github.com/miermontoto/miermontoto/issues/new', 'img': '<img src="/assets/icons/misc/bug.svg" class="icon invert" alt="issue">', 'text': 'report bug'}
 ]
+eleventyNavigation:
+  key: gti
 ---
 
 {% addStyle 'gti' %}
@@ -22,7 +25,7 @@ buttons: [
 	<span id="scored"><span id="score">0</span>%</span>
 	<noscript>ERROR: JavaScript is NEEDED for the quiz to work!</noscript>
 </div>
-<span class="button" id="reset"><img src="/assets/icons/button/reset.svg" class="icon invert" alt="reset"> reset</span>
+<span class="button" id="reset"><img src="/assets/icons/misc/reset.svg" class="icon invert" alt="reset"> reset</span>
 <div id="options">
 	<h2>opciones.</h2>
 	<input type="checkbox" id="shuffle-questions" checked>

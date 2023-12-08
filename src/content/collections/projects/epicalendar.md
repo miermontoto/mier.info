@@ -5,11 +5,17 @@ source: https://github.com/miermontoto/epiCalendar
 links: [{icon: 'ⓘ', url: "/epiCalendar"}]
 demo: https://epicalendar.mier.info
 permalink: /epiCalendar/
+redirect_from: /epicalendar/
 icons: [flask, python, react]
-img: ['epicalendar1.png', 'epicalendar2.png']
+img: true
+lang: es
+star: star
 buttons: [
-    {'url': 'https://epicalendar.mier.info', 'img': '🌐', 'text': 'página web'}
+    {'url': 'https://epicalendar.mier.info', 'img': '<span class="ico">🌐</span>', 'text': 'página web'}
 ]
+eleventyNavigation:
+  key: epicalendar
+  title: epiCalendar
 ---
 
 ## cómo extraer tu JSESSIONID
@@ -22,4 +28,4 @@ buttons: [
     - En caso de haber varias, copia el valor de la cookie que tenga `path: /serviciosacademicos`.
 5. Pega el valor en el campo de texto de la página de epiCalendar.
 
-<img src="/assets/media/jsessionid.png" width="85%" alt="imagen de cómo extrar la cookie JSESSIONID de tu navegador"/>
+<img src="/assets/media/jsessionid.png" width="85%" alt="imagen de cómo extrar la cookie JSESSIONID de tu navegador">

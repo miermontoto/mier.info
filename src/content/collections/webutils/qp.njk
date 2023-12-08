@@ -1,0 +1,19 @@
+---
+title: quoted-printable
+desc: 'encode/decode quoted-printable'
+permalink: /qp/
+eleventyNavigation:
+  key: qp
+  title: quoted-printable
+---
+
+{% addScript 'qp' %}
+{% addStyle 'webutils' %}
+
+<div id="decoded">
+	<textarea class="input" id="qp-decoded-text" placeholder="plain text"></textarea>
+</div>
+<span><=></span>
+<div id="encoded">
+	<textarea class="output" id="qp-encoded-text" placeholder="encoded text"></textarea>
+</div>
