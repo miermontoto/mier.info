@@ -61,8 +61,8 @@ js: index
             {% endif %}
         {% endfor %}
     </div>
+    <hr>
     <div id="project-list">
-        <h2>full works list</h2>
         <ul>
             {% for project in collections.project %}
                 <li class="project {{ project.data.star }}" id="{{ project.data.title | slug }}">

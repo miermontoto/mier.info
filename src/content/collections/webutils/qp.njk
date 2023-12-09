@@ -8,13 +8,10 @@ eleventyNavigation:
   title: quoted-printable
 ---
 
-{% addScript 'qp' %}
-{% addStyle 'webutils' %}
-
-<div id="decoded">
+<div class="decoded">
 	<textarea class="input" id="qp-decoded-text" placeholder="plain text"></textarea>
 </div>
 <span><=></span>
-<div id="encoded">
+<div class="encoded">
 	<textarea class="output" id="qp-encoded-text" placeholder="encoded text"></textarea>
 </div>
