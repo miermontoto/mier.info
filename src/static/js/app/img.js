@@ -1,4 +1,4 @@
-document.getElementById('img-convert').addEventListener('click', convert); // convert on click
+document.getElementById('img-button').addEventListener('click', convert); // convert on click
 
 // enable options after selecting file
 document.getElementById('img-input').addEventListener('change', enableOptions);
@@ -6,9 +6,16 @@ document.getElementById('img-input').addEventListener('change', enableOptions);
 // only enable quality slider if a non lossless format is selected (jpeg, webp)
 document.getElementById('img-format').addEventListener('change', checkQuality);
 
+// enable drag and drop
+let dropArea = document.getElementById('img-drop');
+dropArea.addEventListener('dragenter', allowDrop);
+dropArea.addEventListener('dragover', allowDrop);
+dropArea.addEventListener('drop', drop);
+dropArea.addEventListener('dragleave', leaveDrop);
+
 // sync quality slider with value and enable options if file already present on window load
 window.addEventListener('load', function() {
-	if (document.getElementById('img-input').files[0]) enableOptions();
+	if (document.getElementById('img-input').files.length != 0) enableOptions();
 
 	let slider = document.getElementById('qualitySlider');
 	let value = document.getElementById('qualityValue');
@@ -18,9 +25,33 @@ window.addEventListener('load', function() {
 	};
 });
 
+function allowDrop(ev) {
+	ev.preventDefault();
+	ev.stopPropagation();
+	dropArea.classList.add('dragover');
+}
+
+function leaveDrop(ev) {
+	ev.preventDefault();
+	ev.stopPropagation();
+	dropArea.classList.remove('dragover');
+}
+
+function drop(ev) {
+	let dt = ev.dataTransfer;
+	let file = dt.files;
+
+	if (file.length !== 1) file = file[0];
+	if (file[0].type.split('/')[0] !== 'image') return;
+
+	document.getElementById('img-input').files = file;
+	enableOptions();
+	leaveDrop(ev);
+}
+
 function enableOptions() {
 	// enable options
-	document.getElementById('img-convert').classList.remove('disabled');
+	document.getElementById('img-button').classList.remove('disabled');
 	document.getElementById('img-options').classList.remove('disabled');
 	document.getElementById('heightInput').disabled = false;
 	document.getElementById('widthInput').disabled = false;
@@ -83,6 +114,7 @@ function convert() {
 	let filenameSpan = document.getElementById('img-filename');
 
 	if (!input) return;
+	if (document.getElementById('img-button').classList.contains('disabled')) return;
 
 	const reader = new FileReader();
 	reader.onload = function (e) {
