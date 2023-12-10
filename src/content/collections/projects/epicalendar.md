@@ -2,7 +2,7 @@
 title: epiCalendar
 desc: web (and python) app that downloads your personal University of Oviedo calendar in ICS or CSV format.
 source: https://github.com/miermontoto/epiCalendar
-links: [{icon: 'ⓘ', url: "/epiCalendar"}]
+links: [{icon: 'ⓘ', url: "/epiCalendar", "name": "readme"}]
 demo: https://epicalendar.mier.info
 permalink: /epiCalendar/
 redirect_from: /epicalendar/

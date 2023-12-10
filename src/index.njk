@@ -74,26 +74,34 @@ js: index
                         {% else %}
                             {{ project.data.title }}
                         {% endif %}
-                    </div>
-
-                    <div class="project-links">
-                        {% if project.data.source and project.data.demo %}
-                            <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer" aria-label="source code for {{ project.data.title }}">
-                                {{ macros.renderIcon('git') }}
-                            </a>
+                        {% if project.data.star %}
+                            <span class="star info">⭐</span>
                         {% endif %}
-                        {% for link in project.data.links %}
-                            <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.icon | safe }}</a>
-                        {% endfor %}
+                        {% if project.data.new %}
+                            <span class="new info">new!</span>
+                        {% endif %}
+
+                        <div class="project-tech">
+                            {{ macros.renderIcons(project.data.icons) }}
+                        </div>
                     </div>
 
                     <div class="project-description">
                         {{ project.data.desc | safe }}
                     </div>
 
-                    <div class="project-tech">
-                        {{ macros.renderIcons(project.data.icons) }}
-                    </div>
+                    {% if project.data.links or project.data.source and project.data.demo %}
+                        <div class="project-links">
+                            {% if project.data.source and project.data.demo %}
+                                <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer" aria-label="source code for {{ project.data.title }}">
+                                    {{ macros.renderIcon('git') }} [source]
+                                </a>
+                            {% endif %}
+                            {% for link in project.data.links %}
+                                <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.icon | safe }} [{{ link.name}}]</a>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
                 </li>
             {% endfor %}
         </ul>

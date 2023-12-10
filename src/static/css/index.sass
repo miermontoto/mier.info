@@ -156,10 +156,10 @@ video#background
     .project-tech
         display: flex
         align-content: center
+        top: 0.125em
 
         *:not(:last-child)
             margin-right: 0.5em
-            top: 0.125em
 
 
 #featured .project
@@ -202,32 +202,40 @@ video#background
     .project-links
         font-size: 1.25em
 
-#project-list .project
-    display: flex
-    align-items: center
-    border: 1px solid transparent
-    border-radius: base.$radius
+#project-list
+    margin-left: -1.25em
 
-    div
-        margin: 0.75em
+    .project
+        display: grid
+        border: 1px solid transparent
+        border-radius: base.$radius
+        gap: 1em
+        padding: 1em
 
-    &:hover
-        border-color: colors.$light
+        &:hover
+            border-color: colors.$light
+
+            .project-tech
+                opacity: 1
+
+        .project-title
+            white-space: nowrap
+            font-size: 1.5em
+            display: flex
+
+            .info
+                margin-left: 0.5em
+
+        .project-links
+            font-size: 1.125em
+
+            .icon
+                top: 0.125em
 
         .project-tech
-            opacity: 1
+            opacity: 0
+            margin-left: 1em
+            font-size: 0.85em
 
-    .project-title
-        white-space: nowrap
-        font-size: 1.1em
-
-    .project-description
-        font-style: italic
-        font-size: 0.85em
-
-    .project-tech
-        opacity: 0
-
-        .icon
-            font-size: 1.25em
-            top: -0.125em
+            .icon
+                top: -0.125em
