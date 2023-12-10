@@ -1,6 +1,6 @@
 [
-	"birthday-nile.mp4",
-	"ram-unboxed.mp4",
-	"unseen-ram.mp4",
-	"electroma-ad.mp4"
+	{"name": "Daft Punk - \"Happy Birthday\" from Daft Punk to Nile Rodgers", "src": "birthday-nile.mp4"},
+	{"name": "Daft Punk - Random Access Memories Unboxed", "src": "ram-unboxed.mp4"},
+	{"name": "Daft Punk - Random Access Memories Ad (Unseen Advert)", "src": "unseen-ram.mp4"},
+	{"name": "Daft Punk - 10th Anniversary Teaser of Electroma", "src": "electroma-ad.mp4"}
 ]

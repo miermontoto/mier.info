@@ -94,7 +94,7 @@ video#background
     left: 50%
     transform: translate(-50%, -50%)
     z-index: -3
-    opacity: 0.1
+    opacity: 0.125
     transition: all 0.5s ease
     width: 100%
     height: 100%
@@ -104,22 +104,41 @@ video#background
         z-index: 3
         opacity: 1
 
-#overlay
+#overlay-container
+    display: ruby
     position: fixed
     bottom: 16px
     left: 16px
     margin-bottom: 0
     z-index: 2
 
-    .button
-        color: white
-        font-weight: bolder
+    #overlay-box
+        border: 2px solid transparent
+        border-radius: base.$radius
+        opacity: 0.4
 
-    #fullscreen-background
-        font-size: 0.85em
+        &:hover, &.active
+            border-color: colors.$light
+            background-color: colors.$secondary
+            opacity: 1
 
-    #stop-background
-        font-size: 1.15em
+        .button
+            color: white
+            font-weight: bolder
+            background-color: transparent
+            border-radius: 8px
+            margin: 2.5px
+
+            &:hover, &.active
+                animation: none
+                background-color: colors.$dark
+
+    #bg-nowplaying
+        overflow: hidden
+        white-space: nowrap
+        color: colors.$light
+        font-style: italic
+        margin: 1em
 
 .project
     .project-title
