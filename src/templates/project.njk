@@ -1,9 +1,15 @@
 ---
-layout: navigated.njk
+layout: base.njk
 css: project
 ---
 
-<h1>{{ title }}</h1>
+<div id="title-container">
+    <span id="breadcrumbs">
+        {% set navPages = collections.all | eleventyNavigation %}
+        {% breadcrumbs navPages %}
+    </span>
+    <span id="title">{{ title }}</span>
+</div>
 <div id="project-buttons">
     {% for button in buttons %}
         <a class="button" href="{{ button.url }}">{{ button.img | safe }}{{ button.text }}</a>

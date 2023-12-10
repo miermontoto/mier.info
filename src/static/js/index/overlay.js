@@ -45,7 +45,7 @@ fullscreen.addEventListener('click', () => {
 
 stop.addEventListener('click', () => {
     videoElement.remove();
-    document.getElementById('overlay').remove();
+    overlay_container.remove();
 });
 
 next.addEventListener('click', () => {
