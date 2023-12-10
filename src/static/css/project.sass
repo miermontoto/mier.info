@@ -4,9 +4,20 @@
 #back
     position: static
 
-h1
-    text-align: center
-    margin-top: 1em
+#title-container
+    display: flex
+    flex-wrap: wrap
+
+    #title
+        margin: 1em 0 0.6em
+        font-size: 3em
+        font-weight: bold
+
+    #breadcrumbs
+        justify-content: flex-end
+        align-items: center
+        align-content: center
+        width: 100%
 
 body
     margin-left: 10%
@@ -15,8 +26,6 @@ body
 
 #project-buttons
     display: flex
-    justify-content: center
-    align-items: center
 
     .button
         height: 20px
