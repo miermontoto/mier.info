@@ -1,7 +1,7 @@
-import randomize from './randomize.js';
+import {randElement} from './randomize.js';
 
 fetch('/content/data/marquee.json').then(response => response.json()).then(data => {
-    let string = randomize(data);
+    let string = randElement(data);
     let marquee = document.getElementById('marquee');
     marquee.innerHTML = string.text;
     if (string.url && string.url !== '') {

@@ -48,15 +48,6 @@ a, a:visited
     text-decoration: none
     user-select: none
 
-    &.light
-        background-color: transparent
-        border-radius: 8px
-        margin: 2.5px
-
-        &:hover, &.active
-            animation: none
-            background-color: colors.$secondary
-
     &:hover
         animation: animations.$multicolor
         cursor: pointer
@@ -84,6 +75,7 @@ code
     text-decoration: none
     cursor: alias
     z-index: 2
+    padding: 0.125em
 
 ::selection
     background-color: colors.$white
