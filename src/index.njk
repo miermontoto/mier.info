@@ -26,6 +26,7 @@ js: index
 
 <section id="project-section" class="section">
     <h1>projects.</h1>
+    <h2>featured.</h2>
     <div id="featured" class="carded">
         {% for project in collections.project %}
             {% if project.data.img %}
@@ -62,6 +63,7 @@ js: index
         {% endfor %}
     </div>
     <hr>
+    <h2>all.</h2>
     <div id="project-list">
         <ul>
             {% for project in collections.project %}
