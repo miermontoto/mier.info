@@ -8,6 +8,41 @@ permalink: false
     {% endfor %}
 {% endmacro %}
 
-{% macro renderIcon(svg) %}
-    <img src="/assets/icons/tech/{{ svg }}.svg" class="icon" alt="{{ svg }}" title="{{ svg }}">
+{% macro renderIcon(svg, invert=false) %}
+    {% if invert %}
+        {% set invert = ' invert' %}
+    {% else %}
+        {% set invert = '' %}
+    {% endif %}
+    <img src="/assets/icons/tech/{{ svg }}.svg" class="icon{{ invert }}" alt="{{ svg }}" title="{{ svg }}">
+{% endmacro %}
+
+{% macro renderLinks(project, names=true) %}
+    {% if project.data.source and project.data.demo %}
+        <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer" aria-label="source code for {{ project.data.title }}" class="button">
+            {{ renderIcon('git', true) }} {{ "source" if names }}
+        </a>
+     {% endif %}
+    {% for link in project.data.links %}
+        <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="button">{{ link.icon | safe }} {{ link.name if names }}</a>
+    {% endfor %}
+{% endmacro %}
+
+{% macro renderTitle(project) %}
+    {% if project.data.emoji %}
+        <span class="emoji">{{ project.data.emoji | safe }}</span>
+    {% endif %}
+    {% if project.data.demo %}
+        <a href="{{ project.data.demo }}" rel="noopener noreferrer">{{ project.data.title }}</a>
+    {% elif project.data.source %}
+        <a href="{{ project.data.source }}" rel="noopener noreferrer">{{ project.data.title }}</a>
+    {% else %}
+        {{ project.data.title }}
+    {% endif %}
+    {% if project.data.star %}
+        <span class="star info">⭐</span>
+    {% endif %}
+    {% if project.data.new %}
+        <span class="new info">new!</span>
+    {% endif %}
 {% endmacro %}

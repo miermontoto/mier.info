@@ -1,7 +1,8 @@
 ---
 title: mandelbrot
-desc: mandelbrot set fractal generator using python/openmp/cuda.
+desc: parallelized fractal generator (CPU and GPU).
 source: https://github.com/miermontoto/mandelbrot
 icons: [c, cuda, python]
 img: true
+emoji: 🖼️
 ---

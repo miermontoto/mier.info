@@ -6,10 +6,11 @@ links: [{icon: 'ⓘ', url: "/epiCalendar", "name": "readme"}]
 demo: https://epicalendar.mier.info
 permalink: /epiCalendar/
 redirect_from: /epicalendar/
-icons: [flask, python, react]
+icons: [flask, python, react, heroku]
 img: true
 lang: es
 star: star
+emoji: 📅
 buttons: [
     {'url': 'https://epicalendar.mier.info', 'img': '<span class="ico">🌐</span>', 'text': 'página web'}
 ]

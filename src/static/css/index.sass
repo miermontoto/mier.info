@@ -140,15 +140,36 @@ video#background
         font-style: italic
         margin: 1em
 
+.hoverborder
+    border: 2px solid transparent
+    border-radius: base.$radius
+
+    &:hover
+        border-color: colors.$light
+
 .project
     .project-title
         font-weight: bold
+        font-size: max(1.2em, 2vw)
+        display: flex
+
+        .emoji
+            margin-right: 0.5em
+
+        .info
+            margin-left: 0.5em
 
     .project-links
         display: flex
 
+        img
+            top: 0.125em
+
         a
             text-decoration: none
+
+        .button
+            margin: 0
 
         a:not(:last-child)
             margin-right: 1em
@@ -162,80 +183,106 @@ video#background
             margin-right: 0.5em
 
 
-#featured .project
-    width: max(35%, 300px)
+#projects
+    display: flex
+    flex-direction: column
+    gap: 2.5rem
+    max-width: 64rem
 
-    .project-title
-        font-size: 1.5em
+#featured-grid
+    display: grid
+    gap: 2.5rem
 
-    .project-description
-        font-weight: 500
+    .project
+        display: grid
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+        gap: 0.625rem
+        text-align: left
 
-    .project-img
-        position: relative
-        display: inline-block
+        & > *
+            margin: 1em 1em 1em 1em
 
-        img
-            width: 100%
-            transition: opacity .3s ease-in-out
+        .project-img-container
+            display: block
 
-        .hover
-            opacity: 0
-            position: absolute
-            top: 0
-            left: 0
-            width: 100%
-            height: 100%
-            z-index: 2
-            object-fit: contain
+            &:hover
+                animation: none
 
-    &:hover
-        border: 2px solid colors.$light
+            .project-img
+                position: relative
+                display: inline-block
 
-        .project-img
+                img
+                    width: 100%
+                    transition: opacity .3s ease-in-out
+
+                .hover
+                    opacity: 0
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    z-index: 2
+                    object-fit: contain
+
+        .project-content
+            gap: 1.25rem
+            justify-content: center
+            flex-direction: column
+            display: flex
+
+            .project-tech
+                font-size: 1.5em
+
+        &:hover .project-img
             .main
                 opacity: 0
 
             .hover
                 opacity: 1
 
-    .project-links
-        font-size: 1.25em
-
 #project-list
-    margin-left: -2.5em
+    display: grid
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+    gap: 1.25rem
 
     .project
-        display: grid
-        border: 1px solid transparent
-        border-radius: base.$radius
+        display: flex
+        flex-direction: column
         gap: 1em
         padding: 1em
+        position: relative
 
         &:hover
-            border-color: colors.$light
-
             .project-tech
                 opacity: 1
 
-        .project-title
-            white-space: nowrap
-            font-size: 1.5em
-            display: flex
+            .project-links a.button
+                background-color: colors.$white
+                color: colors.$primary
 
-            .info
-                margin-left: 0.5em
+        .project-title
+            display: flex
+            font-size: max(1.1em, 1.5vw)
+
+        .project-description
+            text-align: left
 
         .project-links
-            font-size: 1.125em
+            position: absolute
+            top: 0.75rem
+            right: 0.75rem
+            overflow: hidden
 
-            .icon
-                top: 0.125em
+            .button
+                background-color: transparent
+                color: colors.$white
 
         .project-tech
             opacity: 0
-            margin-left: 1em
-            font-size: 0.85em
+            margin-left: 1vw
+            font-size: max(0.75em, 1.5vw)
 
             .icon
                 top: -0.125em

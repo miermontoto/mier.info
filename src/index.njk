@@ -6,7 +6,7 @@ js: index
 
 <div id="main-container">
     <div id="title">juan<br>mier</div>
-    <div id="marquee" class="marquee">⠀<noscript>js isn't enabled :')</noscript></div>
+    <div id="marquee" class="marquee">⠀</div>
 
     <div id="socials">
         {% for link in socials %}
@@ -26,63 +26,44 @@ js: index
 
 <section id="project-section" class="section">
     <h1>projects.</h1>
-    <h2>featured.</h2>
-    <div id="featured" class="carded">
-        {% for project in collections.project %}
-            {% if project.data.img %}
-                <div class="project card">
-                    <div class="project-img">
-                        <img src="/assets/media/projects/{{ project.fileSlug }}/front.webp" alt="{{ project.data.title }} image" class="main">
-                        <img src="/assets/media/projects/{{ project.fileSlug }}/back.webp" alt="{{ project.data.title }} alt image" class="hover">
-                    </div>
+    <div id="projects">
+        <div id="featured-grid">
+            {% for project in collections.project %} {% if project.data.img %} {% set link = project.data.demo or project.data.source %}
+                <div class="project hoverborder">
+                    <a href="{{ link }}" rel="noreferrer" class="project-img-container">
+                        <div class="project-img">
+                            <img src="/assets/media/projects/{{ project.fileSlug }}/front.webp" alt="{{ project.data.title }} image" class="main">
+                            <img src="/assets/media/projects/{{ project.fileSlug }}/back.webp" alt="{{ project.data.title }} alt image" class="hover">
+                        </div>
+                    </a>
+                    <div class="project-content">
+                        <div class="project-title">
+                            {{ macros.renderTitle(project) }}
+                        </div>
 
-                    <div class="project-title">
-                        {% if project.data.demo %}
-                            <a href="{{ project.data.demo }}" rel="noopener noreferrer">{{ project.data.title }}</a>
-                        {% else %}
-                            {{ project.data.title }}
-                        {% endif %}
-                    </div>
+                        <div class="project-description">
+                            {{ project.data.desc }}
+                        </div>
 
-                    <div class="project-description">
-                        {{ project.data.desc }}
-                    </div>
+                        <div class="project-tech">
+                            {{ macros.renderIcons(project.data.icons) }}
+                        </div>
 
-                    <div class="project-links">
-                        {% if project.data.source %}
-                            <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer" aria-label="source code for {{ project.data.title }}">
-                                {{ macros.renderIcon('git') }}
-                            </a>
-                        {% endif %}
-                        {% for link in project.data.links %}
-                            <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.icon | safe }}</a>
-                        {% endfor %}
+                        <div class="project-links">
+                            {{ macros.renderLinks(project) }}
+                            {% if project.data.demo %}
+                                <a href="{{ project.data.demo }}" rel="noopener noreferrer" class="button">⇉ link</a>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
-            {% endif %}
-        {% endfor %}
-    </div>
-    <hr>
-    <h2>all.</h2>
-    <div id="project-list">
-        <ul>
-            {% for project in collections.project %}
-                <li class="project {{ project.data.star }}" id="{{ project.data.title | slug }}">
+            {% endif %} {% endfor %}
+        </div>
+        <div id="project-list">
+            {% for project in collections.project %} {% if not project.data.img %}
+                <div class="project {{ project.data.star }} hoverborder" id="{{ project.data.title | slug }}">
                     <div class="project-title">
-                        {% if project.data.demo %}
-                            <a href="{{ project.data.demo }}" rel="noopener noreferrer">{{ project.data.title }}</a>
-                        {% elif project.data.source %}
-                            <a href="{{ project.data.source }}" rel="noopener noreferrer">{{ project.data.title }}</a>
-                        {% else %}
-                            {{ project.data.title }}
-                        {% endif %}
-                        {% if project.data.star %}
-                            <span class="star info">⭐</span>
-                        {% endif %}
-                        {% if project.data.new %}
-                            <span class="new info">new!</span>
-                        {% endif %}
-
+                        {{ macros.renderTitle(project) }}
                         <div class="project-tech">
                             {{ macros.renderIcons(project.data.icons) }}
                         </div>
@@ -94,19 +75,12 @@ js: index
 
                     {% if project.data.links or project.data.source and project.data.demo %}
                         <div class="project-links">
-                            {% if project.data.source and project.data.demo %}
-                                <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer" aria-label="source code for {{ project.data.title }}">
-                                    {{ macros.renderIcon('git') }} [source]
-                                </a>
-                            {% endif %}
-                            {% for link in project.data.links %}
-                                <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.icon | safe }} [{{ link.name}}]</a>
-                            {% endfor %}
+                            {{ macros.renderLinks(project, false) }}
                         </div>
                     {% endif %}
-                </li>
-            {% endfor %}
-        </ul>
+                </div>
+            {% endif %} {% endfor %}
+        </div>
     </div>
 </section>
 

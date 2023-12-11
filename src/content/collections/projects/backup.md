@@ -8,6 +8,7 @@ keywords: backup, backup carrera, epi, epi gijón, asignaturas, giitin, informá
 icons: [markdown, github]
 star: star
 lang: es
+emoji: 📚
 eleventyNavigation:
   key: backup
 ---
