@@ -184,3 +184,13 @@ img
 .new
     color: colors.$correct
     font-weight: bolder
+
+.hoverborder
+    border: 2px solid hsla(0, 0%, 100%, 1%)
+    border-radius: base.$radius
+    backdrop-filter: blur(3px)
+    padding: 1em
+
+    &:hover
+        border-color: colors.$light
+        backdrop-filter: blur(9px)

@@ -21,6 +21,19 @@ function findFileInDir(dir, filename) {
     return null;
 }
 
+function getBlocksFromJson(json) {
+    let blocks = [];
+    for (const key in json) {
+        if (json.hasOwnProperty(key)) {
+            const element = json[key];
+            if (element['questions']) {
+                blocks.push(key);
+            }
+        }
+    }
+    return blocks
+}
+
 function findSelfInNavPages(navPages, url) {
     for (const page of navPages) {
         if (page.key == url) {
@@ -108,22 +121,28 @@ module.exports = function (eleventyConfig) {
         return `<span id="top" class="button topbtn">top ↑</span>`;
     });
 
-    eleventyConfig.addShortcode("questions", function(json) {
-        let blocks = ['socrative', 'otros'];
+    eleventyConfig.addShortcode("quizButtons", function(json) {
+        let blocks = getBlocksFromJson(json);
+        if (blocks.length == 0 || blocks.length == 1) return '';
+
         let template = `<div id="block-selection"> <h3>preguntas.</h3> <ul>`;
         blocks.forEach(b => {
             template += `<li><code>${b}</code>: ${json[b]['info']}</li>`;
         });
-        template += '<li><code>examen:</code> selección de preguntas que aparecieron en el examen de 23-24</li>'
         template += '<li><code>todas</code>: todas las preguntas</li></ul>';
 
         blocks.forEach((b) => {
             template += `<span class="button select-block" id="${b}">${b}</span>`
         });
 
-        template += '<span class="button select-block" id="exam">examen</span>'
         template += '<span class="button select-block" id="all">todas</span>';
-        template += '</div> <hr> <div id="questions">';
+        template += '</div>';
+        return template;
+    });
+
+    eleventyConfig.addShortcode("quizQuestions", function(json) {
+        let blocks = getBlocksFromJson(json);
+        let template = '<div id="questions">';
 
         blocks.forEach((block) => {
             let questions = json[block]['questions'];

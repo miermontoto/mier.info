@@ -140,15 +140,6 @@ video#background
         font-style: italic
         margin: 1em
 
-.hoverborder
-    border: 2px solid hsla(0, 0%, 100%, 1%)
-    border-radius: base.$radius
-    backdrop-filter: blur(3px)
-
-    &:hover
-        border-color: colors.$light
-        backdrop-filter: blur(9px)
-
 .project
     .project-title
         font-weight: bold
@@ -201,11 +192,9 @@ video#background
         grid-template-columns: repeat(2, minmax(0, 1fr))
         text-align: left
 
-        & > *
-            margin: 1em
-
         .project-img-container
             display: block
+            margin-right: 2em
 
             &:hover
                 animation: none
@@ -217,6 +206,7 @@ video#background
                 img
                     width: 100%
                     transition: opacity .3s ease-in-out
+                    border-radius: 5px
 
                 .hover
                     opacity: 0

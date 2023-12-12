@@ -1,5 +1,7 @@
 ---
 permalink: false
+eleventyImport:
+    collections: ["project"]
 ---
 
 {% macro renderIcons(svgs) %}
@@ -16,11 +18,16 @@ permalink: false
 {% endmacro %}
 
 {% macro renderLinks(project, names=true) %}
-    {% if project.data.source and project.data.demo %}
+    {% if project.data.source and (project.data.demo or project.content) %}
         <a href="{{ project.data.source }}" target="_blank" rel="noopener noreferrer" aria-label="source code for {{ project.data.title }}" class="button">
             {{ renderIcon('git', true) }} {{ "source" if names }}
         </a>
-     {% endif %}
+    {% endif %}
+    {% if project.data.demo and project.content %}
+        <a href="/{{ project.data.title }}/" target="_blank" rel="noopener noreferrer" aria-label="info for {{ project.data.title }}" class="button">
+            ⓘ {{ "readme" if names }}
+        </a>
+    {% endif %}
     {% for link in project.data.links %}
         <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="button">{{ link.icon | safe }} {{ link.name if names }}</a>
     {% endfor %}
@@ -32,6 +39,8 @@ permalink: false
     {% endif %}
     {% if project.data.demo %}
         <a href="{{ project.data.demo }}" rel="noopener noreferrer">{{ project.data.title }}</a>
+    {% elif project.content %}
+        <a href="/{{ project.data.title }}/" rel="noopener noreferrer">{{ project.data.title }}</a>
     {% elif project.data.source %}
         <a href="{{ project.data.source }}" rel="noopener noreferrer">{{ project.data.title }}</a>
     {% else %}

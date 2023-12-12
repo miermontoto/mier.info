@@ -1,0 +1,9 @@
+{
+	"tags": "quiz",
+	"layout": "quiz.njk",
+	"permalink": "/{{ page.fileSlug }}/",
+	"eleventyNavigation": {
+		"parent": "quizzes"
+	},
+	"lang": "es"
+}

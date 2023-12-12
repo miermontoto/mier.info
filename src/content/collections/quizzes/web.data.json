@@ -1,0 +1,135 @@
+{
+	"data": {
+		"all": {
+			"questions": [
+				{
+					"title": "¿Qué es necesario para registrar un Servlet?",
+					"answers": [
+						"Nada, Java buscará de forma automática todas las clases que extiendan de HTTPServlet.",
+						"Incluir la anotación <code>@WebServlet</code> sobre el nombre de la clase <u>O</u> añadir las entradas <code>&lt;servlet&gt;</code> y <code>&lt;servlet-mapping&gt;</code> en el fichero <code>web.xml</code>",
+						"Incluir la anotación <code>@WebServlet</code> sobre el nombre de la clase <u>Y</u> añadir las entradas <code>&lt;servlet&gt;</code> y <code>&lt;servlet-mapping&gt;</code> en el fichero <code>web.xml</code>",
+						"Ninguna de las anteriores"
+					],
+					"correct": "1",
+					"shuffle": "false"
+				},
+				{
+					"title": "Para acceder a los campos privados de un ManagedBean, es necesario:",
+					"answers": [
+						"Nada. Aunque los declaremos como privados, pueden ser accesibles por ser un ManagedBean.",
+						"No se puede delcarar campos privados en un ManagedBean. Da un error de compilación.",
+						"Hay que crear getters y setters públicos que tengan como nombre get o set seguido del nombre del campo, cambiando la primera letra por mayúscula.",
+						"Ninguna de las anteriores."
+					],
+					"correct": "2",
+					"shuffle": "false"
+				},
+				{
+					"title": "¿Cuál es una de las principales ventajas del patrón Factory?",
+					"answers": [
+						"Permite desacoplar las implementaciones concretas de las interfaces de los clientes que las utilizan.",
+						"Facilita la modificación de los componentes ya existentes en nuestro diseño gracias a la separación en capas.",
+						"Nos ayuda a instanciar objetos complejos que requieren muchos parámtros.",
+						"Ninguna de las anteriores"
+					],
+					"correct": "0",
+					"shuffle": "false"
+				},
+				{
+					"title": "¿Cuál de las siguientes afirmaciones es cierta?",
+					"answers": [
+						"PrimeFaces es un framework desarrollado por Google que compite con JSF para procesar las aplicaciones web utilizando HTML en lugar de Java.",
+						"PrimeFaces es una librería que permite ejecutar código PHP en nuestras aplicaciones web desarrolladas con Java.",
+						"PrimeFaces es una librería para JSF que añade, entre otras cosas, nuevos componentes gráficos.",
+						"PrimeFaces es una librería que modifica el comportamiento de JSP para permitir incluir código HTML."
+					],
+					"correct": "2"
+				},
+				{
+					"title": "¿Cuál de las siguientes NO es una ventaja de la internacionalización?",
+					"answers": [
+						"El mismo ejecutable puede ser ejecutado en cualquier lugar del mundo.",
+						"El soporte de nuevos idiomas no requiere re-compilación.",
+						"Se utilizan los recursos más eficientemente.",
+						"El código se traduce automáticamente gracias a que se consume un servicio web."
+					],
+					"correct": "3"
+				},
+				{
+					"title": "¿Qué tipo de validación de campos debería ser obligatorio implementar?",
+					"answers": [
+						"Validación en el cliente",
+						"Validación en el servidor",
+						"Validación de la petición",
+						"Validación de la respuesta"
+					],
+					"correct": "1"
+				},
+				{
+					"title": "¿Cuál de las siguientes afirmaciones es cierta?",
+					"answers": [
+						"Si lo codificásemos en Java, las plantillas equivaldrían a la herencia y los snippets a la composición.",
+						"Los snippets son un fragmento de código reutilizable que tiene que colocarse obligatoriamente dentro de una plantilla. No puede estar dentro de una página sin plantilla.",
+						"Las plantillas son fragmentos de código reutilizables que se insertan dentro de otras páginas.",
+						"Ninguna es correcta."
+					],
+					"correct": "0",
+					"shuffle": "false"
+				},
+				{
+					"title": "¿Cuál es la norma más básica de usabilidad?",
+					"answers": [
+						"Todos los elementos de una interfaz deberían desencadenar una acción.",
+						"La disposición de los elementos siempre tiene que ser la misma que la de otras páginas similares.",
+						"No debería hacer falta pensar para usar una interfaz de usuario.",
+						"La usabilidad se basa en la accesibilidad."
+					],
+					"correct": "2"
+				},
+				{
+					"title": "¿Qué ley obliga a las empresas que realicen actividades comerciales en internet a incluir un aviso legal en su página web con la política de cookies?",
+					"answers": [
+						"LPI → Ley de Propiedad Intelectual",
+						"LOPDGDD → Ley Orgánica de Protección de Datos y Garantía de los Derechos Digitales",
+						"LSSICE → Ley de Servicios de la Sociedad de la Información y de Comercio Electrónico",
+						"LGDCU → Ley General para la Defensa de los Consumidores y Usuarios"
+					],
+					"correct": "2"
+				},
+				{
+					"title": "¿Cuál de las siguientes afirmaciones es cierta con respecto a la formalidad del contrato en SOAP y REST?",
+					"answers": [
+						"SOAP utiliza WSDL para definir un contrato formal, mientras que REST no propociona contratos formales.",
+						"REST utiliza WSDL para definir un contrato formal, mientras que SOAP no propociona contratos formales.",
+						"Tanto SOAP como REST utilizan contratos formales definidos por el servidor.",
+						"Ninguna de las anteriores es cierta"
+					],
+					"correct": "0"
+				},
+				{
+					"title": "¿A qué manejador de eventos equivale esta expresión de JQuery: <code>$(function() {...})</code>?",
+					"answers": [
+						"ready(function({...}))",
+						".on(click, function({...}))",
+						".hover(function({...}))",
+						".load(function({...}))"
+					],
+					"correct": "0"
+				},
+				{
+					"title": "En el modelo de negocio de 'Cupones Descuento', la emrpesa anunciada que da el servicio obtiene:",
+					"answers": [
+						"Un alto margen de beneficio, por lo que la calidad del servicio no es relevante.",
+						"Un alto margen de beneficio si la calidad del servicio es alta.",
+						"Un margen de beneficio aceptable aunque la calidad del servicio sea baja porque tienen muchas ventas.",
+						"Muy poco margen de beneficio, pero sí gana por el boca a boca si el servicio es de calidad."
+					],
+					"correct": "3"
+				}
+			]
+		}
+	},
+	"author": "Juan Mier",
+	"website": "https://mier.info/web/",
+	"location": "https://mier.info/content/collections/quizzes/web.data.json"
+}
