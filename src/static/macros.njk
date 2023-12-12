@@ -8,13 +8,11 @@ permalink: false
     {% endfor %}
 {% endmacro %}
 
-{% macro renderIcon(svg, invert=false) %}
-    {% if invert %}
-        {% set invert = ' invert' %}
-    {% else %}
-        {% set invert = '' %}
-    {% endif %}
-    <img src="/assets/icons/tech/{{ svg }}.svg" class="icon{{ invert }}" alt="{{ svg }}" title="{{ svg }}">
+{% macro renderIcon(svg, invert=false, color=false) %}
+    {% set invert = ' invert' if invert else '' %}
+    {% set color = ' color' if color else '' %}
+    {% set classes = 'icon' + invert + color %}
+    <img src="/assets/icons/tech/{{ svg }}.svg" class="{{ classes }}" alt="{{ svg }}" title="{{ svg }}">
 {% endmacro %}
 
 {% macro renderLinks(project, names=true) %}

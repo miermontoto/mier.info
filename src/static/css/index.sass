@@ -141,20 +141,23 @@ video#background
         margin: 1em
 
 .hoverborder
-    border: 2px solid transparent
+    border: 2px solid hsla(0, 0%, 100%, 1%)
     border-radius: base.$radius
+    backdrop-filter: blur(3px)
 
     &:hover
         border-color: colors.$light
+        backdrop-filter: blur(9px)
 
 .project
     .project-title
         font-weight: bold
-        font-size: max(1.2em, 2vw)
         display: flex
+        text-align: left
 
         .emoji
             margin-right: 0.5em
+            vertical-align: middle
 
         .info
             margin-left: 0.5em
@@ -191,16 +194,15 @@ video#background
 
 #featured-grid
     display: grid
-    gap: 2.5rem
+    gap: max(1em, 2vw)
 
     .project
         display: grid
         grid-template-columns: repeat(2, minmax(0, 1fr))
-        gap: 0.625rem
         text-align: left
 
         & > *
-            margin: 1em 1em 1em 1em
+            margin: 1em
 
         .project-img-container
             display: block
@@ -232,8 +234,15 @@ video#background
             flex-direction: column
             display: flex
 
+            .project-title
+                font-size: max(1.2em, 2vw)
+
             .project-tech
                 font-size: 1.5em
+
+            .project-links a
+                padding: min(10px, 1vw) min(15, 1.5vw)
+                font-size: min(1em, max(1.5vw, 12px))
 
         &:hover .project-img
             .main
@@ -245,7 +254,7 @@ video#background
 #project-list
     display: grid
     grid-template-columns: repeat(2, minmax(0, 1fr))
-    gap: 1.25rem
+    gap: max(0.5em, 2vw)
 
     .project
         display: flex
@@ -258,12 +267,7 @@ video#background
             .project-tech
                 opacity: 1
 
-            .project-links a.button
-                background-color: colors.$white
-                color: colors.$primary
-
         .project-title
-            display: flex
             font-size: max(1.1em, 1.5vw)
 
         .project-description
@@ -271,17 +275,21 @@ video#background
 
         .project-links
             position: absolute
-            top: 0.75rem
-            right: 0.75rem
+            top: 0.95rem
+            right: 0.95rem
             overflow: hidden
 
             .button
                 background-color: transparent
+                padding: 0
                 color: colors.$white
+
+                img
+                    filter: invert(1) grayscale(1) brightness(2)
 
         .project-tech
             opacity: 0
-            margin-left: 1vw
+            margin-left: max(0.4em, 1vw)
             font-size: max(0.75em, 1.5vw)
 
             .icon
