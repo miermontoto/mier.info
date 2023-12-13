@@ -1,0 +1,14 @@
+---
+layout: base.njk
+css: generic
+---
+
+<div id="title-container">
+    <span id="breadcrumbs">
+        {% set navPages = collections.all | eleventyNavigation %}
+        {% breadcrumbs navPages %}
+    </span>
+    <span id="title">{{ title }}</span>
+</div>
+
+{{ content | safe }}

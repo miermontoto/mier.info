@@ -129,6 +129,9 @@ hr
             user-select: none
             font-size: 1.5em
 
+img.round
+    border-radius: 3px
+
 .icon
     font-size: 1em
     height: auto
@@ -140,6 +143,9 @@ hr
 
     &.invert
         filter: invert(0) grayscale(1) brightness(1)
+
+    &.color
+        filter: none
 
 .error, noscript
     color: colors.$wrong
@@ -178,3 +184,13 @@ img
 .new
     color: colors.$correct
     font-weight: bolder
+
+.hoverborder
+    border: 2px solid hsla(0, 0%, 100%, 1%)
+    border-radius: base.$radius
+    backdrop-filter: blur(3px)
+    padding: 1em
+
+    &:hover
+        border-color: colors.$light
+        backdrop-filter: blur(9px)

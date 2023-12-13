@@ -1,0 +1,17 @@
+---
+title: quizzes
+emoji: 📝
+permalink: /quizzes/
+lang: es
+icons: [eleventy, js]
+desc: quizzes for different software engineering courses.
+eleventyNavigation:
+  key: quizzes
+---
+
+{% for quiz in collections.quiz %}
+	<div id="{{ quiz.data.title }}" class="quiz hoverborder">
+		<h2><a href="/{{ quiz.fileSlug }}">{{ quiz.fileSlug }}</a></h2>
+		<p>→ {{ quiz.data.desc | safe }}</p>
+	</div>
+{% endfor %}

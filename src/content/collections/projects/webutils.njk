@@ -1,16 +1,16 @@
 ---
 title: webutils
-desc: 'small collection of web utilities: md5, base64, url encode/decode, etc.'
+desc: 'collection of various small utilities (converters, generators...)'
 icons: [js]
 permalink: /webutils/
-demo: /webutils/
+emoji: 🖇️
 eleventyNavigation:
   key: webutils
 ---
 
 <div class="carded" id="utils">
 {% for util in collections.webutils %}
-	<div id="{{ util.fileSlug }}" class="util card">
+	<div id="{{ util.data.title }}" class="util card">
 		<h2 class="card-title"><a href="/{{ util.fileSlug }}">{{ util.fileSlug }}</a></h2>
 		{{ util.templateContent | safe }}
 	</div>

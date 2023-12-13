@@ -6,33 +6,44 @@ let allQuestions;
 let currentQuestionsDiv = document.createElement('div');
 
 window.addEventListener('load', () => { // when the page loads (the content is rendered)
-	let questionsBlock = document.getElementById('questions');
-
 	allQuestions = document.querySelectorAll('.question-block');
-	document.querySelectorAll('.select-block').forEach((block) => {
-		block.addEventListener('click', () => {
-			if (warn()) return;
-			let blockId = block.getAttribute('id');
-			questionsBlock.innerHTML = ''; // empty all questions
-			allQuestions.forEach((q) => {
-				if (q.getAttribute('block') == blockId || blockId == 'all' || (q.getAttribute('exam') == "true" && blockId == "exam")) {
-					if (blockId == "exam") q.querySelector('.exam').remove();
-					questionsBlock.appendChild(q);
-				}
+	if (document.querySelector('.select-block') != null) {
+		let questionsBlock = document.getElementById('questions');
+		let blocks = document.querySelectorAll('.select-block');
+
+		// add exam block
+		let examBlock = '<span class="button select-block" id="exam">examen</span>';
+		blocks[blocks.length -2].insertAdjacentHTML('afterend', examBlock);
+		let explanations = document.querySelectorAll('#block-selection li');
+		explanations[explanations.length -2].insertAdjacentHTML('afterend', '<li><code>examen</code>: preguntas del examen de 23-24, de ambas fuentes.</li>');
+
+		document.querySelectorAll('.select-block').forEach((block) => {
+			block.addEventListener('click', () => {
+				if (warn()) return;
+				let blockId = block.getAttribute('id');
+				questionsBlock.innerHTML = ''; // empty all questions
+				allQuestions.forEach((q) => {
+					if (q.getAttribute('block') == blockId || blockId == 'all' || (q.getAttribute('exam') == "true" && blockId == "exam")) {
+						let copy = q.cloneNode(true);
+						if (blockId == "exam") copy.querySelector('.exam').remove();
+						questionsBlock.appendChild(copy);
+					}
+				});
+				currentQuestionsDiv.innerHTML = questionsBlock.innerHTML;
+
+				resetAll(false);
+				document.querySelectorAll('.select-block').forEach((b) => b.classList.remove('selected'));
+				block.classList.add('selected');
 			});
-			currentQuestionsDiv.innerHTML = questionsBlock.innerHTML;
-
-			resetAll(false);
-			document.querySelectorAll('.select-block').forEach((b) => b.classList.remove('selected'));
-			block.classList.add('selected');
 		});
-	});
 
-	document.querySelector('.select-block').click(); // send click event to the first block (select socrative)
+		document.querySelector('.select-block').click(); // send click event to the first block (select socrative)
+	} else {
+		currentQuestionsDiv.innerHTML = allQuestions[0].parentNode.innerHTML;
+	}
+
 	document.getElementById('reset').addEventListener('click', resetAll);
-
 	document.querySelectorAll('#shuffle-questions, #shuffle-answers').forEach((checkbox) => checkbox.addEventListener('change', resetAll));
-
 	resetAll(false); // reset everything and calculate indices
 });
 
