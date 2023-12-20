@@ -95,11 +95,13 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addShortcode("breadcrumbs", function(navPages) {
         if (!this.page.url) return ''; // if permalink is false in frontmatter, don't show breadcrumbs
+
         let targetName = this.page.url.replace('/', '').replace('/', '').replace('.html', '').toLowerCase();
-        // let beta = this.page.url.replace('.html', '').split('/');
-        // beta.shift();
-        // beta = beta.join('/');
-        // if (beta.endsWith('/')) beta = beta.slice(0, -1);
+        // let targetName = this.page.url.replace('.html', '').split('/');
+        // targetName.shift();
+        // targetName = targetName.join('/');
+        // if (targetName.endsWith('/')) targetName = targetName.slice(0, -1);
+
         let currentPage = findSelfInNavPages(navPages, targetName);
         if (!currentPage) {
             console.log(`unable to produce breadcrumbs for ${targetName}.`);
@@ -119,6 +121,21 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addShortcode("top", function() {
         return `<span id="top" class="button topbtn">top ↑</span>`;
+    });
+
+    eleventyConfig.addShortcode("qka", function(data) {
+        let template = ""
+        data.forEach((d, i) => {
+            let sources = d.s.map(s => `<li><a href="${s}">${s}</a></li>`).join(' ')
+            template += `
+            <div class="doubt hoverborder">
+                <span class="question">${i+1}. ${d.q}</span>
+                <span class="answer">${d.a}</span>
+                <span class="sources">sources: <br>${sources}</span>
+                <span class="bottom">keywords: <code>${d.k}</code>, date asked: ${d.d}</span>
+            </div>`
+        })
+        return template
     });
 
     eleventyConfig.addShortcode("quizButtons", function(json) {

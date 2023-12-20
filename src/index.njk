@@ -10,7 +10,7 @@ js: index
 
     <div id="socials">
         {% for link in socials %}
-            <a href="{{ link.url }}" rel="noopener noreferrer">
+            <a href="{{ link.url }}" rel="noopener noreferrer" target="_blank">
                 <span class="dot"></span> {{ link.text }}
             </a>
         {% endfor %}
@@ -24,6 +24,7 @@ js: index
 
 {% import "src/static/macros.njk" as macros %}
 
+<div id="sections">
 <section id="project-section" class="section">
     <h1>projects.</h1>
     <div id="projects">
@@ -37,43 +38,26 @@ js: index
                         </div>
                     </a>
                     <div class="project-content">
-                        <div class="project-title">
-                            {{ macros.renderTitle(project) }}
-                        </div>
-
-                        <div class="project-description">
-                            {{ project.data.desc }}
-                        </div>
-
-                        <div class="project-tech">
-                            {{ macros.renderIcons(project.data.icons) }}
-                        </div>
-
-                        <div class="project-links">
-                            {{ macros.renderLinks(project) }}
-                        </div>
+                        <div class="project-title">{{ macros.renderTitle(project) }}</div>
+                        <div class="project-desc">{{ project.data.desc | safe }}</div>
+                        <div class="project-tech">{{ macros.renderIcons(project.data.icons) }}</div>
+                        <div class="project-links">{{ macros.renderLinks(project) }}</div>
                     </div>
                 </div>
             {% endif %} {% endfor %}
         </div>
         <div id="project-list">
             {% for project in collections.project %} {% if not project.data.img %}
-                <div class="project {{ project.data.star }} hoverborder" id="{{ project.data.title | slug }}">
+                <div class="project hoverborder {{ project.data.star }}" id="{{ project.data.title | slug }}">
                     <div class="project-title">
                         {{ macros.renderTitle(project) }}
-                        <div class="project-tech">
-                            {{ macros.renderIcons(project.data.icons) }}
-                        </div>
+                        <div class="project-tech">{{ macros.renderIcons(project.data.icons) }}</div>
                     </div>
 
-                    <div class="project-description">
-                        {{ project.data.desc | safe }}
-                    </div>
+                    <div class="project-desc">{{ project.data.desc | safe }}</div>
 
                     {% if project.data.links or project.data.source and project.data.demo %}
-                        <div class="project-links">
-                            {{ macros.renderLinks(project, false) }}
-                        </div>
+                        <div class="project-links">{{ macros.renderLinks(project, false) }}</div>
                     {% endif %}
                 </div>
             {% endif %} {% endfor %}
@@ -101,14 +85,10 @@ js: index
                             <i>{{ experience.data.period }}</i>
                         {% endif %}
                     </div>
-                    <div class="card-description">
-                        {{ experience.content | safe }}
-                    </div>
+                    <div class="card-description">{{ experience.content | safe }}</div>
                     {% if experience.data.icons %}
                         <div class="card-bottom">
-                            <div class="card-icons">
-                                {{ macros.renderIcons(experience.data.icons) }}
-                            </div>
+                            <div class="card-icons">{{ macros.renderIcons(experience.data.icons) }}</div>
                         </div>
                     {% endif %}
                 </div>
@@ -123,5 +103,7 @@ js: index
         </div>
     </div>
 </section>
+</div>
 
 <video id="background" autoplay muted playsinline></video>
+<span id="bg-nowplaying"></span>
