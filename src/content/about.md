@@ -4,4 +4,3 @@
 - i like climbing, cycling and playing bass.
 - ruby, python, java and a little bit of everything else (c/c++, shell, web, sql, ...)
 - i take notes in markdown using [obsidian](https://obsidian.md).
-- this webpage is a tribute to the legendary [daft punk's 90s website](https://web.archive.org/web/20220223020719/https://daftpunk.com/)

@@ -95,11 +95,13 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addShortcode("breadcrumbs", function(navPages) {
         if (!this.page.url) return ''; // if permalink is false in frontmatter, don't show breadcrumbs
+
         let targetName = this.page.url.replace('/', '').replace('/', '').replace('.html', '').toLowerCase();
-        // let beta = this.page.url.replace('.html', '').split('/');
-        // beta.shift();
-        // beta = beta.join('/');
-        // if (beta.endsWith('/')) beta = beta.slice(0, -1);
+        // let targetName = this.page.url.replace('.html', '').split('/');
+        // targetName.shift();
+        // targetName = targetName.join('/');
+        // if (targetName.endsWith('/')) targetName = targetName.slice(0, -1);
+
         let currentPage = findSelfInNavPages(navPages, targetName);
         if (!currentPage) {
             console.log(`unable to produce breadcrumbs for ${targetName}.`);
@@ -121,16 +123,90 @@ module.exports = function (eleventyConfig) {
         return `<span id="top" class="button topbtn">top ↑</span>`;
     });
 
-    eleventyConfig.addShortcode("quizButtons", (data) => {
-        import('./src/static/js/app/quiz/load.mjs').then((module) => {
-            return module.blocks(data);
-        });
+    eleventyConfig.addShortcode("qka", function(data) {
+        let template = ""
+        data.forEach((d, i) => {
+            let sources = d.s.map(s => `<li><a href="${s}">${s}</a></li>`).join(' ')
+            template += `
+            <div class="doubt hoverborder">
+                <span class="question">${i+1}. ${d.q}</span>
+                <span class="answer">${d.a}</span>
+                <span class="sources">sources: <br>${sources}</span>
+                <span class="bottom">keywords: <code>${d.k}</code>, date asked: ${d.d}</span>
+            </div>`
+        })
+        return template
     });
 
-    eleventyConfig.addShortcode("quizQuestions", (data) => {
-        import('./src/static/js/app/quiz/load.mjs').then((module) => {
-            return module.questions(data);
+    eleventyConfig.addShortcode("quizButtons", function(json) {
+        let blocks = getBlocksFromJson(json);
+        if (blocks.length == 0 || blocks.length == 1) return '';
+
+        let template = `<div id="block-selection"> <h3>preguntas.</h3> <ul>`;
+        blocks.forEach(b => {
+            template += `<li><code>${b}</code>: ${json[b]['info']}</li>`;
         });
+        template += '<li><code>todas</code>: todas las preguntas</li></ul>';
+
+        blocks.forEach((b) => {
+            template += `<span class="button select-block" id="${b}">${b}</span>`
+        });
+
+        template += '<span class="button select-block" id="all">todas</span>';
+        template += '</div>';
+        return template;
+    });
+
+    eleventyConfig.addShortcode("quizQuestions", function(json) {
+        let blocks = getBlocksFromJson(json);
+        let template = '<div id="questions">';
+
+        blocks.forEach((block) => {
+            let questions = json[block]['questions'];
+
+            questions.forEach((q) => {
+                let exam = q.exam == "true";
+
+                template += `
+                    <div class="question-block" block="${block}" exam="${exam}">
+                        <h2 class="question">
+                            ${q.title}
+                        </h2>
+                `;
+
+                if (q.options) {
+                    template += `<div class="options">`;
+
+                    q.options.forEach((o, j) => {
+                        template += `<h3 class="option">${j+1}. ${o}</h3>`;
+                    });
+
+                    template += `</div>`;
+                }
+
+                let shuffle = q.shuffle != "false";
+
+                template += `<div class="answer-block" shuffle="${shuffle}">`;
+                q.answers.forEach((a, j) => {
+                    template += `
+                    <span class="button answer${j == q.correct ? " correct" : ""}">
+                        ${a}
+                    </span> <br>`;
+                });
+
+                template += '</div>';
+                if (exam || !shuffle) {
+                    template += `<ul class="asterisks">
+                        ${exam ? '<li class="exam">pregunta de examen reciente</li>' : ''}
+                        ${!shuffle ? '<li class="shuffle">orden de respuestas fijado</li>' : ''}
+                    </ul>`;
+                }
+                template += '</div>';
+            });
+        });
+
+        template += `</div>`;
+        return template;
     });
 
     const nunjucksEnvironment = new Nunjucks.Environment(
