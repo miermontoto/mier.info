@@ -30,7 +30,7 @@ js: index
     <div id="projects">
         <div id="featured-grid">
             {% for project in collections.project %} {% if project.data.img %} {% set link = project.data.demo or project.data.source %}
-                <div class="project hoverborder">
+                <article class="project hoverborder">
                     <a href="{{ link }}" rel="noreferrer" class="project-img-container">
                         <div class="project-img">
                             <img src="/assets/media/projects/{{ project.fileSlug }}/front.webp" alt="{{ project.data.title }} image" class="main">
@@ -43,12 +43,12 @@ js: index
                         <div class="project-tech">{{ macros.renderIcons(project.data.icons) }}</div>
                         <div class="project-links">{{ macros.renderLinks(project) }}</div>
                     </div>
-                </div>
+                </article>
             {% endif %} {% endfor %}
         </div>
         <div id="project-list">
             {% for project in collections.project %} {% if not project.data.img %}
-                <div class="project hoverborder {{ project.data.star }}" id="{{ project.data.title | slug }}">
+                <article class="project hoverborder {{ project.data.star }}" id="{{ project.data.title | slug }}">
                     <div class="project-title">
                         {{ macros.renderTitle(project) }}
                         <div class="project-tech">{{ macros.renderIcons(project.data.icons) }}</div>
@@ -59,7 +59,7 @@ js: index
                     {% if project.data.links or project.data.source and project.data.demo %}
                         <div class="project-links">{{ macros.renderLinks(project, false) }}</div>
                     {% endif %}
-                </div>
+                </article>
             {% endif %} {% endfor %}
         </div>
     </div>
@@ -70,7 +70,7 @@ js: index
         <h1>experience.</h1>
         <div id="experience" class="carded">
             {% for experience in collections.experience %}
-                <div class="card {{ experience.data.class }}" id="{{ experience.data.name | slug }}">
+                <article class="card {{ experience.data.class }}" id="{{ experience.data.name | slug }}">
                     <div class="card-title-col">
                         <h1 class="card-title">
                             {% set logo = '/assets/icons/exp/' + (experience.data.logo or experience.data.name) + '.png' %}
@@ -91,7 +91,7 @@ js: index
                             <div class="card-icons">{{ macros.renderIcons(experience.data.icons) }}</div>
                         </div>
                     {% endif %}
-                </div>
+                </article>
             {% endfor %}
         </div>
     </div>

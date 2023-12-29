@@ -1,14 +1,7 @@
 [
 	{
 		"q": "how to create a list with joined bulletpoints (eg: linkedin in the experience section)?",
-		"k": [
-			"join",
-			"bullet",
-			"points",
-			"ul",
-			"css",
-			"li"
-		],
+		"k": ["join","bullet","points","ul","css","li"],
 		"a": "",
 		"s": ["https://codepen.io/anon/pen/gJpLrR", "https://dev.to/peterc/how-to-create-joined-bulletpoint-lists-with-css-bbc-news-style-1eem"],
 		"d": "2023-12-20"
