@@ -5,6 +5,7 @@ period: 2023, 2024-
 icons: [ruby, laravel, docker, php]
 class: okticket work
 ---
+
 *okticket* is a fintech SaaS that digitizes and manages employee tickets.
 
 ---

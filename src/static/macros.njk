@@ -10,11 +10,11 @@ eleventyImport:
     {% endfor %}
 {% endmacro %}
 
-{% macro renderIcon(svg, invert=false, color=false) %}
+{% macro renderIcon(svg, invert=false, color=false, from='tech') %}
     {% set invert = ' invert' if invert else '' %}
     {% set color = ' color' if color else '' %}
     {% set classes = 'icon' + invert + color %}
-    <img src="/assets/icons/tech/{{ svg }}.svg" class="{{ classes }}" alt="{{ svg }}" title="{{ svg }}">
+    <img src="/assets/icons/{{ from }}/{{ svg }}.svg" class="{{ classes }}" alt="{{ svg }}" title="{{ svg }}">
 {% endmacro %}
 
 {% macro renderLinks(project, names=true) %}

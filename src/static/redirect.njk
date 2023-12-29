@@ -1,27 +1,27 @@
 ---js
 {
-  pagination: {
-    data: "collections.all",
-    size: 1,
-    alias: "redirect",
-    before: function (data) {
-      return data.reduce((redirects, page) => {
-        if (Array.isArray(page.data.redirect_from)) {
-          for (let url of page.data.redirect_from) {
-            redirects.push({ to: page.url, from: url });
-          }
-        } else if (typeof page.data.redirect_from === 'string') {
-          redirects.push({ to: page.url, from: page.data.redirect_from });
-        }
-        return redirects;
-      }, []);
-    },
-    addAllPagesToCollections: false,
-  },
-  permalink: "{{ redirect.from }}/index.html",
-  eleventyExcludeFromCollections: true,
-  layout: "base.njk",
-  title: "redirecting..."
+	pagination: {
+		data: "collections.all",
+		size: 1,
+		alias: "redirect",
+		before: function (data) {
+			return data.reduce((redirects, page) => {
+				if (Array.isArray(page.data.redirect_from)) {
+					for (let url of page.data.redirect_from) {
+						redirects.push({ to: page.url, from: url });
+					}
+				} else if (typeof page.data.redirect_from === 'string') {
+					redirects.push({ to: page.url, from: page.data.redirect_from });
+				}
+				return redirects;
+			}, []);
+		},
+		addAllPagesToCollections: false,
+	},
+	permalink: "{{ redirect.from }}/index.html",
+	eleventyExcludeFromCollections: true,
+	layout: "base.njk",
+	title: "redirecting..."
 }
 ---
 
@@ -31,4 +31,3 @@
 </script>
 <meta name="robots" content="noindex">
 <h1>redirecting...</h1>
-<a href="{{ redirect.to | url }}">click here if you are not redirected.</a>
