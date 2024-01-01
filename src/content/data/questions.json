@@ -5,5 +5,25 @@
 		"a": "",
 		"s": ["https://codepen.io/anon/pen/gJpLrR", "https://dev.to/peterc/how-to-create-joined-bulletpoint-lists-with-css-bbc-news-style-1eem"],
 		"d": "2023-12-20"
+	},
+	{
+		"q": "how to make a variable uppercase in LaTeX?",
+		"k": ["uppercase","latex","variable"],
+		"a": "define a second variable with the uppercase verison of the first one: <code>\\FOO{\\expandafter\\uppercase\\expandafter{\\foo}}</code>",
+		"s": ["https://latexref.xyz/Upper-and-lower-case.html"],
+		"d": "2023-12-29"
+	},
+	{
+		"q": "fix \"could not register service workers invalidstateerror\" in vscode",
+		"k": ["vscode","invalidstateerror","service","worker"],
+		"a": "kill all vscode instances and restart, maybe open the notebook in a regular vscode instead of insiders.",
+		"d": "2023-12-31"
+	},
+	{
+		"q": "how to make LaTeX <code>verbatim</code> inline?",
+		"k": ["latex","verbatim","inline"],
+		"a": "<code>\\usepackage{fancyvrb}</code> and then <code>\\Verb#code#</code>",
+		"s": ["https://tex.stackexchange.com/a/387691"],
+		"d": "2023-12-31"
 	}
 ]

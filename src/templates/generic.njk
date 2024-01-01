@@ -9,6 +9,9 @@ css: generic
         {% breadcrumbs navPages %}
     </span>
     <span id="title">{{ title }}</span>
+    {% if subtitle %}
+        <span id="subtitle">{{ subtitle }}</span>
+    {% endif %}
 </div>
 
 {{ content | safe }}

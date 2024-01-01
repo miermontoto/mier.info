@@ -11,7 +11,7 @@ lang: es
 star: star
 emoji: 📅
 buttons: [
-    {'url': 'https://epicalendar.mier.info', 'img': '<span class="ico">🌐</span>', 'text': 'página web'}
+    {'url': 'https://epicalendar.mier.info', 'img': '🌐 ', 'text': 'web'}
 ]
 eleventyNavigation:
   key: epicalendar

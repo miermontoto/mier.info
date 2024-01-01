@@ -107,7 +107,7 @@ module.exports = function (eleventyConfig) {
             console.log(`unable to produce breadcrumbs for ${targetName}.`);
             return '';
         }
-        let html = `<nav aria-label="breadcrumbs" id="breadcrumbs">$ <a href="/">/</a>`;
+        let html = `<nav aria-label="breadcrumbs" id="breadcrumbs">$ <a href="/" id="indx-btn">/</a>`;
 
 
         if (currentPage.parent) {
@@ -126,14 +126,14 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode("qka", function(data) {
         let template = ""
         data.forEach((d, i) => {
-            let sources = d.s.map(s => `<li><a href="${s}">${s}</a></li>`).join(' ')
-            template += `
-            <div class="doubt hoverborder">
-                <span class="question">${i+1}. ${d.q}</span>
-                <span class="answer">${d.a}</span>
-                <span class="sources">sources: <br>${sources}</span>
-                <span class="bottom">keywords: <code>${d.k}</code>, date asked: ${d.d}</span>
-            </div>`
+            let sources = d.s ? d.s.map(s => `<li><a href="${s}">${s}</a></li>`).join(' ') : null;
+            template += `<div class="doubt hoverborder">
+                <span class="question">${i+1}. ${d.q}</span>`;
+            if (d.a) template += `<span class="answer">${d.a}</span>`
+            if (sources) template += `<span class="sources">sources: <br>${sources}</span>`
+            if (d.k && d.d) template += `<span class="bottom">keywords: <code>${d.k}</code>, date asked: ${d.d}</span>`
+            else console.log('warning: question missing keywords or date')
+            template += `</div>`
         })
         return template
     });
