@@ -90,7 +90,7 @@ module.exports = function (eleventyConfig) {
         let version = json.version;
         let channel = json.channel && json.channel !== 'RTW' ? ` (${json.channel})` : '';
         let versionString = `${version}${channel}`;
-        return `<a id="version-tag" href="https://github.com/miermontoto/miermontoto/commit/${json.channel === "RTW" ? 'main' : 'beta'}" target="_blank">${versionString}</a>`;
+        return `<a id="version-tag" href="https://github.com/miermontoto/mier.info/commit/${json.channel === "RTW" ? 'main' : 'beta'}" target="_blank">${versionString}</a>`;
     });
 
     eleventyConfig.addShortcode("breadcrumbs", function(navPages) {

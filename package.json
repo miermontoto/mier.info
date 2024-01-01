@@ -1,6 +1,6 @@
 {
 	"name": "mier.info",
-	"version": "0.20.9",
+	"version": "0.20.10",
 	"channel": "RTW",
 	"description": "personal portfolio website that showcases my projects and professional experience.",
 	"scripts": {
@@ -15,7 +15,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/miermontoto/miermontoto.git"
+		"url": "git+https://github.com/miermontoto/mier.info.git"
 	},
 	"keywords": [
 		"webpage",
