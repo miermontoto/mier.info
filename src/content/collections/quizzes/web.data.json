@@ -1,6 +1,7 @@
 {
 	"data": {
-		"all": {
+		"simulacro": {
+			"info": "simulacro de examen realizado en clase de pa.",
 			"questions": [
 				{
 					"title": "¿Qué es necesario para registrar un Servlet?",

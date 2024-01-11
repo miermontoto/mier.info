@@ -82,16 +82,62 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addShortcode("keywords", function() {
-        return `<meta name="keywords" content="${require('./package.json').keywords.join(', ')}">`;
+        let json = require('./package.json');
+        if (!json.keywords) {
+            console.log('keywords not found in package.json');
+            return '';
+        }
+        return `<meta name="keywords" content="${json.keywords.join(', ')}">`;
     });
 
     eleventyConfig.addShortcode("version", function() {
         let json = require('./package.json');
         let version = json.version;
         let channel = json.channel && json.channel !== 'RTW' ? ` (${json.channel})` : '';
-        let versionString = `${version}${channel}`;
-        return `<a id="version-tag" href="https://github.com/miermontoto/mier.info/commit/${json.channel === "RTW" ? 'main' : 'beta'}" target="_blank">${versionString}</a>`;
+        return `<a id="version-tag" href="/changelog/" target="_blank">${version}${channel}</a>`;
     });
+
+    // function to get the changelog from the github commit history
+    eleventyConfig.addShortcode("changelog", function(data) {
+        let content = '<div id="changelog">'
+
+        // if the current version isn't in the changelog, add it manually to the data array
+        let currentJson = require('./package.json')
+        let currentVersion = currentJson.version.split('.')
+        let currentChannel = currentJson.channel ? ` ${currentJson.channel}` : ''
+        if (!data.find(d => d.version.major == currentVersion[1] && d.version.minor == currentVersion[2])) {
+            data.push({
+                "version": {
+                    "major": currentVersion[1],
+                    "minor": currentVersion[2]
+                },
+                "title": `${currentVersion[1]}.${currentVersion[2]}${currentChannel}`,
+                "date": "ongoing",
+                "message": "<span class='warning'>unreported changes: please run <code>npm run changelog</code></span>",
+                "hash": null
+            })
+        }
+
+        // sort commits by version
+        data.sort((a, b) => {
+            return a.version.major > b.version.major ? -1 : 1;
+        })
+
+        let prevMajor = null
+        data.forEach((d) => {
+            if (prevMajor != d.version.major) {
+                if (prevMajor) content += '<hr>'
+                content += `<h1>v${d.version.major}</h1>`
+            }
+            prevMajor = d.version.major
+            content += `<div class="entry hoverborder">
+                <span class="title">${d.title}</span>`
+            if (d.message) content += `<br><span class="message">${d.message.replace(/\n/g, '<br>')}</span>`
+            content += `<a class="date" href="https://github.com/miermontoto/mier.info/commit/${d.hash}" target="_blank">${d.date}</a></div>`
+        })
+        content += '</div>'
+        return content
+    })
 
     eleventyConfig.addShortcode("breadcrumbs", function(navPages) {
         if (!this.page.url) return ''; // if permalink is false in frontmatter, don't show breadcrumbs
@@ -140,7 +186,7 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addShortcode("quizButtons", function(json) {
         let blocks = getBlocksFromJson(json);
-        if (blocks.length == 0 || blocks.length == 1) return '';
+        if (blocks.length <= 1) return '';
 
         let template = `<div id="block-selection"> <h3>preguntas.</h3> <ul>`;
         blocks.forEach(b => {

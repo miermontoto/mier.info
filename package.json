@@ -1,12 +1,14 @@
 {
 	"name": "mier.info",
-	"version": "0.20.10",
-	"channel": "RTW",
+	"version": "0.21.0",
+	"channel": "beta",
 	"description": "personal portfolio website that showcases my projects and professional experience.",
 	"scripts": {
 		"start": "npm run clean; eleventy --serve & npm run sass-dev",
 		"build": "npm run clean; eleventy & npm run sass-prod",
 		"deploy": "npm run build; firebase deploy; npm run clean",
+		"push": "npm run changelog; git push",
+		"changelog": "ruby build-changelog.rb",
 		"clean": "rm -rf _site",
 		"test": "npm run build; firebase serve",
 		"beta": "npm run build; firebase hosting:channel:deploy beta",

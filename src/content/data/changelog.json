@@ -1,0 +1,806 @@
+[
+  {
+    "title": "20.10: fix repo targets",
+    "message": null,
+    "date": "2024-01-01",
+    "hash": "39bf243b7a100c9ecb84a5d67fe1d279e34b53a9",
+    "version": {
+      "major": "20",
+      "minor": "10",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "20.9",
+    "message": "[general]\n- better breadcrumbs styling\n- new: subtitles\n- tweak footer\n\n[questions]\n- better styling\n- add more questions\n\n[projects]\n- fix descriptions\n- change mier.info new source\n\n[index]\n- add new background vid",
+    "date": "2024-01-01",
+    "hash": "2d46363e658cc5d1101608d5c89e93fd0b571ac0",
+    "version": {
+      "major": "20",
+      "minor": "9",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "20.8",
+    "message": "[index]\n- small tweaks to projects descriptions",
+    "date": "2023-12-29",
+    "hash": "2ed816d8b7c72f9bb35b97fda2735ea44ede82bc",
+    "version": {
+      "major": "20",
+      "minor": "8",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "20.7",
+    "message": "[general]\n- new icons and better icon compatibility\n- new projects (latex and notes)\n- minor changes\n\n[index]\n- rework \"about\" section",
+    "date": "2023-12-29",
+    "hash": "36ed7b670741779bd79e136949bb3d53400b1f81",
+    "version": {
+      "major": "20",
+      "minor": "7",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "20.6",
+    "message": "[index]\n- html5 tags\n- add new marquee string\n\n[quizzes]\n- fix web question\n- remove source button\n\n[general]\n- minor corrections",
+    "date": "2023-12-29",
+    "hash": "6260dd10c0ef7c6d2ac3f8b0d344816978f5c93f",
+    "version": {
+      "major": "20",
+      "minor": "6",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "20.5: connected bullets in work experience",
+    "message": null,
+    "date": "2023-12-20",
+    "hash": "bb9a3c56adbbaf336db0eaa9816def931c77a81b",
+    "version": {
+      "major": "20",
+      "minor": "5",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "20.4",
+    "message": "[index]\n- downsize and compress background videos\n- remove background overlay\n- add <code>target=_blank</code> to links\n- fix style in big screens\n\n[general]\n- add new \"questions\" page\n- add description about this site\n- remove umami\n- small content adjustments",
+    "date": "2023-12-20",
+    "hash": "cbb44420f4bb8f988b9f74cb1d5c289843ad0353",
+    "version": {
+      "major": "20",
+      "minor": "4",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "20.3",
+    "message": "[quizzes]\n- add common url variations to redirect list\n- enhance source button target",
+    "date": "2023-12-13",
+    "hash": "9f4a5ec2e08e93aa9daf6ac6967704a7c980e32b",
+    "version": {
+      "major": "20",
+      "minor": "3",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "20.2: fix source button for quizzes",
+    "message": null,
+    "date": "2023-12-13",
+    "hash": "358c800984a8a9699a91d6c97eb1b9e3a44fe719",
+    "version": {
+      "major": "20",
+      "minor": "2",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "20.1: remove umami js",
+    "message": null,
+    "date": "2023-12-13",
+    "hash": "66ceba65b9b122aeba40e444dbad9f258b5f1e42",
+    "version": {
+      "major": "20",
+      "minor": "1",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "20.0 RTW",
+    "message": "- minor fixes",
+    "date": "2023-12-13",
+    "hash": "7d46b68105339d68c852f43cc52db57b26364e5b",
+    "version": {
+      "major": "20",
+      "minor": "0",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "20.0 beta",
+    "message": "[general]\n- new templates that support other changes\n- style tweaks and fixes\n\n[index]\n- rework links and link in title\n- auto link to content for projects (if present)\n\n[projects]\n- small description changes\n- remove unused frontmatter\n- other minor changes\n\n[quiz/gti]\n- make gti code abstract and allow it to run with other json data\n- new web quiz\n- quiz landing page\n- quiz template\n- rework scripts\n\n[404]\n- new look",
+    "date": "2023-12-13",
+    "hash": "a9191518f1b40649c7918954455afeb4b5aaf725",
+    "version": {
+      "major": "20",
+      "minor": "0",
+      "channel": "beta",
+      "channel_number": ""
+    }
+  },
+  {
+    "title": "20.0 alpha 2",
+    "message": "[index]\n- tweak css to adapt to mobile sizes\n- small style changes\n\n[macros]\n- allow colors in icons",
+    "date": "2023-12-12",
+    "hash": "c7e197436bcd99f126b6c043a95c5fa168874e4d",
+    "version": {
+      "major": "20",
+      "minor": "0",
+      "channel": "alpha",
+      "channel_number": " 2"
+    }
+  },
+  {
+    "title": "20.0 alpha",
+    "message": "[index]\n- rework (again) project section\n\n[projects]\n- update/fix descriptions\n- add new macros for projects\n- add new icons\n- add \"emojis\" or mini icons\n- remove legacy frontmatter\n\n[general]\n- minor style tweaks\n- remove unused code/assets",
+    "date": "2023-12-12",
+    "hash": "26533470ed8473cd5df894e6083d8b9eb258f8ee",
+    "version": {
+      "major": "20",
+      "minor": "0",
+      "channel": "alpha",
+      "channel_number": ""
+    }
+  },
+  {
+    "title": "19.0 RTW",
+    "message": "[index]\n- adjust margin for mobile\n- add titles to the projects section",
+    "date": "2023-12-11",
+    "hash": "18d3a8b3661e7c748f15c9cb9b4ba3de2296e792",
+    "version": {
+      "major": "19",
+      "minor": "0",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "19.0 RC4",
+    "message": "[index]\n- revamp full projects list (mobile optimized)\n\n[general]\n- fix svg icons\n- small fixes and tweaks",
+    "date": "2023-12-11",
+    "hash": "9e702e81130b9a4493a6bbad174d4fb42d39a05d",
+    "version": {
+      "major": "19",
+      "minor": "0",
+      "channel": "RC",
+      "channel_number": "4"
+    }
+  },
+  {
+    "title": "19.0 RC3",
+    "message": "[index]\n- fix video chain\n- reduce video opacity\n- fix 'stop' overlay button\n\n[general]\n- rework projects' titles\n\n[webutils]\n- better styling for img options",
+    "date": "2023-12-10",
+    "hash": "cd244d2bf597590165b0575a1dfbea75932261db",
+    "version": {
+      "major": "19",
+      "minor": "0",
+      "channel": "RC",
+      "channel_number": "3"
+    }
+  },
+  {
+    "title": "19.0 RC2",
+    "message": "[index]\n- background videos:\n  - compressed and encoded background videos using av1\n  - added title to videos in data file\n  - chained videos on end\n- overlay:\n  - better styling\n  - new 'next' button\n  - show 'now playing' on video change\n  - load overlay from js instead of html\n- better randomize lib\n\n[general]\n- minor tweaks",
+    "date": "2023-12-10",
+    "hash": "3e8bdc54a0e4240b8cb7a0567d73376ade3c2481",
+    "version": {
+      "major": "19",
+      "minor": "0",
+      "channel": "RC",
+      "channel_number": "2"
+    }
+  },
+  {
+    "title": "19.0 RC1",
+    "message": "[webutils]\n- new template that autoloads scripts and styles\n- minor style tweaks\n\n[img]\n- drag and  drop zone\n- important script fixes\n\n[index]\n- fix small clipping issues with images\n- small style tweaks\n\n[general]\n- lighthouse and w3c validation fixes",
+    "date": "2023-12-09",
+    "hash": "adb6360bc2cc65c3008fd12ab66773e713fffd4c",
+    "version": {
+      "major": "19",
+      "minor": "0",
+      "channel": "RC",
+      "channel_number": "1"
+    }
+  },
+  {
+    "title": "19.0 beta 2",
+    "message": "[general]\n- remove leftover logs\n- async load for quicklink\n- remove default font weight\n- allow redirections for common misspelings\n\n[index]\n- reduce projects' imgs sizes and convert to webp\n- fix headings order\n- style fixes and tweaks",
+    "date": "2023-12-08",
+    "hash": "ba0f6542b738bc53724226ba74689c8bae1a5184",
+    "version": {
+      "major": "19",
+      "minor": "0",
+      "channel": "beta",
+      "channel_number": " 2"
+    }
+  },
+  {
+    "title": "19.0 beta",
+    "message": "[general]\n- added breadcrumbs\n- format processed njk files\n- small html fixes\n- tweaks and optimizations\n- add footer\n- remove logic from macros that are only called once\n\n[index]\n- finish rework of projects section\n- fixes to experience and about section\n- add images to projects\n- add root to list of projects\n\n[webutils]\n- add new quoted-printable encoder\n- add frontmatter to webutils that doesn't render on main page\n\n[writeups]\n- add small support for future writeups",
+    "date": "2023-12-08",
+    "hash": "faccb3ca4071464dadfcde9397d3d05fb61bce3e",
+    "version": {
+      "major": "19",
+      "minor": "0",
+      "channel": "beta",
+      "channel_number": ""
+    }
+  },
+  {
+    "title": "19.0 alpha 3",
+    "message": "[general]\n- added minimal statistics (umami.is)\n\n[index]\n- projects rework ideas\n- fix projects.js location\n- styles and tweaks\n\n[epiCalendar]\n- added images",
+    "date": "2023-12-07",
+    "hash": "39813c42a9f8da8155e90f383a24f0441956b13c",
+    "version": {
+      "major": "19",
+      "minor": "0",
+      "channel": "alpha",
+      "channel_number": " 3"
+    }
+  },
+  {
+    "title": "19.0 alpha 2",
+    "message": "[general]\n- scrap scroll mschf idea\n- minor corrections",
+    "date": "2023-12-01",
+    "hash": "f48acc72812917bb4abbe098ca8bcb628bf52fb9",
+    "version": {
+      "major": "19",
+      "minor": "0",
+      "channel": "alpha",
+      "channel_number": " 2"
+    }
+  },
+  {
+    "title": "19.0 alpha 1",
+    "message": "[general]\n- use js modules, new js dir tree\n- new sass modules for animations and colors\n- move background videos to own dir\n- fix firebase deploy github actions\n- modulize index data json\n-test new marquee",
+    "date": "2023-12-01",
+    "hash": "822067792582a7cb98bd3c2e7c11615427aec2d1",
+    "version": {
+      "major": "19",
+      "minor": "0",
+      "channel": "alpha",
+      "channel_number": " 1"
+    }
+  },
+  {
+    "title": "19.0 RTW",
+    "message": "[index]\n- adjust margin for mobile\n- add titles to the projects section",
+    "date": "2023-12-11",
+    "hash": "8f5222d0af65de0f8c2503a4d83cb0e92e69a7a7",
+    "version": {
+      "major": "19",
+      "minor": "0",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "19.0 RC4",
+    "message": "[index]\n- revamp full projects list (mobile optimized)\n\n[general]\n- fix svg icons\n- small fixes and tweaks",
+    "date": "2023-12-11",
+    "hash": "b0d66a662266d10cca98950cc9c8853d15999848",
+    "version": {
+      "major": "19",
+      "minor": "0",
+      "channel": "RC",
+      "channel_number": "4"
+    }
+  },
+  {
+    "title": "19.0 RC3",
+    "message": "[index]\n- fix video chain\n- reduce video opacity\n- fix 'stop' overlay button\n\n[general]\n- rework projects' titles\n\n[webutils]\n- better styling for img options",
+    "date": "2023-12-10",
+    "hash": "bfd0a7abaaaa30195677efa47adffb9147184756",
+    "version": {
+      "major": "19",
+      "minor": "0",
+      "channel": "RC",
+      "channel_number": "3"
+    }
+  },
+  {
+    "title": "19.0 RC2",
+    "message": "[index]\n- background videos:\n  - compressed and encoded background videos using av1\n  - added title to videos in data file\n  - chained videos on end\n- overlay:\n  - better styling\n  - new 'next' button\n  - show 'now playing' on video change\n  - load overlay from js instead of html\n- better randomize lib\n\n[general]\n- minor tweaks",
+    "date": "2023-12-10",
+    "hash": "5d091e5d59e4c6550a03c42e1c2e8947f6f3a623",
+    "version": {
+      "major": "19",
+      "minor": "0",
+      "channel": "RC",
+      "channel_number": "2"
+    }
+  },
+  {
+    "title": "19.0 RC1",
+    "message": "[webutils]\n- new template that autoloads scripts and styles\n- minor style tweaks\n\n[img]\n- drag and  drop zone\n- important script fixes\n\n[index]\n- fix small clipping issues with images\n- small style tweaks\n\n[general]\n- lighthouse and w3c validation fixes",
+    "date": "2023-12-09",
+    "hash": "dbf754468d64520d8d5ac8dfa9f2999ab5ab39b5",
+    "version": {
+      "major": "19",
+      "minor": "0",
+      "channel": "RC",
+      "channel_number": "1"
+    }
+  },
+  {
+    "title": "19.0 beta 2",
+    "message": "[general]\n- remove leftover logs\n- async load for quicklink\n- remove default font weight\n- allow redirections for common misspelings\n\n[index]\n- reduce projects' imgs sizes and convert to webp\n- fix headings order\n- style fixes and tweaks",
+    "date": "2023-12-08",
+    "hash": "dd27ae8610695ba3312651e1ecb4b1ef1fba3ad0",
+    "version": {
+      "major": "19",
+      "minor": "0",
+      "channel": "beta",
+      "channel_number": " 2"
+    }
+  },
+  {
+    "title": "19.0 beta",
+    "message": "[general]\n- added breadcrumbs\n- format processed njk files\n- small html fixes\n- tweaks and optimizations\n- add footer\n- remove logic from macros that are only called once\n\n[index]\n- finish rework of projects section\n- fixes to experience and about section\n- add images to projects\n- add root to list of projects\n\n[webutils]\n- add new quoted-printable encoder\n- add frontmatter to webutils that doesn't render on main page\n\n[writeups]\n- add small support for future writeups",
+    "date": "2023-12-08",
+    "hash": "de27bd006ce7b4f499ebf8911c4b83292a0c976f",
+    "version": {
+      "major": "19",
+      "minor": "0",
+      "channel": "beta",
+      "channel_number": ""
+    }
+  },
+  {
+    "title": "19.0 alpha 3",
+    "message": "[general]\n- added minimal statistics (umami.is)\n\n[index]\n- projects rework ideas\n- fix projects.js location\n- styles and tweaks\n\n[epiCalendar]\n- added images",
+    "date": "2023-12-07",
+    "hash": "1a881c12056a66dc5602e7ac4da49cfeb3b84e15",
+    "version": {
+      "major": "19",
+      "minor": "0",
+      "channel": "alpha",
+      "channel_number": " 3"
+    }
+  },
+  {
+    "title": "19.0 alpha 2",
+    "message": "[general]\n- scrap scroll mschf idea\n- minor corrections",
+    "date": "2023-12-01",
+    "hash": "23cdc3bd8ca8d99a0071f505c6fa6b45f0268e90",
+    "version": {
+      "major": "19",
+      "minor": "0",
+      "channel": "alpha",
+      "channel_number": " 2"
+    }
+  },
+  {
+    "title": "19.0 alpha 1",
+    "message": "[general]\n- use js modules, new js dir tree\n- new sass modules for animations and colors\n- move background videos to own dir\n- fix firebase deploy github actions\n- modulize index data json\n-test new marquee",
+    "date": "2023-12-01",
+    "hash": "ce464c14b371247500f8bf09dfc92edf63051bc4",
+    "version": {
+      "major": "19",
+      "minor": "0",
+      "channel": "alpha",
+      "channel_number": " 1"
+    }
+  },
+  {
+    "title": "18.7",
+    "message": "[GTI]\n- nuevas preguntas del examen y otras fuentes\n- clasificar preguntas que salieron en el examen\n- nuevo botón para seleccionar bloque de examen\n- keywords, css y otros cambios menores\n\n[404]\n- revertir cambios recientes\n\n[general]\n- apuntar enlace de versión al último commit\n- optimizaciones y cambios menores",
+    "date": "2023-11-28",
+    "hash": "1fcbc5b13095b90ef400e11cb0ad65ae1c9218e3",
+    "version": {
+      "major": "18",
+      "minor": "7",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "18.6",
+    "message": "[general]\n- minor tweaks to enhance pagespeed results",
+    "date": "2023-11-27",
+    "hash": "625710b47242b75eed6dea0e5e2e886f41948045",
+    "version": {
+      "major": "18",
+      "minor": "6",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "18.5",
+    "message": "[webutils]\n- new img conversor/resizer webutil\n\n[backup]\n- adjust line spacing (fixes SEO issues)\n\n[GTI]\n- tweaks and style adjustments\n\n[index]\n- remove for loops from macros\n\n[epiCalendar]\n- add own image to tutorial to improve performance\n- minor changes\n\n[general]\n- minor tweaks to css",
+    "date": "2023-11-27",
+    "hash": "184a0fd214086f4f58056d6b9d9e83f14bb60ec2",
+    "version": {
+      "major": "18",
+      "minor": "5",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "18.4",
+    "message": "[GTI]\n- better tap targets spacing\n- change styling of block buttons\n- restructure css\n- minor fixes\n\n[general]\n- minor tweaks and fixes",
+    "date": "2023-11-26",
+    "hash": "9046b257ea5b7b8368597c4e73a2586fa6d3acea",
+    "version": {
+      "major": "18",
+      "minor": "4",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "18.3",
+    "message": "[index]\n- fix bug that animates sections when active\n\n[general]\n- remake 404",
+    "date": "2023-11-26",
+    "hash": "768a4a3f4fb747c9cdda93e74f15ac6a11523e17",
+    "version": {
+      "major": "18",
+      "minor": "3",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "18.2",
+    "message": "[GTI]\n- preguntas del backup\n- permitir preguntas de varias fuentes, controles\n- mejoras de styling\n\n[general]\n- pequeñas correcciones y mejoras",
+    "date": "2023-11-25",
+    "hash": "ec941a1d8654933b436ee4e356a976e795647d30",
+    "version": {
+      "major": "18",
+      "minor": "2",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "18.1",
+    "message": "- \"fix\" autoplay on safari\n- allow options in gti quiz\n- add new GTI questions",
+    "date": "2023-11-23",
+    "hash": "6ea8cbb0a9bd656252f60391f32d2a775535fd03",
+    "version": {
+      "major": "18",
+      "minor": "1",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "18.0 RTW",
+    "message": null,
+    "date": "2023-11-21",
+    "hash": "d1f75e301db90eac96a0a099efbcaf3a46cfe45e",
+    "version": {
+      "major": "18",
+      "minor": "0",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "18.0 RC1: minor fixes",
+    "message": null,
+    "date": "2023-11-21",
+    "hash": "4f81aedc19c06677e1ce407c6ea860952ee3e8e4",
+    "version": {
+      "major": "18",
+      "minor": "0",
+      "channel": "RC",
+      "channel_number": "1"
+    }
+  },
+  {
+    "title": "18.0 beta2",
+    "message": "- gti questions\n- gti styling and tweaks\n- css magic\n- better project button support\n- small fixes",
+    "date": "2023-11-21",
+    "hash": "f6c9a5aa1b1fc2cc59bcd4997b8b8ef7ba29ca64",
+    "version": {
+      "major": "18",
+      "minor": "0",
+      "channel": "beta",
+      "channel_number": "2"
+    }
+  },
+  {
+    "title": "18.0 beta1: background videos, controls, fixes",
+    "message": null,
+    "date": "2023-11-20",
+    "hash": "b756392f57289adcf1623a0b45588c65dd945f33",
+    "version": {
+      "major": "18",
+      "minor": "0",
+      "channel": "beta",
+      "channel_number": "1"
+    }
+  },
+  {
+    "title": "17.6: add urls to marquee, minor changes and fixes",
+    "message": null,
+    "date": "2023-11-18",
+    "hash": "56dda33aa18fa2137652965c9a0cbbb1e306b6e4",
+    "version": {
+      "major": "17",
+      "minor": "6",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "17.5: vertical icons, optimizations and fixes",
+    "message": null,
+    "date": "2023-11-17",
+    "hash": "0bfc582f76b057fdaf420f6287ffc6225d1b2120",
+    "version": {
+      "major": "17",
+      "minor": "5",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "17.4: local svgs instead of libraries, optimizations",
+    "message": null,
+    "date": "2023-11-17",
+    "hash": "6acba4785d494a648f2526d3d90ae633a290b108",
+    "version": {
+      "major": "17",
+      "minor": "4",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "17.3: optimizations, reduce LCP, add link to marquee",
+    "message": null,
+    "date": "2023-11-17",
+    "hash": "11c95133c888077a769711faf4e91e373f26aa4c",
+    "version": {
+      "major": "17",
+      "minor": "3",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "17.2: minor fixes, shuffle on reset on gti",
+    "message": null,
+    "date": "2023-11-16",
+    "hash": "b29092c7a3a14d28dfa7fcb2422c3b7f37ccb1b4",
+    "version": {
+      "major": "17",
+      "minor": "2",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "17.1: custom buttons, changes in backup, fixes",
+    "message": null,
+    "date": "2023-11-16",
+    "hash": "d42a7e3c1652138876d7399a80e756f71c43ee8c",
+    "version": {
+      "major": "17",
+      "minor": "1",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "17.0 RC3: hotfix gti indexing",
+    "message": null,
+    "date": "2023-11-16",
+    "hash": "03c245bff03b5283d5bd7a2409e376a5102acb6f",
+    "version": {
+      "major": "17",
+      "minor": "0",
+      "channel": "RC",
+      "channel_number": "3"
+    }
+  },
+  {
+    "title": "17.0 RC2",
+    "message": "- new gti questions\n- allow download for projects\n- gti options for shuffling\n- styling fixes",
+    "date": "2023-11-16",
+    "hash": "3f3d3af0cc869efea1d3131f531d66d6ddc70771",
+    "version": {
+      "major": "17",
+      "minor": "0",
+      "channel": "RC",
+      "channel_number": "2"
+    }
+  },
+  {
+    "title": "17.0 RC1",
+    "message": "- recursive search for css and js files\n- url encoder/decoder webutil\n- error mesages\n- style changes to webutils\n- minor changes",
+    "date": "2023-11-16",
+    "hash": "5bc941aa469066a289bb45bbc3ca9fb5820ebce6",
+    "version": {
+      "major": "17",
+      "minor": "0",
+      "channel": "RC",
+      "channel_number": "1"
+    }
+  },
+  {
+    "title": "17.0 beta 2",
+    "message": "- better base template\n- links as json\n- enhance webutils\n- marquee strings in data json\n- minor changes",
+    "date": "2023-11-16",
+    "hash": "a4fc4f5c62cfb6dcb50cb0bcfd7305fdb9455440",
+    "version": {
+      "major": "17",
+      "minor": "0",
+      "channel": "beta",
+      "channel_number": " 2"
+    }
+  },
+  {
+    "title": "16.4: qti questions, questions indexing",
+    "message": null,
+    "date": "2023-11-13",
+    "hash": "c715091a0a925a97aa80beee9a754fb6b030e3e4",
+    "version": {
+      "major": "16",
+      "minor": "4",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "16.4: qti questions, questions indexing",
+    "message": null,
+    "date": "2023-11-13",
+    "hash": "dc620f92fc6facad4d0ad363a68e1d4574cb9a87",
+    "version": {
+      "major": "16",
+      "minor": "4",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "17.0 beta1",
+    "message": "webutils css and js, better card css, small fixes, okt",
+    "date": "2023-11-13",
+    "hash": "e2384727b454e14f06accf202cc04adfe3c40030",
+    "version": {
+      "major": "17",
+      "minor": "0",
+      "channel": "beta",
+      "channel_number": "1"
+    }
+  },
+  {
+    "title": "16.3: new gti questions",
+    "message": null,
+    "date": "2023-11-09",
+    "hash": "d65018ec1f607e26e7f36aec10b8355f8181a2e8",
+    "version": {
+      "major": "16",
+      "minor": "3",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "16.3: new gti questions",
+    "message": null,
+    "date": "2023-11-09",
+    "hash": "79c3ee9b4d5f7e9a416bb3baab5aa59809df994b",
+    "version": {
+      "major": "16",
+      "minor": "3",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "17.0 alpha 3: md5, fixes, better css",
+    "message": null,
+    "date": "2023-11-09",
+    "hash": "f6525d00f720e489310695a741dff3d1273a4f1c",
+    "version": {
+      "major": "17",
+      "minor": "0",
+      "channel": "alpha",
+      "channel_number": " 3"
+    }
+  },
+  {
+    "title": "17.0 alpha 2",
+    "message": "webutils bundle page, fix imports, fix listeners, fix styles",
+    "date": "2023-11-09",
+    "hash": "9aa8c5e2b411bde3447bbdc931ef57256bd29a2d",
+    "version": {
+      "major": "17",
+      "minor": "0",
+      "channel": "alpha",
+      "channel_number": " 2"
+    }
+  },
+  {
+    "title": "17.0 alpha",
+    "message": "tiny, base64, webuitls, default project js and css loading",
+    "date": "2023-11-09",
+    "hash": "fb122aaed277bb596456f075a8a18abd46fd2e95",
+    "version": {
+      "major": "17",
+      "minor": "0",
+      "channel": "alpha",
+      "channel_number": ""
+    }
+  },
+  {
+    "title": "16.2: speedlify, new gti Qs, svg icons, fixes, analytics",
+    "message": null,
+    "date": "2023-11-06",
+    "hash": "804c1d56cfebd1f469445e52ee6111c0d75644bf",
+    "version": {
+      "major": "16",
+      "minor": "2",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "16.1: fix accesibility issues, allow <code>&lt;i&gt;</code> custom icons, fix missing icons",
+    "message": null,
+    "date": "2023-11-03",
+    "hash": "320487b4b7eadb86a88982c9516e959cf740bb86",
+    "version": {
+      "major": "16",
+      "minor": "1",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "16.0 RC2: new custom links for projects, detect RTW versions",
+    "message": null,
+    "date": "2023-11-03",
+    "hash": "15be074c03f795a6aad96d6c5774c5985bff5591",
+    "version": {
+      "major": "16",
+      "minor": "0",
+      "channel": "RC",
+      "channel_number": "2"
+    }
+  },
+  {
+    "title": "16.0 RC1: general changes, js & css opt, versioning",
+    "message": null,
+    "date": "2023-11-03",
+    "hash": "d0addbe8efd431628e4ec3ed122f67d6dbec01d9",
+    "version": {
+      "major": "16",
+      "minor": "0",
+      "channel": "RC",
+      "channel_number": "1"
+    }
+  }
+]

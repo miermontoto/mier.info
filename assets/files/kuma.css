@@ -5,8 +5,17 @@
 }
 
 :root {
-	--primary: #090c10;
+	--primary: hsl(0, 0%, 1%);
     --primary-light: #f6f3ef;
+    --secondary: hsl(0, 0%, 5%);
+}
+
+.dark {
+    background-color: var(--primary) !important;
+}
+
+.dark .shadow-box:not(.alert) {
+    background-color: var(--secondary) !important;
 }
 
 

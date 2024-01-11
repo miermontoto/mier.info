@@ -74,7 +74,7 @@ code
     position: fixed
     bottom: 15px
     right: 15px
-    font-size: 16px
+    font-size: min(16px, 2.5vw)
     color: colors.$light
     user-select: none
     text-decoration: none
@@ -191,7 +191,7 @@ img
     font-weight: bolder
 
 .hoverborder
-    border: 2px solid hsla(0, 0%, 100%, 1%)
+    border: 2px solid hsla(0, 0%, 100%, 2%)
     border-radius: base.$radius
     backdrop-filter: blur(3px)
     padding: 1em
@@ -199,3 +199,10 @@ img
     &:hover
         border-color: colors.$light
         backdrop-filter: blur(9px)
+
+    &.quiz
+        display: flex
+        margin: 1em 0
+
+        *
+            margin: 0 0.5em
