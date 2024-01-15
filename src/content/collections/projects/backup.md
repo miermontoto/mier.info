@@ -94,6 +94,7 @@ para descargar todos los repositorios, usar el siguiente comando en una terminal
 - [Gestión de Tecnologías de la Información](https://github.com/miermontoto/GTI)
   - ["gti quiz", colección de preguntas de examen del segundo parcial](https://mier.info/gti/)
 - [Ingeniería de Servicios](https://github.com/miermontoto/Servicios)
+  - [Memoria de prácticas](https://github.com/miermontoto/memoria-servicios)
 - [Inteligencia de Negocio](https://github.com/miermontoto/Negocio)
 - [Seguridad](https://github.com/miermontoto/Servicios)
 - [Tecnologías Web](https://github.com/miermontoto/Web)

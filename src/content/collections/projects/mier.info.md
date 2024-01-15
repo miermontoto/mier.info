@@ -3,13 +3,13 @@ title: mier.info
 desc: my personal portfolio, the very website you are looking at right now.
 source: https://github.com/miermontoto/mier.info
 icons: [eleventy, firebase, sass, markdown, nunjucks, js]
-links: [{icon: "β", url: "https://mier-f6277--beta-ski9fkat.web.app/", name: "beta"}]
+links: [{icon: "β", url: "https://mier-f6277--beta-ms6exjco.web.app/", name: "beta"}]
 star: star
 permalink: /this/
 redirect_from: [/mier.info/, /self/]
 emoji: 🌐
 buttons: [
-	{img: "β ", url: "https://mier-f6277--beta-ski9fkat.web.app/", text: "beta"}
+	{img: "β ", url: "https://mier-f6277--beta-ms6exjco.web.app/", text: "beta"}
 ]
 eleventyNavigation:
   key: this
@@ -34,9 +34,9 @@ apart from having its github repo, it is connected to firebase hosting through C
 the "design" is a tribute to the legendary [daft punk 90's website](https://web.archive.org/web/20220223020719/https://daftpunk.com/).
 as you can probably tell, it's a very important reference for me, and even though it doesn't hold up to today's standards, i've always loved the simplicty and the way that it looks.
 
-from the 1st of december to the 7th of january every year, there is snow falling falling (thanks to [snowstorm](https://www.schillmania.com/projects/snowstorm/))
+from the 1st of december to the 7th of january every year, there is snow falling falling (thanks to [zachleat](https://github.com/zachleat/snow-fall))
 
-several other inspirations include:
+several other inspirations:
 - [mschf](https://mschf.com/)
 - [crlf.link](https://crlf.link/)
 - [stacksorted](https://stacksorted.com/)
@@ -44,3 +44,4 @@ several other inspirations include:
 - [ramsus' portfolio](https://rsms.me/)
 - [eduardorl's portfolio](https://eduardorl.vercel.app/)
 - [ruflas' portfolio](https://ruflas.dev/)
+- [irene mateos' awesome portfolio](https://enerimateos.com/)

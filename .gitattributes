@@ -1,3 +1,4 @@
 *.md linguist-detectable
 package*.json linguist-generated
 assets/** linguist-generated
+src/content/data/changelog.json linguist-generated
