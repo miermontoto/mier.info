@@ -36,7 +36,8 @@ require 'time'
 start = Time.now
 
 delim = "¿¿¡¡"
-raw = `git log --pretty=format:"%B||%ad||%H||%an#{delim}" --date=short`
+branch = `git rev-parse --abbrev-ref HEAD`.strip
+raw = `git log origin/#{branch} --pretty=format:"%B||%ad||%H||%an#{delim}" --date=short`
 commits = []
 raw.split(delim).each do |line|
 	commit = Commit.new

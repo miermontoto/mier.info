@@ -5,3 +5,4 @@ target
 firebase-debug.log
 **.report.html
 .vscode
+changelog.json
