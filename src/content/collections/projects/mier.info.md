@@ -3,13 +3,13 @@ title: mier.info
 desc: my personal portfolio, the very website you are looking at right now.
 source: https://github.com/miermontoto/mier.info
 icons: [eleventy, firebase, sass, markdown, nunjucks, js]
-links: [{icon: "β", url: "https://mier-f6277--beta-ski9fkat.web.app/", name: "beta"}]
+links: [{icon: "β", url: "https://mier-f6277--beta-ms6exjco.web.app/", name: "beta"}]
 star: star
 permalink: /this/
 redirect_from: [/mier.info/, /self/]
 emoji: 🌐
 buttons: [
-	{img: "β ", url: "https://mier-f6277--beta-ski9fkat.web.app/", text: "beta"}
+	{img: "β ", url: "https://mier-f6277--beta-ms6exjco.web.app/", text: "beta"}
 ]
 eleventyNavigation:
   key: this

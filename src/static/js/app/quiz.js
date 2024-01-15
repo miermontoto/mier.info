@@ -4,6 +4,7 @@ let total;
 
 let allQuestions;
 let currentQuestionsDiv = document.createElement('div');
+let exam = document.querySelector('.question-block[exam="true"]') != null;
 
 window.addEventListener('load', () => { // when the page loads (the content is rendered)
 	allQuestions = document.querySelectorAll('.question-block');
@@ -12,10 +13,12 @@ window.addEventListener('load', () => { // when the page loads (the content is r
 		let blocks = document.querySelectorAll('.select-block');
 
 		// add exam block
-		let examBlock = '<span class="button select-block" id="exam">examen</span>';
-		blocks[blocks.length -2].insertAdjacentHTML('afterend', examBlock);
-		let explanations = document.querySelectorAll('#block-selection li');
-		explanations[explanations.length -2].insertAdjacentHTML('afterend', '<li><code>examen</code>: preguntas del examen de 23-24, de ambas fuentes.</li>');
+		if (exam) {
+			let examBlock = '<span class="button select-block" id="exam">examen</span>';
+			blocks[blocks.length -2].insertAdjacentHTML('afterend', examBlock);
+			let explanations = document.querySelectorAll('#block-selection li');
+			explanations[explanations.length -2].insertAdjacentHTML('afterend', '<li><code>examen</code>: preguntas del examen de 23-24, de ambas fuentes.</li>');
+		}
 
 		document.querySelectorAll('.select-block').forEach((block) => {
 			block.addEventListener('click', () => {

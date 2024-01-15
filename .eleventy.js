@@ -94,7 +94,7 @@ module.exports = function (eleventyConfig) {
         let json = require('./package.json');
         let version = json.version;
         let channel = json.channel && json.channel !== 'RTW' ? ` (${json.channel})` : '';
-        return `<a id="version-tag" href="/changelog/" target="_blank">${version}${channel}</a>`;
+        return `<a id="version-tag" href="/changelog/">${version}${channel}</a>`;
     });
 
     // function to get the changelog from the github commit history
@@ -113,7 +113,7 @@ module.exports = function (eleventyConfig) {
                 },
                 "title": `${currentVersion[1]}.${currentVersion[2]}${currentChannel}`,
                 "date": "ongoing",
-                "message": "<span class='warning'>unreported changes: please run <code>npm run changelog</code></span>",
+                "message": "<span class='warning'>changelog for this patch will be built in the next version</span>",
                 "hash": null
             })
         }

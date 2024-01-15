@@ -1,5 +1,17 @@
 [
   {
+    "title": "21.0 beta",
+    "message": "[general]\n- replace snowstorm with snow-fall\n- append scripts to head instead of body\n- new npm run scripts\n- update kuma css\n- remove unused assets\n- minor tweaks and fixes\n\n[changelog]\n- new changelog page\n- new changelog building tools (ruby!)\n\n[this]\n- minor changes\n\n[quizzes]\n- minor corrections\n\n[index]\n- emojify and add content to the about section",
+    "date": "2024-01-11",
+    "hash": "22abaa87db07b0905b158f3f12acefad49fbb9d9",
+    "version": {
+      "major": "21",
+      "minor": "0",
+      "channel": "beta",
+      "channel_number": ""
+    }
+  },
+  {
     "title": "20.10: fix repo targets",
     "message": null,
     "date": "2024-01-01",

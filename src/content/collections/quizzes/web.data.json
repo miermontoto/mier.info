@@ -18,7 +18,7 @@
 					"title": "Para acceder a los campos privados de un ManagedBean, es necesario:",
 					"answers": [
 						"Nada. Aunque los declaremos como privados, pueden ser accesibles por ser un ManagedBean.",
-						"No se puede delcarar campos privados en un ManagedBean. Da un error de compilación.",
+						"No se puede declarar campos privados en un ManagedBean. Da un error de compilación.",
 						"Hay que crear getters y setters públicos que tengan como nombre get o set seguido del nombre del campo, cambiando la primera letra por mayúscula.",
 						"Ninguna de las anteriores."
 					],
@@ -30,7 +30,7 @@
 					"answers": [
 						"Permite desacoplar las implementaciones concretas de las interfaces de los clientes que las utilizan.",
 						"Facilita la modificación de los componentes ya existentes en nuestro diseño gracias a la separación en capas.",
-						"Nos ayuda a instanciar objetos complejos que requieren muchos parámtros.",
+						"Nos ayuda a instanciar objetos complejos que requieren muchos parámetros.",
 						"Ninguna de las anteriores"
 					],
 					"correct": "0",
@@ -74,8 +74,7 @@
 						"Las plantillas son fragmentos de código reutilizables que se insertan dentro de otras páginas.",
 						"Ninguna es correcta."
 					],
-					"correct": "0",
-					"shuffle": "false"
+					"correct": "0"
 				},
 				{
 					"title": "¿Cuál es la norma más básica de usabilidad?",
@@ -126,6 +125,472 @@
 						"Muy poco margen de beneficio, pero sí gana por el boca a boca si el servicio es de calidad."
 					],
 					"correct": "3"
+				}
+			]
+		},
+		"otras": {
+			"info": "preguntas alternativas obtenidas de otras fuentes.",
+			"questions": [
+				{
+					"title": "Un contenedor recibe 2 peticiones desde dos 2 IPs diferentes para el mismo Servlet. ¿Cuántas instancias del proceso Servlet se crearán?",
+					"answers": [
+						"Dos",
+						"Más de dos",
+						"Una",
+						"Ninguna"
+					],
+					"correct": "2"
+				},
+				{
+					"title": "Indica las dos implementaciones de REST en JEE y cuál se ha utilizado en clase:",
+					"answers": [
+						"RestEasy, y Jersey (utilizado en clase)",
+						"RestEasy, y Wildfly (utilizado en clase)",
+						"Jersey, y JSAPI (utilizado en clase)",
+						"Jersey, y RestEasy (utilizado en clase)"
+					],
+					"correct": "3"
+				},
+				{
+					"title": "Un Bean gestionado es...",
+					"answers": [
+						"Una clase <b>no pojo</b> cuyo ciclo de vida es gestionado por el patrón MVC",
+						"Una clase <b>pojo</b> cuyo ciclo de vida es gestionado por el patrón MVC",
+						"Una clase <b>no pojo</b> cuyo ciclo de vida es gestionado por el patrón JSF",
+						"Una clase <b>pojo</b> cuyo ciclo de vida es gestionado por el patrón JSF"
+					],
+					"correct": "3"
+				},
+				{
+					"title": "¿En qué tecnologías está basado Bootstrap?",
+					"answers": [
+						"Javascript, Ajax y HTML5",
+						"Javascript, PrimeFaces y Ajax",
+						"JQuery, HTML5 y Javascript",
+						"HTML5, Javascript y CSS"
+					],
+					"correct": "3"
+				},
+				{
+					"title": "¿Cómo se ejecuta un JSP?",
+					"answers": [
+						"Es compilado a un servlet y el servlet es enviado al cliente para su ejecución",
+						"Es enviado \"tal cual\" al navegador, donde es ejecutado",
+						"Es compilado a un servlet y el servlet se ejecuta dentro del contenedor",
+						"Es interpretado tal cual en el servidor"
+					],
+					"correct": "2"
+				},
+				{
+					"title": "¿Puede un Action Controller tener como tipo de retorno <code>void</code>?",
+					"answers": [
+						"Sí, siempre",
+						"No",
+						"Sí, solo cuando el evento está ajaxificado",
+						"Sí, solo cuando el evento es síncrono pero ajaxificado"
+					],
+					"correct": "2"
+				},
+				{
+					"title": "Indica cuál de los siguientes <u>NO</u> es un principio REST",
+					"answers": [
+						"Una sintaxis universal para identificar los recursos",
+						"El uso de hipermedios",
+						"El uso de un formato JSON para el transporte",
+						"Un protocolo cliente/servidor sin estado"
+					],
+					"correct": "2"
+				},
+				{
+					"title": "Indica 6 scopes de un Bean gestionado:",
+					"answers": [
+						"Role, Session, Application, View, Custom y None",
+						"Request, Session, Role, View, Custom y None",
+						"Request, Session, Application, View, Custom y Role",
+						"Request, Session, Application, View, Custom y None"
+					],
+					"correct": "3"
+				},
+				{
+					"title": "¿Cuáles son los métodos HTTP habituales en un formulario HTTP?",
+					"answers": [
+						"GET y POST",
+						"PUT y POST",
+						"GET y PUT",
+						"PUT y DELETE"
+					],
+					"correct": "0"
+				},
+				{
+					"title": "Indica los elementos de scripting en JSP:",
+					"answers": [
+						"Scriplets, templates y expresiones",
+						"Scriplets, declaraciones y expresiones",
+						"Templates, declaraciones y expresiones",
+						"Scriplets, declaraciones y templates"
+					],
+					"correct": "1"
+				},
+				{
+					"title": "¿En qué momento se instancia por defecto un Managed Bean en JSF?",
+					"answers": [
+						"Al desplegar el proyecto por primera vez",
+						"No se instancia automáticamente, el programa debe hacerlo",
+						"En el primer momento que se referencie dicho Managed Bean en una vista JSF",
+						"Cuando dicho Managed Bean sea inyectado en otro Managed Bean"
+					],
+					"correct": "2"
+				},
+				{
+					"title": "Un servlet recibe 10 peticiones simultáneas desde la misma IP - ¿cuántos hilos se ejecutarán desde que se crea el servlet?",
+					"answers": [
+						"10",
+						"11",
+						"Más de 11",
+						"1"
+					],
+					"correct": "0"
+				},
+				{
+					"title": "Indica la diferencia entre Sitio Web (SW) y Aplicación Web (AW):",
+					"answers": [
+						"WS → mucha interactividad y contenido estático, AW → alto nivel de interactividad y funcionalidad",
+						"WS → mucha interactividad y contenido dinámico, AW → bajo nivel de interactividad y funcionalidad",
+						"WS → muy poca interactividad y contenido estático, AW → bajo nivel de interactividad y funcionalidad",
+						"WS → muy poca interactividad y contenido dinámico, AW → alto nivel de interactividad y funcionalidad"
+					],
+					"correct": "3"
+				},
+				{
+					"title": "¿Qué tipos de manejadores de eventos hay en JSF?",
+					"answers": [
+						"Síncronos y asíncronos",
+						"Action Controllers y Event Listeners",
+						"Action Controllers y Action Takers",
+						"Action Controllers y manejadores asíncronos"
+					],
+					"correct": "1"
+				},
+				{
+					"title": "¿Cuántas columnas dispone Bootstrap en su grid?",
+					"answers": [
+						"Variable entre 8 y 12",
+						"13",
+						"12",
+						"11"
+					],
+					"correct": "2"
+				},
+				{
+					"title": "¿Qué sifnicia que un diseño sea 'responsive'?",
+					"answers": [
+						"Que las vistas se adaptan al dispositivo",
+						"Que la velocidad de respuesta está por encima de la media",
+						"Que la velocidad de respuesta está por debajo de 0,5s",
+						"Que la interfaz tiene un alto nivel de interactividad"
+					],
+					"correct": "0"
+				},
+				{
+					"title": "¿Qué tipo de manejadores en JSF se disparan antes de rellenar un Managed Bean?",
+					"answers": [
+						"Event Listener y Action Controller",
+						"Event Listener",
+						"Event Listener o Action Controller, indistintamente",
+						"Action Controller"
+					],
+					"correct": "1"
+				},
+				{
+					"title": "¿Cuál es la diferencia principal entre REST y SOAP?",
+					"answers": [
+						"REST está orientado a hipermedios mientras que SOAP a procedimientos",
+						"SOAP es más utilizado a fecha de 2021 que REST",
+						"REST no guarda estado y SOAP sí",
+						"REST es más estructurado que SOAP"
+					],
+					"correct": "0"
+				},
+				{
+					"title": "¿En qué consiste una petición Ajax?",
+					"answers": [
+						"Una petición realizada desde un scirpt JS a otro JS con respuesta inmediata",
+						"Una petición realizada desde un script PHP cuya respuesta es síncrona",
+						"Una petición realizada desde un script JS cuya repsuesta es síncrona",
+						"Una petición realizada desde un script JS cuya respuesta es asíncrona"
+					],
+					"correct": "3"
+				},
+				{
+					"title": "¿Cuál de los siguientes <i>scopes</i> tiene mayor duración en un proyecto JSF?",
+					"answers": [
+						"View",
+						"Request",
+						"Session",
+						"Application"
+					],
+					"correct": "3"
+				},
+				{
+					"title": "¿Qué etiqueta semántica de HTML5 se emplea para representar una unidad independiente que pueda ser sacada de su contexto?",
+					"answers": [
+						"Article",
+						"Tanto section como article",
+						"Section",
+						"Tanto aside como article"
+					],
+					"correct": "2"
+				},
+				{
+					"title": "En JQuery, ¿qué tipo de selector es <code>$('form').click(function() {...})</code>?",
+					"answers": [
+						"De elemento",
+						"De identificador",
+						"De clase",
+						"Ninguno de los anteriores"
+					],
+					"correct": "0",
+					"shuffle": "false"
+				},
+				{
+					"title": "Indica cómo tiene que ser la primera línea de una petición HTTP:",
+					"answers": [
+						"&lt;METODO_HTTP&gt; &lt;URI&gt; &lt;HTTP/Version&gt;",
+						"&lt;GET/POST&gt; &lt;URI&gt; &lt;HTTP/Version&gt;",
+						"&lt;METODO_HTTP&gt; &lt;URL&gt; &lt;HTTP/Version&gt;",
+						"&lt;TRACE&gt; &lt;URI&gt; &lt;HTTP/Version&gt;"
+					],
+					"correct": "0"
+				},
+				{
+					"title": "En RestEasy, cuando se desea transmitir datos estructurados, ¿qué métodos de la clase DTO se deben anotar con <code>@XmlAttribute</code>/<code>@XmlElement</code>?",
+					"answers": [
+						"Solo los setter",
+						"Todos",
+						"El constructur y el destructor",
+						"Solo los getter"
+					],
+					"correct": "3"
+				},
+				{
+					"title": "¿Cuál es la denominación formal para el modelo de negocio TaskRabbit?",
+					"answers": [
+						"Vendedor virtual",
+						"Mercado virtual",
+						"Sistema de colector de la demanda",
+						"Intercambiador de mercado"
+					],
+					"correct": "2"
+				},
+				{
+					"title": "¿En qué estándar está incluida la API JDBC?",
+					"answers": [
+						"JavaFX",
+						"JEE",
+						"JSF",
+						"JavaSE"
+					],
+					"correct": "3"
+				},
+				{
+					"title": "Enumera los modelos generales de negocio:",
+					"answers": [
+						"Intermediación, mercado, vendedor, suscripción, publicidad, comunidad",
+						"Intermediación, directo, colector, suscripción, publicidad, comunidad",
+						"Intermediación, directo, colector, suscripción, publicidad, comunidad",
+						"Intermediación, directo, vendedor, suscripción, publicidad, comunidad"
+					],
+					"correct": "3"
+				},
+				{
+					"title": "En REST, ¿con qué operación CRUD se corresponden los métodos PUT y POST <b>respectivamente</b>?",
+					"answers": [
+						"Insert y Update",
+						"Update y Delete",
+						"Update y Read",
+						"Update e Insert"
+					],
+					"correct": "3"
+				},
+				{
+					"title": "Indica tres especificaciones incluidas en el estandar JEE:",
+					"answers": [
+						"JavaFX, Beans y JSP",
+						"Servlets, JSP y EJB",
+						"Servlets, JSP y Beans",
+						"Servlets, JSP y JavaFX"
+					],
+					"correct": "1"
+				},
+				{
+					"title": "¿En qué archivo JSF se definen las reglas de navegación?",
+					"answers": [
+						"faces-config.xml",
+						"web.xml",
+						"index.xhtml",
+						"web.jsf"
+					],
+					"correct": "0"
+				},
+				{
+					"title": "¿Cuáles de las siguientes son solo técnicas SEM?",
+					"answers": [
+						"AdSense",
+						"Adwords, AdSense y SEO",
+						"Adwords",
+						"Adwords y AdSense"
+					],
+					"correct": "2"
+				},
+				{
+					"title": "¿Desde qué método de un Servlet se invoca al método HTTP correspondiente a la petición del cliente HTTP?",
+					"answers": [
+						"<code>doGet</code>",
+						"<code>service</code>",
+						"<code>request</code>",
+						"<code>init</code>"
+					],
+					"correct": "1"
+				},
+				{
+					"title": "Indica la diferencia entre un diseñador UI y un diseñador UX:",
+					"answers": [
+						"El diseñador UI se encarga del diseño de la funcionalidad visual del front-end mientras que el diseñador UX se encarga de la interfaz del back-end",
+						"El diseñador UI se encarga del diseño de la interfaz visual mientras que el diseñador UX se encarga de cuidar que la experiencia del usuario sea la óptima",
+						"El diseñador UI está más centrado en el back-end, mientras que el diseñador UX se encarga del front-end",
+						"El diseñador UI se encarga del diseño del front-end, mientras que el diseñador UX se encarga del back-end"
+					],
+					"correct": "1"
+				},
+				{
+					"title": "Indica la respuesta correcta",
+					"answers": [
+						"JSPs son más adecuados para presentación",
+						"JSPs son más adecuados para lógica de negocio",
+						"Servlets son más adecuados para presentación que JSP",
+						"JSP y Servlets son igualmente adecuados para presentación"
+					],
+					"correct": "0"
+				},
+				{
+					"title": "¿Cuál es el formato de envío de datos que comparten REST y SOAP?",
+					"answers": [
+						"El constructor y el destructor",
+						"JSON/XML",
+						"XML",
+						"JSON"
+					],
+					"correct": "2"
+				},
+				{
+					"title": "Indica los componentes básicos de la web",
+					"answers": [
+						"URL, FTP, SSH, un servidor web y un navegador",
+						"URL, FTP, HTTP, un servidor web y un navegador",
+						"URL, un cliente web, HTML, HTTP y un servidor web"
+					],
+					"correct": "2"
+				},
+				{
+					"title": "¿Cuáles son los conceptos básicos de un modelo de negocio?",
+					"answers": [
+						"Bien, proveedor y servicio",
+						"Producto, consumidor y servidor",
+						"Producto, servicio y proveedor",
+						"Proveedor, consumidor y bien"
+					],
+					"correct": "3"
+				},
+				{
+					"title": "Los nodos que se seleccionan en JQuery, ¿son directamente nodos DOM?",
+					"answers": [
+						"Sí, y se pueden modificar como si se usaran desde funciones DOM",
+						"No, son envoltorios de los nodos DOM",
+						"Sí, pero con más features",
+						"Ninguna de las anteriores"
+					],
+					"correct": "1",
+					"shuffle": "false"
+				},
+				{
+					"title": "¿Qué ocurre en una fila del grid de Bootstrap si indicas más del máximo de columnas permitidas?",
+					"answers": [
+						"Las columnas sobrantes después de la máxima pasan a la siguiente fila",
+						"Se condensan las columnas para que quepan en la fila",
+						"Se obtiene un error en el servidor",
+						"Se obtiene un error en el navegador"
+					],
+					"correct": "0"
+				},
+				{
+					"title": "Indica la respuesta correcta respecto a JSF:",
+					"answers": [
+						"JSF es una librería independiente de JEE",
+						"JSF sigue un patrón arquitectónico propio distinto de MVC",
+						"JSF solo puede ser implementado por Oracle",
+						"JSF es parte de la especificación JEE"
+					],
+					"correct": "3"
+				},
+				{
+					"title": "¿Cuáles de las siguientes afirmaciones es correcta?",
+					"answers": [
+						"Ninguna es correcta",
+						"El ámbito <i>request</i> siempre dura menos que el <i>application</i>",
+						"El ámbito <i>session</i> siempre dura más que el <i>application</i>",
+						"El ámbito <i>application</i> siempre dura menos que el resto"
+					],
+					"correct": "1"
+				},
+				{
+					"title": "¿Qué tipo de selectores existen en JQuery?",
+					"answers": [
+						"De elemento, de identificador y de JS",
+						"De elemento, de AJAX y de JS",
+						"De clase, de elemento y de identificador",
+						"De elemento, de JS y de HTML"
+					],
+					"correct": "2"
+				},
+				{
+					"title": "Indica cuál de las siguientes afirmaciones es correcta:",
+					"answers": [
+						"Los objetos de una sesión siempre son visibles automáticamente desde cualquier otro proyecto.",
+						"Los objetos del ámbito 'contexto' de un proyecto siempre son visibles desde otro proyecto.",
+						"Un objeto de sesión siempre es visible desde todos los servlets del proyecto donde se ha creado dicha sesión.",
+						"La variable <code>request</code> recibida por un Servlet queda automáticamente visible para el resto de servlets del mismo proyecto."
+					],
+					"correct": "2"
+				},
+				{
+					"title": "Indica tres implementaciones del estándar JEE:",
+					"answers": [
+						"Oracle Application Server, Eclipse y Wildfly",
+						"WebSphere, Glashfish y Wildfly",
+						"WebSphere, GitHub y Wildfly",
+						"Glashfish, Eclipse y Wildfly"
+					],
+					"correct": "1"
+				},
+				{
+					"title": "¿Qué es PrimeFaces?",
+					"answers": [
+						"Es un framework MVC para JSF",
+						"Es una especificación de un framework MVC para Java",
+						"Es un framework MVC para Java",
+						"Es una extensión de JSF"
+					],
+					"correct": "3"
+				},
+				{
+					"title": "¿Dónde se ejecutan los servlets?",
+					"answers": [
+						"En el contenedor de Servlets localizado en el cliente",
+						"En una JVM embebida en el navegador",
+						"En el contenedor de Servlets localizado en el servidor de aplicaciones",
+						"Como un programa Java standalone en el SSOO del liente tras descargarse"
+					],
+					"correct": "2"
 				}
 			]
 		}
