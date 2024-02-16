@@ -5,7 +5,7 @@ period: 2020-2024 (expected)
 logo: epi
 ---
 
-**grades:** 3.0 GPA, <b style="color: gold;"><i>13 honors</i></b>
+**grades:** 3.0 GPA, <b style="color: gold;"><i>14 honors</i></b>
 
 see all subjects and content in my [backup](https://mier.info/backup).
 

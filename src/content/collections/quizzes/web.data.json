@@ -12,7 +12,8 @@
 						"Ninguna de las anteriores"
 					],
 					"correct": "1",
-					"shuffle": "false"
+					"shuffle": "false",
+					"exam": "true"
 				},
 				{
 					"title": "Para acceder a los campos privados de un ManagedBean, es necesario:",
@@ -44,7 +45,8 @@
 						"PrimeFaces es una librería para JSF que añade, entre otras cosas, nuevos componentes gráficos.",
 						"PrimeFaces es una librería que modifica el comportamiento de JSP para permitir incluir código HTML."
 					],
-					"correct": "2"
+					"correct": "2",
+					"exam": "true"
 				},
 				{
 					"title": "¿Cuál de las siguientes NO es una ventaja de la internacionalización?",
@@ -54,7 +56,8 @@
 						"Se utilizan los recursos más eficientemente.",
 						"El código se traduce automáticamente gracias a que se consume un servicio web."
 					],
-					"correct": "3"
+					"correct": "3",
+					"exam": "true"
 				},
 				{
 					"title": "¿Qué tipo de validación de campos debería ser obligatorio implementar?",
@@ -74,7 +77,8 @@
 						"Las plantillas son fragmentos de código reutilizables que se insertan dentro de otras páginas.",
 						"Ninguna es correcta."
 					],
-					"correct": "0"
+					"correct": "0",
+					"exam": "true"
 				},
 				{
 					"title": "¿Cuál es la norma más básica de usabilidad?",
@@ -84,7 +88,8 @@
 						"No debería hacer falta pensar para usar una interfaz de usuario.",
 						"La usabilidad se basa en la accesibilidad."
 					],
-					"correct": "2"
+					"correct": "2",
+					"exam": "true"
 				},
 				{
 					"title": "¿Qué ley obliga a las empresas que realicen actividades comerciales en internet a incluir un aviso legal en su página web con la política de cookies?",
@@ -94,7 +99,8 @@
 						"LSSICE → Ley de Servicios de la Sociedad de la Información y de Comercio Electrónico",
 						"LGDCU → Ley General para la Defensa de los Consumidores y Usuarios"
 					],
-					"correct": "2"
+					"correct": "2",
+					"exam": "true"
 				},
 				{
 					"title": "¿Cuál de las siguientes afirmaciones es cierta con respecto a la formalidad del contrato en SOAP y REST?",
@@ -124,7 +130,8 @@
 						"Un margen de beneficio aceptable aunque la calidad del servicio sea baja porque tienen muchas ventas.",
 						"Muy poco margen de beneficio, pero sí gana por el boca a boca si el servicio es de calidad."
 					],
-					"correct": "3"
+					"correct": "3",
+					"exam": "true"
 				}
 			]
 		},
@@ -189,7 +196,8 @@
 						"Sí, solo cuando el evento está ajaxificado",
 						"Sí, solo cuando el evento es síncrono pero ajaxificado"
 					],
-					"correct": "2"
+					"correct": "2",
+					"exam": "true"
 				},
 				{
 					"title": "Indica cuál de los siguientes <u>NO</u> es un principio REST",
@@ -199,7 +207,8 @@
 						"El uso de un formato JSON para el transporte",
 						"Un protocolo cliente/servidor sin estado"
 					],
-					"correct": "2"
+					"correct": "2",
+					"exam": "true"
 				},
 				{
 					"title": "Indica 6 scopes de un Bean gestionado:",
@@ -319,7 +328,8 @@
 						"Una petición realizada desde un script JS cuya repsuesta es síncrona",
 						"Una petición realizada desde un script JS cuya respuesta es asíncrona"
 					],
-					"correct": "3"
+					"correct": "3",
+					"exam": "true"
 				},
 				{
 					"title": "¿Cuál de los siguientes <i>scopes</i> tiene mayor duración en un proyecto JSF?",
@@ -400,17 +410,19 @@
 						"Intermediación, directo, colector, suscripción, publicidad, comunidad",
 						"Intermediación, directo, vendedor, suscripción, publicidad, comunidad"
 					],
-					"correct": "3"
+					"correct": "3",
+					"exam": "true"
 				},
 				{
-					"title": "En REST, ¿con qué operación CRUD se corresponden los métodos PUT y POST <b>respectivamente</b>?",
+					"title": "En REST, ¿con qué operación CRUD se corresponden los métodos POST, PUT y GET <b>respectivamente</b>?",
 					"answers": [
-						"Insert y Update",
-						"Update y Delete",
-						"Update y Read",
-						"Update e Insert"
+						"Update, Insert y Read",
+						"Read, Update e Insert",
+						"Insert, Update y Read",
+						"Insert, Delete y Update"
 					],
-					"correct": "3"
+					"correct": "2",
+					"exam": "true"
 				},
 				{
 					"title": "Indica tres especificaciones incluidas en el estandar JEE:",
@@ -470,7 +482,8 @@
 						"Servlets son más adecuados para presentación que JSP",
 						"JSP y Servlets son igualmente adecuados para presentación"
 					],
-					"correct": "0"
+					"correct": "0",
+					"exam": "true"
 				},
 				{
 					"title": "¿Cuál es el formato de envío de datos que comparten REST y SOAP?",
@@ -480,7 +493,8 @@
 						"XML",
 						"JSON"
 					],
-					"correct": "2"
+					"correct": "2",
+					"exam": "true"
 				},
 				{
 					"title": "Indica los componentes básicos de la web",
@@ -590,7 +604,402 @@
 						"En el contenedor de Servlets localizado en el servidor de aplicaciones",
 						"Como un programa Java standalone en el SSOO del liente tras descargarse"
 					],
-					"correct": "2"
+					"correct": "2",
+					"exam": "true"
+				},
+				{
+					"title": "Suponiendo una aplicación JSF sin base de datos en la que toda la información se almacena en Managed Beans, ¿cuál de los siguientes scopes es más adecuado para que un MB almacene listas de nombres inmutables de países, provincias y divisas?",
+					"answers": [
+						"Application",
+						"Request",
+						"Session",
+						"View"
+					],
+					"correct": "0",
+					"exam": "true"
+				},
+				{
+					"title": "¿Qué métodos son obligatorios de implementar en un Servlet?",
+					"answers": [
+						"Ninguna de las otras es correcta",
+						"Los métodos doGet, doPost, doPut y doDelete",
+						"Solo el método doGet",
+						"Los métodos doGet y doPost"
+					],
+					"correct": "3",
+					"exam": "true"
+				},
+				{
+					"title": "¿Qué etiquetas se utilizan en JSP para evaluar y mostrar una expresión?",
+					"answers": [
+						"&lt;% ... %&gt;",
+						"&lt;%= ... %&gt;",
+						"&lt;jsp:expression&gt; ... &lt;/jsp:expression&gt;",
+						"Ninguna de las otras es correcta"
+					],
+					"correct": "1",
+					"exam": "true"
+				},
+				{
+					"title": "Responde a las siguientes preguntas sobre la World Wide Web: ¿Quién la creo? / ¿Dónde? / ¿Por qué?",
+					"answers": [
+						"Ninguna de las otras es correcta",
+						"Robert C Martin / 1989 / MIT / Compartir información bibliográfica entre científicos",
+						"Demis Hassabis / 1991 / CERN / Sistema de inversión en bolsa online",
+						"Tim Berners-Lee / 1985 / CERN / Comparir información bilbiográfica entre científicos"
+					],
+					"correct": "0",
+					"exam": "true"
+				},
+				{
+					"title": "¿Cuál de las siguientes afirmaciones es correcta?",
+					"answers": [
+						"Desde los ficheros JSP no se pueden almacenar variables de sesión ni contexto.",
+						"Los JSPs funcionan gracias a que, a la hora de compilar el proyecto, estos se traducen a un servlet y se compilan como código Java",
+						"Uno de los principales problemas de JSp es que no permite establecer un tipo de respuesta distinto a <code>text/html</code>",
+						"Dentro de los ficheros JSP no se pueden declarar atributos y métodos. Para ello, hay que invocar a los Beans"
+					],
+					"correct": "1",
+					"exam": "true"
+				},
+				{
+					"title": "¿Qué papel juega el patrón Facade en el diseño de la aplicación web vista en clase?",
+					"answers": [
+						"Ninguno, no se utiliza ese patrón de diseño",
+						"Lo utilizamos para definiar las fachadas de cada nivel de nuestra arquitectura n-capas, para indicar qué puntos de entrada tenemos en cada nivel",
+						"Es el diseño arquitectónico general de la aplicación. El patrón Facade es una combinación del MVC con el n-capas, que da lugar a un paquete por cada capa y a uno adicional para el modelo",
+						"Ninguna de las otras es correcta"
+					],
+					"correct": "0",
+					"exam": "true"
+				},
+				{
+					"title": "¿Cuál de las siguientes afirmaciones es correcta sobre la localización (l10n)?",
+					"answers": [
+						"La localización (l10n) es el proceso por el cuál sabemos la ubicación desde la que un cliente se está conectando a nuestra aplicación web",
+						"La localización (l10n) y la internacionalización (i18n) son lo mismo",
+						"La localización (l10n) parte de la internacionalización y cambia otros recursos como la moneda o el calendario en función de la región",
+						"Localizar solo es importante en las aplicaciones de escritorio. Las aplicaciones web están automáticamente localizadas gracias a los navegadores"
+					],
+					"correct": "2",
+					"exam": "true"
+				},
+				{
+					"title": "Un ejemplo de método para identificar a un usuario basado en algo que tiene es:",
+					"answers": [
+						"Una contraseña",
+						"Reconocimiento facial",
+						"Una huella dactilar",
+						"Ninguna de las anteriores es correcta"
+					],
+					"correct": "3",
+					"exam": "true",
+					"shuffle": "false"
+				},
+				{
+					"title": "¿Cuál de las siguientes afirmaciones es falsa?",
+					"answers": [
+						"Las pruebas de usabilidad son importantes para hacer que los usuarios se sientan cómodos utilizando la aplicación",
+						"Las pruebas de usabilidad se realizan siempre al final del desarrollo para garantizar que en ellas se prueban todas las funcionalidades",
+						"Las pruebas de usabilidad deberían hacerse en un proceso iterativo en el que se vayan solucionando los problemas",
+						"En las pruebas de usabilidad participa una persona implicada con el proyecto por ejemplo, un desarrollador que solo puede observar, no guiar"
+					],
+					"correct": "1",
+					"exam": "true"
+				},
+				{
+					"title": "El término AJAX proviene de:",
+					"answers": [
+						"Asynchronous JavaScript and XML",
+						"Acknowledge Java Applet XML",
+						"Asynchronous JavaScript Authorization over XML",
+						"Asynchronous Java Authorization eXtended"
+					],
+					"correct": "0",
+					"exam": "true"
+				},
+				{
+					"title": "¿Dentro de qué tipo de modelo podemos incluir KickStarter?",
+					"answers": [
+						"Ninguno de los otros",
+						"Intermediador",
+						"Publicidad",
+						"Suscripción"
+					],
+					"correct": "1",
+					"exam": "true"
+				},
+				{
+					"title": "¿Cuál de las siguientes afirmaciones es falsa sobre el RGPD?",
+					"answers": [
+						"Para almacenar y tratar datos de los usuarios es necesario solicitar su consentimiento en el momento de recoger los datos",
+						"Una circunstancia que nos permite almacenar datos personales especiales sobre una persona es que esta haya manifestado públicamente esa información",
+						"En caso de que tratemos datos especiales como ideología política, religión o vida sexual, se debe designar un delagado de protección de datos",
+						"Las violaciones de seguridad tienen que resolverse en un plazo de 72 horas y, si no es posible, se debe notificar a la AEPD"
+					],
+					"correct": "3",
+					"exam": "true"
+				},
+				{
+					"title": "¿Cuál de los siguientes tipos de modelos no están categorizados dentro de los modelos de vendedor?",
+					"answers": [
+						"Click & Mortar",
+						"Outlet",
+						"Mercado virtual",
+						"Vendedor virtual"
+					],
+					"correct": "2",
+					"exam": "true"
+				},
+				{
+					"title": "¿Cómo obtienen ingresos los servicios de contenido?",
+					"answers": [
+						"Solo por la venta directa de contenido exclusivo",
+						"Por una cuota de suscripción y, en algunos casos, un sobrecoste para acceder a contenido exclusivo",
+						"Solo por una cuota de suscripción",
+						"A través de anuncios"
+					],
+					"correct": "1",
+					"exam": "true"
+				},
+				{
+					"title": "¿Cuál de las siguientes afirmaciones es falsa con respecto a Spring?",
+					"answers": [
+						"Es un framework con un diseño modular. Para crear las aplicaciones web, se pueden configurar diferentes módulos que afectan a distintos ámbitos de proyecto.",
+						"Es un framework orientado a componentes. Su filosofía es crear componentes (a poder ser reutilizables) y definir su comportamiento dentro de los componentes.",
+						"Spring no integra por defecto un mecanismo para mostrar vistas. A la hora de mostrar datos al usuario, necesita integrar un motor de plantillas como Mustache o Thymeleaf.",
+						"Las características integradas en los controladores hacen que sea muy fácil utilizarlo para exponer una API Rest que pueda ser consumida por otra aplicación."
+					],
+					"correct": "1",
+					"exam": "true"
+				},
+				{
+					"title": "¿Cuál de las siguientes afirmaciones es cierta con respecto a Spring?",
+					"answers": [
+						"Al desarrollar una aplicación n-capas con Spring, se puede optar por utilizar la técnica de inyección de dependencias que viene implementada en Spring o se puede utilizar el patrón Factory.",
+						"Spring Boot es el precursor de lo que ahora conocemos como Spring. Spring se lanzó después para solucionar los problemas de configuración que existían en Spring Boot.",
+						"Spring es un framework que solo afecta a la capa de presentación de nuestra aplicación. Normalmente, Spring se combina con otro framework como Arching que facilita la integración de todas las capas del proyecto.",
+						"Todas son falsas."
+					],
+					"correct": "0",
+					"exam": "true"
+				},
+				{
+					"title": "¿Qué es NodeJS?",
+					"answers": [
+						"Un servidor virtual de aplicaciones web en el sevidor. Hasta hace poco, seguía solo el estándar EcmaScript, pero actualmente se puede configurar para interpretar otros lenguajes.",
+						"Un compilador de JavaScript con el que podemos generar ejecutables para nuestro servidor. Las aplicaciones web generadas se pueden ejecutar en cualquier servidor web dinámico como WildFly, Tomcat, etc.",
+						"Un framework de aplicaciones web para JavaScript.",
+						"Un entorno de ejecución en el servidor para JavaScript o cualquier lenguaje que se puede transpilar a JavaScript."
+					],
+					"correct": "3",
+					"exam": "true"
+				},
+				{
+					"title": "¿Qué es React?",
+					"answers": [
+						"Un estándar que define un conjunto de interfaces para facilitar la representación gráfica de las aplicaciones.",
+						"Una librería de desarrollo web desarrollada por Facebook para webs de una sola página.",
+						"Un framework de desarrollo web de código libre para el desarrollo de aplicaciones web basadas en controladores.",
+						"Un framework de desarrollo web de código libre para el desarrollo de aplicaciones web basadas en componentes."
+					],
+					"correct": "1",
+					"exam": "true"
+				},
+				{
+					"title": "¿Qué es NextJS?",
+					"answers": [
+						"Un framework de desarrollo web creado por Facebook para el desarrollo de aplicaciones web a partir de React",
+						"Una de las implementaciones del estándar React para la creación de vistas web",
+						"Un framework de aplicaciones web que utiliza React y que amplía su funcionalidad permitiendo múltiples páginas",
+						"Ninguna de las otras es cierta"
+					],
+					"correct": "2",
+					"exam": "true"
+				},
+				{
+					"title": "¿Cómo se definen los nuevos componentes en React?",
+					"answers": [
+						"Con un lenguaje propio de definición de interfaces",
+						"A través de clases",
+						"A través de funciones",
+						"En un fichero XML"
+					],
+					"correct": "2",
+					"exam": "true"
+				},
+				{
+					"title": "¿Cuál de las siguientes definiciones es cierta sobre los servidores de aplicaciones?",
+					"answers": [
+						"En los servidores incluidos en el proyecto, como es el caso de Flask, el framework se encarga de crear el fichero ejecutable y moverlo al directorio público del servidor para ser accesible por los clientes",
+						"En un servidor independiente solo se puede incluir un proyecto, mientras que en los servidores incluidos se pueden inyectar diferentes proyectos de aplicaciones web",
+						"Es posible desarrollar y desplegar una aplicación web sin hacer uso de ningún tipo de servidor web",
+						"En los servidores independientes del proyecto, como es el caso de WildFly, se genera un fichero ejecutable por el servidor. Para el despliegue hay que copiar ese fichero al directorio de despliegues del proyecto"
+					],
+					"correct": "3",
+					"exam": "true"
+				},
+				{
+					"title": "A la hora de realizar el despliegue, este se puede hacer en:",
+					"answers": [
+						"Barebone, máquina virtual o contenedor",
+						"Servidor o contenedor",
+						"Barebone o máquina virtual",
+						"Servidor o sistema de virtualización"
+					],
+					"correct": "0",
+					"exam": "true"
+				},
+				{
+					"title": "En el contexto de CI/CD, CI significa:",
+					"answers": [
+						"Continuous Integration/Integración Contínua. Consiste en la paralelización de los procesos de análisis y desarrollo, garantizando que siempre habrá alguien desarrollando nuevas características.",
+						"Continuous Integration/Integración Contínua. Consiste en la automatización y agilización de la integración de un proyecto.",
+						"Continuous Improvement/Mejora Continua. Consiste en el análisis de los proyectos del software para identificar problemas en la gestión de proyectos y resolverlos pronto.",
+						"Ninguna de las otras es correcta"
+					],
+					"correct": "1",
+					"exam": "true"
+				},
+				{
+					"title": "¿Qué dos tipos de Frameowkrs Web existen?",
+					"answers": [
+						"Los del lado del servidor y los del lado del cliente",
+						"Los orientados a controladores y los orientados a componentes",
+						"Los orientados a peticiones y los orientados a componentes",
+						"Los orientados a peticiones y los orientados a vista"
+					],
+					"correct": "1",
+					"exam": "true"
+				},
+				{
+					"title": "¿Qué tipo de framework utiliza un motor de plantillas para renderizar las vistas?",
+					"answers": [
+						"Frameworks del lado del cliente",
+						"Frameworks orientados a vista",
+						"Frameworks orientados a controladores",
+						"Frameworks orientados a componentes"
+					],
+					"correct": "2",
+					"exam": "true"
+				},
+				{
+					"title": "¿A qué hace referencia el término Click & Mortar?",
+					"answers": [
+						"A modelos de negocio que tienen presencia online y física en la misma medida",
+						"A modelos de negocio que centralizan la venta online de productos de pequeñas tiendas tradicionales",
+						"A modelos de negocio en los que vas a una tienda física en la que te encuentras una serie de terminales desde los que hacer la compra",
+						"A modelos de negocio en os que hay negocios físicos donde solo puedes recoger los productos que hayas comprado online"
+					],
+					"correct": "0",
+					"exam": "true"
+				},
+				{
+					"title": "¿Qué sentencia es falsa sobre el diseño y código limpio?",
+					"answers": [
+						"Hacer que el código funcione es solo la mitad del trabajo. Una buena práctica es limpiar y refactorizar el código una vez que este funcione.",
+						"Desde el punto de vista del desarrollo, existen dos enfoques para el diseño de aplicaciones: los principios SOLID y los principios de código limpio. Al iniciar el desarrollo hay que decir cuáles seguir.",
+						"Ninguna de las otras es correcta",
+						"Mantener un código limpio ayuda a mantener la productividad del equipo de desarrollo ya que las nuevas características se podrán implementar igual de rápido que las anteriores"
+					],
+					"correct": "1",
+					"exam": "true"
+				},
+				{
+					"title": "Qué significa SOLID?",
+					"answers": [
+						"Single Responsability Principle, Open-Close Principle, Lider Authrorization Principle, Inversion Superiority Principle, Dependency Inversion Principle",
+						"Single Object Principle, Open-View Principle, Level Segregation Principle, Interoperability Segregation Principle, Design Interoperability Principle",
+						"Single Class Principle, Open-Interface Principle, Level Substitution Principle, Inversion Rentability Principle, Design Inversion Principle",
+						"Single Responsability Principle, Open-Close Principle, Liskov Sustitution Principle, Interface Segregation Principle, Dependency Inversion Principle"
+					],
+					"correct": "3",
+					"exam": "true"
+				},
+				{
+					"title": "",
+					"answers": [
+
+					],
+					"correct": "0",
+					"exam": "true"
+				},
+				{
+					"title": "¿Qué sentencia es falsa sobre los modelos de intermediario de subastas?",
+					"answers": [
+						"La peculiaridad de las subastas con Precio por Puja es uqe se limita el precio por le que se puede pujar un artículo",
+						"En estos modelos se reciben ingresos por una comisión de venta y por el coste de pujar en el caso de las subastas con Precio por Puja",
+						"Hay dos tipos: subastas clásicas y subastas con Precio por Puja",
+						"La peculiaridad de las subastas con Precio por Puja es uqe hay que pagar para poder acceder a la subasta, aunque no ganes el artículo"
+					],
+					"correct": "0",
+					"exam": "true"
+				},
+				{
+					"title": "El patrón Factory que utilizamos en la práctica nos ayuda a cumplir con siguiente principio: (seleccionar aquel al que afecte de manera más directa)",
+					"answers": [
+						"Cada clase debe tener un solo motivo para cambiar",
+						"Si S es un subtipo de T, entonces los objetos de tipo T en un programa puedne ser sustituidos por objetos de tipo S sin afectar a su funcionamiento y sin necesidad de conocer las diferencias entre S y T",
+						"Ninguna de las otras es correcta",
+						"Los módulo de alto nivell no deberían depender de los módulos de bajo nivel"
+					],
+					"correct": "3",
+					"exam": "true"
+				},
+				{
+					"title": "¿Qué es un código deontológico?",
+					"answers": [
+						"Una guía ética para los profesionales de una rama. Representan las normas de una profesión y violar el código deontológico puede suponer perder el derecho de ejercer la profesión.",
+						"Un conjunto de leyes establecidas por el estado que limitan las actuaciones de los profesionales en ciertas áreas de conocimiento.",
+						"Una guía ética para los profesionales de una rama. Al estar escrita solo por los colegios y no ratificada por una ley, solo representa una guía orientativa pero no se puede juzgar a alguien por no seguir ese código.",
+						"Ninguna de las otras es correcta"
+					],
+					"correct": "0",
+					"exam": "true"
+				},
+				{
+					"title": "¿Qué tipo de comportamientos no regula un código deontológico?",
+					"answers": [
+						"La vida privada y familiar",
+						"La relación entre compañeros de trabajo",
+						"La responsabilidad medioambiental",
+						"Todos están regulados en el código deontológico"
+					],
+					"correct": "0",
+					"exam": "true"
+				},
+				{
+					"title": "¿Cómo se llama al proceso de identificar a un usuario?",
+					"answers": [
+						"Autorización",
+						"Auditoría",
+						"Ninguna de las otras es correcta",
+						"Autenticación"
+					],
+					"correct": "3",
+					"exam": "true"
+				},
+				{
+					"title": "¿Cuál de los siguientes tipos de certificados SSL/TLS es el que tiene un mayor nivel de verificación a la hora de obtenerlo?",
+					"answers": [
+						"Certificado con validación extendida (EV)",
+						"Certificado con validación de dominio (DV)",
+						"Certificado con validación de organización (OV)",
+						"Certificado con validación personal (PV)"
+					],
+					"correct": "0",
+					"exam": "true"
+				},
+				{
+					"title": "¿Qué tipo de filtros podemos aplicar en JSF?",
+					"answers": [
+						"Request, Error, Forward, Include",
+						"No hay diferentes tipos de filtros en JSF",
+						"Request, Error",
+						"Application, Session, Request"
+					],
+					"correct": "0",
+					"exam": "true"
 				}
 			]
 		}
