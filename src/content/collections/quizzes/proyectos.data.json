@@ -103,6 +103,56 @@
 						"Entrega del presupuesto"
 					],
 					"correct": "2"
+				},
+				{
+					"title": "La memoria de un proyecto:",
+					"answers": [
+						"El documento más vinculante",
+						"No es vinculante",
+						"Es vinculante pero menos que otros documentos",
+						"Puede no existir"
+					],
+					"correct": "2"
+				},
+				{
+					"title": "¿Es habitual que en la memoria existan alternativas?",
+					"answers": [
+						"Sí, siempre",
+						"No, nunca",
+						"Solo si no hubo estudios previos",
+						"Solo si no hay pliego"
+					],
+					"correct": "2"
+				},
+				{
+					"title": "El coste del proyecto se incluye en la memoria.",
+					"answers": [
+						"Sí, es parte de los apartados de la memoria",
+						"Sí, pero solo como resumen",
+						"En ocasiones",
+						"No, no figura en la memoria"
+					],
+					"correct": "1"
+				},
+				{
+					"title": "La planificación del proyecto e parte de la memoria.",
+					"answers": [
+						"Sí, en el documento principal",
+						"Sí, como anexos",
+						"Sí, en el documento principal o como anexo según su extensión",
+						"No, nunca"
+					],
+					"correct": "2"
+				},
+				{
+					"title": "La memoria va dirigida fundamentalmente:",
+					"answers": [
+						"Al desarrollador",
+						"Al cliente",
+						"Al usuario",
+						"A la administración pública"
+					],
+					"correct": "1"
 				}
 			]
 		}
