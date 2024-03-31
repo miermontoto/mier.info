@@ -30,6 +30,10 @@ class Version
 	end
 end
 
+def log(msg)
+	puts "changelog!: #{msg}"
+end
+
 require 'json'
 require 'time'
 
@@ -40,6 +44,8 @@ start = Time.now
 
 branch = `git rev-parse --abbrev-ref HEAD`.strip
 raw = `git log origin/#{branch} --pretty=format:"%B||%ad||%H||%an#{delim}" --date=short`
+log("found #{raw.split(delim).length} commits")
+
 commits = []
 raw.split(delim).each do |line|
 	commit = Commit.new
@@ -89,4 +95,4 @@ File.open("src/content/data/changelog.json", "w") do |f|
 	f.write(JSON.pretty_generate(commits))
 end
 
-puts "changelog!: processed and outputed changelog in #{Time.now - start} seconds"
+log("processed changelog in #{Time.now - start} seconds")
