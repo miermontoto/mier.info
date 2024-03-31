@@ -13,8 +13,12 @@ jobs:
       - name: 🍱 download packages
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          packages: git ruby nodejs pnpm
+          packages: git ruby nodejs
           version: 1.0
+      - name: 📦 install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
       - name: 📦 install dependencies and build
         run: pnpm install --frozen-lockfile && pnpm build
       - name: 🚀 deploy to firebase
