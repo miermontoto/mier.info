@@ -1,0 +1,163 @@
+{
+	"data": {
+		"kahoot": {
+			"info": "preguntas de kahoots resueltos en clases expositivas",
+			"questions": [
+				{
+					"title": "La organización de un concierto es:",
+					"answers": [
+						"Un proyecto",
+						"Una operación",
+						"Un servicio",
+						"Una actividad no laboral"
+					],
+					"correct": "0"
+				},
+				{
+					"title": "Para implantar una nueva actividad de desarrollo de videojuegos, se requiere:",
+					"answers": [
+						"Auditoría",
+						"Consultoría",
+						"Peritación",
+						"Ninguna de las anteriores"
+					],
+					"correct": "1",
+					"shuffle": "false"
+				},
+				{
+					"title": "La realización de un proyecto implica:",
+					"answers": [
+						"No tiene relación con el riesgo",
+						"Un riesgo similar al de otras actividades",
+						"Un riesgo menor que otras actividades",
+						"Un riesgo más elevado que otras actividades"
+					],
+					"correct": "3"
+				},
+				{
+					"title": "Los factores más importantes que definen un proyecto son:",
+					"answers": [
+						"Coste, plazo y alcance",
+						"Coste, alcance y plazo",
+						"Alcance, plazo y calidad",
+						"Coste, plazo y calidad"
+					],
+					"correct": "3"
+				},
+				{
+					"title": "A medida que pasa el proyecto, la probabilidad de que surja un problema y sus consecuencias:",
+					"answers": [
+						"Crecen ambas",
+						"Decrecen ambas",
+						"Probabilidad decrece y consecuencias crecen",
+						"Probabilidad crece y consecuencias decrecen"
+					],
+					"correct": "2"
+				},
+				{
+					"title": "El mantenimiento es parte del",
+					"answers": [
+						"Ciclo de vida del proyecto",
+						"Ciclo de vida del producto",
+						"Ciclo de vida del proyecto y prodcuto",
+						"Ninguno de ellos"
+					],
+					"correct": "1"
+				},
+				{
+					"title": "La viabilidad estratégica se realiza:",
+					"answers": [
+						"Antes del análisis de viabilidad",
+						"Después del análisis de viabilidad",
+						"Durante el análisis de viabilidad",
+						"En el cierre del proyecto"
+					],
+					"correct": "0"
+				},
+				{
+					"title": "Los proyectos más innovadores:",
+					"answers": [
+						"Suponen más riesgo que el resto",
+						"Suponen el mismo riesgo que el resto",
+						"Suponen menos riesgo que el resto",
+						"El riesgo no depende del tipo de proyecto"
+					],
+					"correct": "0"
+				},
+				{
+					"title": "El DAFO es una técnica de valoración de viabilidad:",
+					"answers": [
+						"Económica",
+						"Financiera",
+						"Estratégica",
+						"Técnica"
+					],
+					"correct": "2"
+				},
+				{
+					"title": "¿Cuál de las siguientes actividades NO se realiza al finalizar un proyecto?",
+					"answers": [
+						"Transferencia del proyecto",
+						"Comienzo de la garantía",
+						"Estudio de viabilidad",
+						"Entrega del presupuesto"
+					],
+					"correct": "2"
+				},
+				{
+					"title": "La memoria de un proyecto:",
+					"answers": [
+						"El documento más vinculante",
+						"No es vinculante",
+						"Es vinculante pero menos que otros documentos",
+						"Puede no existir"
+					],
+					"correct": "2"
+				},
+				{
+					"title": "¿Es habitual que en la memoria existan alternativas?",
+					"answers": [
+						"Sí, siempre",
+						"No, nunca",
+						"Solo si no hubo estudios previos",
+						"Solo si no hay pliego"
+					],
+					"correct": "2"
+				},
+				{
+					"title": "El coste del proyecto se incluye en la memoria.",
+					"answers": [
+						"Sí, es parte de los apartados de la memoria",
+						"Sí, pero solo como resumen",
+						"En ocasiones",
+						"No, no figura en la memoria"
+					],
+					"correct": "1"
+				},
+				{
+					"title": "La planificación del proyecto es parte de la memoria.",
+					"answers": [
+						"Sí, en el documento principal",
+						"Sí, como anexos",
+						"Sí, en el documento principal o como anexo según su extensión",
+						"No, nunca"
+					],
+					"correct": "2"
+				},
+				{
+					"title": "La memoria va dirigida fundamentalmente:",
+					"answers": [
+						"Al desarrollador",
+						"Al cliente",
+						"Al usuario",
+						"A la administración pública"
+					],
+					"correct": "1"
+				}
+			]
+		}
+	},
+	"author": "Juan Mier",
+	"website": "https://mier.info/proyectos/",
+	"location": "https://mier.info/content/collections/quizzes/proyectos.data.json"
+}

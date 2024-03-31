@@ -1,5 +1,53 @@
 [
   {
+    "title": "21.3",
+    "message": "[proyectos]\n- new kahoot questions",
+    "date": "2024-02-20",
+    "hash": "e31f0096163d785e4a571707610ddfe25b8ed327",
+    "version": {
+      "major": "21",
+      "minor": "3",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "21.2",
+    "message": "[quizzes]\n- new web exam questions\n- new proyectos quiz\n\n[general]\n- small projects updates\n- small style tweaks",
+    "date": "2024-02-16",
+    "hash": "64bb64636472ecd487e31fce9cf83380ec719089",
+    "version": {
+      "major": "21",
+      "minor": "2",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "21.1: fetch commits from remote to build changelog",
+    "message": null,
+    "date": "2024-01-15",
+    "hash": "b40b7d6e69dbe4502c8f20a7d75375f9c296e40e",
+    "version": {
+      "major": "21",
+      "minor": "1",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
+    "title": "21.0 RTW",
+    "message": "[quizzes]\n- add daypo Qs to web\n- remove exam block if no questions marked as \"exam\"\n- web fixes\n\n[index]\n- update grado\n\n[general]\n- update npm scripts to allow changelog build on push\n- add license to repo\n- link version code to changelog\n- minor corrections",
+    "date": "2024-01-15",
+    "hash": "b5a23814731265bf65d8fd55926ba0a348be5850",
+    "version": {
+      "major": "21",
+      "minor": "0",
+      "channel": null,
+      "channel_number": null
+    }
+  },
+  {
     "title": "21.0 beta",
     "message": "[general]\n- replace snowstorm with snow-fall\n- append scripts to head instead of body\n- new npm run scripts\n- update kuma css\n- remove unused assets\n- minor tweaks and fixes\n\n[changelog]\n- new changelog page\n- new changelog building tools (ruby!)\n\n[this]\n- minor changes\n\n[quizzes]\n- minor corrections\n\n[index]\n- emojify and add content to the about section",
     "date": "2024-01-11",

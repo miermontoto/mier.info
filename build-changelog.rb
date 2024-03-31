@@ -33,10 +33,13 @@ end
 require 'json'
 require 'time'
 
+delim = "¿¿¡¡"
+allowed_authors = ["miermontoto", "Juan Mier"]
+
 start = Time.now
 
-delim = "¿¿¡¡"
-raw = `git log --pretty=format:"%B||%ad||%H||%an#{delim}" --date=short`
+branch = `git rev-parse --abbrev-ref HEAD`.strip
+raw = `git log origin/#{branch} --pretty=format:"%B||%ad||%H||%an#{delim}" --date=short`
 commits = []
 raw.split(delim).each do |line|
 	commit = Commit.new
@@ -44,8 +47,9 @@ raw.split(delim).each do |line|
 	commit.author.strip!
 
 	# filter out commits
-	next unless commit.author == "miermontoto" # discard commits from other authors
+	next unless commit.author in allowed_authors # discard commits from other authors
 	next if commit.body !~ /^\d{1,2}\.\d{1,2}(.*)/ # discard commits that don't have a version number (XX.y)
+	next if commit.body =~ /Merge pull request/ # discard merge commits
 
 	# process version
 	commit.version = Version.new
@@ -58,8 +62,9 @@ raw.split(delim).each do |line|
 	end
 
 	# process commit message
-	commit.body = commit.body.split("\n").drop(1).join("\n") unless commits.length == 0 # remove first line (version)
 	split = commit.body.split("\n")
+	split.shift unless commits.length == 0
+	split.shift if split.first == ""
 	if split.length > 1 then
 		commit.title = split.first
 		commit.message = split.drop(1).join("\n")
