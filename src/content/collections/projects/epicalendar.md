@@ -14,8 +14,7 @@ buttons: [
     {'url': 'https://epicalendar.mier.info', 'img': '🌐 ', 'text': 'web'}
 ]
 eleventyNavigation:
-  key: epicalendar
-  title: epiCalendar
+  key: epiCalendar
 ---
 
 ## cómo extraer tu JSESSIONID

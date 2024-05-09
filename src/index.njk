@@ -33,8 +33,8 @@ js: index
                 <article class="project hoverborder">
                     <a href="{{ link }}" rel="noreferrer" class="project-img-container">
                         <div class="project-img">
-                            <img src="/assets/media/projects/{{ project.fileSlug }}/front.webp" alt="{{ project.data.title }} image" class="main">
-                            <img src="/assets/media/projects/{{ project.fileSlug }}/back.webp" alt="{{ project.data.title }} alt image" class="hover">
+                            <img src="/assets/media/projects/{{ project.fileSlug }}/front.webp" alt="{{ project.data.title }} showcase" class="main">
+                            <img src="/assets/media/projects/{{ project.fileSlug }}/back.webp" alt="{{ project.data.title }} alt showcase" class="hover">
                         </div>
                     </a>
                     <div class="project-content">
@@ -47,7 +47,7 @@ js: index
             {% endif %} {% endfor %}
         </div>
         <div id="project-list">
-            {% for project in collections.project %} {% if not project.data.img %}
+            {% for project in collections.project %} {% if not project.data.img and not project.hidden %}
                 <article class="project hoverborder {{ project.data.star }}" id="{{ project.data.title | slug }}">
                     <div class="project-title">
                         {{ macros.renderTitle(project) }}

@@ -34,7 +34,7 @@ apart from having its github repo, it is connected to firebase hosting through C
 the "design" is a tribute to the legendary [daft punk 90's website](https://web.archive.org/web/20220223020719/https://daftpunk.com/).
 as you can probably tell, it's a very important reference for me, and even though it doesn't hold up to today's standards, i've always loved the simplicty and the way that it looks.
 
-from the 1st of december to the 7th of january every year, there is snow falling falling (thanks to [zachleat](https://github.com/zachleat/snow-fall))
+from December 1st to January 7th every year, there is snow falling (thanks to [zachleat](https://github.com/zachleat/snow-fall))
 
 several other inspirations:
 - [mschf](https://mschf.com/)
@@ -43,5 +43,5 @@ several other inspirations:
 - [dmaorg / clancy's blog](http://dmaorg.info/)
 - [ramsus' portfolio](https://rsms.me/)
 - [eduardorl's portfolio](https://eduardorl.vercel.app/)
-- [ruflas' portfolio](https://ruflas.dev/)
 - [irene mateos' awesome portfolio](https://enerimateos.com/)
+- [Things Of Interest](https://qntm.org/)

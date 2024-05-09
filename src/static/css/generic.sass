@@ -1,3 +1,5 @@
+@use 'colors'
+
 *
     text-align: left
 
@@ -10,6 +12,7 @@ ul, ol
 #title-container
     display: flex
     flex-wrap: wrap
+    flex-direction: column
 
     #title
         margin: 1em 0 0.6em
@@ -17,8 +20,14 @@ ul, ol
         font-weight: bold
 
     #subtitle
-        margin-top: -1em
         font-style: italic
+        font-size: 1.5em
+        margin: -1em 0 1em
+
+    .date
+        font-size: 0.925em
+        font-style: italic
+        color: colors.$light
 
     #breadcrumbs
         justify-content: flex-end
@@ -40,4 +49,4 @@ body
     flex-wrap: wrap
 
     .button img, .icon
-            margin-right: .5em
+        margin-right: .5em

@@ -12,6 +12,9 @@ css: generic
     {% if subtitle %}
         <span id="subtitle">{{ subtitle }}</span>
     {% endif %}
+    {% if created_at %}
+        <span class="date">{{ created_at }}</span>
+    {% endif %}
 </div>
 
 {{ content | safe }}

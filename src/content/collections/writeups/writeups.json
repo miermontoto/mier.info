@@ -1,7 +1,8 @@
 {
-	"permalink": "/writeups/{{ page.fileSlug }}/",
-	"tags": "writeup",
-	"eleventyNavigation": {
-		"parent": "writeups"
-	}
+    "eleventyNavigation": {
+        "parent": "writeups"
+    },
+    "layout": "project.njk",
+    "permalink": "/writeups/{{ page.fileSlug }}/",
+    "tags": "writeup"
 }

@@ -2,15 +2,23 @@
 layout: generic.njk
 ---
 
+{% import "src/static/macros.njk" as macros %}
+
 <div id="button-container">
-    {% for button in buttons %}
-        <a class="button" href="{{ button.url }}">{{ button.img | safe }}{{ button.text }}</a>
-    {% endfor %}
     {% if source %}
         <a href="{{ source }}" id="source" class="button"><img src="/assets/icons/tech/git.svg" class="icon invert" alt="source icon">source</a>
     {% endif %}
+    {% for button in buttons %}
+        <a class="button" href="{{ button.url }}">
+            {{ button.img }}
+            {% if button.icon %} {{ macros.renderIcon(button.icon, true) }} {% endif %}
+            {{ button.text }}
+        </a>
+    {% endfor %}
 </div>
+
 <hr>
+
 {% if content %}
     {{ content | safe }}
 {% else %}

@@ -11,14 +11,14 @@ class: okticket work
 ---
 
 - **2024-now: developer**
-  - new backend serverless services using aws lambda in nestjs.
+  - backend serverless services using aws lambdas in nestjs.
   - new pdf generator service using puppeteer.
   - devops tasks: postmortem analysis, cloudwatch monitoring and others.
-  - refinement of the previously implemented features.
-- **2023: internship, developer**
+  - further system migration (PHPUnit 10, PHP 8.3) and maintenance.
+- **2023: developer (intership)**
   - back-end system migration (laravel 10, PHP 8.2, composer 2).
   - local deploy automation with Docker and Ruby.
-  - load and stress tests with [Locust](https://locust.io/).
-  - implementation of code styling and linting tools such as [duster](https://github.com/tighten/duster).
-  - configuration of brand new environments for Mexico.
+  - load and stress testing with Locust.
+  - implementation of code styling and linting tools for PHP.
+  - deployment of a brand new environment for Mexico.
   - optimization and refactoring of legacy code.

@@ -457,10 +457,10 @@
 				{
 					"title": "¿Desde qué método de un Servlet se invoca al método HTTP correspondiente a la petición del cliente HTTP?",
 					"answers": [
-						"<code>doGet</code>",
-						"<code>service</code>",
-						"<code>request</code>",
-						"<code>init</code>"
+						"doGet",
+						"service",
+						"request",
+						"init"
 					],
 					"correct": "1"
 				},
