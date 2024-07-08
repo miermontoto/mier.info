@@ -1,11 +1,12 @@
 {
 	"name": "mier.info",
-	"version": "0.21.6",
+	"version": "0.21.7",
 	"channel": "RTW",
 	"description": "personal portfolio website that showcases my projects and professional experience.",
 	"scripts": {
-		"start": "pnpm clean; eleventy --serve & pnpm sass-dev",
-		"build": "pnpm changelog; pnpm clean; eleventy & pnpm sass-prod",
+		"start": "pnpm kickstart; eleventy --serve & pnpm sass-dev",
+		"build": "pnpm kickstart; eleventy & pnpm sass-prod",
+		"kickstart": "pnpm clean; pnpm changelog",
 		"changelog": "ruby build-changelog.rb",
 		"clean": "rm -rf _site",
 		"test": "pnpm build; firebase serve",

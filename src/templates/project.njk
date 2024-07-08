@@ -11,7 +11,13 @@ layout: generic.njk
     {% for button in buttons %}
         <a class="button" href="{{ button.url }}">
             {{ button.img }}
-            {% if button.icon %} {{ macros.renderIcon(button.icon, true) }} {% endif %}
+            {% if button.icon %}
+                {% if button.from %}
+                    {{ macros.renderIcon(button.icon, true, false, button.from) }}
+                {% else %}
+                    {{ macros.renderIcon(button.icon, true) }}
+                {% endif %}
+            {% endif %}
             {{ button.text }}
         </a>
     {% endfor %}

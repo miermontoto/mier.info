@@ -29,34 +29,37 @@ js: index
     <h1>projects.</h1>
     <div id="projects">
         <div id="featured-grid">
-            {% for project in collections.project %} {% if project.data.img %} {% set link = project.data.demo or project.data.source %}
+            {% for project in collections.project %} {% if project.data.img %}
+                {% set data = project.data %}
+                {% set link = data.demo or data.source %}
                 <article class="project hoverborder">
                     <a href="{{ link }}" rel="noreferrer" class="project-img-container">
                         <div class="project-img">
-                            <img src="/assets/media/projects/{{ project.fileSlug }}/front.webp" alt="{{ project.data.title }} showcase" class="main">
-                            <img src="/assets/media/projects/{{ project.fileSlug }}/back.webp" alt="{{ project.data.title }} alt showcase" class="hover">
+                            <img src="/assets/media/projects/{{ project.fileSlug }}/front.webp" alt="{{ data.title }} showcase" class="main">
+                            <img src="/assets/media/projects/{{ project.fileSlug }}/back.webp" alt="{{ data.title }} alt showcase" class="hover">
                         </div>
                     </a>
                     <div class="project-content">
                         <div class="project-title">{{ macros.renderTitle(project) }}</div>
                         <div class="project-desc">{{ project.data.desc | safe }}</div>
-                        <div class="project-tech">{{ macros.renderIcons(project.data.icons) }}</div>
+                        <div class="project-tech">{{ macros.renderIcons(data.icons) }}</div>
                         <div class="project-links">{{ macros.renderLinks(project) }}</div>
                     </div>
                 </article>
             {% endif %} {% endfor %}
         </div>
         <div id="project-list">
-            {% for project in collections.project %} {% if not project.data.img and not project.hidden %}
-                <article class="project hoverborder {{ project.data.star }}" id="{{ project.data.title | slug }}">
+            {% for project in collections.project %} {% if not project.data.img and not project.data.hidden %}
+                {% set data = project.data %}
+                <article class="project hoverborder {{ data.star }}" id="{{ data.title | slug }}">
                     <div class="project-title">
                         {{ macros.renderTitle(project) }}
-                        <div class="project-tech">{{ macros.renderIcons(project.data.icons) }}</div>
+                        <div class="project-tech">{{ macros.renderIcons(data.icons) }}</div>
                     </div>
 
-                    <div class="project-desc">{{ project.data.desc | safe }}</div>
+                    <div class="project-desc">{{ data.desc | safe }}</div>
 
-                    {% if project.data.links or project.data.source and project.data.demo %}
+                    {% if data.links or data.source and data.demo %}
                         <div class="project-links">{{ macros.renderLinks(project, false) }}</div>
                     {% endif %}
                 </article>

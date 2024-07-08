@@ -17,7 +17,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("**.json");
     eleventyConfig.setDataFileSuffixes([".data", ""]);
     eleventyConfig.setQuietMode(true);
-    eleventyConfig.setServerOptions({ watch: ["src/static/css/**"] });
+    eleventyConfig.setServerOptions({ watch: ["src/static/css/**"], port: 8088 });
 
 
     eleventyConfig.addShortcode("breadcrumbs", function(navPages) { return buildBreadcrumbs(navPages, this.page) });
