@@ -27,7 +27,7 @@ const addAsset = (type, filename) => {
 
 
 const addStyle = (filename) => {
-	let filepath = findAsset(path.resolve(__dirname, '../static/css'), `${filename}.sass`)
+	let filepath = findAsset(path.resolve(__dirname, '../../css'), `${filename}.sass`)
 
 	if (!filepath) {
 		console.error(`style file ${filename}.sass not found`)
@@ -39,7 +39,7 @@ const addStyle = (filename) => {
 
 
 const addScript = (filename) => {
-	let filepath = findAsset(path.resolve(__dirname, '../static/js'), `${filename}.js`)
+	let filepath = findAsset(path.resolve(__dirname, '..'), `${filename}.js`)
 
 	if (!filepath) {
 		console.error(`script file ${filename}.js not found`)
