@@ -51,11 +51,12 @@ raw.split(delim).each do |line|
 	commit = Commit.new
 	commit.body, commit.date, commit.hash, commit.author = line.split("||")
 	commit.author.strip!
+	commit.hash.strip!
 
 	# filter out commits
-	next unless commit.author in allowed_authors # discard commits from other authors
+	next unless commit.author in allowed_authors   # discard commits from other authors
+	next if commit.body =~ /Merge pull request/    # discard merge commits
 	next if commit.body !~ /^\d{1,2}\.\d{1,2}(.*)/ # discard commits that don't have a version number (XX.y)
-	next if commit.body =~ /Merge pull request/ # discard merge commits
 
 	# process version
 	commit.version = Version.new
@@ -86,6 +87,12 @@ raw.split(delim).each do |line|
 	# process markdown code as HTML
 	commit.title = commit.title.gsub(/`(.*)`/, "<code>\\1</code>")
 	commit.message = commit.message.gsub(/`(.*)`/, "<code>\\1</code>") unless commit.message.nil?
+
+	# skip commits with repeated titles
+	next if commits.map(&:title).include? commit.title
+
+	# bold sections in the commit message (format: "[section]")
+	commit.message = commit.message.gsub(/\[(.*)\]/, "<strong>\[\\1\]</strong>") unless commit.message.nil?
 
 	commits << commit
 end

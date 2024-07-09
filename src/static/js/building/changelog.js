@@ -18,6 +18,21 @@ const checkCurrent = (data) => {
 	})
 }
 
+
+const processTitle = (title) => {
+	let content = `<span class="title">`
+
+	const parts = title.split(': ')
+	content += parts[0]
+
+	if (parts.length > 1) {
+		content += `<span class="subtitle"> ${parts.slice(1).join(': ')}</span>`
+	}
+
+	content += `</span>`
+	return content
+}
+
 const buildChangelog = (data) => {
 	let content = '<div id="changelog">'
 
@@ -38,7 +53,8 @@ const buildChangelog = (data) => {
 		prevMajor = d.version.major
 
 		// add the commit entry
-		content += `<div class="entry hoverborder"><span class="title">${d.title}</span>`
+		content += `<div class="entry hoverborder">`
+		content += processTitle(d.title)
 		if (d.message) content += `<br><span class="message">${d.message.replace(/\n/g, '<br>')}</span>`
 		content += `<a class="date" href="https://github.com/miermontoto/mier.info/commit/${d.hash}" target="_blank">${d.date}</a></div>`
 	})
