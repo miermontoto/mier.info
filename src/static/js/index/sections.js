@@ -9,6 +9,14 @@ sections.forEach(({ button, section }) => {
     button.addEventListener('click', () => {
         toggleSection(section);
     });
+
+    window.addEventListener('click', (event) => {
+        if (!section.classList.contains('active')) return;
+
+        if (event.target !== section && event.target !== button) {
+            clearSections();
+        }
+    });
 });
 
 function toggleSection(section) {
@@ -16,12 +24,16 @@ function toggleSection(section) {
     const sectionIsActive = section.classList.contains('active');
 
     // remove active class from all sections
-    document.querySelectorAll('.section').forEach((s) => {
-        s.classList.remove('active');
-    });
+    clearSections();
 
     // add active class to the selected section if it wasn't active before
     if (!sectionIsActive) {
         section.classList.add('active');
     }
+}
+
+function clearSections() {
+    sections.forEach(({ section }) => {
+        section.classList.remove('active');
+    });
 }
