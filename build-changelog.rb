@@ -94,6 +94,10 @@ raw.split(delim).each do |line|
 	# bold sections in the commit message (format: "[section]")
 	commit.message = commit.message.gsub(/\[(.*)\]/, "<strong>\[\\1\]</strong>") unless commit.message.nil?
 
+	# if the first line of the commit message is a newline, remove it
+	commit.message = commit.message.slice(0, 1) == "\n" ? commit.message.slice(1, commit.message.length) : commit.message unless commit.message.nil?
+	# ↑ esta es de las líneas más incomprensibles que he escrito en mi vida.
+
 	commits << commit
 end
 

@@ -4,6 +4,7 @@
 
 *
     font-family: base.$fonts
+    font-weight: lighter
 
 body
     color: colors.$white
@@ -36,8 +37,9 @@ footer
 a, a:visited
     color: colors.$white
 
-    &:hover
-        animation: animations.$multicolor
+    &:hover:not(.project-img-container)
+        color: colors.$primary
+        background-color: colors.$white
 
     &.button
         color: colors.$primary
@@ -73,9 +75,9 @@ code
 
 #version-tag
     position: fixed
-    bottom: 15px
-    right: 15px
-    font-size: min(16px, 2.5vw)
+    bottom: 10px
+    right: 10px
+    font-size: min(14px, 2.25vw)
     color: colors.$light
     user-select: none
     text-decoration: none
@@ -109,9 +111,8 @@ hr
 
     .card
         @extend .model
-        width: max(30%, 300px)
+        width: max(40%, 300px)
         display: grid
-        gap: 1em
         align-items: center
         justify-items: center
         padding: 1.5em
@@ -207,3 +208,6 @@ img
 
         *
             margin: 0 0.5em
+
+h1, h2, h3
+    font-weight: normal

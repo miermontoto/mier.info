@@ -13,9 +13,11 @@ sections.forEach(({ button, section }) => {
     window.addEventListener('click', (event) => {
         if (!section.classList.contains('active')) return;
 
-        if (event.target !== section && event.target !== button) {
-            clearSections();
-        }
+        if (
+            event.target !== section &&     // si se hace click fuera del section
+            event.target !== button &&      // y no es al botón (al invocarlo)
+            !section.contains(event.target) // y no está dentro de la section
+        ) {clearSections();}                // cerrar todas las secciones
     });
 });
 
