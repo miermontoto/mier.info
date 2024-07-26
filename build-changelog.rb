@@ -92,7 +92,7 @@ raw.split(delim).each do |line|
 	next if commits.map(&:title).include? commit.title
 
 	# bold sections in the commit message (format: "[section]")
-	commit.message = commit.message.gsub(/\[(.*)\]/, "<strong>\[\\1\]</strong>") unless commit.message.nil?
+	commit.message = commit.message.gsub(/\[(.*)\]/, "<b>\[\\1\]</b>") unless commit.message.nil?
 
 	# if the first line of the commit message is a newline, remove it
 	commit.message = commit.message.slice(0, 1) == "\n" ? commit.message.slice(1, commit.message.length) : commit.message unless commit.message.nil?
