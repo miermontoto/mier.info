@@ -33,11 +33,35 @@ const processTitle = (title) => {
 	return content
 }
 
+
+const buildVersionsCollapsible = (data) => {
+	const majors = new Set(data.map(d => d.version.major))
+
+	let content = '<div id="versions" class="hoverborder"><h2>versions</h2><ul>'
+
+	majors.forEach((major) => {
+		const fromDate = data.filter(d => d.version.major == major).slice(-1)[0].date
+		const toDate = data.filter(d => d.version.major == major)[0].date
+
+		content += `<li>
+			<a href="#version-${major}" class="version">v${major}</a>
+			<span class="date">${fromDate} - ${toDate}</span>
+		</li>`
+	})
+
+	content += '<li><span class="older">no info available for older versions</span></li></ul></div><hr>'
+	return content
+}
+
+
 const buildChangelog = (data) => {
 	let content = '<div id="changelog">'
 
 	// sort commits by version
 	data.sort((a, b) => { return a.version.major > b.version.major ? -1 : 1 })
+
+	// build the versions collapsible
+	content += buildVersionsCollapsible(data)
 
 	// if the current version isn't in the changelog,
 	// add it manually to the data array
@@ -48,7 +72,7 @@ const buildChangelog = (data) => {
 		// if the major version has changed, add a new header
 		if (prevMajor != d.version.major) {
 			if (prevMajor) content += '</div><hr>'
-			content += `<div id="version-${d.version.major}"><h1>v${d.version.major}</h1>`
+			content += `<div id="version-${d.version.major}"><h1><a class="version-title" href="#title">v${d.version.major}</a></h1>`
 		}
 		prevMajor = d.version.major
 

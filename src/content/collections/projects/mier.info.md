@@ -45,3 +45,4 @@ several other inspirations:
 - [eduardorl's portfolio](https://eduardorl.vercel.app/)
 - [irene mateos' awesome portfolio](https://enerimateos.com/)
 - [Things Of Interest](https://qntm.org/)
+- [nothing](https://es.nothing.tech/)
