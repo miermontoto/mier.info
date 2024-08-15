@@ -3,7 +3,8 @@ const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const Nunjucks = require("nunjucks");
 
-const { buildBreadcrumbs, buildTreemap } = require('./src/static/js/building/breadcrumbs.js');
+const buildBreadcrumbs = require('./src/static/js/building/breadcrumbs.js');
+const buildTreemap = require('./src/static/js/building/treemap.js');
 const buildChangelog = require('./src/static/js/building/changelog.js');
 const addAsset = require('./src/static/js/building/linking.js');
 const { qka, quizButtons, quizQuestions } = require('./src/static/js/building/quizzing.js');

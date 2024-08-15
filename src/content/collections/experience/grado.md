@@ -1,7 +1,7 @@
 ---
 name: universidad de oviedo
 role: computer engineering degree
-period: 2020-2024 (expected)
+period: 2020-2024
 logo: epi
 ---
 
