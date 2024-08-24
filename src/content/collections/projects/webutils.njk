@@ -11,6 +11,7 @@ eleventyNavigation:
 <div class="carded" id="utils">
 {% for util in collections.webutils %}
 	<div id="{{ util.data.title }}" class="util card">
+		{% addScript util.fileSlug %}
 		<h2 class="card-title"><a href="/{{ util.fileSlug }}">{{ util.fileSlug }}</a></h2>
 		{{ util.templateContent | safe }}
 	</div>

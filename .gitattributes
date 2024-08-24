@@ -4,3 +4,4 @@ assets/** linguist-generated
 src/content/data/changelog.json linguist-generated
 pnpm-lock.yaml linguist-generated
 *.svg linguist-generated
+*.umd.js linguist-generated

@@ -2,7 +2,7 @@ import {load} from './video.js';
 let videoElement = document.getElementById('background');
 
 // create elements
-let overlay_container = document.createElement('div');
+let overlayContainer = document.createElement('div');
 let overlay_box = document.createElement('div');
 let fullscreen = document.createElement('span');
 let stop = document.createElement('span');
@@ -10,7 +10,7 @@ let next = document.createElement('span');
 let nowplaying = document.createElement('span');
 
 // set attributes
-overlay_container.setAttribute('id', 'overlay-container');
+overlayContainer.setAttribute('id', 'overlay-container');
 overlay_box.setAttribute('id', 'overlay-box');
 fullscreen.setAttribute('id', 'bg-fullscreen');
 stop.setAttribute('id', 'bg-stop');
@@ -34,18 +34,18 @@ fullscreen.addEventListener('click', () => {
         videoElement.classList.remove('fullscreen');
         fullscreen.classList.remove('active');
         overlay_box.classList.remove('active');
-        overlay_container.style.zIndex = '2';
+        overlayContainer.style.zIndex = '2';
     } else {
         videoElement.classList.add('fullscreen');
         fullscreen.classList.add('active');
         overlay_box.classList.add('active');
-        overlay_container.style.zIndex = '4';
+        overlayContainer.style.zIndex = '4';
     }
 });
 
 stop.addEventListener('click', () => {
     videoElement.remove();
-    overlay_container.remove();
+    overlayContainer.remove();
 });
 
 next.addEventListener('click', () => {
@@ -56,6 +56,6 @@ next.addEventListener('click', () => {
 overlay_box.appendChild(fullscreen);
 overlay_box.appendChild(stop);
 overlay_box.appendChild(next);
-overlay_container.appendChild(overlay_box);
-overlay_container.appendChild(nowplaying);
-document.body.appendChild(overlay_container);
+overlayContainer.appendChild(overlay_box);
+overlayContainer.appendChild(nowplaying);
+document.body.appendChild(overlayContainer);

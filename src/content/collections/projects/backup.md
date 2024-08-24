@@ -43,6 +43,10 @@ para descargar todos los repositorios, usar el siguiente comando en una terminal
 # Contenido
 <div id="subjects">
 
+## global
+- [notes](https://github.com/miermontoto/notes) *(apuntes de la carrera)*
+- [latexTemplate](https://github.com/miermontoto/latexTemplate) *(plantilla para documentos en LaTeX)*
+
 ## y1t1
 - [Álgebra Lineal](https://github.com/miermontoto/Algebra) *(algunas PAs corregidas + Entregaxp, parciales con solución)*
 - [Cálculo](https://github.com/miermontoto/Calculo) *(parcial del año resuelto + otros parciales)*
@@ -92,6 +96,7 @@ para descargar todos los repositorios, usar el siguiente comando en una terminal
   - [SI2022-PL41](https://github.com/miermontoto/SI2022-PL41), trabajo en grupo.
 - [Sistemas Distribuidos](https://github.com/miermontoto/Distribuidos) *trabajos de PL completos*
 - [Sistemas Inteligentes](https://github.com/miermontoto/Inteligentes) **(falta contenido de PL)**
+- [Memoria de prácticas](https://github.com/miermontoto/memoria-practicas)
 
 ## y4t1
 - [Gestión de Tecnologías de la Información](https://github.com/miermontoto/GTI)
@@ -109,6 +114,7 @@ para descargar todos los repositorios, usar el siguiente comando en una terminal
 ## y4t2
 - [Proyectos](https://github.com/miermontoto/Proyectos)
 - [Pruebas y Despliegue de Software](https://github.com/miermontoto/Pruebas)
+- [Trabajo Fin de Grado](https://github.com/miermontoto/tfg)
 
 </div>
 

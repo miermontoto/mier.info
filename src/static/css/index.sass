@@ -31,23 +31,47 @@ ul
     text-align: left
 
 .section
-    max-height: 0
-    opacity: 0
-    overflow: hidden
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    max-height: 80%
+    width: 80%
+    opacity: 0.6
+    overflow: auto
     transition: all 0.5s ease
-    margin-top: 3em
-    display: inline-block
-    width: 100%
+    display: none
+    background-color: colors.$primary
+    z-index: 1
+    padding: 2em
+
+    border: 1px dashed colors.$half
 
     &.active
         opacity: 1
-        max-height: 9999em
+        display: block
+
+.modal-overlay
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(0, 0, 0, 0.5)
+    z-index: 999
+    display: none
+
+    &.active
+        display: block
 
 #about
     line-height: 1.5em
 
     ul
         margin-right: 1.25em
+
+#socials span, #buttons span
+    font-family: base.$classic-fonts
 
 #socials
     user-select: none
@@ -61,6 +85,10 @@ ul
         padding: 2px 0
         user-select: none
         animation: none
+
+    a:hover
+        color: inherit
+        background-color: inherit !important
 
 .dot
     vertical-align: middle
@@ -151,7 +179,7 @@ video#background
 #overlay-container
     position: fixed
     bottom: 16px
-    left: 16px
+    left: 47%
     margin-bottom: 0
     z-index: 2
 
@@ -225,7 +253,6 @@ video#background
 
         *:not(:last-child)
             margin-right: 0.5em
-
 
 #projects
     display: flex

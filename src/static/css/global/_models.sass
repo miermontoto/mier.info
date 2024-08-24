@@ -1,0 +1,56 @@
+@use '../base'
+@use '../colors'
+
+.model
+    border-radius: base.$radius
+    border: 2px solid colors.$dark
+    background-color: colors.$primary
+
+.carded
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+    .card
+        @extend .model
+        width: max(40%, 300px)
+        display: grid
+        align-items: center
+        justify-items: center
+        padding: 1.5em
+        margin: 1.5em
+
+        p
+            margin: 1em
+
+        .card-bottom
+            display: flex
+            align-items: center
+            justify-content: center
+            height: 100%
+
+        .card-title
+            display: flex
+            align-items: center
+            justify-content: center
+
+        .card-icons
+            user-select: none
+            font-size: 1.5em
+
+.hoverborder
+    border: 2px solid hsla(0, 0%, 100%, 2%)
+    border-radius: base.$radius
+    backdrop-filter: blur(3px)
+    padding: 1em
+
+    &:hover
+        border-color: colors.$light
+
+    &.quiz
+        display: flex
+        margin: 1em 0
+        align-items: center
+
+        *
+            margin: 0 0.5em
