@@ -1,4 +1,4 @@
-const checkCurrent = (data) => {
+const checkCurrent = (data, pkg) => {
 	let currentJson = require('../../../../package.json')
 	let currentVersion = currentJson.version.split('.')
 	let currentChannel = currentJson.channel ? ` ${currentJson.channel}` : ''
@@ -54,7 +54,7 @@ const buildVersionsCollapsible = (data) => {
 }
 
 
-const buildChangelog = (data) => {
+const buildChangelog = (data, pkg) => {
 	let content = '<div id="changelog">'
 
 	// sort commits by version
@@ -65,7 +65,7 @@ const buildChangelog = (data) => {
 
 	// if the current version isn't in the changelog,
 	// add it manually to the data array
-	checkCurrent(data)
+	checkCurrent(data, pkg)
 
 	let prevMajor = null
 	data.forEach((d) => {

@@ -1,0 +1,24 @@
+---
+title: til
+emoji: ❔
+desc: collection of general questions I've asked myself over time
+subtitle: inspired by <a href="https://til.simonwillison.net/" target="_blank">Simon Willison's TIL</a>
+icons: [eleventy, markdown]
+permalink: /til/
+eleventyNavigation:
+  key: til
+---
+
+{% addStyle 'til' %}
+
+<div id="til-tags">
+	<h2>tags</h2>
+	{% tilTags collections.til %}
+</div>
+
+<hr>
+
+<div id="til-recents">
+	<h2>recent TILs</h2>
+	{% tilRecents collections.til %}
+</div>

@@ -1,25 +1,32 @@
 <!DOCTYPE html>
-<html lang="{{ lang or "en" }}">
+<html lang="{{ lang or " en" }}">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="{{ eleventy.generator }}">
-    <meta name="description" content="{{ desc or "personal portfolio website that collects all my projects and professional experiences." }}">
+    <meta name="description" content="{{ desc or "personal portfolio website
+        that collects all my projects and professional experiences." }}">
     <meta name="view-transition" content="same-origin">
     <meta name="author" content="Juan Mier">
-    {% if keywords %} <meta name="keywords" content="{{ keywords }}">
-    {% else %} {% keywords %} {% endif %}
-    {% addStyle 'global' %}
-    {% addScript 'global' %}
     <link rel="icon" href="/assets/favicon.svg" type="image/x-icon">
     <title>{{ title or "mier" }}</title>
-    {% if js %} {% addScript js %} {% endif %}
-    {% if css %} {% addStyle css %} {% endif %}
+
+    {% if keywords %}
+        <meta name="keywords" content="{{ keywords }}">
+    {% else %}
+        {% keywords pkg %}
+    {% endif %}
+
+    {% addStyle 'global' %}
+    {% addScript 'global' %}
 </head>
+
 <body>
     {{ content | safe }}
     <is-land id="snow-container" on:media="(prefers-reduced-motion: no-preference)"></is-land>
-    {% version %}
+    {% version pkg %}
 </body>
+
 </html>

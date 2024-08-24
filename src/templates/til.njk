@@ -1,0 +1,18 @@
+---
+layout: generic.njk
+---
+
+{% import "src/static/macros.njk" as macros %}
+{% addStyle 'til' %}
+{% addScript 'til' %}
+
+{{ content | safe }}
+
+<hr>
+
+<h3>More TILs</h3>
+{% tilRelated collections.til, page %}
+
+<hr>
+
+<div id="til-timestamps">{% tilTimestamps page %}</div>

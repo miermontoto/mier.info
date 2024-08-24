@@ -1,16 +1,17 @@
 ---
 layout: base.njk
-css: generic
 ---
+
+{% addStyle 'generic' %}
 
 <div id="title-container">
     <span id="breadcrumbs">
         {% set navPages = collections.all | eleventyNavigation %}
         {% breadcrumbs navPages %}
     </span>
-    <span id="title">{{ emoji }} {{ title }}</span>
+    <span id="title">{{ emoji }} {{ title | safe }}</span>
     {% if subtitle %}
-        <span id="subtitle">{{ subtitle }}</span>
+        <span id="subtitle">{{ subtitle | safe }}</span>
     {% endif %}
     {% if created_at %}
         <span class="date">{{ created_at }}</span>

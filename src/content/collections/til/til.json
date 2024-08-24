@@ -1,0 +1,6 @@
+{
+    "eleventyNavigation": {"parent": "til"},
+    "layout": "til.njk",
+    "permalink": "/til/{{ page.fileSlug }}/",
+    "tags": ["til"]
+}

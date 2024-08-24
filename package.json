@@ -1,7 +1,7 @@
 {
 	"name": "mier.info",
 	"version": "0.22.0",
-	"channel": "beta",
+	"channel": "RC1",
 	"description": "personal portfolio website that showcases my projects and professional experience.",
 	"scripts": {
 		"start": "pnpm kickstart; eleventy --serve & pnpm sass-dev",

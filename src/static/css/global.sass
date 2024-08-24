@@ -2,6 +2,12 @@
 @use 'animations'
 @use 'colors'
 
+@use 'global/breadcrumbs'
+@use 'global/versiontag'
+@use 'global/models'
+@use 'global/footer'
+@use 'global/code'
+
 *
     font-family: base.$fonts
     font-weight: lighter
@@ -13,33 +19,12 @@ body
     overflow-x: hidden
     overflow-y: scroll
 
-footer
-    text-align: center
-    position: fixed
-    bottom: 0
-    left: 0
-    width: 100%
-    border-top: 2px solid colors.$dark
-    color: colors.$light
-    background: colors.$primary
-    padding: 1em
-    font-size: 0.95em
-
-    img
-        height: 2em
-        margin-bottom: -0.75em
-
-    .footer-links
-        font-size: 0.65em
-        font-style: italic
-        color: colors.$light !important
-
 a, a:visited
     color: colors.$white
 
     &:hover:not(.project-img-container)
         color: colors.$primary
-        background-color: colors.$white
+        background-color: colors.$white !important
 
     &.button
         color: colors.$primary
@@ -67,24 +52,6 @@ a, a:visited
     cursor: not-allowed !important
     opacity: 0.5
 
-code
-    color: colors.$white
-    background-color: colors.$dark
-    padding: 0 5px
-    border-radius: 5px
-
-#version-tag
-    position: fixed
-    bottom: 10px
-    right: 10px
-    font-size: min(14px, max(2.25vw, 0.65em))
-    color: colors.$light
-    user-select: none
-    text-decoration: none
-    cursor: alias
-    z-index: 2
-    padding: 0.125em
-
 ::selection
     background-color: colors.$white
     color: colors.$secondary
@@ -98,43 +65,6 @@ hr
     margin-top: 3em
     margin-bottom: 3em
     width: 95%
-
-.model
-    border-radius: base.$radius
-    border: 2px solid colors.$dark
-    background-color: colors.$primary
-
-.carded
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
-
-    .card
-        @extend .model
-        width: max(40%, 300px)
-        display: grid
-        align-items: center
-        justify-items: center
-        padding: 1.5em
-        margin: 1.5em
-
-        p
-            margin: 1em
-
-        .card-bottom
-            display: flex
-            align-items: center
-            justify-content: center
-            height: 100%
-
-        .card-title
-            display: flex
-            align-items: center
-            justify-content: center
-
-        .card-icons
-            user-select: none
-            font-size: 1.5em
 
 img.round
     border-radius: 3px
@@ -173,21 +103,6 @@ quote
     font-style: italic
     color: colors.$secondary
 
-#breadcrumbs
-    color: colors.$light
-    user-select: none
-
-    #b-map
-        text-decoration: none
-        color: inherit !important
-        background-color: inherit !important
-
-    .bc-target
-        font-size: 1.1em
-
-        &:not(a)
-            color: colors.$white
-
 img
     user-select: none
 
@@ -199,25 +114,17 @@ img
     color: colors.$correct
     font-weight: bolder
 
-.hoverborder
-    border: 2px solid hsla(0, 0%, 100%, 2%)
-    border-radius: base.$radius
-    backdrop-filter: blur(3px)
-    padding: 1em
-
-    &:hover
-        border-color: colors.$light
-
-    &.quiz
-        display: flex
-        margin: 1em 0
-        align-items: center
-
-        *
-            margin: 0 0.5em
-
 h1, h2, h3
     font-weight: normal
 
 b, strong
     font-weight: bolder
+
+h1
+    font-size: 2.5em
+
+h2
+    font-size: 2em
+
+h3
+    font-size: 1.5em
