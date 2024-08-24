@@ -6,19 +6,19 @@ eleventyNavigation:
 keywords: ["eleventy", "package.json", "shortcodes", "package", "json"]
 ---
 
-For a long time now, I've been using a custom shortcode in Eleventy through the
+for a long time now, I've been using a custom shortcode in Eleventy through the
 configuration file (`.eleventy.js`) to access the `package.json` file. This is
 useful for various reasons, such as displaying the version number of the package
 or the using the package's keywords in the metadata of the website.
 
-Because I was directly accessing the `package.json` file, I had to import it
-using `require`:
+because I was directly accessing the `package.json` file, I had to import it
+using `require` like so:
 
 ```js
 let json = require('./package.json');
 ```
 
-This works fine, but restricts the definition of the shortcode to the config
+this works fine, but restricts the definition of the shortcode to the config
 file itself, which is not ideal. I wanted to separate the shortcode from the
 config file so that it's easier to manage and maintain.
 
@@ -31,7 +31,7 @@ eleventyConfig.addShortcode("version", () => {
 });
 ```
 
-While browsing the Eleventy documentation, I came across the
+while browsing the Eleventy documentation, I came across the
 *Eleventy Supplied Data*. In it, I found that the content of the `package.json`
 file is available through the `pkg` data value in the template files. This
 means that I can access the `package.json` file directly in the template files
@@ -41,7 +41,7 @@ without having to import it in the configuration file:
 {% raw %}{% pkg.version %}{% endraw %}
 ```
 
-This is a much cleaner way to access the version number of the package, and as
+this is a much cleaner way to access the version number of the package, and as
 such I can migrate the function for the shortcode to a separate script file:
 
 ```js
