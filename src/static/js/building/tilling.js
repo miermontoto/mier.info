@@ -1,27 +1,42 @@
+const maxTagSize = 1.25
+const minTagSize = 0.75
+
 function buildTagWall(data) {
 	const tags = {}
 
 	data.forEach((element) => {
 		element.data.tags.forEach((tag) => {
-			if (tags[tag]) { tags[tag] += 1 }
-			else { tags[tag] = 1 }
+			if (!tags[tag]) { tags[tag] = {} }
+			if (tags[tag].count) { tags[tag].count += 1 }
+			else { tags[tag].count = 1 }
 		})
 	})
 
-	delete tags.til
+	delete tags.til // remove the 'til' tag from the list
 
-	// sort tags by count and then alphabetically
+	// calculate size by count.
+	const maxCount = Math.max(...Object.values(tags).map((tag) => tag.count))
+	const minCount = Math.min(...Object.values(tags).map((tag) => tag.count))
+	Object.keys(tags).forEach((tag) => {
+		const size = (tags[tag].count - minCount) / (maxCount - minCount) * (maxTagSize - minTagSize) + minTagSize
+		tags[tag].size = `font-size: ${size}em`
+	})
+
 	Object.keys(tags).sort((a, b) => {
-		if (tags[a] === tags[b]) { return a > b ? 1 : -1 }
-		return tags[a] < tags[b] ? 1 : -1
+		// sort by count and then by name
+		if (tags[a].count > tags[b].count) { return -1 }
+		if (tags[a].count < tags[b].count) { return 1 }
+		if (a < b) { return -1 }
+		if (a > b) { return 1 }
+		return 0
 	})
 
 	return Object.keys(tags).map((tag) => {
-		// TODO: size the tags based on the count
 		// TODO: make tags clickable to filter the entries
-		return `<code class="tag">${tag}</code> <span class="count">${tags[tag]}</span>`
+		return `<span class="tag" style="${tags[tag].size}"><code class="tag-name">${tag}</code> <span class="tag-count">${tags[tag].count}</span></span>`
 	}).join(' ')
 }
+
 
 function getRecents(data) {
 	return data.slice(-10).reverse().map((element) => buildEntry(element)).join(' ');
@@ -43,7 +58,8 @@ function buildTitle(element) {
 		return `<code>${tag}</code>`
 	}).join(' ')
 
-	const date = extractDate(element.page.date) || ''
+
+	const date = extractDate(element.data.created) || ''
 
 	return `<div>
 		<a href="${element.url}"><span class="til-card-title">${element.data.title}</span></a>
@@ -102,11 +118,16 @@ function getRelated(data, current) {
 }
 
 
-function buildTimestamps(element) {
+function buildTimestamps(data, element) {
 	let target = element.inputPath.substring(1)
 	target = `https://github.com/miermontoto/mier.info/tree/main${target}`
+
+	// find the element in the data array
+	let fullElement = data.find((entry) => entry.page.fileSlug === element.fileSlug)
+	const date = extractDate(fullElement.data.created)
+
 	return `
-		<div class="timestamp"> created: <time datetime="${element.date}">${element.date}</time></div>
+		<div class="timestamp"> created: <time datetime="${date}">${date}</time></div>
 		<div class="source">source: <a href="${target}">${element.filePathStem}</a></div>
 	`
 }

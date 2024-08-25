@@ -29,7 +29,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode("tilTags", (data) => buildTagWall(data));
     eleventyConfig.addShortcode("tilRecents", (data) => getRecents(data));
     eleventyConfig.addShortcode("tilRelated", (data, current) => getRelated(data, current));
-    eleventyConfig.addShortcode("tilTimestamps", (element) => buildTimestamps(element) );
+    eleventyConfig.addShortcode("tilTimestamps", buildTimestamps);
 
     eleventyConfig.addShortcode("qka", (data) => qka(data));
     eleventyConfig.addShortcode("quizButtons", (json) => quizButtons(json));
@@ -41,6 +41,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode("keywords", (pkg) => buildKeywords(pkg));
     eleventyConfig.addShortcode("version", (pkg) => buildVersionTag(pkg));
 
+    eleventyConfig.addShortcode("reference", (url, num) => `<a href="${url}" class="reference" target="_blank" rel="noopener noreferrer">[${num}]</a>`);
 
     eleventyConfig.setLibrary("njk", new Nunjucks.Environment(
         new Nunjucks.FileSystemLoader("./"),

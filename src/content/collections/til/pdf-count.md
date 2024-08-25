@@ -4,6 +4,7 @@ tags: ["puppeteer", "pdf"]
 eleventyNavigation:
   key: "pdf-count"
 keywords: ["puppeteer", "pdf", "page count", "number of pages", "chromium", "wkhtmltopdf"]
+created: 2024-08-15
 ---
 
 in Okticket, we are building a serverless service that generates PDF from HTML.
