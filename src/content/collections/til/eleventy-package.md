@@ -4,6 +4,7 @@ tags: ["eleventy"]
 eleventyNavigation:
   key: "eleventy-package"
 keywords: ["eleventy", "package.json", "shortcodes", "package", "json"]
+created: 2024-08-24
 ---
 
 for a long time now, I've been using a custom shortcode in Eleventy through the

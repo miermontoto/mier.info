@@ -4,6 +4,7 @@ tags: ["ios", "html", "javascript"]
 eleventyNavigation:
   key: "ios-event-bubbling"
 keywords: ["ios", "html", "javascript", "event bubbling", "event delegation", "event propagation", "event handling"]
+created: 2024-08-24
 ---
 
 recently, while preparing the 22.0 release of this website, I noticed that the
@@ -29,10 +30,14 @@ sections.forEach(({ button, section }) => {
 });
 ```
 
-after some investigation (and Claude's help), I found out that the issue was
-related to [*event bubbling*](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture). By simply moving the event listener from the
-`window` object to the `document` object and flipping the loop to iterate over
-the sections last, the issue was fixed.
+after some investigation
+{% reference 'https://www.quirksmode.org/blog/archives/2010/09/click_event_delegation.html', '1' %}
+{% reference 'https://www.sitepoint.com/community/t/handling-click-in-the-safari-browser/417837', '2' %}
+(and Claude's help), I found out that the issue was related to
+[*event bubbling*](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture).
+By simply moving the event listener from the `window` object to the `document`
+object and flipping the loop to iterate over the sections last, the issue was
+fixed.
 
 here is the updated code that works on all platforms:
 
@@ -48,12 +53,3 @@ better compatibility, and the mentioned change of the loop order, avoiding the
 addition of separate event listeners.
 
 *Thanks, Claude!*
-
-<br>
-
-### references
-
-- [Apple Developer Documentation](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/HandlingEvents/HandlingEvents.html)
-- [MDN: Event Bubbling and Capture](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture)
-- [QuircksMode: Click event delegation on iOS](https://www.quirksmode.org/blog/archives/2010/09/click_event_delegation.html)
-- [SitePoint: Handling .click() in the Safari browser](https://www.sitepoint.com/community/t/handling-click-in-the-safari-browser/417837)
