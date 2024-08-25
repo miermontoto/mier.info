@@ -22,16 +22,12 @@ function buildTagWall(data) {
 		tags[tag].size = `font-size: ${size}em`
 	})
 
-	Object.keys(tags).sort((a, b) => {
-		// sort by count and then by name
+	return Object.keys(tags).sort((a, b) => {
+		// sort by count. if the counts are equal, sort by name
 		if (tags[a].count > tags[b].count) { return -1 }
 		if (tags[a].count < tags[b].count) { return 1 }
-		if (a < b) { return -1 }
-		if (a > b) { return 1 }
-		return 0
-	})
-
-	return Object.keys(tags).map((tag) => {
+		return a.localeCompare(b);
+	}).map((tag) => {
 		// TODO: make tags clickable to filter the entries
 		return `<span class="tag" style="${tags[tag].size}"><code class="tag-name">${tag}</code> <span class="tag-count">${tags[tag].count}</span></span>`
 	}).join(' ')
@@ -39,7 +35,12 @@ function buildTagWall(data) {
 
 
 function getRecents(data) {
-	return data.slice(-10).reverse().map((element) => buildEntry(element)).join(' ');
+	// sort data by the "created" frontmatter field
+	return data.sort((a, b) => {
+		if (a.data.created > b.data.created) { return -1 }
+		if (a.data.created < b.data.created) { return 1 }
+		return 0
+	}).slice(-10).map((element) => buildEntry(element)).join(' ');
 }
 
 
@@ -114,7 +115,7 @@ function getRelated(data, current) {
 	// if there are still no related entries, content will be a simple message
 	if (!entries.length) { return 'no related entries found :(' }
 
-	return '<li>' + entries.map((element) => buildTitle(element)).join('</li><li>') + '</li>'
+	return '<div id="til-related"><li>' + entries.map((element) => buildTitle(element)).join('</li><li>') + '</li></div>'
 }
 
 

@@ -42,6 +42,11 @@ the github repo is connected to firebase hosting through CI/CD using github acti
 - the [**treemap**](/treemap/) is generated in a similar way to the breadcrumbs,
   using the eleventy collections and processed with javascript to generate the
   html treemap.
+- the [**quizzes**](/quizzes/) are generated using a json file and processed
+  with javascript to generate the html quiz, including listeners and animations.
+- the [**til**](/til/) (today i learned) posts are handled using markdown files
+  and processed with custom javascript. the tagging system, related posts and
+  timedates need this processing to be displayed correctly.
 
 <br>
 
@@ -58,7 +63,6 @@ from December 1st to January 7th every year, there is snow falling
 several other inspirations:
 - [mschf](https://mschf.com/)
 - [crlf.link](https://crlf.link/)
-- [stacksorted](https://stacksorted.com/)
 - [dmaorg / clancy's blog](http://dmaorg.info/)
 - [ramsus' portfolio](https://rsms.me/)
 - [eduardorl's portfolio](https://eduardorl.vercel.app/)

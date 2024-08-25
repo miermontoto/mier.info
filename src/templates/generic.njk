@@ -7,7 +7,7 @@ layout: base.njk
 <div id="title-container">
     <span id="breadcrumbs">
         {% set navPages = collections.all | eleventyNavigation %}
-        {% breadcrumbs navPages %}
+        {% breadcrumbs navPages, page %}
     </span>
     <span id="title">{{ emoji }} {{ title | safe }}</span>
     {% if subtitle %}

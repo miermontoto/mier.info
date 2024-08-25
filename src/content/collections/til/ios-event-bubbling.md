@@ -31,8 +31,8 @@ sections.forEach(({ button, section }) => {
 ```
 
 after some investigation
-{% reference 'https://www.quirksmode.org/blog/archives/2010/09/click_event_delegation.html', '1' %}
-{% reference 'https://www.sitepoint.com/community/t/handling-click-in-the-safari-browser/417837', '2' %}
+{% ref 'https://www.quirksmode.org/blog/archives/2010/09/click_event_delegation.html', '1' %}
+{% ref 'https://www.sitepoint.com/community/t/handling-click-in-the-safari-browser/417837', '2' %}
 (and Claude's help), I found out that the issue was related to
 [*event bubbling*](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture).
 By simply moving the event listener from the `window` object to the `document`
