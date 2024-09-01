@@ -1,5 +1,6 @@
 ---
 layout: base.njk
+desc: "personal portfolio website that collects all my projects and professional experiences."
 ---
 
 {% addScript 'index' %}
@@ -11,9 +12,9 @@ layout: base.njk
 
     <div id="socials">
         {% for link in socials %}
-            <a href="{{ link.url }}" rel="noopener noreferrer" target="_blank">
-                <span class="dot"></span> {{ link.text }}
-            </a>
+        <a href="{{ link.url }}" rel="noopener noreferrer" target="_blank">
+            <span class="dot"></span> {{ link.text }}
+        </a>
         {% endfor %}
     </div>
 
@@ -26,88 +27,10 @@ layout: base.njk
 {% import "src/static/macros.njk" as macros %}
 
 <div id="sections">
-<section id="project-section" class="section">
-    <h1>projects.</h1>
-    <div id="projects">
-        <div id="featured-grid">
-            {% for project in collections.project %} {% if project.data.img %}
-                {% set data = project.data %}
-                {% set link = data.demo or data.source %}
-                <article class="project hoverborder">
-                    <a href="{{ link }}" rel="noreferrer" class="project-img-container">
-                        <div class="project-img">
-                            <img src="/assets/media/projects/{{ project.fileSlug }}/front.webp" alt="{{ data.title }} showcase" class="main">
-                            <img src="/assets/media/projects/{{ project.fileSlug }}/back.webp" alt="{{ data.title }} alt showcase" class="hover">
-                        </div>
-                    </a>
-                    <div class="project-content">
-                        <div class="project-title">{{ macros.renderTitle(project) }}</div>
-                        <div class="project-desc">{{ project.data.desc | safe }}</div>
-                        <div class="project-tech">{{ macros.renderIcons(data.icons) }}</div>
-                        <div class="project-links">{{ macros.renderLinks(project) }}</div>
-                    </div>
-                </article>
-            {% endif %} {% endfor %}
-        </div>
-        <div id="project-list">
-            {% for project in collections.project %} {% if not project.data.img and not project.data.hidden %}
-                {% set data = project.data %}
-                <article class="project hoverborder {{ data.star }}" id="{{ data.title | slug }}">
-                    <div class="project-title">
-                        {{ macros.renderTitle(project) }}
-                        <div class="project-tech">{{ macros.renderIcons(data.icons) }}</div>
-                    </div>
-
-                    <div class="project-desc">{{ data.desc | safe }}</div>
-
-                    {% if data.links or data.source and data.demo %}
-                        <div class="project-links">{{ macros.renderLinks(project, false) }}</div>
-                    {% endif %}
-                </article>
-            {% endif %} {% endfor %}
-        </div>
-    </div>
-</section>
-
-<section id="about-section" class="section">
-    <div id="experience-container">
-        <h1>experience.</h1>
-        <div id="experience" class="carded">
-            {% for experience in collections.experience %}
-                <article class="card {{ experience.data.class }}" id="{{ experience.data.name | slug }}">
-                    <div class="card-title-col">
-                        <h3 class="card-title">
-                            {% set logo = '/assets/icons/exp/' + (experience.data.logo or experience.data.name) + '.png' %}
-                            <img src="{{ logo }}" class="experience-logo" alt="{{ experience.data.name }} logo">
-                            {{ experience.data.name }}
-                        </h3>
-                        {% if experience.data.role %}
-                            <b>{{ experience.data.role }}</b>
-                        {% endif %}
-                        {% if experience.data.period %}
-                            <br>
-                            <i>{{ experience.data.period }}</i>
-                        {% endif %}
-                    </div>
-                    <div class="card-description">{{ experience.content | safe }}</div>
-                    {% if experience.data.icons %}
-                        <div class="card-bottom">
-                            <div class="card-icons">{{ macros.renderIcons(experience.data.icons) }}</div>
-                        </div>
-                    {% endif %}
-                </article>
-            {% endfor %}
-        </div>
-    </div>
-    <br>
-    <div id="about-container">
-        <div id="about">
-            <h1>about.</h1>
-            {% renderFile "./src/content/about.njk" %}
-        </div>
-    </div>
-</section>
+    {% include "./content/index/projects.njk" %}
+    {% include "./content/index/about.njk" %}
+    {% include "./content/index/shortcuts.njk" %}
 </div>
 
 <video id="background" autoplay muted playsinline></video>
-<span id="bg-nowplaying"></span>
+<span id="messages-span"></span>

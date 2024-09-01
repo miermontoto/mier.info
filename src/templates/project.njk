@@ -8,6 +8,9 @@ layout: generic.njk
     {% if source %}
         <a href="{{ source }}" id="source" class="button"><img src="/assets/icons/tech/git.svg" class="icon invert" alt="source icon">source</a>
     {% endif %}
+    {% if demo %}
+        <a href="{{ demo }}" id="demo" class="button">🌐 url</a>
+    {% endif %}
     {% for button in buttons %}
         <a class="button" href="{{ button.url }}">
             {{ button.img }}
@@ -30,5 +33,3 @@ layout: generic.njk
 {% else %}
     <br> work in progress!
 {% endif %}
-
-{% include "src/templates/snippets/footer.njk" %}

@@ -2,7 +2,7 @@
 title: mier.info
 desc: my personal portfolio, the very website you are looking at right now.
 source: https://github.com/miermontoto/mier.info
-icons: [eleventy, firebase, sass, markdown, nunjucks, js, json]
+icons: [eleventy, firebase, sass, markdown, nunjucks, js ]
 star: star
 permalink: /this/
 redirect_from: [/mier.info/, /self/]
@@ -69,3 +69,4 @@ several other inspirations:
 - [irene mateos' awesome portfolio](https://enerimateos.com/)
 - [Things Of Interest](https://qntm.org/)
 - [nothing](https://es.nothing.tech/)
+- [aphex twin](https://aphextwin.warp.net/)

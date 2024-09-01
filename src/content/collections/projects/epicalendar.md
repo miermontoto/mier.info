@@ -10,9 +10,6 @@ img: true
 lang: es
 star: star
 emoji: 📅
-buttons: [
-    {'url': 'https://epicalendar.mier.info', 'img': '🌐 ', 'text': 'web'}
-]
 eleventyNavigation:
   key: epiCalendar
 ---

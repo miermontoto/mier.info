@@ -9,17 +9,18 @@ const { buildTagWall, getRecents, getRelated, buildTimestamps } = require('./src
 const addAsset = require('./src/static/js/building/linking.js');
 const { qka, quizButtons, quizQuestions } = require('./src/static/js/building/quizzing.js');
 const { buildVersionTag, buildKeywords } = require("./src/static/js/building/package.js");
+const projectImages = require("./src/static/js/building/images.js");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
-  eleventyConfig.addPassthroughCopy("./src/static/js");
+  eleventyConfig.addPassthroughCopy("./src/static/js"); // css is compiled by sass
   eleventyConfig.addPassthroughCopy("./assets");
   eleventyConfig.addPassthroughCopy("**.json");
 
+  eleventyConfig.setQuietMode(true); // suppresses the "Writing" log message
   eleventyConfig.setDataFileSuffixes([".data", ""]);
-  eleventyConfig.setQuietMode(true);
   eleventyConfig.setServerOptions({ watch: ["src/static/css/**"], port: 8088 });
 
   eleventyConfig.addShortcode("breadcrumbs", buildBreadcrumbs);
@@ -42,10 +43,21 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("version", buildVersionTag);
 
   eleventyConfig.addShortcode("ref", (url, num) => `<a href="${url}" class="ref" target="_blank" rel="noopener noreferrer">[${num}]</a>`);
-  eleventyConfig.addShortcode("tilImg", (file, alt) => `<figure class="til-img">
-    <img src="/assets/media/projects/til/${file}" alt="${alt}" />
-    <figcaption class="til-img-alt">${alt}</figcaption>
-  </figure>`);
+  eleventyConfig.addShortcode("tilImg", function (file, alt) {
+    return `<figure class="til-img">
+      <img src="/assets/media/projects/til/${this.page.fileSlug}/${file}" alt="${alt}" />
+      <figcaption class="til-img-alt">${alt}</figcaption>
+    </figure>`;
+  });
+  eleventyConfig.addShortcode("link", (url, text) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${text}</a>`);
+
+  eleventyConfig.addShortcode("projectImages", projectImages);
+
+  eleventyConfig.addFilter("generateDesc", function (content) {
+    if (!content) return "personal portfolio website that collects all my projects and professional experiences.";
+    let text = content.replace(/<[^>]*>/g, '').trim();
+    return text.slice(0, 160) + (text.length > 160 ? "..." : "");
+  });
 
   eleventyConfig.setLibrary("njk", new Nunjucks.Environment(
     new Nunjucks.FileSystemLoader("./"),

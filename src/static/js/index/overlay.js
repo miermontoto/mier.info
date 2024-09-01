@@ -1,5 +1,5 @@
 import {load} from './video.js';
-let videoElement = document.getElementById('background');
+const videoElement = document.getElementById('background');
 
 // create elements
 let overlayContainer = document.createElement('div');
@@ -7,7 +7,6 @@ let overlay_box = document.createElement('div');
 let fullscreen = document.createElement('span');
 let stop = document.createElement('span');
 let next = document.createElement('span');
-let nowplaying = document.createElement('span');
 
 // set attributes
 overlayContainer.setAttribute('id', 'overlay-container');
@@ -15,7 +14,6 @@ overlay_box.setAttribute('id', 'overlay-box');
 fullscreen.setAttribute('id', 'bg-fullscreen');
 stop.setAttribute('id', 'bg-stop');
 next.setAttribute('id', 'bg-next');
-nowplaying.setAttribute('id', 'bg-nowplaying');
 
 // set innerHTML
 fullscreen.innerHTML = '⛶';
@@ -48,14 +46,11 @@ stop.addEventListener('click', () => {
     overlayContainer.remove();
 });
 
-next.addEventListener('click', () => {
-    load();
-});
+next.addEventListener('click', load);
 
 // append elements
 overlay_box.appendChild(fullscreen);
 overlay_box.appendChild(stop);
 overlay_box.appendChild(next);
 overlayContainer.appendChild(overlay_box);
-overlayContainer.appendChild(nowplaying);
 document.body.appendChild(overlayContainer);

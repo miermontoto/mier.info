@@ -1,0 +1,79 @@
+@use '../base'
+@use '../colors'
+
+video#background
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: -3
+    opacity: 0.1
+    transition: all 0.5s ease
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+    &.fullscreen
+        z-index: 3
+        opacity: 1
+
+#overlay-container
+    position: fixed
+    bottom: 16px
+    .modal-overlay
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-color: rgba(0, 0, 0, 0.5)
+        z-index: 999
+        display: none
+
+    &.active
+        display: block
+        border: 2px solid transparent
+        border-radius: base.$radius
+        opacity: 0.4
+
+        &:hover, &.active
+            border-color: colors.$light
+            background-color: colors.$secondary
+            opacity: 1
+
+        .button
+            color: white
+            font-weight: bolder
+            background-color: transparent
+            border-radius: 8px
+            margin: 2.5px
+
+            &:hover, &.active
+                animation: none
+                background-color: colors.$dark
+
+#messages-span
+    overflow: hidden
+    white-space: nowrap
+    color: colors.$light
+    font-style: italic
+    margin: 1em
+    position: fixed
+    bottom: 1rem
+    left: 0.4rem
+    margin-bottom: 0
+    z-index: 2
+    font-size: min(1em, 2vw)
+
+.modal-overlay
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(0, 0, 0, 0.5)
+    z-index: 999
+    display: none
+
+    &.active
+        display: block

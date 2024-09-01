@@ -11,7 +11,7 @@ const checkCurrent = (data, pkg) => {
 			"major": currentVersion[1],
 			"minor": currentVersion[2]
 		},
-		"title": `${currentVersion[1]}.${currentVersion[2]}${currentChannel}`,
+		"title": `${currentVersion[1]}.${currentVersion[2]}${currentChannel === " RTW" ? "" : currentChannel}`,
 		"date": "ongoing",
 		"message": "<span class='warning'>this version hasn't been published yet.</span>",
 		"hash": "main"

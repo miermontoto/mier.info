@@ -1,0 +1,50 @@
+{% import "src/static/macros.njk" as macros %}
+
+<section id="about-section">
+    <div id="about-container">
+        <div id="about">
+            <h1>about.</h1>
+            <ul>
+                <li>spanish computer engineering graduate.</li>
+                <li>🎓 studied at EPI Gijón (University of Oviedo).</li>
+                <li>interested in all things 💻 tech and 🎵 music.</li>
+                <li>i like 🧗 climbing, 🚲 cycling and playing 🎸 bass.</li>
+                <li>i take 📒 <a href="https://github.com/miermontoto/notes">notes</a> in {{
+                    macros.renderIcon('markdown') }} markdown using {{ macros.renderIcon('obsidian') }} <a
+                        href="https://obsidian.md">obsidian</a>.
+                <li>🌐 <a href="/this/">this webpage</a> was hand built using {{ macros.renderIcon('eleventy') }} <a
+                        href="https://11ty.dev" target="_blank">eleventy</a>.</li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div id="experience-container">
+        <h1>experience.</h1>
+        <div id="experience" class="carded">
+            {% for experience in collections.experience %}
+            <article class="card {{ experience.data.class }}" id="{{ experience.data.name | slug }}">
+                <div class="card-title-col">
+                    <h3 class="card-title">
+                        {% set logo = '/assets/icons/exp/' + (experience.data.logo or experience.data.name) + '.png' %}
+                        <img src="{{ logo }}" class="experience-logo" alt="{{ experience.data.name }} logo">
+                        {{ experience.data.name }}
+                    </h3>
+                    {% if experience.data.role %}
+                    <b>{{ experience.data.role }}</b>
+                    {% endif %}
+                    {% if experience.data.period %}
+                    <br>
+                    <i>{{ experience.data.period }}</i>
+                    {% endif %}
+                </div>
+                <div class="card-description">{{ experience.content | safe }}</div>
+                {% if experience.data.icons %}
+                <div class="card-bottom">
+                    <div class="card-icons">{{ macros.renderIcons(experience.data.icons) }}</div>
+                </div>
+                {% endif %}
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>

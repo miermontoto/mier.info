@@ -1,0 +1,33 @@
+{
+    "dashboard": [
+        "main.png"
+    ],
+    "epicalendar": [
+        "back.webp",
+        "new.webp"
+    ],
+    "mandelbrot": [
+        "front.webp",
+        "back.webp"
+    ],
+    "notflix": [
+        "example.gif"
+    ],
+    "speedlify": [
+        "main.png"
+    ],
+    "tahoe": [
+        "aws.png",
+        "infra.png",
+        "storymapping.png",
+        "tech.png"
+    ],
+    "dotfiles": [
+        "desktop.png",
+        "desktop2.png",
+        "desktop3.png"
+    ],
+    "url": [
+        "main.png"
+    ]
+}
