@@ -11,8 +11,6 @@ emoji: 📚
 buttons: [
   {'url': 'https://drive.google.com/drive/folders/1z8Sc4v4nRte7a7H5TaDDtwROzoN4_Cu3?usp=share_link', 'icon': 'drive', 'text': 'drive'}
 ]
-eleventyNavigation:
-  key: backup
 ---
 
 {% addStyle 'backup' %}

@@ -1,5 +1,6 @@
-// ciclar entre las imagenes inyectadas para cada proyecto
+const CYLCE_INTERVAL = 4000;
 
+// ciclar entre las imagenes inyectadas para cada proyecto
 const cycle = () => {
 	const imagesContainers = document.querySelectorAll('.project-images');
 	imagesContainers.forEach((container) => {
@@ -14,7 +15,7 @@ const cycle = () => {
 			images.forEach((image) => image.classList.remove('active'));
 			images[index].classList.add('active');
 			index = (index + 1) % images.length;
-		}, 5000);
+		}, CYLCE_INTERVAL);
 	});
 }
 

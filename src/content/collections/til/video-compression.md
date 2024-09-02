@@ -1,8 +1,6 @@
 ---
 title: "how I compress the background videos for my website"
 tags: ["ffmpeg", "video"]
-eleventyNavigation:
-  key: "video-compression"
 keywords: ["ffmpeg", "video", "background", "website", "compression", "bitrate", "av1", "quality"]
 created: 2024-08-31
 ---

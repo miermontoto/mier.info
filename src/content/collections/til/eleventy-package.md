@@ -1,8 +1,6 @@
 ---
 title: "accessing <code>package.json</code> in Eleventy shortcodes"
 tags: ["eleventy"]
-eleventyNavigation:
-  key: "eleventy-package"
 keywords: ["eleventy", "package.json", "shortcodes", "package", "json"]
 created: 2024-08-24
 ---

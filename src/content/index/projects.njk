@@ -4,49 +4,48 @@
     <h1>projects.</h1>
     <div id="projects">
         <div id="featured-grid">
-            {% for project in collections.project %} {% if project.data.img %}
-            {% set data = project.data %}
-            {% set link = data.demo or data.source %}
-            <article class="project hoverborder">
-                <a href="{{ link }}" rel="noreferrer" class="project-img-container">
-                    {% projectImages project.fileSlug, images %}
-                </a>
-                <div class="project-content">
-                    <div class="project-title">{{ macros.renderTitle(project) }}</div>
-                    <div class="project-desc">{{ project.data.desc | safe }}</div>
-                    <div class="project-tech">{{ macros.renderIcons(data.icons) }}</div>
-                    <div class="project-links">{{ macros.renderLinks(project) }}</div>
-                </div>
-            </article>
-            {% endif %} {% endfor %}
+            {% for project in collections.project | featuredProjects %}
+                {% set data = project.data %}
+                {% set link = data.demo or data.source %}
+                <article class="project hoverborder">
+                    <a href="{{ link }}" rel="noreferrer" class="project-img-container">
+                        {% projectImages project.fileSlug, images %}
+                    </a>
+                    <div class="project-content">
+                        <div class="project-title">{{ macros.renderTitle(project) }}</div>
+                        <div class="project-desc">{{ project.data.desc | safe }}</div>
+                        <div class="project-tech">{{ macros.renderIcons(data.icons) }}</div>
+                        <div class="project-links">{{ macros.renderLinks(project) }}</div>
+                    </div>
+                </article>
+            {% endfor %}
         </div>
         <div id="main-projects" class="projects-list">
-            {% for project in collections.project %} {% if not project.data.img and not project.data.hidden and not
-            project.data.minor %}
-            {% set data = project.data %}
-            <article class="project hoverborder {{ data.star }}" id="{{ data.title | slug }}">
-                <div class="project-title">
-                    {{ macros.renderTitle(project) }}
-                    <div class="project-tech">{{ macros.renderIcons(data.icons) }}</div>
-                </div>
+            {% for project in collections.project | mainProjects %}
+                {% set data = project.data %}
+                <article class="project hoverborder {{ data.star }}" id="{{ data.title | slug }}">
+                    <div class="project-title">
+                        {{ macros.renderTitle(project) }}
+                        <div class="project-tech">{{ macros.renderIcons(data.icons) }}</div>
+                    </div>
 
-                <div class="project-desc">{{ data.desc | safe }}</div>
+                    <div class="project-desc">{{ data.desc | safe }}</div>
 
-                {% if data.links or data.source and data.demo %}
-                <div class="project-links">{{ macros.renderLinks(project, false) }}</div>
-                {% endif %}
-            </article>
-            {% endif %} {% endfor %}
+                    {% if data.links or data.source and data.demo %}
+                        <div class="project-links">{{ macros.renderLinks(project, false) }}</div>
+                    {% endif %}
+                </article>
+            {% endfor %}
         </div>
         <div id="other-projects" class="projects-list">
-            {% for project in collections.project %} {% if project.data.minor %}
-            <article class="project hoverborder">
-                <div class="project-title">{{ macros.renderTitle(project) }} <div class="project-tech">{{
-                        macros.renderIcons(project.data.icons) }}</div>
-                </div>
-                <div class="project-desc">{{ project.data.desc | safe }}</div>
-            </article>
-            {% endif %} {% endfor %}
+            {% for project in collections.project | otherProjects %}
+                <article class="project hoverborder">
+                    <div class="project-title">{{ macros.renderTitle(project) }}
+                        <div class="project-tech">{{ macros.renderIcons(project.data.icons) }}</div>
+                    </div>
+                    <div class="project-desc">{{ project.data.desc | safe }}</div>
+                </article>
+            {% endfor %}
         </div>
     </div>
 </section>

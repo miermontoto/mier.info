@@ -1,8 +1,6 @@
 ---
 title: "puppeteer: getting the number of pages in a PDF"
 tags: ["puppeteer", "pdf"]
-eleventyNavigation:
-  key: "pdf-count"
 keywords: ["puppeteer", "pdf", "page count", "number of pages", "chromium", "wkhtmltopdf"]
 created: 2024-08-15
 ---

@@ -1,8 +1,6 @@
 ---
 title: "wait, how did I use to manage certs for this service?"
 tags: ["docker", "certs", "services", "nginx"]
-eleventyNavigation:
-  key: "certs-renewal"
 keywords: ["certificates", "certbot", "sonarqube", "services", "docker", "nginx"]
 created: 2024-08-25
 ---

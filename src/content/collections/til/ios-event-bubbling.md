@@ -1,8 +1,6 @@
 ---
 title: "why click events do not work on iOS"
 tags: ["ios", "html", "javascript"]
-eleventyNavigation:
-  key: "ios-event-bubbling"
 keywords: ["ios", "html", "javascript", "event bubbling", "event delegation", "event propagation", "event handling"]
 created: 2024-08-24
 ---

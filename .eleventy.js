@@ -9,11 +9,19 @@ const { buildTagWall, getRecents, getRelated, buildTimestamps } = require('./src
 const addAsset = require('./src/static/js/building/linking.js');
 const { qka, quizButtons, quizQuestions } = require('./src/static/js/building/quizzing.js');
 const { buildVersionTag, buildKeywords } = require("./src/static/js/building/package.js");
-const projectImages = require("./src/static/js/building/images.js");
+const { projectImages, getFeaturedProjects, getMainProjects, getOtherProjects } = require("./src/static/js/building/projects.js");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
+  eleventyConfig.addGlobalData("eleventyComputed", {
+    eleventyNavigation: {
+      key: data => data.eleventyNavigation.key || data.page.fileSlug,
+      parent: data => data.eleventyNavigation.parent || data.page.parent,
+      title: data => data.eleventyNavigation.title || data.title,
+    }
+  });
 
   eleventyConfig.addPassthroughCopy("./src/static/js"); // css is compiled by sass
   eleventyConfig.addPassthroughCopy("./assets");
@@ -58,6 +66,10 @@ module.exports = function (eleventyConfig) {
     let text = content.replace(/<[^>]*>/g, '').trim();
     return text.slice(0, 160) + (text.length > 160 ? "..." : "");
   });
+
+  eleventyConfig.addFilter("featuredProjects", getFeaturedProjects);
+  eleventyConfig.addFilter("mainProjects", getMainProjects);
+  eleventyConfig.addFilter("otherProjects", getOtherProjects);
 
   eleventyConfig.setLibrary("njk", new Nunjucks.Environment(
     new Nunjucks.FileSystemLoader("./"),

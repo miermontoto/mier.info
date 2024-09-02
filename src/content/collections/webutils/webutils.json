@@ -1,8 +1,8 @@
 {
-    "tags": "webutils",
-    "layout": "webutils.njk",
-	"permalink": "/{{ page.fileSlug }}/",
     "eleventyNavigation": {
         "parent": "webutils"
-    }
+    },
+    "layout": "webutils.njk",
+    "permalink": "/{{ page.fileSlug }}/",
+    "tags": "webutils"
 }

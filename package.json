@@ -1,6 +1,6 @@
 {
 	"name": "mier.info",
-	"version": "0.23.0",
+	"version": "0.23.1",
 	"channel": "RTW",
 	"description": "personal portfolio website that showcases my projects and professional experience.",
 	"scripts": {
@@ -11,7 +11,7 @@
 		"clean": "rm -rf _site",
 		"test": "pnpm build; firebase serve",
 		"beta": "pnpm build; firebase hosting:channel:deploy beta",
-		"sass-dev": "sass --watch --update --style=expanded src/static/css:_site/static/css",
+		"sass-dev": "sass --watch --update --style=expanded --quiet src/static/css:_site/static/css",
 		"sass-prod": "sass --no-source-map --style=compressed src/static/css:_site/static/css"
 	},
 	"repository": {
@@ -19,7 +19,6 @@
 		"url": "git+https://github.com/miermontoto/mier.info.git"
 	},
 	"keywords": [
-		"webpage",
 		"portfolio",
 		"eleventy",
 		"projects",
