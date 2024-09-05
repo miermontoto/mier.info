@@ -12,6 +12,7 @@ see all subjects and content in my [backup](https://mier.info/backup).
 ---
 
 some relevant projects and assignments:
+- [**final thesis, automated heterogeneous data ingestion using ELK stack**](https://github.com/miermontoto/tfg).
 - [mandelbrot fractal generator in CUDA/OpenMP](https://github.com/miermontoto/mandelbrot).
 - [academic center demo managing app in Java](https://github.com/miermontoto/SI2022-PL41).
 - [multithreaded & SIMD image filtering in C](https://github.com/miermontoto/TeamworkImages).

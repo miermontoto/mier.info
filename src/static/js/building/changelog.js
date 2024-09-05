@@ -37,7 +37,7 @@ const processTitle = (title) => {
 const buildVersionsCollapsible = (data) => {
 	const majors = new Set(data.map(d => d.version.major))
 
-	let content = '<div id="versions" class="hoverborder"><h2>versions</h2><ul>'
+	let content = '<div id="versions"><h2>versions</h2><ul>'
 
 	majors.forEach((major) => {
 		const fromDate = data.filter(d => d.version.major == major).slice(-1)[0].date

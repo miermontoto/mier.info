@@ -16,6 +16,7 @@ class: okticket work
   - devops tasks in AWS: postmortem analysis, cloudwatch monitoring, infrastructure deployment.
   - further system migration (PHPUnit 11, PHP 8.3, Laravel 11) and maintenance.
   - sonarqube and locust integration for code quality and performance testing.
+  - data lake creation, automated deployment and management.
 - **2023: developer (intership)**
   - back-end system migration (laravel 10, PHP 8.2, composer 2).
   - local deploy automation with Docker and Ruby.

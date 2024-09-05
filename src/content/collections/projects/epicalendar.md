@@ -22,6 +22,6 @@ eleventyNavigation:
     - En Firefox, ve a la pestaña `Storage`.
 4. Copia el valor de la cookie `JSESSIONID`.
     - En caso de haber varias, copia el valor de la cookie que tenga `path: /serviciosacademicos`.
-5. Pega el valor en el campo de texto de la página de epiCalendar.
+5. Pega el valor en el campo de texto de la página de [epiCalendar](https://epicalendar.mier.info).
 
 <img src="/assets/media/projects/epicalendar/jsessionid.png" width="85%" alt="imagen de cómo extrar la cookie JSESSIONID de tu navegador">
