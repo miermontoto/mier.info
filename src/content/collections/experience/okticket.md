@@ -11,7 +11,7 @@ class: okticket work
 ---
 
 - **2024-now: developer**
-  - backend serverless services using aws lambdas in nestjs.
+  - serverless services using aws lambdas in nestjs.
   - backend deployment and validation manager.
   - devops tasks in AWS: postmortem analysis, cloudwatch monitoring, infrastructure deployment.
   - further system migration (PHPUnit 11, PHP 8.3, Laravel 11) and maintenance.

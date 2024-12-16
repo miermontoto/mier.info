@@ -11,6 +11,7 @@ function projectImages(project, images) {
 	let html = "<div class='project-images'>";
 	projectImages.forEach((image) => {
 		html += `<img src="/assets/media/projects/${project}/${image}" alt="${project}" class="project-image" />`;
+		// TODO: ← and → buttons to switch between images (disabling auto cycle)
 	});
 	html += "</div>";
 

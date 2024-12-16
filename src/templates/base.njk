@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="{{ eleventy.generator }}">
-    <meta name="description" content="{{ desc | generateDesc }}">
+    <meta name="description" content="{% if desc %}{{ desc }}{% else %}{{ content | generateDesc }}{% endif %}">
     <meta name="view-transition" content="same-origin">
     <meta name="author" content="Juan Mier">
     <link rel="icon" href="/assets/favicon.svg" type="image/x-icon">

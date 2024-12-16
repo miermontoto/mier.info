@@ -8,7 +8,8 @@ redirect_from: /webutils/img/
 <div id="img-drop">
 	<div id="img-convert">
 		<label for="img-input" class="info">convert </label>
-		<input type="file" id="img-input" accept="image/png, image/jpeg, image/svg+xml, image/webp, image/ico, image/bmp">
+		<input type="file" id="img-input"
+			accept="image/png, image/jpeg, image/svg+xml, image/webp, image/ico, image/bmp">
 		<label for="img-format" class="info"> to </label>
 		<select id="img-format">
 			<option value="png">png</option>
@@ -20,7 +21,6 @@ redirect_from: /webutils/img/
 		<span id="img-formatInfo" class="warning hidden" title="not supported by all browsers & platforms">⚠️</span>
 	</div>
 	<table id="img-options" class="disabled">
-		<caption><h3>options</h3></caption>
 		<thead hidden>
 			<tr>
 				<th>option</th>
@@ -51,6 +51,7 @@ redirect_from: /webutils/img/
 </div>
 <span class="button disabled" id="img-button">convert</span>
 <hr>
-<a class="button hidden" id="img-download"><img src="/assets/icons/misc/download.svg" class="icon invert" alt=""> download</a> <br>
+<a class="button hidden" id="img-download"><img src="/assets/icons/misc/download.svg" class="icon invert" alt="">
+	download</a> <br>
 <span class="info" id="img-filename"></span><br>
 <img id="img-canvas" alt="converted image" hidden />

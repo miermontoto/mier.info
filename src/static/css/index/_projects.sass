@@ -70,11 +70,12 @@
                 position: relative
                 display: none
                 width: 100%
+                max-height: 20em
                 transition: opacity .3s ease-in-out
-                border-radius: 5px
+                border-radius: base.$radius
 
                 &.active
-                    object-fit: contain
+                    object-fit: cover
                     display: inline-block
 
         .project-content

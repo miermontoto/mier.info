@@ -2,7 +2,6 @@
 title: til
 emoji: ❔
 desc: things I've asked myself over time and found the answer to.
-subtitle: inspired by <a href="https://til.simonwillison.net/" target="_blank">Simon Willison's TIL</a>
 icons: [eleventy, markdown, js]
 permalink: /til/
 ---
@@ -10,9 +9,13 @@ permalink: /til/
 {% addStyle 'til' %}
 
 {# TODO: search bar #}
+{# <div id="til-search">
+	<h3>search</h3>
+	<input type="text" id="til-search-input search" placeholder="search til...">
+</div> #}
 
 <div id="til-tags">
-	<h2>tags</h2>
+	<h3>tags</h3>
 	{% tilTags collections.til %}
 </div>
 

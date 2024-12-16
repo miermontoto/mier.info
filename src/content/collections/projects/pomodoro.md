@@ -5,4 +5,5 @@ source: https://github.com/miermontoto/pomodoro
 icons: [firebase, vue, sass]
 demo: https://pomodoro.mier.info
 emoji: 🍅
+img: true
 ---

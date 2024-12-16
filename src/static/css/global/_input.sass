@@ -1,0 +1,107 @@
+@use '../colors'
+@use '../base'
+
+$primary-color: colors.$white
+$transition-time: 0.3s
+
+input
+	padding: 0.5em
+	font-size: 14px
+	border: 2px solid colors.$half
+	border-radius: 0
+	transition: all $transition-time ease
+	outline: none
+	background-color: colors.$primary
+	color: colors.$white
+
+	&:focus
+		border: 3px solid $primary-color
+		box-shadow: 0 0 8px rgba($primary-color, 0.4)
+
+	&[type="submit"]
+		background-color: $primary-color
+		color: white
+		cursor: pointer
+
+		&:hover
+			background-color: darken($primary-color, 10%)
+
+	&::placeholder
+		color: colors.$half
+		font-style: italic
+
+	&::selection
+		background-color: colors.$white !important
+		color: colors.$primary !important
+
+	&:hover:not(input[type="range"])
+		box-shadow: 0 0 0 3px rgba($primary-color, 0.4)
+
+input[type="checkbox"],
+input[type="radio"]
+	appearance: none
+	width: 69.6167px
+	height: 35px
+	border: 2px solid #ccc
+	margin-right: 5px
+	position: relative
+	top: 2.5px
+
+	&:not(:checked)
+		background-color: colors.$primary
+		border-color: colors.$half
+
+		&::after
+			content: '\2718'
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+
+	&:checked
+		background-color: $primary-color
+		color: colors.$primary
+		border-color: $primary-color
+
+		&::after
+			content: '\2714'
+			font-size: 16px
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+
+input[type="radio"]
+	align-content: center
+
+	&:checked::after
+		content: ''
+		width: 10px
+		height: 10px
+		background-color: white
+		border-radius: 50%
+
+select
+	padding: 0.5em
+	font-size: 16px
+	border: 2px solid colors.$half
+	transition: all $transition-time ease
+	outline: none
+	background-color: colors.$primary
+	color: colors.$white
+
+	&:focus
+		border: 3px solid $primary-color
+		box-shadow: 0 0 8px rgba($primary-color, 0.4)
+
+	&::placeholder
+		color: colors.$half
+		font-style: italic
+
+	&:hover
+		box-shadow: 0 0 0 3px rgba($primary-color, 0.4)
+
+input[type="range"]
+	width: 25%
+
+// todo: input.search cool styles

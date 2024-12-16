@@ -44,6 +44,10 @@
     border-color: transparent;
 }
 
+.dark .monitor-list .item:hover {
+    background-color: var(--primary);
+}
+
 @keyframes MULTICOLOR {
     0%   { background-color:#9f0; color:#f3c; }
     10%  { background-color:#6ff; color:#f0c; }

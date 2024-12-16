@@ -1,6 +1,6 @@
 {
 	"name": "mier.info",
-	"version": "0.23.2",
+	"version": "0.23.3",
 	"channel": "RTW",
 	"description": "personal portfolio website that showcases my projects and professional experience.",
 	"scripts": {
@@ -36,6 +36,6 @@
 	"dependencies": {
 		"fs": "0.0.1-security",
 		"path": "^0.12.7",
-		"sass": "^1.77.8"
+		"sass": "^1.78.0"
 	}
 }
