@@ -11,7 +11,7 @@ const checkCurrent = (data, pkg) => {
 			"major": currentVersion[1],
 			"minor": currentVersion[2]
 		},
-		"title": `${currentVersion[1]}.${currentVersion[2]}${currentChannel === " RTW" ? "" : currentChannel}`,
+		"title": `${currentVersion[1]}.${currentVersion[2]}${currentChannel.includes("RTW") ? "" : currentChannel}`,
 		"date": "ongoing",
 		"message": "<span class='warning'>this version hasn't been published yet.</span>",
 		"hash": "main"
@@ -23,7 +23,7 @@ const processTitle = (title) => {
 	let content = `<span class="title">`
 
 	const parts = title.split(': ')
-	content += parts[0]
+	content += parts[0].replace(' RTW', '')
 
 	if (parts.length > 1) {
 		content += `<span class="subtitle"> ${parts.slice(1).join(': ')}</span>`

@@ -1,5 +1,5 @@
-import { randArray } from './randomize.js';
 import { addMessage, showMessage } from './messages.js';
+import { randArray } from './randomize.js';
 
 const videoElement = document.getElementById('background');
 
@@ -11,9 +11,40 @@ load(); // load first video
 addMessage('press "?" for help')
 videoElement.addEventListener('ended', () => load()); // load next video on end
 
-export function load() { // needs to be exported for the 'next' button to work
+// Handle video loading errors
+videoElement.addEventListener('error', (e) => {
+    const error = videoElement.error;
+    let errorMessage = 'Error playing video';
+
+    if (error) {
+        switch (error.code) {
+            case MediaError.MEDIA_ERR_ABORTED:
+                errorMessage = 'Video playback was aborted';
+                break;
+            case MediaError.MEDIA_ERR_NETWORK:
+                errorMessage = 'Network error while loading video';
+                break;
+            case MediaError.MEDIA_ERR_DECODE:
+                errorMessage = 'Video decode error';
+                break;
+            case MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED:
+                errorMessage = 'Video format not supported';
+                break;
+        }
+    }
+
+    showMessage(`${errorMessage}: ${sources[index].name}`);
+});
+
+export function load() {
     index = (index + 1) % sources.length;
-    videoElement.innerHTML = `<source src="/assets/media/background/${sources[index].src}" type="video/mp4">`;
+    const basePath = `/assets/media/background/${sources[index].src}`;
+    const h264Path = basePath.replace('.mp4', '-h264.mp4');
+
+    videoElement.innerHTML = `
+        <source src="${basePath}" type="video/mp4; codecs=av01.0.05M.08">
+        <source src="${h264Path}" type="video/mp4; codecs=avc1.42E01E">
+    `;
     videoElement.load();
     videoElement.play();
     addMessage(`now playing: ${sources[index].name}`);
