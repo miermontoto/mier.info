@@ -105,8 +105,8 @@ para descargar todos los repositorios, usar el siguiente comando en una terminal
 - [Seguridad](https://github.com/miermontoto/Servicios)
 - [Tecnologías Web](https://github.com/miermontoto/Web)
   - [tew-lab-jee](https://github.com/miermontoto/tew-2324-4-UO283319-lab-jee), prácticas de laboratorio.
-  - [tew1-41](https://github.com/miermontoto/tew1-2324), primer trabajo en grupo.
-  - [tew2-41](https://github.com/miermontoto/tew2-2324), segundo trabajo en grupo.
+  - [tew1-41](https://github.com/miermontoto/tew1-41), primer trabajo en grupo.
+  - [tew2-41](https://github.com/miermontoto/tew2-41), segundo trabajo en grupo.
   - [web quiz](https://mier.info/web/), colección de preguntas de examen.
 
 ## y4t2

@@ -94,5 +94,5 @@ this is the summary of the process:
 single command:
 
 ```sh
-docker compose down; yes | docker system prune -a; yes | docker builder prune -a; journalctl --vacuum-size=10M; sudo dnf remove --oldinstallonly; docker compose up -d
+docker compose down; yes | docker system prune -a; yes | docker builder prune -a; sudo journalctl --vacuum-size=10M; sudo dnf remove --oldinstallonly; docker compose up -d
 ```

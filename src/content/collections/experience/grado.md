@@ -5,7 +5,7 @@ period: 2020-2024
 logo: epi
 ---
 
-**grades:** 3.0 GPA, <b style="color: gold;"><i>14 honors</i></b>
+**grades:** 8,555 avg, 2.85 GPA, <b style="color: gold;">14/29 honors <i>"matrículas de honor"</i></b>
 
 see all subjects and content in my [backup](https://mier.info/backup).
 

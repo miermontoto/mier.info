@@ -2,7 +2,7 @@
 name: okticket
 role: software engineer
 period: 2023-
-icons: [ruby, laravel, docker, php, aws, typescript]
+icons: [ruby, laravel, docker, php, aws, typescript, nestjs]
 class: okticket work
 ---
 
@@ -17,7 +17,8 @@ class: okticket work
   - further system migration (PHPUnit 11, PHP 8.3, Laravel 11) and maintenance.
   - sonarqube and locust integration for code quality and performance testing.
   - data lake creation, automated deployment and management.
-- **2023: developer (intership)**
+  - maintenance and development of legacy and new components.
+- **2023: developer (internship)**
   - back-end system migration (laravel 10, PHP 8.2, composer 2).
   - local deploy automation with Docker and Ruby.
   - load and stress testing with Locust.
