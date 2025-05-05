@@ -1,5 +1,6 @@
 @use '../colors'
 @use '../base'
+@use 'sass:color'
 
 $primary-color: colors.$white
 $transition-time: 0.3s
@@ -24,7 +25,7 @@ input
 		cursor: pointer
 
 		&:hover
-			background-color: darken($primary-color, 10%)
+			background-color: color.adjust($primary-color, $lightness: -10%)
 
 	&::placeholder
 		color: colors.$half

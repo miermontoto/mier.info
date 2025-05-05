@@ -1,6 +1,6 @@
 {
 	"name": "mier.info",
-	"version": "0.23.6",
+	"version": "0.23.7",
 	"channel": "RTW",
 	"description": "personal portfolio website that showcases my projects and professional experience.",
 	"scripts": {
@@ -30,12 +30,15 @@
 	],
 	"author": "Juan Mier",
 	"devDependencies": {
-		"@11ty/eleventy": "^2.0.1",
-		"@11ty/eleventy-navigation": "^0.3.5"
+		"@11ty/eleventy": "^3.0.0",
+		"@11ty/eleventy-navigation": "^1.0.4"
 	},
 	"dependencies": {
 		"fs": "0.0.1-security",
 		"path": "^0.12.7",
-		"sass": "^1.78.0"
-	}
+		"sass": "^1.87.0"
+	},
+	"pnpm": {
+    "neverBuiltDependencies": []
+  }
 }

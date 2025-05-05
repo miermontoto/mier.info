@@ -71,12 +71,15 @@ function buildTitle(element) {
 
 
 function buildDescription(element) {
+	// ahora, el contenido viene en rawInput en lugar de content
+	const content = element.rawInput
+
 	// the description is the first characters of the content, removing
 	// the HTML tags. stop at 100 characters or at the end of the first line
-	let description = element.content.replace(/<[^>]*>?/gm, '').split('\n')[0].substring(0, 100).trim()
+	let description = content.replace(/<[^>]*>?/gm, '').split('\n')[0].substring(0, 100).trim()
 	const isLastCharDot = description[description.length - 1] === '.'
 	const lastThreeDots = isLastCharDot ? '..' : ' ...'
-	description = element.content.length < 100 ? description : `${description}${lastThreeDots}`
+	description = content.length < 100 ? description : `${description}${lastThreeDots}`
 
 	return description
 }
