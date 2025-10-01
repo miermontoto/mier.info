@@ -1,28 +1,42 @@
 ---
-layout: generic.njk
+layout: project.njk
+buttons: [
+	{
+		text: "get json",
+		icon: "download",
+		url: "/content/collections/quizzes/{{page.fileSlug}}.data.json",
+		from: "misc"
+	},
+	{
+		text: "report issue",
+		icon: "bug",
+		url: "https://github.com/miermontoto/mier.info/issues/new",
+		from: "misc"
+	}
+]
 ---
+
 {% addStyle "quiz" %}
 {% addScript "quiz" %}
 
-<div id="button-container">
-	<a href="/content/collections/quizzes/{{page.fileSlug}}.data.json" alt="download json" class="button" id="dl-btn"><img src="/assets/icons/misc/download.svg" class="icon invert" alt="download icon">download json</a>
-	<a href="https://github.com/miermontoto/mier.info/issues/new" alt="report an issue" class="button" id="bug-btn"><img src="/assets/icons/misc/bug.svg" class="icon invert" alt="bug icon">report an issue</a>
-</div>
-<hr>
-<div id="results">
-	<span id="correct">0</span> / <span id="total">?</span>
-	<span id="→">→</span>
-	<span id="scored"><span id="score">0</span>%</span>
-	<noscript>ERROR: JavaScript is NEEDED for the quiz to work!</noscript>
-</div>
-<span class="button" id="reset"><img src="/assets/icons/misc/reset.svg" class="icon invert" alt="reset"> reset</span>
-<div id="options">
-	<h2>opciones.</h2>
-	<input type="checkbox" id="shuffle-questions" checked>
-	<label for="shuffle-questions">saltear preguntas</label>
-	<br>
-	<input type="checkbox" id="shuffle-answers" checked>
-	<label for="shuffle-answers">saltear respuestas</label>
+<div id="quiz-header">
+	<div id="results">
+		<span id="correct">0</span> / <span id="total">?</span>
+		<span id="→">→</span>
+		<span id="scored"><span id="score">0</span>%</span>
+		<noscript>ERROR: JavaScript is NEEDED for the quiz to work!</noscript>
+	</div>
+	<div id="options">
+		<label>
+			<input type="checkbox" id="shuffle-questions" checked>
+			<span>saltear preguntas</span>
+		</label>
+		<label>
+			<input type="checkbox" id="shuffle-answers" checked>
+			<span>saltear respuestas</span>
+		</label>
+		<span class="button" id="reset"><img src="/assets/icons/misc/reset.svg" class="icon invert" alt="reset"> reset</span>
+	</div>
 </div>
 
 {% if data %}

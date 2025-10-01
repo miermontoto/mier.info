@@ -4,12 +4,30 @@ desc: 'encode/decode base64'
 redirect_from: /webutils/base64/
 ---
 
+<h3>text</h3>
 <div class="decoded">
 	<textarea class="input" id="decoded-text" placeholder="plain text"></textarea>
-	{# <span class="button" id="decoded-copy">⎘</span> #}
+	<span class="button" id="decoded-copy" title="Copy to clipboard"></span>
 </div>
 <span>&lt;=></span>
 <div class="encoded">
 	<textarea class="output" id="encoded-text" placeholder="encoded text"></textarea>
-	{# <span class="button" id="encoded-copy">⎘</span> #}
+	<span class="button" id="encoded-copy" title="Copy to clipboard"></span>
+</div>
+
+<hr>
+
+<h3>images</h3>
+<div class="decoded">
+	<div id="img-drop" onclick="document.getElementById('img-input').click()">
+		<span class="info">Drop an image here or click to select</span>
+		<input type="file" id="img-input"
+			accept="image/png, image/jpeg, image/svg+xml, image/webp, image/ico, image/bmp">
+	</div>
+	<span class="button" id="img-copy" title="Copy to clipboard"></span>
+</div>
+<span>&lt;=></span>
+<div class="encoded">
+	<textarea class="output" id="img-encoded-text" placeholder="base64 image data"></textarea>
+	<span class="button" id="img-encoded-copy" title="Copy to clipboard"></span>
 </div>

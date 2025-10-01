@@ -12,7 +12,8 @@ window.addEventListener('load', () => { // when the page loads (the content is r
 		let questionsBlock = document.getElementById('questions');
 		let blocks = document.querySelectorAll('.select-block');
 
-		// add exam block
+		// se añade html ad-hoc en caso de que haya flags de examen en el JSON.
+		// un poco feo, pero es lógica muy específica y no se me ocurre una manera mucho mejor.
 		if (exam) {
 			let examBlock = '<span class="button select-block" id="exam">examen</span>';
 			blocks[blocks.length -2].insertAdjacentHTML('afterend', examBlock);
@@ -22,7 +23,16 @@ window.addEventListener('load', () => { // when the page loads (the content is r
 
 		document.querySelectorAll('.select-block').forEach((block) => {
 			block.addEventListener('click', () => {
-				if (warn()) return;
+				// guardar estado actual de checkboxes antes de mostrar el alert
+				let shuffleQuestionsState = document.getElementById('shuffle-questions').checked;
+				let shuffleAnswersState = document.getElementById('shuffle-answers').checked;
+
+				if (warn()) {
+					// restaurar estado de checkboxes cuando el usuario cancela
+					document.getElementById('shuffle-questions').checked = shuffleQuestionsState;
+					document.getElementById('shuffle-answers').checked = shuffleAnswersState;
+					return;
+				}
 				let blockId = block.getAttribute('id');
 				questionsBlock.innerHTML = ''; // empty all questions
 				allQuestions.forEach((q) => {
@@ -46,18 +56,27 @@ window.addEventListener('load', () => { // when the page loads (the content is r
 	}
 
 	document.getElementById('reset').addEventListener('click', resetAll);
-	document.querySelectorAll('#shuffle-questions, #shuffle-answers').forEach((checkbox) => checkbox.addEventListener('change', resetAll));
-	resetAll(false); // reset everything and calculate indices
+	document.querySelectorAll('#shuffle-questions, #shuffle-answers').forEach((checkbox) => {
+		checkbox.addEventListener('change', (e) => {
+			if (warn()) {
+				// si el usuario cancela, revertir el cambio
+				e.target.checked = !e.target.checked;
+				return;
+			}
+			resetAll(false);
+		});
+	});
+	resetAll(false); // reset everything and calculate indexes
 });
 
 function recalc() {
 	let i = 1;
 	document.querySelectorAll('.question-block').forEach((q) => {
 		let title = q.querySelector('.question');
-		title.innerHTML = `<span class="number">${i++}.</span> ${title.innerHTML}`;   // add index to each question title
+		title.innerHTML = `<span class="number">${i++}.</span> ${title.innerHTML}`; // add index to each question title
 
 		let j = 0;
-		q.querySelectorAll('.answer').forEach((ans) => {           				      // for each answer
+		q.querySelectorAll('.answer').forEach((ans) => {           				          // for each answer
 			let letter = String.fromCharCode(97 + j++);                               // convert index to letter
 			ans.innerHTML = `<span class="letter">${letter}.</span>${ans.innerHTML}`; // add letter to answer
 		});

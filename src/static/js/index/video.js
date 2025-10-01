@@ -8,33 +8,11 @@ let index = 0;
 
 await fetch('/content/data/backgrounds.json').then(response => response.json()).then(data => sources = randArray(data)); // load sources
 load(); // load first video
-addMessage('press "?" for help')
+// Only show help message on non-touch devices
+if (!('ontouchstart' in window) && !navigator.maxTouchPoints) {
+    addMessage('press "?" for help')
+}
 videoElement.addEventListener('ended', () => load()); // load next video on end
-
-// Handle video loading errors
-videoElement.addEventListener('error', (e) => {
-    const error = videoElement.error;
-    let errorMessage = 'Error playing video';
-
-    if (error) {
-        switch (error.code) {
-            case MediaError.MEDIA_ERR_ABORTED:
-                errorMessage = 'Video playback was aborted';
-                break;
-            case MediaError.MEDIA_ERR_NETWORK:
-                errorMessage = 'Network error while loading video';
-                break;
-            case MediaError.MEDIA_ERR_DECODE:
-                errorMessage = 'Video decode error';
-                break;
-            case MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED:
-                errorMessage = 'Video format not supported';
-                break;
-        }
-    }
-
-    showMessage(`${errorMessage}: ${sources[index].name}`);
-});
 
 export function load() {
     index = (index + 1) % sources.length;
@@ -47,7 +25,7 @@ export function load() {
     `;
     videoElement.load();
     videoElement.play();
-    addMessage(`now playing: ${sources[index].name}`);
+    addMessage(`<b>now playing:</b> ${sources[index].name}`);
 }
 
 // add event listener for 'n' key to load next video

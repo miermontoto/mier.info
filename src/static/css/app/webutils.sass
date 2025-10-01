@@ -12,6 +12,74 @@
 .input, .output
 	width: 100%
 	height: max(1em, auto)
+	position: relative
+	border-radius: 0
+	transition: border-color 0.2s ease
+
+.decoded, .encoded
+	position: relative
+	display: flex
+	align-items: flex-start
+
+	.button
+		position: absolute
+		right: 8px
+		top: 8px
+		background: rgba(colors.$light, 0.08)
+		color: colors.$light
+		padding: 6px 8px
+		border-radius: 0
+		cursor: pointer
+		transition: all 0.2s ease
+		font-size: 12px
+		z-index: 10
+		border: 1px solid rgba(colors.$light, 0.2)
+		backdrop-filter: blur(10px)
+		user-select: none
+		min-width: 24px
+		text-align: center
+		line-height: 1
+
+		&:hover
+			background: rgba(colors.$correct, 0.15)
+			color: colors.$correct
+			border-color: rgba(colors.$correct, 0.3)
+			transform: translateY(-1px)
+			box-shadow: 0 2px 8px rgba(0, 223, 11, 0.15), 0 0 20px rgba(0, 223, 11, 0.1)
+
+		&:active
+			transform: translateY(0)
+			box-shadow: 0 1px 4px rgba(0, 223, 11, 0.2)
+
+		// Special styling for copy buttons
+		&[title*="Copy"]
+			font-family: monospace
+			font-weight: 500
+			letter-spacing: 0.5px
+
+			&::before
+				content: "⎘"
+				opacity: 0.8
+				transition: opacity 0.2s ease
+
+			&:hover::before
+				opacity: 1
+
+		// Success state when copied
+		&.copied
+			background: rgba(colors.$correct, 0.2)
+			color: colors.$correct
+			border-color: rgba(colors.$correct, 0.4)
+			animation: copySuccess 0.3s ease-out
+
+// Copy success animation
+@keyframes copySuccess
+	0%
+		transform: scale(1)
+	50%
+		transform: scale(1.1)
+	100%
+		transform: scale(1)
 
 .utils
 	width: 100%
@@ -63,3 +131,87 @@ table td:nth-child(2) input
 
 .util-container
 	// text-align: center
+
+// Base64 image functionality styling
+#img-drop
+	border: 2px dashed colors.$light
+	border-radius: 0
+	padding: 15px
+	text-align: center
+	transition: all 0.3s ease
+	background: rgba(colors.$light, 0.05)
+	cursor: pointer
+	user-select: none
+
+	&:hover
+		border-color: colors.$correct
+		background: rgba(colors.$correct, 0.1)
+		transform: translateY(-1px)
+		box-shadow: 0 2px 8px rgba(0, 223, 11, 0.1)
+
+	&:active
+		transform: translateY(0)
+		box-shadow: 0 1px 4px rgba(0, 223, 11, 0.15)
+
+	span.info
+		display: block
+		margin-bottom: 10px
+		cursor: pointer
+		pointer-events: none
+
+	input[type="file"]
+		display: none
+
+// Removed img-options styling as elements were removed
+
+#img-button
+	&.disabled
+		opacity: 0.5
+		cursor: not-allowed
+
+#img-download
+	display: inline-flex
+	align-items: center
+	gap: 8px
+	margin: 10px 0
+
+	.icon
+		width: 16px
+		height: 16px
+
+#img-filename
+	display: block
+	margin: 10px 0
+	font-size: 0.9em
+	color: colors.$light
+
+#base64-image-decode
+	margin: 20px 0
+
+	textarea
+		font-family: monospace
+		font-size: 0.9em
+		resize: vertical
+		min-height: 80px
+		border: 2px solid transparent
+		transition: border-color 0.3s ease
+
+#decoded-img
+	max-width: 100%
+	height: auto
+	border: 1px solid colors.$light
+	border-radius: 0
+	margin: 10px 0
+
+.warning
+	color: #ff9800
+	font-weight: bold
+
+.hidden
+	display: none !important
+
+// Responsive design
+@media (max-width: 768px)
+	#img-drop
+		padding: 15px
+		margin: 15px 0

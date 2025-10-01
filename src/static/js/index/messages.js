@@ -14,7 +14,7 @@ export function addMessage(msg) {
 export function showMessage(msg) {
     if (!msg) return;
 
-    span.textContent = msg;
+    span.innerHTML = msg;
     span.style.display = 'block';
 
     clearTimeout(timeout);

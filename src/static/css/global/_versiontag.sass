@@ -1,13 +1,15 @@
 @use '../colors'
 
 #version-tag
-    position: fixed
-    bottom: 10px
-    right: 10px
-    font-size: min(14px, max(2.25vw, 0.65em))
     color: colors.$light
     user-select: none
     text-decoration: none
     cursor: alias
-    z-index: 2
+
+body > #version-tag
+    position: fixed
+    bottom: 12px
+    right: 10px
+    font-size: min(14px, max(2.25vw, 0.65em))
     padding: 0.125em
+    z-index: 2

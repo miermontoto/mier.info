@@ -3,6 +3,19 @@
 #breadcrumbs
     color: colors.$light
     user-select: none
+    position: sticky
+    top: 0
+    background-color: colors.$primary
+    z-index: 100
+    padding: 1em 0 0.001em
+    margin: -1em -10% 1em -10%
+    padding-left: 10%
+    padding-right: 10%
+    display: block
+    font-size: 1.125em
+
+    #indx-btn
+        padding: 0 0.5em 0
 
     #b-map
         text-decoration: none
@@ -14,3 +27,14 @@
 
         &:not(a)
             color: colors.$white
+
+    .bc-cursor
+        animation: blink 1s infinite
+        font-weight: normal
+        margin-left: 0.2em
+
+@keyframes blink
+    0%, 49%
+        opacity: 1
+    50%, 100%
+        opacity: 0
