@@ -1,0 +1,9 @@
+name = "mier-info"
+compatibility_date = "2024-01-01"
+pages_build_output_dir = "_site"
+
+# r2 bucket binding para servir assets estáticos
+[[r2_buckets]]
+binding = "MEDIA_BUCKET"
+bucket_name = "mier-info-assets"
+preview_bucket_name = "mier-info-assets"

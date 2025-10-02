@@ -1,18 +1,20 @@
 {
 	"name": "mier.info",
-	"version": "0.23.7",
-	"channel": "RTW",
+	"version": "0.24.0",
+	"channel": "RC",
+	"type": "module",
 	"description": "personal portfolio website that showcases my projects and professional experience.",
 	"scripts": {
 		"start": "pnpm kickstart; eleventy --serve & pnpm sass-dev",
-		"build": "pnpm kickstart; eleventy & pnpm sass-prod",
+		"build": "pnpm kickstart; pnpm sass-prod && pnpm r2:upload && eleventy",
 		"kickstart": "pnpm clean; pnpm changelog",
-		"changelog": "ruby build-changelog.rb",
+		"changelog": "git fetch --unshallow --all --prune && ruby build-changelog.rb",
 		"clean": "rm -rf _site",
-		"test": "pnpm build; firebase serve",
-		"beta": "pnpm build; firebase hosting:channel:deploy beta",
+		"deploy": "pnpm build && pnpm remove-assets && wrangler pages deploy _site",
 		"sass-dev": "sass --watch --update --style=expanded --quiet src/static/css:_site/static/css",
-		"sass-prod": "sass --no-source-map --style=compressed src/static/css:_site/static/css"
+		"sass-prod": "sass --no-source-map --style=compressed src/static/css:_site/static/css",
+		"r2:upload": "node scripts/upload-to-r2.js",
+		"remove-assets": "rm -rf _site/assets"
 	},
 	"repository": {
 		"type": "git",
@@ -31,7 +33,13 @@
 	"author": "Juan Mier",
 	"devDependencies": {
 		"@11ty/eleventy": "^3.0.0",
-		"@11ty/eleventy-navigation": "^1.0.4"
+		"@11ty/eleventy-navigation": "^1.0.4",
+		"@aws-sdk/client-s3": "^3.896.0",
+		"@aws-sdk/lib-storage": "^3.896.0",
+		"dotenv": "^17.2.2",
+		"glob": "^11.0.3",
+		"mime-types": "^3.0.1",
+		"wrangler": "^4.40.2"
 	},
 	"dependencies": {
 		"fs": "0.0.1-security",
@@ -39,6 +47,6 @@
 		"sass": "^1.87.0"
 	},
 	"pnpm": {
-    "neverBuiltDependencies": []
-  }
+		"neverBuiltDependencies": []
+	}
 }

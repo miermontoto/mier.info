@@ -1,5 +1,6 @@
 const maxTagSize = 1.25
 const minTagSize = 0.75
+const maxDescriptionLength = 200
 
 function buildTagWall(data) {
 	const tags = {}
@@ -75,13 +76,15 @@ function buildDescription(element) {
 	const content = element.rawInput
 
 	// the description is the first characters of the content, removing
-	// the HTML tags. stop at 100 characters or at the end of the first line
-	let description = content.replace(/<[^>]*>?/gm, '').split('\n')[0].substring(0, 100).trim()
+	// the HTML tags. stop at maxDescriptionLength or at the end of the first line
+	const lines = content.replace(/<[^>]*>?/gm, '').split('\n')
+	const firstLine = lines[0] == '' ? lines[1] : lines[0]
+	const description = firstLine.substring(0, maxDescriptionLength).trim()
+
 	const isLastCharDot = description[description.length - 1] === '.'
 	const lastThreeDots = isLastCharDot ? '..' : ' ...'
-	description = content.length < 100 ? description : `${description}${lastThreeDots}`
 
-	return description
+	return `${description}${lastThreeDots}`
 }
 
 

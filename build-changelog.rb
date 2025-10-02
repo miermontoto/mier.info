@@ -1,3 +1,6 @@
+# encoding: utf-8
+# frozen_string_literal: true
+
 class Commit
 	attr_accessor :message, :date, :version, :title, :hash, :author, :body
 
@@ -43,7 +46,7 @@ allowed_authors = ["miermontoto", "Juan Mier"]
 start = Time.now
 
 branch = `git rev-parse --abbrev-ref HEAD`.strip
-raw = `git log origin/#{branch} --pretty=format:"%B||%ad||%H||%an#{delim}" --date=short`
+raw = `git log #{branch} --pretty=format:"%B||%ad||%H||%an#{delim}" --date=short`.force_encoding('UTF-8')
 log("found #{raw.split(delim).length} commits")
 
 commits = []
