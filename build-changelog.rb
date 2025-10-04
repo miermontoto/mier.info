@@ -45,15 +45,21 @@ $ALLOWED_AUTHORS = ["miermontoto", "Juan Mier"]
 
 start = Time.now
 
-begin
-	`git fetch --all --prune --unshallow 2>&1`
-rescue
-	`git fetch --all --prune 2>&1`
+# intenta hacer unshallow del repositorio
+if `git rev-parse --is-shallow-repository`.strip == "true"
+	log("repository is shallow, fetching full history")
+	unshallow_result = system("git fetch --unshallow 2>&1")
+	if unshallow_result == false
+		log("unshallow failed, trying regular fetch")
+		system("git fetch --all --prune 2>&1")
+	end
+else
+	log("repository is not shallow")
 end
 
 
 branch = `git rev-parse --abbrev-ref HEAD`.strip
-raw = `git log #{branch} --pretty=format:"%B||%ad||%H||%an#{$DELIM}" --date=short`.force_encoding('UTF-8')
+raw = `git log #{branch} --all --pretty=format:"%B||%ad||%H||%an#{$DELIM}" --date=short`.force_encoding('UTF-8')
 log("found #{raw.split($DELIM).length} commits")
 
 commits = []
