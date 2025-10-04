@@ -1,12 +1,24 @@
+{% import "src/static/macros.njk" as macros %}
 <footer>
-	<img src="/assets/favicon.svg" alt="logo">
+	<div class="footer-left">
+		<a href="http://creativecommons.org/licenses/by-nc-nd/4.0" target="_blank" rel="license noopener noreferrer"
+			class="footer-links" title="license">📜</a>
+		<a href="https://github.com/miermontoto/mier.info" target="_blank" class="footer-links" title="source">{{ macros.renderIcon("github", false, false, "tech") }}</a>
+		<a href="/treemap/" class="footer-links" title="map">🗺️</a>
+	</div>
 
-	<a property="dct:title" rel="cc:attributionURL" href="/">mier.info</a>
-	by
-	<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/miermontoto">Juan
-		Mier</a>
-	<a href="http://creativecommons.org/licenses/by-nc-nd/4.0" target="_blank" rel="license noopener noreferrer"
-		class="footer-links">license</a>
-	<a href="https://github.com/miermontoto/mier.info" target="_blank" class="footer-links">source</a>
-	<a href="/treemap/" class="footer-links">map</a>
+	<div class="footer-center" style="container-type: inline-size;">
+		<img src="/assets/favicon.svg" alt="logo">
+		<div class="footer-text">
+			<a property="dct:title" rel="cc:attributionURL"
+				href="/">mier.info</a>
+			<span>by</span>
+			<a rel="cc:attributionURL dct:creator" property="cc:attributionName"
+				href="https://github.com/miermontoto">Juan Mier</a>
+		</div>
+	</div>
+
+	<div class="footer-right">
+		{% version pkg %}
+	</div>
 </footer>

@@ -23,14 +23,15 @@ const buildBreadcrumbs = (navPages, thisPage) => {
     }
 
     // build the breadcrumbs
-    let html = `<nav aria-label="breadcrumbs" id="breadcrumbs"><a href="/treemap/" id="b-map">$</a> <a href="/" id="indx-btn">/</a>`; // home button
+    let html = `<nav aria-label="breadcrumbs-nav" id="breadcrumbs"><a href="/treemap/" id="b-map">$</a> <a href="/" id="indx-btn">/</a>`; // home button
 
     if (currentPage.parent) { // if the page has a parent, add it to the breadcrumbs
         let parentPage = findSelfInNavPages(navPages, currentPage.parent);
         html += `<span class="bc-spacer"> > </span><a class="bc-target" href="${parentPage.url}">${parentPage.key}</a>`;
     }
 
-    html += `<span class="bc-spacer"> > </span><b class="bc-target">${currentPage.title || currentPage.key}</b>`; // add self
+    html += `<span class="bc-spacer"> > </span><b class="bc-target">${(currentPage.data.emoji ? currentPage.data.emoji + ' ' : '')}${currentPage.data.title || currentPage.key}</b>`; // add self
+    html += `<span class="bc-cursor">_</span>`; // add blinking cursor
     html += `</nav>`;
     return html;
 };

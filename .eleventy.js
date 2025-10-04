@@ -24,8 +24,8 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy("./src/static/js"); // css is compiled by sass
-  eleventyConfig.addPassthroughCopy("./assets");
-  eleventyConfig.addPassthroughCopy("**.json");
+  eleventyConfig.addPassthroughCopy("./assets"); // solo favicon, todo lo demás desde r2
+  eleventyConfig.addPassthroughCopy("./src/content/data/*.json"); // solo json de contenido
 
   eleventyConfig.setQuietMode(true); // suppresses the "Writing" log message
   eleventyConfig.setDataFileSuffixes([".data", ""]);

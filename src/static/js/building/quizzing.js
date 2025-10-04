@@ -24,9 +24,9 @@ const quizQuestions = (json) => {
 
 			template += `
 				<div class="question-block" block="${block}" exam="${exam}">
-					<h2 class="question">
+					<h3 class="question">
 						${q.title}
-					</h2>
+					</h3>
 			`;
 
 			if (q.options) {

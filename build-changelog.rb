@@ -1,3 +1,6 @@
+# encoding: utf-8
+# frozen_string_literal: true
+
 class Commit
 	attr_accessor :message, :date, :version, :title, :hash, :author, :body
 
@@ -37,24 +40,37 @@ end
 require 'json'
 require 'time'
 
-delim = "¿¿¡¡"
-allowed_authors = ["miermontoto", "Juan Mier"]
+$DELIM = "¿¿¡¡"
+$ALLOWED_AUTHORS = ["miermontoto", "Juan Mier"]
 
 start = Time.now
 
+# intenta hacer unshallow del repositorio
+if `git rev-parse --is-shallow-repository`.strip == "true"
+	log("repository is shallow, fetching full history")
+	unshallow_result = system("git fetch --unshallow 2>&1")
+	if unshallow_result == false
+		log("unshallow failed, trying regular fetch")
+		system("git fetch --all --prune 2>&1")
+	end
+else
+	log("repository is not shallow")
+end
+
+
 branch = `git rev-parse --abbrev-ref HEAD`.strip
-raw = `git log origin/#{branch} --pretty=format:"%B||%ad||%H||%an#{delim}" --date=short`
-log("found #{raw.split(delim).length} commits")
+raw = `git log #{branch} --all --pretty=format:"%B||%ad||%H||%an#{$DELIM}" --date=short`.force_encoding('UTF-8')
+log("found #{raw.split($DELIM).length} commits")
 
 commits = []
-raw.split(delim).each do |line|
+raw.split($DELIM).each do |line|
 	commit = Commit.new
 	commit.body, commit.date, commit.hash, commit.author = line.split("||")
 	commit.author.strip!
 	commit.hash.strip!
 
 	# filter out commits
-	next unless commit.author in allowed_authors   # discard commits from other authors
+	next unless $ALLOWED_AUTHORS.include?(commit.author)   # discard commits from other authors
 	next if commit.body =~ /Merge pull request/    # discard merge commits
 	next if commit.body !~ /^\d{1,2}\.\d{1,2}(.*)/ # discard commits that don't have a version number (XX.y)
 

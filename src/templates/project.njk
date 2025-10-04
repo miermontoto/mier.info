@@ -1,29 +1,48 @@
 ---
-layout: generic.njk
+layout: base.njk
 ---
 
+{% addStyle 'generic' %}
 {% import "src/static/macros.njk" as macros %}
 
-<div id="button-container">
-    {% if source %}
-        <a href="{{ source }}" id="source" class="button"><img src="/assets/icons/tech/git.svg" class="icon invert" alt="source icon">source</a>
-    {% endif %}
-    {% if demo %}
-        <a href="{{ demo }}" id="demo" class="button">🌐 web</a>
-    {% endif %}
-    {% for button in buttons %}
-        <a class="button" href="{{ button.url }}">
-            {{ button.img }}
-            {% if button.icon %}
-                {% if button.from %}
-                    {{ macros.renderIcon(button.icon, true, false, button.from) }}
-                {% else %}
-                    {{ macros.renderIcon(button.icon, true) }}
-                {% endif %}
+<span id="breadcrumbs">
+    {% set navPages = collections.all | eleventyNavigation %}
+    {% breadcrumbs navPages, page %}
+</span>
+
+<div id="title-container">
+    <div id="project-header">
+        <div id="title-section">
+            <span id="title">{{ emoji }} {{ title | safe }}</span>
+            {% if subtitle %}
+                <span id="subtitle">{{ subtitle | safe }}</span>
             {% endif %}
-            {{ button.text }}
-        </a>
-    {% endfor %}
+            {% if created_at %}
+                <span class="date">{{ created_at }}</span>
+            {% endif %}
+        </div>
+        <div id="button-container">
+            {% if source %}
+                <a href="{{ source }}" id="source" class="button"><img src="/assets/icons/tech/git.svg" class="icon invert" alt="source icon">source</a>
+            {% endif %}
+            {% if demo %}
+                <a href="{{ demo }}" id="demo" class="button">🌐 web</a>
+            {% endif %}
+            {% for button in buttons %}
+                <a class="button" href="{{ button.url }}">
+                    {{ button.img }}
+                    {% if button.icon %}
+                        {% if button.from %}
+                            {{ macros.renderIcon(button.icon, true, false, button.from) }}
+                        {% else %}
+                            {{ macros.renderIcon(button.icon, true) }}
+                        {% endif %}
+                    {% endif %}
+                    {{ button.text }}
+                </a>
+            {% endfor %}
+        </div>
+    </div>
 </div>
 
 <hr>
@@ -33,3 +52,5 @@ layout: generic.njk
 {% else %}
     <br> work in progress!
 {% endif %}
+
+{% include "src/templates/snippets/footer.njk" %}

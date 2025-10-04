@@ -1,8 +1,10 @@
 node_modules
 _site
-.firebase
-target
-firebase-debug.log
-**.report.html
 .vscode
+**.report.html
 changelog.json
+.env
+.dev.vars
+.wrangler
+r2-assets-mapping.json
+.firebase

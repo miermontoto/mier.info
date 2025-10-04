@@ -33,6 +33,7 @@
 
 #correct
 	font-size: 5em
+	margin-right: 0.1em
 
 #total
 	font-size: 2.5em
@@ -43,15 +44,25 @@
 .question-block
 	margin: 0 auto
 	width: 90%
-	border-radius: 8px
-	border: 3px solid colors.$dark
+	border: 2px solid colors.$dark
 	margin-bottom: 2em
 	padding: 2em
+
+#quiz-header
+	position: sticky
+	top: 0
+	background-color: colors.$primary
+	z-index: 100
+	padding: 1em
+	margin: -1em -1em 1em -1em
+	display: flex
+	justify-content: space-between
+	align-items: center
+	gap: 2em
 
 #results
 	display: flex
 	flex-direction: row
-	justify-content: center
 	align-items: center
 	font-size: 2em
 	color: lightgray
@@ -62,6 +73,29 @@
 		color: colors.$white
 		font-size: 1.5em
 		font-style: normal
+
+#options
+	display: flex
+	align-items: center
+	gap: 1.5em
+
+	label
+		display: flex
+		align-items: center
+		gap: 0.5em
+		cursor: pointer
+		font-size: 0.9em
+
+		input[type="checkbox"]
+			height: 1.25em
+			width: 1.25em
+			margin: 0
+			cursor: pointer
+
+	#reset
+		margin-left: 1em
+		padding: 0.5em 1em
+		font-size: 0.9em
 
 #scored
 	font-size: 2em
@@ -78,11 +112,6 @@
 
 .letter
 	font-weight: bold
-
-#options input
-	height: 1.25em
-	width: 1.25em
-	margin: 6px
 
 .asterisks
 	margin-top: 1em

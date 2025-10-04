@@ -27,10 +27,13 @@ desc: "personal portfolio website that collects all my projects and professional
 {% import "src/static/macros.njk" as macros %}
 
 <div id="sections">
-    {% include "./content/index/projects.njk" %}
-    {% include "./content/index/about.njk" %}
-    {% include "./content/index/shortcuts.njk" %}
+    {% include "./partials/index/projects.njk" %}
+    {% include "./partials/index/about.njk" %}
+    {% include "./partials/index/shortcuts.njk" %}
 </div>
 
 <video id="background" autoplay muted playsinline></video>
 <span id="messages-span"></span>
+
+{% version pkg %}
+
