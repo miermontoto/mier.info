@@ -1,14 +1,13 @@
 {
 	"name": "mier.info",
 	"version": "0.24.0",
-	"channel": "RC",
-	"type": "module",
+	"channel": "RC3",
 	"description": "personal portfolio website that showcases my projects and professional experience.",
 	"scripts": {
 		"start": "pnpm kickstart; eleventy --serve & pnpm sass-dev",
 		"build": "pnpm kickstart; pnpm sass-prod && pnpm r2:upload && eleventy",
 		"kickstart": "pnpm clean; pnpm changelog",
-		"changelog": "git fetch --unshallow --all --prune && ruby build-changelog.rb",
+		"changelog": "ruby build-changelog.rb",
 		"clean": "rm -rf _site",
 		"deploy": "pnpm build && pnpm remove-assets && wrangler pages deploy _site",
 		"sass-dev": "sass --watch --update --style=expanded --quiet src/static/css:_site/static/css",

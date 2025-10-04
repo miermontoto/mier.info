@@ -8,7 +8,6 @@ redirect_from: /epicalendar/
 icons: [flask, python, react, heroku]
 img: true
 lang: es
-star: star
 emoji: 📅
 eleventyNavigation:
   key: epiCalendar

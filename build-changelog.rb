@@ -40,24 +40,31 @@ end
 require 'json'
 require 'time'
 
-delim = "¿¿¡¡"
-allowed_authors = ["miermontoto", "Juan Mier"]
+$DELIM = "¿¿¡¡"
+$ALLOWED_AUTHORS = ["miermontoto", "Juan Mier"]
 
 start = Time.now
 
+begin
+	`git fetch --all --prune --unshallow 2>&1`
+rescue
+	`git fetch --all --prune 2>&1`
+end
+
+
 branch = `git rev-parse --abbrev-ref HEAD`.strip
-raw = `git log #{branch} --pretty=format:"%B||%ad||%H||%an#{delim}" --date=short`.force_encoding('UTF-8')
-log("found #{raw.split(delim).length} commits")
+raw = `git log #{branch} --pretty=format:"%B||%ad||%H||%an#{$DELIM}" --date=short`.force_encoding('UTF-8')
+log("found #{raw.split($DELIM).length} commits")
 
 commits = []
-raw.split(delim).each do |line|
+raw.split($DELIM).each do |line|
 	commit = Commit.new
 	commit.body, commit.date, commit.hash, commit.author = line.split("||")
 	commit.author.strip!
 	commit.hash.strip!
 
 	# filter out commits
-	next unless commit.author in allowed_authors   # discard commits from other authors
+	next unless $ALLOWED_AUTHORS.include?(commit.author)   # discard commits from other authors
 	next if commit.body =~ /Merge pull request/    # discard merge commits
 	next if commit.body !~ /^\d{1,2}\.\d{1,2}(.*)/ # discard commits that don't have a version number (XX.y)
 
