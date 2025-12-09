@@ -1,19 +1,15 @@
 ---
 layout: project.njk
-buttons: [
-	{
-		text: "get json",
-		icon: "download",
-		url: "/content/collections/quizzes/{{page.fileSlug}}.data.json",
-		from: "misc"
-	},
-	{
-		text: "report issue",
-		icon: "bug",
-		url: "https://github.com/miermontoto/mier.info/issues/new",
-		from: "misc"
-	}
-]
+eleventyComputed:
+  buttons:
+    - text: "get json"
+      icon: "download"
+      url: "/content/collections/quizzes/{{ page.fileSlug }}.data.json"
+      from: "misc"
+    - text: "report issue"
+      icon: "bug"
+      url: "https://github.com/miermontoto/mier.info/issues/new"
+      from: "misc"
 ---
 
 {% addStyle "quiz" %}
