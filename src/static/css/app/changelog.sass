@@ -1,45 +1,167 @@
 @use '../colors'
+@use '../base'
 
-.entry
+// contenedor principal con layout de dos columnas
+#changelog-container
+	display: grid
+	grid-template-columns: minmax(200px, 250px) 1fr
+	grid-template-rows: 1fr
+	gap: 2rem
+	margin-top: 1rem
+	height: 75vh
+
+// sidebar con lista de versiones
+#versions-sidebar
+	overflow-y: auto
+	background: colors.$secondary
+	border: 1px solid colors.$halflight
+
+	.versions-header
+		background: colors.$white
+		color: colors.$primary
+		padding: 0.75rem 1rem
+		font-weight: bold
+		font-size: 0.875rem
+		letter-spacing: 0.125rem
+		border-bottom: 1px solid colors.$white
+
+	.versions-list
+		list-style: none
+		padding: 0
+		margin: 0
+
+	.version-item
+		border-bottom: 1px solid colors.$halflight
+
+		&:last-child
+			border-bottom: none
+
+	.version-link
+		display: block
+		padding: 0.75rem 1rem
+		text-decoration: none
+		color: colors.$white
+		transition: background 0.1s
+
+		&:hover
+			background: colors.$halflight
+
+	.version-number
+		font-size: 0.875rem
+		font-weight: bold
+		margin-right: 0.5rem
+
+	.version-range
+		font-size: 0.625rem
+		color: colors.$light
+		font-family: base.$classic-fonts
+
+// contenido principal con scroll independiente
+#changelog-main
+	overflow-y: auto
+	scroll-behavior: smooth
+
+// sección de versión
+.version-section
 	margin-bottom: 2rem
-	border-color: colors.$dark
-	display: flex
-	flex-direction: column
+	scroll-margin-top: 1rem
 
-	*
-		margin: 0.25rem 0
+	&:last-child
+		margin-bottom: 0
+
+// header de versión
+.version-header
+	margin-bottom: 1rem
+	padding-bottom: 0.5rem
+	border-bottom: 2px solid colors.$white
+
+	.version-title
+		font-size: 2.5rem
+		font-weight: bold
+		color: colors.$white
+		margin: 0
+
+// entrada de changelog
+.changelog-entry
+	background: colors.$secondary
+	border: 1px solid colors.$halflight
+	margin-bottom: 0.75rem
+	padding: 0.75rem 1rem
+
+	.entry-header
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		gap: 1rem
 
 	.title
-		font-weight: normal
-		font-size: 1.75rem
+		font-size: 1.25rem
+		font-weight: bold
+		color: colors.$white
+		flex: 1
 
 		.subtitle
+			color: colors.$light
 			font-weight: normal
+			margin-left: 0.5rem
+
+	.entry-date
+		font-size: 0.6875rem
+		color: colors.$light
+		text-decoration: none
+		white-space: nowrap
+		font-family: base.$classic-fonts
+		padding: 0.125rem 0.375rem
+		background: colors.$halflight
+		border: 1px solid colors.$dark
+
+		&:hover
+			border-color: colors.$white
+
+	.entry-message
+		font-size: 0.8125rem
+		color: colors.$half
+		line-height: 1.6
+		margin-top: 0.5rem
+		padding-left: 0.75rem
+		border-left: 2px solid colors.$halflight
+
+		code
+			background: colors.$halflight
+			padding: 0.125rem 0.375rem
+			border: 1px solid colors.$dark
+			font-size: 0.75rem
+
+		b
+			color: colors.$white
+
+	.warning
+		color: colors.$warning
+		font-weight: bold
+
+// responsive: colapsar sidebar en móviles
+@media (max-width: 768px)
+	#changelog-container
+		grid-template-columns: 1fr
+		gap: 1rem
+
+	#versions-sidebar
+		position: relative
+		top: 0
+		max-height: 15rem
+
+		.versions-header
+			position: sticky
+			top: 0
+			z-index: 1
+
+	.version-header .version-title
+		font-size: 2rem
+
+	.changelog-entry
+		.title
 			font-size: 1rem
 
-	.date
-		margin-top: 0.75em
-		font-size: 0.8rem
-		color: colors.$dark
-
-.version-title
-	font-size: 3rem
-	text-decoration: none
-
-	&:hover
-		background-color: inherit !important
-		color: inherit !important
-
-#versions li
-	margin: 0.5rem 0
-
-	.version
-		font-size: 1.25rem
-
-	.date
-		font-style: italic
-		font-size: 0.9rem
-
-	.older
-		font-style: italic
-		color: colors.$dark
+		.entry-header
+			flex-wrap: wrap
+			gap: 0.5rem

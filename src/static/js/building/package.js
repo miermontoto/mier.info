@@ -6,10 +6,11 @@ function buildKeywords(pkg) {
 	return `<meta name="keywords" content="${pkg.keywords.join(', ')}">`;
 }
 
-function buildVersionTag(pkg) {
+function buildVersionTag(pkg, page) {
 	let version = pkg.version;
 	let channel = pkg.channel && pkg.channel !== 'RTW' ? ` (${pkg.channel})` : '';
-	return `<a id="version-tag" href="/changelog/">${version}${channel}</a>`;
+	let current = page?.url === '/changelog/' ? ' current' : '';
+	return `<a id="version-tag" class="${current}" href="/changelog/">${version}${channel}</a>`;
 }
 
 module.exports = { buildKeywords, buildVersionTag };

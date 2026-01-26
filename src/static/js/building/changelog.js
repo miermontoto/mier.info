@@ -37,52 +37,62 @@ const processTitle = (title) => {
 const buildVersionsCollapsible = (data) => {
 	const majors = new Set(data.map(d => d.version.major))
 
-	let content = '<div id="versions"><h2>versions</h2><ul>'
+	let content = '<nav id="versions-sidebar"><div class="versions-header">VERSIONS</div><ul class="versions-list">'
 
 	majors.forEach((major) => {
-		const fromDate = data.filter(d => d.version.major == major).slice(-1)[0].date
-		const toDate = data.filter(d => d.version.major == major)[0].date
+		const versions = data.filter(d => d.version.major == major)
+		const fromDate = versions.slice(-1)[0].date
+		const toDate = versions[0].date
 
-		content += `<li>
-			<a href="#version-${major}" class="version">v${major}</a>
-			<span class="date">${fromDate} - ${toDate}</span>
+		content += `<li class="version-item">
+			<a href="#version-${major}" class="version-link" data-version="${major}">
+				<span class="version-number">v${major}</span>
+				<span class="version-range">${fromDate} → ${toDate}</span>
+			</a>
 		</li>`
 	})
-
-	content += '<li><span class="older">no info available for older versions</span></li></ul></div><hr>'
+	content += '</ul></nav>'
 	return content
 }
 
 
 const buildChangelog = (data, pkg) => {
-	let content = '<div id="changelog">'
-
 	// sort commits by version
 	data.sort((a, b) => { return a.version.major > b.version.major ? -1 : 1 })
-
-	// build the versions collapsible
-	content += buildVersionsCollapsible(data)
 
 	// if the current version isn't in the changelog,
 	// add it manually to the data array
 	checkCurrent(data, pkg)
 
+	// build the sidebar and main content container
+	let content = '<div id="changelog-container">'
+	content += buildVersionsCollapsible(data)
+	content += '<main id="changelog-main">'
+
 	let prevMajor = null
 	data.forEach((d) => {
-		// if the major version has changed, add a new header
+		// if the major version has changed, add a new section header
 		if (prevMajor != d.version.major) {
-			if (prevMajor) content += '</div><hr>'
-			content += `<div id="version-${d.version.major}"><h1><a class="version-title" href="#title">v${d.version.major}</a></h1>`
+			if (prevMajor) content += '</section>'
+			content += `<section id="version-${d.version.major}" class="version-section">
+				<div class="version-header">
+					<h1 class="version-title">v${d.version.major}</h1>
+				</div>`
 		}
 		prevMajor = d.version.major
 
 		// add the commit entry
-		content += `<div class="entry hoverborder">`
+		const shortHash = d.hash.substring(0, 7)
+		content += `<div class="changelog-entry">`
+		content += `<div class="entry-header">`
 		content += processTitle(d.title)
-		if (d.message) content += `<br><span class="message">${d.message.replace(/\n/g, '<br>')}</span>`
-		content += `<a class="date" href="https://github.com/miermontoto/mier.info/commit/${d.hash}" target="_blank">${d.date}</a></div>`
+		content += `<a class="entry-date" href="https://github.com/miermontoto/mier.info/commit/${d.hash}" target="_blank" rel="noopener noreferrer" data-hash="${shortHash}">${d.date}</a>`
+		content += `</div>`
+		if (d.message) content += `<div class="entry-message">${d.message.replace(/\n/g, '<br>')}</div>`
+		content += `</div>`
 	})
-	content += '</div>'
+
+	content += '</section></main></div>'
 
 	return content
 }
