@@ -8,6 +8,7 @@
 @use 'global/footer'
 @use 'global/code'
 @use 'global/input'
+@use 'global/nav'
 
 *
     font-family: base.$fonts
@@ -134,3 +135,35 @@ h3
 
 h4
     font-size: 1.25em
+
+// panel de shortcuts global
+#shortcuts-panel
+    position: fixed
+    bottom: 1em
+    right: 1em
+    background: colors.$secondary
+    border: 1px solid colors.$halflight
+    padding: 1em
+    text-align: left
+    max-width: 20em
+    z-index: 1000
+
+    h3
+        margin-top: 0
+
+    h4
+        margin-bottom: 0.5em
+        color: colors.$light
+
+    .shortcut
+        margin: 0.25em 0
+
+        .key
+            display: inline-block
+            background: colors.$halflight
+            border: 1px solid colors.$dark
+            padding: 0.1em 0.4em
+            margin-right: 0.5em
+            min-width: 1.5em
+            text-align: center
+            font-weight: bold

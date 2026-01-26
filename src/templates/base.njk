@@ -25,6 +25,8 @@
 <body>
     {{ content | safe }}
     <is-land id="snow-container" on:media="(prefers-reduced-motion: no-preference)"></is-land>
+    {% set navPages = collections.all | eleventyNavigation %}
+    {% navScript navPages, collections.all %}
 </body>
 
 </html>

@@ -139,4 +139,11 @@ function buildTimestamps(data, element) {
 	`
 }
 
-module.exports = { buildTagWall, getRecents, getRelated, buildTimestamps }
+function buildWrappedImg(file, alt) {
+  return `<figure class="til-img">
+    <img src="/assets/media/projects/til/${this.page.fileSlug}/${file}" alt="${alt}" />
+    <figcaption class="til-img-alt">${alt}</figcaption>
+  </figure>`;
+}
+
+module.exports = { buildTagWall, getRecents, getRelated, buildTimestamps, buildWrappedImg }

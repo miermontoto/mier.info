@@ -1,0 +1,119 @@
+@use '../colors'
+
+// panel de navegación (estilo command palette)
+#nav-panel
+    position: fixed
+    z-index: 1000
+    display: none
+    background-color: rgba(colors.$primary, 0.95)
+
+    &.active
+        display: flex
+        flex-direction: column
+
+    // versión centrada para index (estilo Arc/Zen)
+    &.nav-centered
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        justify-content: center
+        align-items: center
+        backdrop-filter: blur(8px)
+
+        .nav-container
+            width: min(500px, 85vw)
+            font-size: 1.4em
+            border: 1px solid colors.$dark
+            background-color: colors.$primary
+
+        #nav-results
+            width: min(500px, 85vw)
+            max-height: 50vh
+            border: 1px solid colors.$dark
+            border-top: none
+
+    // versión inline para páginas con breadcrumbs
+    &.nav-breadcrumb
+        top: 0
+        left: 0
+        right: 0
+        padding: 0 10%
+        background-color: colors.$primary
+        border-bottom: 1px solid colors.$dark
+
+        .nav-container
+            width: 100%
+            font-size: 1.1em
+            padding: 0.75em 0
+
+        #nav-results
+            width: 100%
+            max-height: 60vh
+
+.nav-container
+    display: flex
+    align-items: center
+    padding: 0.5em 1em
+
+.nav-prefix
+    color: colors.$light
+    user-select: none
+    margin-right: 0.25em
+    font-weight: bold
+
+#nav-input
+    flex: 1
+    background: transparent
+    border: none
+    outline: none
+    color: colors.$white
+    font-family: inherit
+    font-size: inherit
+    padding: 0.25em 0
+    caret-color: colors.$white
+
+    &::placeholder
+        color: colors.$dark
+
+#nav-results
+    list-style: none
+    padding: 0
+    margin: 0
+    overflow-y: auto
+    background-color: colors.$primary
+
+.nav-item
+    padding: 0.6em 1em
+    cursor: pointer
+    display: flex
+    align-items: center
+    gap: 0.25em
+    text-align: left
+    transition: background-color 0.1s ease
+
+    &:hover, &.selected
+        background-color: colors.$secondary
+
+.nav-parent
+    color: colors.$dark
+    font-size: 0.85em
+
+.nav-emoji
+    margin-right: 0.25em
+
+.nav-key
+    color: inherit
+
+.nav-empty
+    padding: 1em
+    color: colors.$dark
+    font-style: italic
+    text-align: center
+
+// cursor clickeable en breadcrumbs
+.bc-cursor
+    cursor: pointer
+
+    &:hover
+        color: colors.$white

@@ -20,10 +20,9 @@ function fetchMarquee() {
     }
 }
 
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'm') {
-        fetchMarquee();
-    }
-});
+// registrar shortcut de marquee
+if (window.shortcuts) {
+    window.shortcuts.register('m', () => fetchMarquee(), 'change marquee', 'background');
+}
 
 fetchMarquee();

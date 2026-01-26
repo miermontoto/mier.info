@@ -2,7 +2,7 @@
 title: mier.info
 desc: my personal portfolio, the very website you are looking at right now.
 source: https://github.com/miermontoto/mier.info
-icons: [eleventy, firebase, sass, markdown, nunjucks, js ]
+icons: [eleventy, sass, markdown, nunjucks, js]
 star: star
 permalink: /this/
 redirect_from: [/mier.info/, /self/]
@@ -13,6 +13,7 @@ eleventyNavigation:
 ---
 
 ## intro
+
 this webpage is a collection of my personal projects, a place that I control
 that allows me to build and publish my own small ideas.
 I've spent a lot of time building it and slowly redefining it,
@@ -22,17 +23,19 @@ it represents my ideas and beliefs.
 <br>
 
 ## tech
+
 almost everything you see, from the breadcrumbs to the buttons, is handcrafted
 and built from scratch with <img src="/assets/icons/tech/eleventy.svg" class="icon" alt="eleventy">,
-hosted in <img src="/assets/icons/tech/firebase.svg" class="icon" alt="firebase">,
+hosted in <img src="/assets/icons/tech/cloudflare.svg" class="icon" alt="cloudflare">,
 using <img src="/assets/icons/tech/nunjucks.svg" class="icon" alt="nunjucks">,
 <img src="/assets/icons/tech/sass.svg" class="icon" alt="sass">,
 <img src="/assets/icons/tech/markdown.svg" class="icon" alt="markdown">
 (and a ton of client-side <img src="/assets/icons/tech/js.svg" class="icon" alt="javascript">).
 
-the github repo is connected to firebase hosting through CI/CD using github actions, including the 'beta' branch that hosts the latest changes before going live.
+the github repo is connected to cloudflare pages through CI/CD using github actions, including the 'beta' branch that hosts the latest changes before going live.
 
 ### custom elements
+
 - the [**changelog**](/changelog/) is generated using the git history, first
   processed using a ruby script which generates a json file, which is then
   processed by javascript to generate the html changelog.
@@ -51,6 +54,7 @@ the github repo is connected to firebase hosting through CI/CD using github acti
 <br>
 
 ## design
+
 the "design" is a tribute to the legendary
 [daft punk 90's website](https://web.archive.org/web/20220223020719/https://daftpunk.com/).
 as you can probably tell, it's a very important reference for me,
@@ -61,6 +65,7 @@ from December 1st to January 7th every year, there is snow falling
 (thanks to [zachleat](https://github.com/zachleat/snow-fall))
 
 several other inspirations:
+
 - [mschf](https://mschf.com/)
 - [crlf.link](https://crlf.link/)
 - [dmaorg / clancy's blog](http://dmaorg.info/)
@@ -69,4 +74,4 @@ several other inspirations:
 - [irene mateos' awesome portfolio](https://enerimateos.com/)
 - [Things Of Interest](https://qntm.org/)
 - [nothing](https://es.nothing.tech/)
-- [aphex twin](https://aphextwin.warp.net/)
+- [aphex twin](https:/in /aphextwin.warp.net/)

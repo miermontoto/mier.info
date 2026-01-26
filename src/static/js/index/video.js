@@ -28,16 +28,10 @@ export function load() {
     addMessage(`<b>now playing:</b> ${sources[index].name}`);
 }
 
-// add event listener for 'n' key to load next video
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'n') {
-        load();
-    }
-});
-
-// add event listener for 's' to start/stop video
-document.addEventListener('keydown', (event) => {
-    if (event.key === 's') {
+// registrar shortcuts de video
+if (window.shortcuts) {
+    window.shortcuts.register('n', () => load(), 'next video', 'background');
+    window.shortcuts.register('s', () => {
         if (videoElement.paused) {
             videoElement.play();
             videoElement.hidden = false;
@@ -47,5 +41,5 @@ document.addEventListener('keydown', (event) => {
             videoElement.hidden = true;
             showMessage('video paused. press s to resume.');
         }
-    }
-});
+    }, 'stop video', 'background');
+}
