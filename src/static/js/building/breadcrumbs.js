@@ -30,7 +30,7 @@ const buildBreadcrumbs = (navPages, thisPage) => {
         html += `<span class="bc-spacer"> > </span><a class="bc-target" href="${parentPage.url}">${parentPage.key}</a>`;
     }
 
-    html += `<span class="bc-spacer"> > </span><b class="bc-target">${(currentPage.data.emoji ? currentPage.data.emoji + ' ' : '')}${currentPage.data.title || currentPage.key}</b>`; // add self
+    html += `<span class="bc-spacer"> > </span><b class="bc-target">${(currentPage.data.emoji ? currentPage.data.emoji + ' ' : '')}${currentPage.key}</b>`; // add self
     html += `<span class="bc-cursor">_</span>`; // add blinking cursor
     html += `</nav>`;
     return html;

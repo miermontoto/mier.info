@@ -1,9 +1,30 @@
 @use '../colors'
+@use '../base'
 
+// contenedor principal de experiencia
 #experience-container
+    h1
+        margin-bottom: 1.5rem
+
     .carded .card
         width: max(40%, 500px)
+        background: colors.$secondary
+        border: 1px solid colors.$halflight
+        margin: 1rem
+        display: grid
+        grid-template-rows: auto 1fr auto
+        align-items: start
 
+        &:hover
+            border-color: colors.$light
+
+    // grid de tarjetas mejorado
+    .carded
+        gap: 1rem
+        margin-top: 1rem
+        align-items: stretch
+
+    // timeline mejorada para experiencia de trabajo
     .work .card-description > ul
         margin-left: -2em
         list-style-type: none
@@ -11,23 +32,27 @@
         & > li:before
             content: ''
             position: absolute
-            background-color: colors.$white
+            background: linear-gradient(to bottom, colors.$white 0%, colors.$light 100%)
             top: 0
             bottom: 0
             left: 5px
-            width: 2px
+            width: 3px
+            border-radius: 2px
 
         & > li
             position: relative
             margin: 0
-            padding-bottom: 1em
-            padding-left: 20px
+            padding-bottom: 1.5em
+            padding-left: 24px
 
             ul
                 display: block
+                margin-top: 0.5em
 
                 li
                     margin-left: -1em
+                    font-size: 0.9em
+                    color: colors.$half
 
         & > li:after
             content: ''
@@ -37,17 +62,85 @@
             background-size: contain
             left: 0
             top: 2px
-            width: 12px
-            height: 12px
+            width: 14px
+            height: 14px
 
         & > li:last-child:before
-            height: 6px
+            height: 9px
 
         & > li:first-child:before
-            top: 10px
+            top: 9px
 
+    // logo de experiencia mejorado
     .experience-logo
         width: 1.5em
+        height: 1.5em
         margin-right: 0.5em
         border-radius: 5%
         user-select: none
+        object-fit: contain
+
+    // estilos de tarjeta mejorados
+    .card-title-col
+        width: 100%
+        padding-bottom: 0.75rem
+        border-bottom: 1px solid colors.$halflight
+        min-height: 5rem
+
+        .card-title
+            font-size: 1.5rem
+            color: colors.$white
+            margin-bottom: 0.5rem
+            margin-top: 0
+
+        b
+            color: colors.$white
+            font-size: 1rem
+            display: block
+            margin-top: 0.25rem
+
+        i
+            color: colors.$light
+            font-size: 0.875rem
+            font-family: base.$classic-fonts
+            display: block
+            margin-top: 0.25rem
+
+    .card-description
+        width: 100%
+        color: colors.$half
+        line-height: 1.6
+        font-size: 0.9rem
+        padding-top: 1rem
+
+        b, strong
+            color: colors.$white
+
+        code
+            background: colors.$halflight
+            padding: 0.125rem 0.375rem
+            border: 1px solid colors.$dark
+            font-size: 0.85rem
+
+    .card-bottom
+        width: 100%
+        margin-top: auto
+        padding-top: 1rem
+        border-top: 1px solid colors.$halflight
+
+        .card-icons
+            font-size: 1.5em
+
+// responsive: mejorar diseño móvil
+@media (max-width: 768px)
+    #experience-container
+        .carded .card
+            width: 100%
+            margin: 0.75rem 0
+
+        .card-title-col
+            .card-title
+                font-size: 1.25rem
+
+        .work .card-description > ul > li
+            padding-left: 20px

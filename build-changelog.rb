@@ -59,7 +59,7 @@ end
 
 
 branch = `git rev-parse --abbrev-ref HEAD`.strip
-raw = `git log #{branch} --all --pretty=format:"%B||%ad||%H||%an#{$DELIM}" --date=short`.force_encoding('UTF-8')
+raw = `git log #{branch} --pretty=format:"%B||%ad||%H||%an#{$DELIM}" --date=short`.force_encoding('UTF-8')
 log("found #{raw.split($DELIM).length} commits")
 
 commits = []
@@ -101,8 +101,8 @@ raw.split($DELIM).each do |line|
 	commit.message = commit.message.gsub(/</, "&lt;").gsub(/>/, "&gt;") unless commit.message.nil?
 
 	# process markdown code as HTML
-	commit.title = commit.title.gsub(/`(.*)`/, "<code>\\1</code>")
-	commit.message = commit.message.gsub(/`(.*)`/, "<code>\\1</code>") unless commit.message.nil?
+	commit.title = commit.title.gsub(/`(.*?)`/, "<code>\\1</code>")
+	commit.message = commit.message.gsub(/`(.*?)`/, "<code>\\1</code>") unless commit.message.nil?
 
 	# skip commits with repeated titles
 	next if commits.map(&:title).include? commit.title

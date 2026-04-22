@@ -32,7 +32,7 @@
                     <div class="project-desc">{{ data.desc | safe }}</div>
 
                     {% if data.links or data.source and data.demo %}
-                        <div class="project-links">{{ macros.renderLinks(project, false) }}</div>
+                        <div class="project-links">{{ macros.renderLinks(project) }}</div>
                     {% endif %}
                 </article>
             {% endfor %}

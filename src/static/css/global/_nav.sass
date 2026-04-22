@@ -1,0 +1,127 @@
+@use '../colors'
+
+// panel de navegación (estilo command palette)
+#nav-panel
+    position: fixed
+    z-index: 1000
+    display: none
+    background-color: rgba(colors.$primary, 0.95)
+
+    &.active
+        display: flex
+        flex-direction: column
+
+    // versión centrada para index (estilo terminal)
+    &.nav-centered
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        justify-content: center
+        align-items: center
+        backdrop-filter: blur(8px)
+
+        .nav-container
+            width: min(500px, 85vw)
+            font-size: 1.4em
+            border: 1px solid colors.$halflight
+            background-color: colors.$primary
+            padding: 0.75em 1em
+
+        #nav-results
+            width: min(500px, 85vw)
+            max-height: 50vh
+            border: 1px solid colors.$halflight
+            border-top: none
+
+    // versión inline para páginas con breadcrumbs (estilo terminal)
+    &.nav-breadcrumb
+        top: 0
+        left: 0
+        right: 0
+        padding: 1em 10% 0.001em
+        background-color: colors.$primary
+        z-index: 100
+
+        .nav-container
+            width: 100%
+            font-size: 1.125em
+            padding: 0
+
+        #nav-results
+            width: 100%
+            max-height: 60vh
+            margin-top: 0.5em
+            border-top: 1px solid colors.$halflight
+
+.nav-container
+    display: flex
+    align-items: center
+
+.nav-prefix
+    color: colors.$light
+    user-select: none
+    margin-right: 0.5em
+
+#nav-input
+    flex: 1
+    background: transparent
+    border: none
+    outline: none
+    color: colors.$white
+    font-family: inherit
+    font-size: inherit
+    padding: 0
+    caret-color: colors.$white
+
+    &::placeholder
+        color: colors.$dark
+
+#nav-results
+    list-style: none
+    padding: 0
+    margin: 0
+    overflow-y: auto
+    background-color: colors.$primary
+
+.nav-item
+    padding: 0.5em 1em
+    cursor: pointer
+    display: flex
+    align-items: center
+    gap: 0.25em
+    text-align: left
+    color: colors.$half
+
+    &:hover, &.selected
+        color: colors.$white
+        background-color: colors.$secondary
+
+        .nav-key
+            text-decoration: underline
+
+.nav-parent
+    color: colors.$light
+
+    &::after
+        content: " > "
+        color: colors.$dark
+
+.nav-emoji
+    margin-right: 0.25em
+
+.nav-key
+    color: inherit
+
+.nav-empty
+    padding: 1em
+    color: colors.$dark
+    font-style: italic
+    text-align: center
+
+// cursor clickeable en breadcrumbs
+.bc-cursor
+    cursor: pointer
+
+    &:hover
+        color: colors.$white

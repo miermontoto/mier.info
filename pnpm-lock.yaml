@@ -30,6 +30,9 @@ importers:
       '@aws-sdk/lib-storage':
         specifier: ^3.896.0
         version: 3.896.0(@aws-sdk/client-s3@3.896.0)
+      detect-port:
+        specifier: ^2.1.0
+        version: 2.1.0
       dotenv:
         specifier: ^17.2.2
         version: 17.2.2
@@ -934,6 +937,10 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
+  address@2.0.3:
+    resolution: {integrity: sha512-XNAb/a6TCqou+TufU8/u11HCu9x1gYvOoxLwtlXgIqmkrYQADVv6ljyW2zwiPhHz9R1gItAWpuDrdJMmrOBFEA==}
+    engines: {node: '>= 16.0.0'}
+
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
     engines: {node: '>=8'}
@@ -1097,6 +1104,11 @@ packages:
   detect-libc@2.1.1:
     resolution: {integrity: sha512-ecqj/sy1jcK1uWrwpR67UhYrIFQ+5WlGxth34WquCbamhFA6hkkwiu37o6J5xCHdo1oixJRfVRw+ywV+Hq/0Aw==}
     engines: {node: '>=8'}
+
+  detect-port@2.1.0:
+    resolution: {integrity: sha512-epZuWb/6Q62L+nDHJc/hQAqf8pylsqgk3BpZXVBx1CDnr3nkrVNn73Uu1rXcFzkNcc+hkP3whuOg7JZYaQB65Q==}
+    engines: {node: '>= 16.0.0'}
+    hasBin: true
 
   dom-serializer@1.4.1:
     resolution: {integrity: sha512-VHwB3KfrcOOkelEG2ZOfxqLZdfkil8PtJi4P8N2MMXucZq2yLp75ClViUlOVwyoHEDjYU433Aq+5zWP61+RGag==}
@@ -3038,6 +3050,8 @@ snapshots:
 
   acorn@8.14.1: {}
 
+  address@2.0.3: {}
+
   ansi-regex@5.0.1: {}
 
   ansi-regex@6.1.0: {}
@@ -3178,6 +3192,10 @@ snapshots:
     optional: true
 
   detect-libc@2.1.1: {}
+
+  detect-port@2.1.0:
+    dependencies:
+      address: 2.0.3
 
   dom-serializer@1.4.1:
     dependencies:

@@ -1,24 +1,23 @@
 const sections = [
-    { buttonId: 'project-button', sectionId: 'project-section', key: 'p' },
-    { buttonId: 'about-button', sectionId: 'about-section', key: 'a' },
-    { sectionId: 'shortcuts-section', key: '?' }
-].map(({ buttonId, sectionId, key }) => ({
+    { buttonId: 'project-button', sectionId: 'project-section', key: 'p', label: 'projects' },
+    { buttonId: 'about-button', sectionId: 'about-section', key: 'a', label: 'about' }
+].map(({ buttonId, sectionId, key, label }) => ({
     button: document.getElementById(buttonId),
     section: document.getElementById(sectionId),
-    key
+    key,
+    label
 }));
 
 const projects = document.getElementById('projects');
 
 function initializeSections() {
-    sections.forEach(({ button, section, key }) => {
+    sections.forEach(({ button, section, key, label }) => {
         if (!section) {
             console.error(`section not found:`, section?.id);
             return;
         }
 
         // add event listeners for the buttons that toggle the sections
-        // (if the button exists)
         if (button) {
             ['click', 'touchend'].forEach(eventType => {
                 button.addEventListener(eventType, (event) => {
@@ -28,21 +27,19 @@ function initializeSections() {
             });
         }
 
-        if (!key) {
-            return;
+        // registrar shortcut en el manager global
+        if (key && window.shortcuts) {
+            window.shortcuts.register(key, () => toggleSection(section), label, 'sections');
         }
-
-        // add event listener for the key that toggles the section (optional)
-        document.addEventListener('keydown', (event) => {
-            if (event.key === key) {
-                toggleSection(section);
-            }
-        });
     });
+
+    // registrar escape para cerrar secciones (hidden)
+    if (window.shortcuts) {
+        window.shortcuts.register('Escape', () => clearSections(), 'close', 'sections', true);
+    }
 
     document.addEventListener('click', handleOutsideClick);
     document.addEventListener('touchend', handleOutsideClick);
-    document.addEventListener('keydown', handleEscapeKey);
 }
 
 
@@ -57,12 +54,6 @@ function handleOutsideClick(event) {
         ) {
             clearSections();
         }
-    }
-}
-
-function handleEscapeKey(event) {
-    if (event.key === 'Escape') {
-        clearSections();
     }
 }
 
