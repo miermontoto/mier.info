@@ -11,7 +11,7 @@
         display: flex
         flex-direction: column
 
-    // versión centrada para index (estilo Arc/Zen)
+    // versión centrada para index (estilo terminal)
     &.nav-centered
         top: 0
         left: 0
@@ -24,43 +24,44 @@
         .nav-container
             width: min(500px, 85vw)
             font-size: 1.4em
-            border: 1px solid colors.$dark
+            border: 1px solid colors.$halflight
             background-color: colors.$primary
+            padding: 0.75em 1em
 
         #nav-results
             width: min(500px, 85vw)
             max-height: 50vh
-            border: 1px solid colors.$dark
+            border: 1px solid colors.$halflight
             border-top: none
 
-    // versión inline para páginas con breadcrumbs
+    // versión inline para páginas con breadcrumbs (estilo terminal)
     &.nav-breadcrumb
         top: 0
         left: 0
         right: 0
-        padding: 0 10%
+        padding: 1em 10% 0.001em
         background-color: colors.$primary
-        border-bottom: 1px solid colors.$dark
+        z-index: 100
 
         .nav-container
             width: 100%
-            font-size: 1.1em
-            padding: 0.75em 0
+            font-size: 1.125em
+            padding: 0
 
         #nav-results
             width: 100%
             max-height: 60vh
+            margin-top: 0.5em
+            border-top: 1px solid colors.$halflight
 
 .nav-container
     display: flex
     align-items: center
-    padding: 0.5em 1em
 
 .nav-prefix
     color: colors.$light
     user-select: none
-    margin-right: 0.25em
-    font-weight: bold
+    margin-right: 0.5em
 
 #nav-input
     flex: 1
@@ -70,7 +71,7 @@
     color: colors.$white
     font-family: inherit
     font-size: inherit
-    padding: 0.25em 0
+    padding: 0
     caret-color: colors.$white
 
     &::placeholder
@@ -84,20 +85,27 @@
     background-color: colors.$primary
 
 .nav-item
-    padding: 0.6em 1em
+    padding: 0.5em 1em
     cursor: pointer
     display: flex
     align-items: center
     gap: 0.25em
     text-align: left
-    transition: background-color 0.1s ease
+    color: colors.$half
 
     &:hover, &.selected
+        color: colors.$white
         background-color: colors.$secondary
 
+        .nav-key
+            text-decoration: underline
+
 .nav-parent
-    color: colors.$dark
-    font-size: 0.85em
+    color: colors.$light
+
+    &::after
+        content: " > "
+        color: colors.$dark
 
 .nav-emoji
     margin-right: 0.25em

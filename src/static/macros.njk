@@ -29,7 +29,16 @@ eleventyImport:
         </a>
     {% endif %}
     {% for link in project.data.links %}
-        <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="button">{{ link.icon | safe }} {{ link.name if names }}</a>
+        <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="button">
+            {% if link.tech %}
+                {{ renderIcon(link.tech) }}
+            {% elif link.misc %}
+                {{ renderIcon(link.misc, from='misc') }}
+            {% elif link.icon %}
+                {{ link.icon | safe }}
+            {% endif %}
+            {% if names %}{{ link.name }}{% endif %}
+        </a>
     {% endfor %}
 {% endmacro %}
 

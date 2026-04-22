@@ -4,6 +4,7 @@ const buildNavPages = (navPages, allPages) => {
 
     for (const page of allPages) {
         if (!page.url || page.url === false) continue;
+        if (page.data?.url === false) continue; // respeta url: false en frontmatter
         if (page.url === '/') continue;
 
         const nav = page.data?.eleventyNavigation;

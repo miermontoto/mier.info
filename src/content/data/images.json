@@ -2,6 +2,9 @@
     "dashboard": [
         "main.png"
     ],
+    "dotfiles": [
+        "desktop.png"
+    ],
     "epicalendar": [
         "back.webp",
         "new.webp"
@@ -13,6 +16,17 @@
     "notflix": [
         "example.gif"
     ],
+    "pomodoro": [
+        "tele.jpg",
+        "cap.png"
+    ],
+    "sis": [
+        "sis screenshot (1).png",
+        "sis screenshot (2).png",
+        "sis screenshot (3).png",
+        "sis screenshot (4).png",
+        "sis screenshot (5).png"
+    ],
     "speedlify": [
         "main.png"
     ],
@@ -22,15 +36,7 @@
         "storymapping.png",
         "tech.png"
     ],
-    "dotfiles": [
-        "screen1.png",
-        "screen2.png"
-    ],
     "url": [
         "main.png"
-    ],
-    "pomodoro": [
-    	"tele.jpg",
-    	"cap.png"
     ]
 }

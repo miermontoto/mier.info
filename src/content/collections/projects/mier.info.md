@@ -25,7 +25,7 @@ it represents my ideas and beliefs.
 ## tech
 
 almost everything you see, from the breadcrumbs to the buttons, is handcrafted
-and built from scratch with <img src="/assets/icons/tech/eleventy.svg" class="icon" alt="eleventy">,
+and built from scratch. it's built using <img src="/assets/icons/tech/eleventy.svg" class="icon" alt="eleventy">,
 hosted in <img src="/assets/icons/tech/cloudflare.svg" class="icon" alt="cloudflare">,
 using <img src="/assets/icons/tech/nunjucks.svg" class="icon" alt="nunjucks">,
 <img src="/assets/icons/tech/sass.svg" class="icon" alt="sass">,
@@ -59,7 +59,7 @@ the "design" is a tribute to the legendary
 [daft punk 90's website](https://web.archive.org/web/20220223020719/https://daftpunk.com/).
 as you can probably tell, it's a very important reference for me,
 and even though it doesn't hold up to today's standards,
-i've always loved its simplicty and looks.
+i've always loved its simplicty and design.
 
 from December 1st to January 7th every year, there is snow falling
 (thanks to [zachleat](https://github.com/zachleat/snow-fall))
@@ -74,4 +74,4 @@ several other inspirations:
 - [irene mateos' awesome portfolio](https://enerimateos.com/)
 - [Things Of Interest](https://qntm.org/)
 - [nothing](https://es.nothing.tech/)
-- [aphex twin](https:/in /aphextwin.warp.net/)
+- [aphex twin](https://aphextwin.warp.net/)

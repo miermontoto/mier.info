@@ -24,16 +24,16 @@ function createNavPanel() {
   const container = document.createElement("div");
   container.className = "nav-container";
 
-  const prefix = document.createElement("div");
+  const prefix = document.createElement("span");
   prefix.className = "nav-prefix";
-  prefix.textContent = "/";
+  prefix.textContent = "$ /";
 
   const input = document.createElement("input");
   input.type = "text";
   input.id = NAV_INPUT_ID;
   input.autocomplete = "off";
   input.spellcheck = false;
-  input.placeholder = "navigate...";
+  input.placeholder = "";
 
   const results = document.createElement("ul");
   results.id = NAV_RESULTS_ID;
@@ -144,7 +144,9 @@ function handleKeydown(event) {
 
     case "Enter":
       event.preventDefault();
-      if (selectedIndex >= 0 && filteredPages[selectedIndex]) {
+      if (!navInput.value.trim()) {
+        navigateTo("/");
+      } else if (selectedIndex >= 0 && filteredPages[selectedIndex]) {
         navigateTo(filteredPages[selectedIndex].url);
       }
       break;
@@ -185,7 +187,7 @@ function createNavItem(page, index) {
   if (page.parent) {
     const parentSpan = document.createElement("span");
     parentSpan.className = "nav-parent";
-    parentSpan.textContent = page.parent + "/";
+    parentSpan.textContent = page.parent;
     li.appendChild(parentSpan);
   }
 
