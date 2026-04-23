@@ -4,7 +4,7 @@
 export async function onRequestGet(ctx) {
   // extraer la ruta del asset desde la url
   const url = new URL(ctx.request.url);
-  const assetPath = url.pathname.replace("/assets/", "assets/");
+  const assetPath = decodeURIComponent(url.pathname.replace("/assets/", "assets/"));
 
   try {
     // obtener el archivo desde r2
