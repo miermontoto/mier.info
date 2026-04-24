@@ -6,6 +6,7 @@ import {
   ListObjectsV2Command,
 } from "@aws-sdk/client-s3";
 import { Upload } from "@aws-sdk/lib-storage";
+import { createHash } from "crypto";
 import { readFile, stat } from "fs/promises";
 import { createReadStream } from "fs";
 import { glob } from "glob";
@@ -98,8 +99,13 @@ async function uploadFile(filePath, key) {
   }
 }
 
+async function md5(filePath) {
+  const content = await readFile(filePath);
+  return createHash("md5").update(content).digest("hex");
+}
+
 async function listExistingFiles() {
-  const existingFiles = new Set();
+  const existingFiles = new Map();
   let continuationToken;
 
   do {
@@ -111,7 +117,9 @@ async function listExistingFiles() {
     const response = await s3Client.send(command);
 
     if (response.Contents) {
-      response.Contents.forEach((obj) => existingFiles.add(obj.Key));
+      response.Contents.forEach((obj) =>
+        existingFiles.set(obj.Key, obj.ETag?.replace(/"/g, "")),
+      );
     }
 
     continuationToken = response.NextContinuationToken;
@@ -138,12 +146,16 @@ async function syncAssets() {
     console.log(`\nProcessing ${dir}: ${files.length} files`);
 
     for (const file of files) {
-      const key = file; // mantener la estructura de directorios
+      const key = file;
+      const remoteEtag = existingFiles.get(key);
 
-      if (existingFiles.has(key)) {
-        skippedFiles.push(key);
-        console.log(`  Skipping ${key} (already exists)`);
-        continue;
+      if (remoteEtag && !remoteEtag.includes("-")) {
+        const localHash = await md5(file);
+        if (localHash === remoteEtag) {
+          skippedFiles.push(key);
+          continue;
+        }
+        console.log(`  Content changed: ${key}`);
       }
 
       try {
