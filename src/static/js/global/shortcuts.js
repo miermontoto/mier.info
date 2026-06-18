@@ -24,6 +24,11 @@ class ShortcutsManager {
   }
 
   _handleKey(e) {
+    // ignorar combos del navegador (ctrl+c, cmd+v, etc): los shortcuts son teclas sueltas
+    if (e.ctrlKey || e.metaKey || e.altKey) {
+      return;
+    }
+
     // ignorar si el usuario esta escribiendo en un input
     if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA" || e.target.isContentEditable) {
       return;
