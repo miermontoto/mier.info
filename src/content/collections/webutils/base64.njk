@@ -4,41 +4,45 @@ desc: 'encode/decode base64'
 redirect_from: /webutils/base64/
 ---
 
-<h3>text</h3>
-<div class="decoded">
-	<textarea class="input" id="decoded-text" placeholder="plain text"></textarea>
-	<span class="button" id="decoded-copy" title="Copy to clipboard">⎘</span>
+{# macro reutilizable: panel de conversión con su botón de copiar.
+   centraliza el markup compartido por ambos convertidores #}
+{% macro panel(side, copyId) %}
+<div class="{{ side }}">
+	{{ caller() }}
+	<span class="button" id="{{ copyId }}" title="Copy to clipboard">⎘</span>
 </div>
-<span>&lt;=></span>
-<div class="encoded">
-	<textarea class="output" id="encoded-text" placeholder="encoded text"></textarea>
-	<span class="button" id="encoded-copy" title="Copy to clipboard">⎘</span>
-</div>
+{% endmacro %}
 
-<hr>
-
-<h3>images</h3>
-<div class="decoded">
-	<div id="img-drop" onclick="document.getElementById('img-input').click()">
-		<span class="info">Drop an image here or click to select</span>
-		<input type="file" id="img-input"
-			accept="image/png, image/jpeg, image/svg+xml, image/webp, image/ico, image/bmp">
+<div class="converter">
+	<div class="tabs" role="tablist">
+		<button type="button" class="tab active" data-tab="text" role="tab">text</button>
+		<button type="button" class="tab" data-tab="images" role="tab">images</button>
 	</div>
-	<span class="button" id="img-copy" title="Copy to clipboard">⎘</span>
-</div>
-<span>&lt;=></span>
-<div class="encoded">
-	<textarea class="output" id="img-encoded-text" placeholder="base64 image data"></textarea>
-	<span class="button" id="img-encoded-copy" title="Copy to clipboard">⎘</span>
-</div>
 
-<hr>
+	{# convertidor de texto #}
+	<div class="tab-panel" data-panel="text">
+		{% call panel('decoded', 'decoded-copy') %}
+			<textarea class="input" id="decoded-text" placeholder="plain text"></textarea>
+		{% endcall %}
+		<span class="arrow">&lt;=></span>
+		{% call panel('encoded', 'encoded-copy') %}
+			<textarea class="output" id="encoded-text" placeholder="encoded text"></textarea>
+		{% endcall %}
+	</div>
 
-<h3>decode image from base64</h3>
-<div class="decoded">
-	<textarea class="input" id="base64-input" placeholder="paste base64 image data here"></textarea>
-</div>
-<span>=></span>
-<div class="encoded">
-	<img id="decoded-img" hidden alt="Decoded image">
+	{# convertidor de imágenes: imagen <=> base64 #}
+	<div class="tab-panel hidden" data-panel="images">
+		{% call panel('decoded', 'img-copy') %}
+			<div id="img-drop" onclick="document.getElementById('img-input').click()">
+				<span class="info">Drop an image here or click to select</span>
+				<input type="file" id="img-input"
+					accept="image/png, image/jpeg, image/svg+xml, image/webp, image/ico, image/bmp">
+				<img id="decoded-img" hidden alt="Decoded image">
+			</div>
+		{% endcall %}
+		<span class="arrow">&lt;=></span>
+		{% call panel('encoded', 'img-encoded-copy') %}
+			<textarea class="output" id="img-encoded-text" placeholder="base64 image data"></textarea>
+		{% endcall %}
+	</div>
 </div>

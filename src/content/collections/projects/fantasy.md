@@ -12,6 +12,11 @@ links: [
     name: "v2",
     url: "https://github.com/miermontoto/fantasy-zig",
     tech: "zig"
+  },
+  {
+    name: "v3",
+    url: "https://github.com/miermontoto/fantasy-v3",
+    tech: "typescript"
   }
 ]
 ---

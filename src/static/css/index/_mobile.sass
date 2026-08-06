@@ -1,0 +1,56 @@
+@use '../colors'
+@use '../base'
+
+// botón de volver del overlay: oculto salvo en móvil
+.section-back
+	display: none
+
+@media (max-width: 768px)
+	// el overlay pasa a pantalla completa, sin márgenes flotantes.
+	// se usan los ids (no `section`) para ganar en especificidad a la regla
+	// base de index.sass, que se compila después de este parcial.
+	#project-section,
+	#about-section
+		top: 0
+		left: 0
+		width: 100%
+		height: 100dvh
+		max-height: none
+		transform: none
+		opacity: 1
+		border: none
+		padding: 0
+
+	// barra superior fija (sticky) con el botón de volver, a sangre
+	.section-back
+		display: flex
+		align-items: center
+		position: sticky
+		top: 0
+		z-index: 1
+		padding: 0.9em 1.25em
+		background-color: colors.$primary
+		border-bottom: 1px solid colors.$halflight
+		color: colors.$white
+		font-family: base.$classic-fonts
+		cursor: pointer
+		user-select: none
+
+	// el resto del contenido respira dentro del overlay (la barra va a sangre)
+	section > *:not(.section-back)
+		padding-left: 1.25em
+		padding-right: 1.25em
+
+	section > h1
+		margin-top: 0.75em
+
+	// los grids de proyectos colapsan a una sola columna
+	#featured-grid .project
+		grid-template-columns: 1fr
+
+		.project-images
+			margin-right: 0
+
+	#main-projects,
+	#other-projects
+		grid-template-columns: 1fr

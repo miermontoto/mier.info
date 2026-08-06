@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- mark de marca: crosshair canónico del favicon (viewBox 16) escalado x3.5 con padding -->
+  <g transform="translate(4 4) scale(3.5)" fill="none" stroke="#f0b040" stroke-width="1.5">
+    <circle cx="8" cy="8" r="6.5"/>
+    <line x1="8" y1="0" x2="8" y2="4"/>
+    <line x1="8" y1="12" x2="8" y2="16"/>
+    <line x1="0" y1="8" x2="4" y2="8"/>
+    <line x1="12" y1="8" x2="16" y2="8"/>
+    <circle cx="8" cy="8" r="1" fill="#f0b040" stroke="none"/>
+  </g>
+</svg>

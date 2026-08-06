@@ -11,7 +11,7 @@ const { buildTagWall, getRecents, getRelated, buildTimestamps, buildWrappedImg }
 const addAsset = require('./src/static/js/building/linking.js');
 const { qka, quizButtons, quizQuestions } = require('./src/static/js/building/quizzing.js');
 const { buildVersionTag, buildKeywords } = require("./src/static/js/building/package.js");
-const { projectImages, getFeaturedProjects, getMainProjects, getOtherProjects } = require("./src/static/js/building/projects.js");
+const { projectImages, getSiteSections, getFeaturedProjects, getMainProjects, getOtherProjects } = require("./src/static/js/building/projects.js");
 const { generateDescription } = require("./src/static/js/building/description.js");
 
 
@@ -86,6 +86,7 @@ module.exports = async function (eleventyConfig) {
 
   eleventyConfig.addFilter("generateDesc", generateDescription);
 
+  eleventyConfig.addFilter("siteSections", getSiteSections);
   eleventyConfig.addFilter("featuredProjects", getFeaturedProjects);
   eleventyConfig.addFilter("mainProjects", getMainProjects);
   eleventyConfig.addFilter("otherProjects", getOtherProjects);

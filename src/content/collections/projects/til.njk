@@ -4,15 +4,16 @@ emoji: ❔
 desc: things I've asked myself over time and found the answer to.
 icons: [eleventy, markdown, js]
 permalink: /til/
+section: true
 ---
 
 {% addStyle 'til' %}
+{% addScript 'til-search' %}
 
-{# TODO: search bar #}
-{# <div id="til-search">
+<div id="til-search">
 	<h3>search</h3>
-	<input type="text" id="til-search-input search" placeholder="search til...">
-</div> #}
+	<input type="text" id="til-search-input" placeholder="search TILs...">
+</div>
 
 <div id="til-tags">
 	<h3>tags</h3>
@@ -24,4 +25,5 @@ permalink: /til/
 <div id="til-recents">
 	<h2>recent TILs</h2>
 	{% tilRecents collections.til %}
+	<p id="til-no-results" hidden>no TILs found.</p>
 </div>

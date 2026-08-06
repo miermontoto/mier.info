@@ -5,6 +5,12 @@
     "dotfiles": [
         "desktop.png"
     ],
+    "duckhunt": [
+        "ipad-1-board-en.png",
+        "ipad-2-inbox-en.png",
+        "ipad-3-task-en.png",
+        "ipad-4-insights-en.png"
+    ],
     "epicalendar": [
         "back.webp",
         "new.webp"

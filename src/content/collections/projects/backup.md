@@ -5,7 +5,6 @@ source: https://github.com/miermontoto/backup
 permalink: /backup/
 keywords: backup, backup carrera, epi, epi gijón, asignaturas, giitin, informática, ingeniería informática, ingeniería, engineering, computer engineering, gijón
 icons: [markdown, github]
-star: star
 lang: es
 emoji: 📚
 buttons:

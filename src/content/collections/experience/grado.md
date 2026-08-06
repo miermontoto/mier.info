@@ -7,8 +7,6 @@ logo: epi
 
 **grades:** 8.55/10 avg, <b style="color: gold;">14/29 honors <i>"matrículas de honor"</i></b>
 
-see all subjects and content in my [backup](https://mier.info/backup).
-
 ---
 
 some relevant projects and assignments:
@@ -22,3 +20,5 @@ some relevant projects and assignments:
 - data analysis and manipulation in [R](https://github.com/miermontoto/Estadistica/tree/main/PL) and [MATLAB](https://github.com/miermontoto/Computacion/tree/main/PL).
 - [cybersecurity, digital signing and certificates in C#](https://github.com/miermontoto/Seguridad/tree/master/PL).
 - [anomaly detection LaTeX paper with practical samples in Python](https://github.com/miermontoto/neg-teo-ii)
+
+see all subjects and content in my [backup](https://mier.info/backup).

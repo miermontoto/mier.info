@@ -18,9 +18,14 @@ function projectImages(project, images) {
 	return html;
 }
 
+// secciones internas del propio sitio (quizzes, til, webutils), no proyectos reales
+function getSiteSections(projects) {
+	return projects.filter((project) => project.data.section);
+}
+
 function getFeaturedProjects(projects) {
-	// remove projects with no "img" frontmatter and projects marked as "hidden"
-	let featuredProjects = projects.filter((project) => project.data.img && !project.data.hidden);
+	// remove sections, projects with no "img" frontmatter and projects marked as "hidden"
+	let featuredProjects = projects.filter((project) => project.data.img && !project.data.hidden && !project.data.section);
 
 	// sort projects with "star" first
 	let starred = featuredProjects.filter((project) => project.data.star);
@@ -30,8 +35,8 @@ function getFeaturedProjects(projects) {
 }
 
 function getMainProjects(projects) {
-	// remove projects marked as "hidden"
-	let mainProjects = projects.filter((project) => !project.data.hidden);
+	// remove sections and projects marked as "hidden"
+	let mainProjects = projects.filter((project) => !project.data.hidden && !project.data.section);
 
 	// remove "featured" projects
 	let featuredProjects = getFeaturedProjects(projects);
@@ -43,7 +48,7 @@ function getMainProjects(projects) {
 }
 
 function getOtherProjects(projects) {
-	return projects.filter((project) => !project.data.hidden && project.data.minor);
+	return projects.filter((project) => !project.data.hidden && project.data.minor && !project.data.section);
 }
 
-module.exports = { projectImages, getFeaturedProjects, getMainProjects, getOtherProjects };
+module.exports = { projectImages, getSiteSections, getFeaturedProjects, getMainProjects, getOtherProjects };

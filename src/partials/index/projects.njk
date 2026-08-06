@@ -1,6 +1,7 @@
 {% import "src/static/macros.njk" as macros %}
 
 <section id="project-section">
+    <span class="section-back">← back</span>
     <h1>projects.</h1>
     <div id="projects">
         <div id="featured-grid">
@@ -46,6 +47,18 @@
                     <div class="project-desc">{{ project.data.desc | safe }}</div>
                 </article>
             {% endfor %}
+        </div>
+        <div class="projects-group">
+            <h2 class="projects-group-title">sections.</h2>
+            <div class="projects-list inline">
+                {% for project in collections.project | siteSections %}
+                    <article class="project hoverborder">
+                        <div class="project-title">{{ macros.renderTitle(project) }}</div>
+                        <div class="project-desc">{{ project.data.desc | safe }}</div>
+                        <div class="project-tech">{{ macros.renderIcons(project.data.icons) }}</div>
+                    </article>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </section>

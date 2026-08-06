@@ -1,30 +1,19 @@
 @use '../colors'
 @use '../base'
 
-// contenedor principal de experiencia
 #experience-container
     h1
         margin-bottom: 1.5rem
 
-    .carded .card
-        width: max(40%, 500px)
-        background: colors.$secondary
-        border: 1px solid colors.$halflight
-        margin: 1rem
-        display: grid
+    .card
         grid-template-rows: auto 1fr auto
         align-items: start
 
-        &:hover
-            border-color: colors.$light
+    li
+        font-size: 0.9rem
+        line-height: 1.6
+        color: colors.$half
 
-    // grid de tarjetas mejorado
-    .carded
-        gap: 1rem
-        margin-top: 1rem
-        align-items: stretch
-
-    // timeline mejorada para experiencia de trabajo
     .work .card-description > ul
         margin-left: -2em
         list-style-type: none
@@ -32,7 +21,7 @@
         & > li:before
             content: ''
             position: absolute
-            background: linear-gradient(to bottom, colors.$white 0%, colors.$light 100%)
+            background: colors.$white
             top: 0
             bottom: 0
             left: 5px
@@ -51,7 +40,7 @@
 
                 li
                     margin-left: -1em
-                    font-size: 0.9em
+                    font-size: 1em
                     color: colors.$half
 
         & > li:after
@@ -71,7 +60,6 @@
         & > li:first-child:before
             top: 9px
 
-    // logo de experiencia mejorado
     .experience-logo
         width: 1.5em
         height: 1.5em
@@ -80,7 +68,6 @@
         user-select: none
         object-fit: contain
 
-    // estilos de tarjeta mejorados
     .card-title-col
         width: 100%
         padding-bottom: 0.75rem
@@ -108,30 +95,24 @@
 
     .card-description
         width: 100%
-        color: colors.$half
-        line-height: 1.6
-        font-size: 0.9rem
-        padding-top: 1rem
 
         b, strong
             color: colors.$white
 
-        code
-            background: colors.$halflight
-            padding: 0.125rem 0.375rem
-            border: 1px solid colors.$dark
-            font-size: 0.85rem
+        // el hr del markdown debe igualar a los bordes de la tarjeta
+        hr
+            border: 0
+            border-top: 1px solid colors.$halflight
 
     .card-bottom
         width: 100%
         margin-top: auto
-        padding-top: 1rem
         border-top: 1px solid colors.$halflight
+        margin: 1em
 
         .card-icons
             font-size: 1.5em
 
-// responsive: mejorar diseño móvil
 @media (max-width: 768px)
     #experience-container
         .carded .card

@@ -1,8 +1,8 @@
 ---
 title: speedlify
-desc: netlify hosted tool that monitors the performance of my websites.
+desc: personal website performance monitoring.
 demo: https://speedlify.mier.info
 icons: [netlify, eleventy]
 emoji: 🏎️
-img: true
+minor: true
 ---

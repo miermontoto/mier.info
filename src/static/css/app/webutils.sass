@@ -19,7 +19,14 @@
 .decoded, .encoded
 	position: relative
 	display: flex
-	align-items: flex-start
+	align-items: stretch
+	flex: 1
+	min-width: 0
+
+	// el contenido (textarea o drop zone) rellena el panel; el botón queda absoluto
+	> :not(.button)
+		flex: 1
+		min-width: 0
 
 	.button
 		position: absolute
@@ -79,6 +86,57 @@
 		transform: scale(1.1)
 	100%
 		transform: scale(1)
+
+// convertidor centralizado con tabs (base64)
+.converter
+	width: 100%
+	max-width: 720px
+	margin: 2em auto
+
+.tabs
+	display: flex
+	justify-content: center
+	gap: 4px
+	margin-bottom: 1.5em
+	border-bottom: 1px solid colors.$halflight
+
+.tab
+	font-family: inherit
+	font-size: 1em
+	padding: 8px 18px
+	background: transparent
+	color: colors.$half
+	border: none
+	border-bottom: 2px solid transparent
+	cursor: pointer
+	user-select: none
+	transition: color 0.2s ease, border-color 0.2s ease
+
+	&:hover
+		color: colors.$white
+
+	&.active
+		color: colors.$white
+		border-bottom-color: colors.$correct
+
+.tab-panel
+	display: flex
+	align-items: stretch
+	justify-content: center
+	gap: 1em
+
+	// altura homogénea para ambos paneles
+	textarea
+		min-height: 140px
+		resize: vertical
+
+.arrow
+	display: flex
+	align-items: center
+	white-space: nowrap
+	user-select: none
+	color: colors.$light
+	font-family: monospace
 
 .utils
 	width: 100%
@@ -184,19 +242,9 @@ table td:nth-child(2) input
 	font-size: 0.9em
 	color: colors.$light
 
-#base64-image-decode
-	margin: 20px 0
-
-	textarea
-		font-family: monospace
-		font-size: 0.9em
-		resize: vertical
-		min-height: 80px
-		border: 2px solid transparent
-		transition: border-color 0.3s ease
-
 #decoded-img
 	max-width: 100%
+	max-height: 240px
 	height: auto
 	border: 1px solid colors.$light
 	border-radius: 0
@@ -211,6 +259,14 @@ table td:nth-child(2) input
 
 // Responsive design
 @media (max-width: 768px)
+	// apilar los paneles en vertical en pantallas estrechas
+	.tab-panel
+		flex-direction: column
+
+	.arrow
+		justify-content: center
+		padding: 4px 0
+
 	#img-drop
 		padding: 15px
 		margin: 15px 0

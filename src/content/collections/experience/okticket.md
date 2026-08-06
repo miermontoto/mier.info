@@ -12,7 +12,7 @@ _okticket_ is a fintech SaaS that digitizes and manages employee tickets.
 
 - **2025-now: I+D team lead**
   - complete infrastructure management and maintenance.
-  - analysis and integral developing of new services.
+  - analysis and integral development of new services.
   - george by _okticket_: async semi-automated invoice recovery service for Mexico driven by AWS events.
 - **2024-2025: developer**
   - serverless services using aws lambdas in nestjs.

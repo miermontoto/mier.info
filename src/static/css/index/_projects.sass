@@ -155,3 +155,23 @@
     .project-tech img
         width: 0.7em
         top: -0.0125em
+
+// agrupa un título con su lista
+.projects-group
+    display: flex
+    flex-direction: column
+    gap: 1em
+
+// modificador: tarjetas a lo ancho, una por fila, iconos a la derecha
+.projects-list.inline
+    display: flex
+    flex-direction: column
+    gap: 0.5em
+
+    .project
+        flex-direction: row
+        align-items: baseline
+
+    .project-tech
+        opacity: 1
+        margin-left: auto

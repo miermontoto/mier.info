@@ -64,7 +64,23 @@ window.addEventListener("load", function(event) {
 	// inicializar funcionalidades de imagen
 	initImageEncoding();
 	initImageDecoding();
+
+	// inicializar tabs
+	initTabs();
 });
+
+// tabs: alternar entre los convertidores de texto e imágenes
+function initTabs() {
+	const tabs = document.querySelectorAll('.converter .tab');
+	const panels = document.querySelectorAll('.converter .tab-panel');
+
+	const activate = (name) => {
+		tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === name));
+		panels.forEach(p => p.classList.toggle('hidden', p.dataset.panel !== name));
+	};
+
+	tabs.forEach(tab => tab.addEventListener('click', () => activate(tab.dataset.tab)));
+}
 
 // base64 decode con soporte unicode
 const a2b = (str) => decodeURIComponent(
@@ -119,7 +135,11 @@ function initImageEncoding() {
 	const imgEncodedText = document.getElementById('img-encoded-text');
 	const imgDrop = document.getElementById('img-drop');
 
-	const handleImageFile = (file) => imageFileToBase64(file, (base64) => imgEncodedText.value = base64);
+	const handleImageFile = (file) => imageFileToBase64(file, (base64) => {
+		imgEncodedText.value = base64;
+		// disparar el decode para previsualizar la imagen recién codificada
+		imgEncodedText.dispatchEvent(new Event('input'));
+	});
 
 	// configurar drag and drop
 	setupDragDrop(imgDrop, (files) => {
@@ -146,15 +166,16 @@ const displayDecodedImage = (imgElement, blob) => {
 
 // funcionalidad de decoding de imagen
 function initImageDecoding() {
-	const base64Input = document.getElementById('base64-input');
+	// misma textarea que produce el encoding: imagen <=> base64 en una sola sección
+	const imgEncodedText = document.getElementById('img-encoded-text');
 	const decodedImg = document.getElementById('decoded-img');
 
 	const processBase64Input = () => {
-		const data = base64Input.value.trim();
+		const data = imgEncodedText.value.trim();
 
 		if (!data) {
 			decodedImg.hidden = true;
-			base64Input.style.borderColor = '';
+			imgEncodedText.style.borderColor = '';
 			return;
 		}
 
@@ -162,20 +183,20 @@ function initImageDecoding() {
 			try {
 				const blob = decodeBase64ToBlob(data);
 				displayDecodedImage(decodedImg, blob);
-				base64Input.style.borderColor = '#00df0b';
+				imgEncodedText.style.borderColor = '#00df0b';
 			} catch (error) {
 				decodedImg.hidden = true;
-				base64Input.style.borderColor = '#d40b00';
+				imgEncodedText.style.borderColor = '#d40b00';
 			}
 		} else {
 			decodedImg.hidden = true;
-			base64Input.style.borderColor = '#d40b00';
+			imgEncodedText.style.borderColor = '#d40b00';
 		}
 	};
 
 	// auto-decode on input
-	base64Input.addEventListener('input', processBase64Input);
+	imgEncodedText.addEventListener('input', processBase64Input);
 
 	// auto-decode on paste
-	base64Input.addEventListener('paste', () => setTimeout(processBase64Input, 100));
+	imgEncodedText.addEventListener('paste', () => setTimeout(processBase64Input, 100));
 }
