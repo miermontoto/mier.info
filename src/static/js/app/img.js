@@ -1,3 +1,5 @@
+const IMAGE_MIME_PREFIX = 'image/';
+
 document.getElementById('img-button').addEventListener('click', convert); // convert on click
 
 // enable options after selecting file
@@ -11,7 +13,10 @@ let dropArea = document.getElementById('img-drop');
 dropArea.addEventListener('dragenter', allowDrop);
 dropArea.addEventListener('dragover', allowDrop);
 dropArea.addEventListener('drop', drop);
-dropArea.addEventListener('dragleave', leaveDrop);
+dropArea.addEventListener('dragleave', (ev) => {
+	if (dropArea.contains(ev.relatedTarget)) return;
+	leaveDrop(ev);
+});
 
 // sync quality slider with value and enable options if file already present on window load
 window.addEventListener('load', function() {
@@ -38,15 +43,19 @@ function leaveDrop(ev) {
 }
 
 function drop(ev) {
-	let dt = ev.dataTransfer;
-	let file = dt.files;
-
-	if (file.length !== 1) file = file[0];
-	if (file[0].type.split('/')[0] !== 'image') return;
-
-	document.getElementById('img-input').files = file;
-	enableOptions();
 	leaveDrop(ev);
+
+	const dropped = ev.dataTransfer.files;
+	if (dropped.length === 0) return;
+
+	const file = dropped[0];
+	if (!file.type.startsWith(IMAGE_MIME_PREFIX)) return;
+
+	const single = new DataTransfer();
+	single.items.add(file);
+	document.getElementById('img-input').files = single.files;
+
+	enableOptions();
 }
 
 function enableOptions() {

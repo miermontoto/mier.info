@@ -23,7 +23,6 @@
 	flex: 1
 	min-width: 0
 
-	// el contenido (textarea o drop zone) rellena el panel; el botón queda absoluto
 	> :not(.button)
 		flex: 1
 		min-width: 0
@@ -189,7 +188,7 @@ table td:nth-child(2) input
 .util-container
 	// text-align: center
 
-// Base64 image functionality styling
+// zona de drop, compartida por base64 e img (ambas usan el mismo id)
 #img-drop
 	border: 2px dashed colors.$light
 	border-radius: 0
@@ -197,27 +196,31 @@ table td:nth-child(2) input
 	text-align: center
 	transition: all 0.3s ease
 	background: rgba(colors.$light, 0.05)
-	cursor: pointer
 	user-select: none
 
 	&:hover
 		border-color: colors.$correct
 		background: rgba(colors.$correct, 0.1)
-		transform: translateY(-1px)
 		box-shadow: 0 2px 8px rgba(0, 223, 11, 0.1)
 
-	&:active
-		transform: translateY(0)
-		box-shadow: 0 1px 4px rgba(0, 223, 11, 0.15)
-
-	span.info
-		display: block
-		margin-bottom: 10px
+	.converter &
 		cursor: pointer
-		pointer-events: none
 
-	input[type="file"]
-		display: none
+		&:hover
+			transform: translateY(-1px)
+
+		&:active
+			transform: translateY(0)
+			box-shadow: 0 1px 4px rgba(0, 223, 11, 0.15)
+
+		span.info
+			display: block
+			margin-bottom: 10px
+			cursor: pointer
+			pointer-events: none
+
+		input[type="file"]
+			display: none
 
 // Removed img-options styling as elements were removed
 
